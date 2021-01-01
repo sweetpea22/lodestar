@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://chainsafe.github.io/lodestar/packages/lodestar/modules/network_encoders/">
       
       <link rel="shortcut icon" href="../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -606,11 +606,11 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">&para;</a></h2>
 <h3 id="requestdecodeerrortype">RequestDecodeErrorType<a class="headerlink" href="#requestdecodeerrortype" title="Permanent link">&para;</a></h3>
 <p>Ƭ <strong>RequestDecodeErrorType</strong>: <em>object | object | object | object | object | object | object | object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/request.ts#L161">packages/lodestar/src/network/encoders/request.ts:161</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/request.ts#L161">packages/lodestar/src/network/encoders/request.ts:161</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">&para;</a></h2>
 <h3 id="decodep2perrormessage">decodeP2pErrorMessage<a class="headerlink" href="#decodep2perrormessage" title="Permanent link">&para;</a></h3>
 <p>▸ <strong>decodeP2pErrorMessage</strong>(<code>config</code>: IBeaconConfig, <code>err</code>: Uint8Array): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/response.ts#L174">packages/lodestar/src/network/encoders/response.ts:174</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/response.ts#L174">packages/lodestar/src/network/encoders/response.ts:174</a></em></p>
 <p>Decodes error message from network bytes and removes non printable, non ascii characters.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -634,8 +634,8 @@
 <p><strong>Returns:</strong> <em>string</em></p>
 <hr />
 <h3 id="encodep2perrormessage">encodeP2pErrorMessage<a class="headerlink" href="#encodep2perrormessage" title="Permanent link">&para;</a></h3>
-<p>▸ <strong>encodeP2pErrorMessage</strong>(<code>config</code>: IBeaconConfig, <code>err</code>: string): <em><a href="../reflection-10046.reflection-10047._.reflection-10049._lodestar_types_src_types/#p2perrormessage">P2pErrorMessage</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/response.ts#L166">packages/lodestar/src/network/encoders/response.ts:166</a></em></p>
+<p>▸ <strong>encodeP2pErrorMessage</strong>(<code>config</code>: IBeaconConfig, <code>err</code>: string): <em><a href="../reflection-9977.reflection-9978._.reflection-9980._lodestar_types_src_types/#p2perrormessage">P2pErrorMessage</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/response.ts#L166">packages/lodestar/src/network/encoders/response.ts:166</a></em></p>
 <p>Encodes error message per eth2 spec.
 https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-interface.md#responding-side</p>
 <p><strong>Parameters:</strong></p>
@@ -657,11 +657,11 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em><a href="../reflection-10046.reflection-10047._.reflection-10049._lodestar_types_src_types/#p2perrormessage">P2pErrorMessage</a></em></p>
+<p><strong>Returns:</strong> <em><a href="../reflection-9977.reflection-9978._.reflection-9980._lodestar_types_src_types/#p2perrormessage">P2pErrorMessage</a></em></p>
 <hr />
 <h3 id="encoderesponsestatus">encodeResponseStatus<a class="headerlink" href="#encoderesponsestatus" title="Permanent link">&para;</a></h3>
 <p>▸ <strong>encodeResponseStatus</strong>(<code>status</code>: number): <em>Buffer</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/utils.ts#L42">packages/lodestar/src/network/encoders/utils.ts:42</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/utils.ts#L42">packages/lodestar/src/network/encoders/utils.ts:42</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -681,7 +681,7 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 <hr />
 <h3 id="eth2requestdecode">eth2RequestDecode<a class="headerlink" href="#eth2requestdecode" title="Permanent link">&para;</a></h3>
 <p>▸ <strong>eth2RequestDecode</strong>(<code>config</code>: IBeaconConfig, <code>logger</code>: ILogger, <code>method</code>: <a href="../../enums/constants.method/">Method</a>, <code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/request.ts#L42">packages/lodestar/src/network/encoders/request.ts:42</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/request.ts#L42">packages/lodestar/src/network/encoders/request.ts:42</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -729,7 +729,7 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 <hr />
 <h3 id="eth2requestencode">eth2RequestEncode<a class="headerlink" href="#eth2requestencode" title="Permanent link">&para;</a></h3>
 <p>▸ <strong>eth2RequestEncode</strong>(<code>config</code>: IBeaconConfig, <code>logger</code>: ILogger, <code>method</code>: <a href="../../enums/constants.method/">Method</a>, <code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/request.ts#L10">packages/lodestar/src/network/encoders/request.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/request.ts#L10">packages/lodestar/src/network/encoders/request.ts:10</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -758,7 +758,7 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>function</em></p>
-<p>▸ (<code>source</code>: AsyncIterable‹<a href="../reflection-10046.reflection-10047._.reflection-10049._lodestar_types_src_types/#requestbody">RequestBody</a> | null›): <em>AsyncGenerator‹Buffer›</em></p>
+<p>▸ (<code>source</code>: AsyncIterable‹<a href="../reflection-9977.reflection-9978._.reflection-9980._lodestar_types_src_types/#requestbody">RequestBody</a> | null›): <em>AsyncGenerator‹Buffer›</em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -770,14 +770,14 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 <tbody>
 <tr>
 <td><code>source</code></td>
-<td>AsyncIterable‹<a href="../reflection-10046.reflection-10047._.reflection-10049._lodestar_types_src_types/#requestbody">RequestBody</a> &#124; null›</td>
+<td>AsyncIterable‹<a href="../reflection-9977.reflection-9978._.reflection-9980._lodestar_types_src_types/#requestbody">RequestBody</a> &#124; null›</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h3 id="eth2responsedecode">eth2ResponseDecode<a class="headerlink" href="#eth2responsedecode" title="Permanent link">&para;</a></h3>
 <p>▸ <strong>eth2ResponseDecode</strong>(<code>config</code>: IBeaconConfig, <code>logger</code>: ILogger, <code>method</code>: <a href="../../enums/constants.method/">Method</a>, <code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>, <code>requestId</code>: <a href="../constants/#requestid">RequestId</a>, <code>controller</code>: AbortController): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/response.ts#L56">packages/lodestar/src/network/encoders/response.ts:56</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/response.ts#L56">packages/lodestar/src/network/encoders/response.ts:56</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -814,7 +814,7 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>function</em></p>
-<p>▸ (<code>source</code>: AsyncIterable‹Buffer›): <em>AsyncGenerator‹<a href="../reflection-10046.reflection-10047._.reflection-10049._lodestar_types_src_types/#responsebody">ResponseBody</a>›</em></p>
+<p>▸ (<code>source</code>: AsyncIterable‹Buffer›): <em>AsyncGenerator‹<a href="../reflection-9977.reflection-9978._.reflection-9980._lodestar_types_src_types/#responsebody">ResponseBody</a>›</em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -833,7 +833,7 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 <hr />
 <h3 id="eth2responseencode">eth2ResponseEncode<a class="headerlink" href="#eth2responseencode" title="Permanent link">&para;</a></h3>
 <p>▸ <strong>eth2ResponseEncode</strong>(<code>config</code>: IBeaconConfig, <code>logger</code>: ILogger, <code>method</code>: <a href="../../enums/constants.method/">Method</a>, <code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/response.ts#L12">packages/lodestar/src/network/encoders/response.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/response.ts#L12">packages/lodestar/src/network/encoders/response.ts:12</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -881,7 +881,7 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 <hr />
 <h3 id="getcompressor">getCompressor<a class="headerlink" href="#getcompressor" title="Permanent link">&para;</a></h3>
 <p>▸ <strong>getCompressor</strong>(<code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/utils.ts#L7">packages/lodestar/src/network/encoders/utils.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/utils.ts#L7">packages/lodestar/src/network/encoders/utils.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -917,7 +917,7 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 <hr />
 <h3 id="getdecompressor">getDecompressor<a class="headerlink" href="#getdecompressor" title="Permanent link">&para;</a></h3>
 <p>▸ <strong>getDecompressor</strong>(<code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>): <em><a href="../../interfaces/network_encoders.idecompressor/">IDecompressor</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/utils.ts#L25">packages/lodestar/src/network/encoders/utils.ts:25</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/utils.ts#L25">packages/lodestar/src/network/encoders/utils.ts:25</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -937,7 +937,7 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 <hr />
 <h3 id="maxencodedlen">maxEncodedLen<a class="headerlink" href="#maxencodedlen" title="Permanent link">&para;</a></h3>
 <p>▸ <strong>maxEncodedLen</strong>(<code>sszLength</code>: number, <code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/utils.ts#L46">packages/lodestar/src/network/encoders/utils.ts:46</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/utils.ts#L46">packages/lodestar/src/network/encoders/utils.ts:46</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -960,8 +960,8 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 <p><strong>Returns:</strong> <em>number</em></p>
 <hr />
 <h3 id="receiveanddecoderequest">receiveAndDecodeRequest<a class="headerlink" href="#receiveanddecoderequest" title="Permanent link">&para;</a></h3>
-<p>▸ <strong>receiveAndDecodeRequest</strong>(<code>source</code>: AsyncIterable‹Buffer | BufferList›, <code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>, <code>type</code>: Exclude‹ReturnType‹typeof Methods[Method]["requestSSZType"]›, null›): <em>Promise‹<a href="../reflection-10046.reflection-10047._.reflection-10049._lodestar_types_src_types/#requestbody">RequestBody</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar/src/network/encoders/request.ts#L72">packages/lodestar/src/network/encoders/request.ts:72</a></em></p>
+<p>▸ <strong>receiveAndDecodeRequest</strong>(<code>source</code>: AsyncIterable‹Buffer | BufferList›, <code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>, <code>type</code>: Exclude‹ReturnType‹typeof Methods[Method]["requestSSZType"]›, null›): <em>Promise‹<a href="../reflection-9977.reflection-9978._.reflection-9980._lodestar_types_src_types/#requestbody">RequestBody</a>›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar/src/network/encoders/request.ts#L72">packages/lodestar/src/network/encoders/request.ts:72</a></em></p>
 <p>Buffers request body source in memory
 - Uncompress with <code>encoding</code>
 - Deserialize with <code>type</code>
@@ -989,7 +989,7 @@ https://github.com/ethereum/eth2.0-specs/blob/v1.0.0-rc.0/specs/phase0/p2p-inter
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise‹<a href="../reflection-10046.reflection-10047._.reflection-10049._lodestar_types_src_types/#requestbody">RequestBody</a>›</em></p>
+<p><strong>Returns:</strong> <em>Promise‹<a href="../reflection-9977.reflection-9978._.reflection-9980._lodestar_types_src_types/#requestbody">RequestBody</a>›</em></p>
                 
               
               

@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://chainsafe.github.io/lodestar/packages/lodestar-validator/interfaces/api_interface.ivalidatorapi/">
       
       <link rel="shortcut icon" href="../../../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -529,8 +529,8 @@
 </ul>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">&para;</a></h2>
 <h3 id="getaggregatedattestation">getAggregatedAttestation<a class="headerlink" href="#getaggregatedattestation" title="Permanent link">&para;</a></h3>
-<p>▸ <strong>getAggregatedAttestation</strong>(<code>attestationDataRoot</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#root">Root</a>, <code>slot</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#slot">Slot</a>): <em>Promise‹Attestation›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar-validator/src/api/interface/validators.ts#L30">packages/lodestar-validator/src/api/interface/validators.ts:30</a></em></p>
+<p>▸ <strong>getAggregatedAttestation</strong>(<code>attestationDataRoot</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#root">Root</a>, <code>slot</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#slot">Slot</a>): <em>Promise‹Attestation›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar-validator/src/api/interface/validators.ts#L30">packages/lodestar-validator/src/api/interface/validators.ts:30</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -542,19 +542,19 @@
 <tbody>
 <tr>
 <td><code>attestationDataRoot</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#root">Root</a></td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#root">Root</a></td>
 </tr>
 <tr>
 <td><code>slot</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#slot">Slot</a></td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#slot">Slot</a></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise‹Attestation›</em></p>
 <hr />
 <h3 id="getattesterduties">getAttesterDuties<a class="headerlink" href="#getattesterduties" title="Permanent link">&para;</a></h3>
-<p>▸ <strong>getAttesterDuties</strong>(<code>epoch</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#epoch">Epoch</a>, <code>indices</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#validatorindex">ValidatorIndex</a>[]): <em>Promise‹AttesterDuty[]›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar-validator/src/api/interface/validators.ts#L19">packages/lodestar-validator/src/api/interface/validators.ts:19</a></em></p>
+<p>▸ <strong>getAttesterDuties</strong>(<code>epoch</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#epoch">Epoch</a>, <code>indices</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#validatorindex">ValidatorIndex</a>[]): <em>Promise‹AttesterDuty[]›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar-validator/src/api/interface/validators.ts#L19">packages/lodestar-validator/src/api/interface/validators.ts:19</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -566,19 +566,19 @@
 <tbody>
 <tr>
 <td><code>epoch</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#epoch">Epoch</a></td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#epoch">Epoch</a></td>
 </tr>
 <tr>
 <td><code>indices</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#validatorindex">ValidatorIndex</a>[]</td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#validatorindex">ValidatorIndex</a>[]</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise‹AttesterDuty[]›</em></p>
 <hr />
 <h3 id="getproposerduties">getProposerDuties<a class="headerlink" href="#getproposerduties" title="Permanent link">&para;</a></h3>
-<p>▸ <strong>getProposerDuties</strong>(<code>epoch</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#epoch">Epoch</a>, <code>validatorPubKeys</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#blspubkey">BLSPubkey</a>[]): <em>Promise‹ProposerDuty[]›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar-validator/src/api/interface/validators.ts#L17">packages/lodestar-validator/src/api/interface/validators.ts:17</a></em></p>
+<p>▸ <strong>getProposerDuties</strong>(<code>epoch</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#epoch">Epoch</a>, <code>validatorPubKeys</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#blspubkey">BLSPubkey</a>[]): <em>Promise‹ProposerDuty[]›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar-validator/src/api/interface/validators.ts#L17">packages/lodestar-validator/src/api/interface/validators.ts:17</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -590,19 +590,19 @@
 <tbody>
 <tr>
 <td><code>epoch</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#epoch">Epoch</a></td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#epoch">Epoch</a></td>
 </tr>
 <tr>
 <td><code>validatorPubKeys</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#blspubkey">BLSPubkey</a>[]</td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#blspubkey">BLSPubkey</a>[]</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise‹ProposerDuty[]›</em></p>
 <hr />
 <h3 id="preparebeaconcommitteesubnet">prepareBeaconCommitteeSubnet<a class="headerlink" href="#preparebeaconcommitteesubnet" title="Permanent link">&para;</a></h3>
-<p>▸ <strong>prepareBeaconCommitteeSubnet</strong>(<code>validatorIndex</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#validatorindex">ValidatorIndex</a>, <code>committeeIndex</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#committeeindex">CommitteeIndex</a>, <code>committeesAtSlot</code>: number, <code>slot</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#slot">Slot</a>, <code>isAggregator</code>: boolean): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar-validator/src/api/interface/validators.ts#L34">packages/lodestar-validator/src/api/interface/validators.ts:34</a></em></p>
+<p>▸ <strong>prepareBeaconCommitteeSubnet</strong>(<code>validatorIndex</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#validatorindex">ValidatorIndex</a>, <code>committeeIndex</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#committeeindex">CommitteeIndex</a>, <code>committeesAtSlot</code>: number, <code>slot</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#slot">Slot</a>, <code>isAggregator</code>: boolean): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar-validator/src/api/interface/validators.ts#L34">packages/lodestar-validator/src/api/interface/validators.ts:34</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -614,11 +614,11 @@
 <tbody>
 <tr>
 <td><code>validatorIndex</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#validatorindex">ValidatorIndex</a></td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#validatorindex">ValidatorIndex</a></td>
 </tr>
 <tr>
 <td><code>committeeIndex</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#committeeindex">CommitteeIndex</a></td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#committeeindex">CommitteeIndex</a></td>
 </tr>
 <tr>
 <td><code>committeesAtSlot</code></td>
@@ -626,7 +626,7 @@
 </tr>
 <tr>
 <td><code>slot</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#slot">Slot</a></td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#slot">Slot</a></td>
 </tr>
 <tr>
 <td><code>isAggregator</code></td>
@@ -637,8 +637,8 @@
 <p><strong>Returns:</strong> <em>Promise‹void›</em></p>
 <hr />
 <h3 id="produceattestationdata">produceAttestationData<a class="headerlink" href="#produceattestationdata" title="Permanent link">&para;</a></h3>
-<p>▸ <strong>produceAttestationData</strong>(<code>index</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#committeeindex">CommitteeIndex</a>, <code>slot</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#slot">Slot</a>): <em>Promise‹AttestationData›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar-validator/src/api/interface/validators.ts#L28">packages/lodestar-validator/src/api/interface/validators.ts:28</a></em></p>
+<p>▸ <strong>produceAttestationData</strong>(<code>index</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#committeeindex">CommitteeIndex</a>, <code>slot</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#slot">Slot</a>): <em>Promise‹AttestationData›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar-validator/src/api/interface/validators.ts#L28">packages/lodestar-validator/src/api/interface/validators.ts:28</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -650,19 +650,19 @@
 <tbody>
 <tr>
 <td><code>index</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#committeeindex">CommitteeIndex</a></td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#committeeindex">CommitteeIndex</a></td>
 </tr>
 <tr>
 <td><code>slot</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#slot">Slot</a></td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#slot">Slot</a></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise‹AttestationData›</em></p>
 <hr />
 <h3 id="produceblock">produceBlock<a class="headerlink" href="#produceblock" title="Permanent link">&para;</a></h3>
-<p>▸ <strong>produceBlock</strong>(<code>slot</code>: <a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#slot">Slot</a>, <code>randaoReveal</code>: Uint8Array, <code>graffiti</code>: string): <em>Promise‹BeaconBlock›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar-validator/src/api/interface/validators.ts#L26">packages/lodestar-validator/src/api/interface/validators.ts:26</a></em></p>
+<p>▸ <strong>produceBlock</strong>(<code>slot</code>: <a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#slot">Slot</a>, <code>randaoReveal</code>: Uint8Array, <code>graffiti</code>: string): <em>Promise‹BeaconBlock›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar-validator/src/api/interface/validators.ts#L26">packages/lodestar-validator/src/api/interface/validators.ts:26</a></em></p>
 <p>Requests a BeaconNode to produce a valid block,
 which can then be signed by a ValidatorClient.</p>
 <p><strong>Parameters:</strong></p>
@@ -676,7 +676,7 @@ which can then be signed by a ValidatorClient.</p>
 <tbody>
 <tr>
 <td><code>slot</code></td>
-<td><a href="../../modules/reflection-10688.reflection-10689._.reflection-10691._lodestar_types_src_types/#slot">Slot</a></td>
+<td><a href="../../modules/reflection-10619.reflection-10620._.reflection-10622._lodestar_types_src_types/#slot">Slot</a></td>
 </tr>
 <tr>
 <td><code>randaoReveal</code></td>
@@ -693,7 +693,7 @@ which can then be signed by a ValidatorClient.</p>
 <hr />
 <h3 id="publishaggregateandproofs">publishAggregateAndProofs<a class="headerlink" href="#publishaggregateandproofs" title="Permanent link">&para;</a></h3>
 <p>▸ <strong>publishAggregateAndProofs</strong>(<code>signedAggregateAndProofs</code>: SignedAggregateAndProof[]): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a351996/packages/lodestar-validator/src/api/interface/validators.ts#L32">packages/lodestar-validator/src/api/interface/validators.ts:32</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4ac2b13/packages/lodestar-validator/src/api/interface/validators.ts#L32">packages/lodestar-validator/src/api/interface/validators.ts:32</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
