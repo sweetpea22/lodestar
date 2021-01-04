@@ -470,6 +470,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#filterbystateanddirection" class="md-nav__link">
+    filterByStateAndDirection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#getpeerstate" class="md-nav__link">
     getPeerState
   </a>
@@ -516,6 +523,7 @@
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
 <ul>
+<li><a href="./#filterbystateanddirection">filterByStateAndDirection</a></li>
 <li><a href="./#getpeerstate">getPeerState</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">&para;</a></h2>
@@ -525,9 +533,46 @@
 <h3 id="nodeapi">NodeApi<a class="headerlink" href="#nodeapi" title="Permanent link">&para;</a></h3>
 <p>• <strong>NodeApi</strong>:</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">&para;</a></h2>
+<h3 id="filterbystateanddirection">filterByStateAndDirection<a class="headerlink" href="#filterbystateanddirection" title="Permanent link">&para;</a></h3>
+<p>▸ <strong>filterByStateAndDirection</strong>(<code>peers</code>: LibP2p.Peer[], <code>network</code>: <a href="../../interfaces/network.inetwork/">INetwork</a>, <code>state</code>: string[], <code>direction</code>: string[]): <em>LibP2p.Peer[]</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a6ed7cc/packages/lodestar/src/api/impl/node/utils.ts#L18">packages/lodestar/src/api/impl/node/utils.ts:18</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>peers</code></td>
+<td>LibP2p.Peer[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td><code>network</code></td>
+<td><a href="../../interfaces/network.inetwork/">INetwork</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>string[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td><code>direction</code></td>
+<td>string[]</td>
+<td>[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>LibP2p.Peer[]</em></p>
+<hr />
 <h3 id="getpeerstate">getPeerState<a class="headerlink" href="#getpeerstate" title="Permanent link">&para;</a></h3>
 <p>▸ <strong>getPeerState</strong>(<code>status</code>: LibP2pConnection["stat"]["status"]): <em>NodePeer["state"]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/daaca58/packages/lodestar/src/api/impl/node/utils.ts#L3">packages/lodestar/src/api/impl/node/utils.ts:3</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a6ed7cc/packages/lodestar/src/api/impl/node/utils.ts#L5">packages/lodestar/src/api/impl/node/utils.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
