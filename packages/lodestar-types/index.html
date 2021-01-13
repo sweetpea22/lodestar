@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://chainsafe.github.io/lodestar/packages/lodestar-types/">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
         
       
     
@@ -416,9 +416,9 @@
 <p>Typescript and SSZ types for Eth2 datastructures</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <h4 id="using-the-typescript-types">Using the typescript types<a class="headerlink" href="#using-the-typescript-types" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code><span class="kr">import</span> <span class="p">{</span><span class="nx">BeaconState</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@chainsafe/lodestar-types&quot;</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">BeaconState</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@chainsafe/lodestar-types&quot;</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">b</span>: <span class="kt">BeaconState</span> <span class="o">=</span> <span class="p">{</span>
+<span class="kd">const</span> <span class="nx">b</span>: <span class="kt">BeaconState</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">slot</span>: <span class="kt">5</span><span class="p">,</span>
   <span class="p">...</span>
 <span class="p">};</span>
@@ -426,8 +426,8 @@
 
 <h4 id="using-the-ssz-types">Using the ssz types<a class="headerlink" href="#using-the-ssz-types" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><code><span class="c1">// mainnet and minimal types pre-generated under non-default export</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">types</span> <span class="kr">as</span> <span class="nx">mainnetTypes</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@chainsafe/lodestar-types/lib/ssz/presets/mainnet&quot;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">types</span> <span class="kr">as</span> <span class="nx">minimalTypes</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@chainsafe/lodestar-types/lib/ssz/presets/mainnet&quot;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">types</span> <span class="kr">as</span> <span class="nx">mainnetTypes</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@chainsafe/lodestar-types/lib/ssz/presets/mainnet&quot;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">types</span> <span class="kr">as</span> <span class="nx">minimalTypes</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@chainsafe/lodestar-types/lib/ssz/presets/mainnet&quot;</span><span class="p">;</span>
 
 <span class="nx">mainnetTypes</span><span class="p">.</span><span class="nx">BeaconState</span><span class="p">.</span><span class="nx">defaultValue</span><span class="p">();</span>
 <span class="nx">minimalTypes</span><span class="p">.</span><span class="nx">BeaconState</span><span class="p">.</span><span class="nx">defaultValue</span><span class="p">();</span>
@@ -435,13 +435,13 @@
 <span class="p">...</span>
 
 <span class="c1">// create your own IBeaconSSZTypes object from an IBeaconParams</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">createIBeaconSSZTypes</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@chainsafe/lodestar-types&quot;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="p">{</span><span class="nx">IBeaconParams</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@chainsafe/lodestar-params&quot;</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">testnetParams</span>: <span class="kt">IBeaconParams</span> <span class="o">=</span> <span class="p">{</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">createIBeaconSSZTypes</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@chainsafe/lodestar-types&quot;</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">IBeaconParams</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@chainsafe/lodestar-params&quot;</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">testnetParams</span>: <span class="kt">IBeaconParams</span> <span class="o">=</span> <span class="p">{</span>
   <span class="p">...</span>
 <span class="p">};</span>
 
-<span class="kr">const</span> <span class="nx">testnetTypes</span> <span class="o">=</span> <span class="nx">createIBeaconSSZTypes</span><span class="p">(</span><span class="nx">testnetParams</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">testnetTypes</span> <span class="o">=</span> <span class="nx">createIBeaconSSZTypes</span><span class="p">(</span><span class="nx">testnetParams</span><span class="p">);</span>
 
 <span class="nx">testnetTypes</span><span class="p">.</span><span class="nx">BeaconState</span><span class="p">.</span><span class="nx">defaultValue</span><span class="p">();</span>
 </code></pre></div>
@@ -519,8 +519,8 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
