@@ -417,7 +417,7 @@
 </a>
 <h1 id="beacon-node-module-architecture">Beacon Node Module Architecture<a class="headerlink" href="#beacon-node-module-architecture" title="Permanent link">¶</a></h1>
 <h2 id="lodestar-beacon-node-modules">Lodestar Beacon Node Modules<a class="headerlink" href="#lodestar-beacon-node-modules" title="Permanent link">¶</a></h2>
-<p>When <code>lodestar beacon --testnet TESTNET_NAME</code> (as described in <a href="../reference/cli">CLI Reference</a>) is ran, <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-cli">@chainsafe/lodestar-cli</a> does the following:</p>
+<p>When <code>lodestar beacon --network NETWORK_NAME</code> (as described in <a href="../reference/cli">CLI Reference</a>) is ran, <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-cli">@chainsafe/lodestar-cli</a> does the following:</p>
 <ul>
 <li>gathers data required to run the beacon node based on local configurations and CLI options</li>
 <li>bootstraps the <a href="https://github.com/ChainSafe/lodestar/blob/54e13c9908054b99f68e420ee7c0273fba9db3f9/packages/lodestar/src/node/nodejs.ts#L66"><code>BeaconNode</code></a> (in the <code>node</code> module) in <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar">@chainsafe/lodestar</a></li>

@@ -342,7 +342,7 @@
 <!-- prettier-ignore-start -->
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you want to create a wallet for a testnet, you need to add <code>--testnet $TESTNET_NAME</code> to the following command</p>
+<p>If you want to create a wallet for a testnet, you need to add <code>--network $TESTNET_NAME</code> to the following command</p>
 </div>
 <!-- prettier-ignore-end -->
 <h3 id="create-a-wallet">Create a wallet<a class="headerlink" href="#create-a-wallet" title="Permanent link">¶</a></h3>
@@ -366,7 +366,7 @@
 <!-- prettier-ignore-start -->
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you want to create a validator for a testnet, you need to add <code>--testnet $TESTNET_NAME</code> to all of the following commands and will use the <code>.$TESTNET_NAME</code> directory instead of <code>.lodestar</code></p>
+<p>If you want to create a validator for a testnet, you need to add <code>--network $TESTNET_NAME</code> to all of the following commands and will use the <code>.$TESTNET_NAME</code> directory instead of <code>.lodestar</code></p>
 </div>
 <!-- prettier-ignore-end -->
 <h3 id="create-validator-keypair">Create validator keypair<a class="headerlink" href="#create-validator-keypair" title="Permanent link">¶</a></h3>
@@ -392,11 +392,11 @@
 <!-- prettier-ignore-end -->
 <h3 id="import-a-validator-keystore-from-deposit-launch-pad">Import a validator keystore from Deposit Launch Pad<a class="headerlink" href="#import-a-validator-keystore-from-deposit-launch-pad" title="Permanent link">¶</a></h3>
 <p>To import a keystore that was created via the ETH2.0 Deposit Launch Pad:</p>
-<div class="highlight"><pre><span></span><code>./lodestar account validator import --testnet <span class="nv">$TESTNET_NAME</span> --directory &lt;path to your launchpad keys&gt;
+<div class="highlight"><pre><span></span><code>./lodestar account validator import --network <span class="nv">$TESTNET_NAME</span> --directory &lt;path to your launchpad keys&gt;
 </code></pre></div>
 <p>You will be prompted to enter a password. Use the same one you used to create the keys initially.</p>
 <p>To confirm your keys have been imported run:</p>
-<div class="highlight"><pre><span></span><code>./lodestar account validator list --testnet <span class="nv">$TESTNET_NAME</span>
+<div class="highlight"><pre><span></span><code>./lodestar account validator list --network <span class="nv">$TESTNET_NAME</span>
 </code></pre></div>
 <p>This command will print the public address of every active keystore.</p>
 <h3 id="submit-a-validator-deposit">Submit a validator deposit<a class="headerlink" href="#submit-a-validator-deposit" title="Permanent link">¶</a></h3>
