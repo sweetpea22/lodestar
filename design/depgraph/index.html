@@ -9,7 +9,7 @@
 <link href="https://chainsafe.github.io/lodestar/design/depgraph/" rel="canonical"/>
 <link href="../../images/favicon.ico" rel="shortcut icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-6.2.5" name="generator"/>
-<title>Lodestar packages dependency graph - Lodestar documentation</title>
+<title>Lodestar package structure - Lodestar documentation</title>
 <link href="../../assets/stylesheets/main.15aa0b43.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.75751829.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -47,7 +47,7 @@
 <div class="md-header-nav__topic">
 <span class="md-ellipsis">
             
-              Lodestar packages dependency graph
+              Lodestar package structure
             
           </span>
 </div>
@@ -152,11 +152,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Lodestar packages dependency graph
+          Lodestar package structure
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Lodestar packages dependency graph
+        Lodestar package structure
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -170,8 +170,53 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#chainsafelodestar-dep-graph">
-    @chainsafe/lodestar-* dep graph
+<a class="md-nav__link" href="#chainsafelodestar-params">
+    @chainsafe/lodestar-params
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-types">
+    @chainsafe/lodestar-types
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-config">
+    @chainsafe/lodestar-config
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-utils">
+    @chainsafe/lodestar-utils
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-beacon-state-transition">
+    @chainsafe/lodestar-beacon-state-transition
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-db">
+    @chainsafe/lodestar-db
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-fork-choice">
+    @chainsafe/lodestar-fork-choice
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-validator">
+    @chainsafe/lodestar-validator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar">
+    @chainsafe/lodestar
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-cli">
+    @chainsafe/lodestar-cli
   </a>
 </li>
 </ul>
@@ -265,8 +310,53 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#chainsafelodestar-dep-graph">
-    @chainsafe/lodestar-* dep graph
+<a class="md-nav__link" href="#chainsafelodestar-params">
+    @chainsafe/lodestar-params
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-types">
+    @chainsafe/lodestar-types
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-config">
+    @chainsafe/lodestar-config
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-utils">
+    @chainsafe/lodestar-utils
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-beacon-state-transition">
+    @chainsafe/lodestar-beacon-state-transition
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-db">
+    @chainsafe/lodestar-db
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-fork-choice">
+    @chainsafe/lodestar-fork-choice
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-validator">
+    @chainsafe/lodestar-validator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar">
+    @chainsafe/lodestar
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainsafelodestar-cli">
+    @chainsafe/lodestar-cli
   </a>
 </li>
 </ul>
@@ -279,58 +369,59 @@
 <a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/design/depgraph.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<h1>Lodestar packages dependency graph</h1>
+<h1>Lodestar package structure</h1>
 <h2 id="lodestar-monorepo-dependency-graph">Lodestar monorepo dependency graph<a class="headerlink" href="#lodestar-monorepo-dependency-graph" title="Permanent link">¶</a></h2>
-<h2 id="chainsafelodestar-dep-graph">@chainsafe/lodestar-* dep graph<a class="headerlink" href="#chainsafelodestar-dep-graph" title="Permanent link">¶</a></h2>
-<div class="mermaid">graph LR
-    lodestar["lodestar"]
-    cli["lodestar-cli"]
-    config["lodestar-config"]
-    db["lodestar-db"]
-    fork-choice["lodestar-fork-choice"]
-    params["lodestar-params"]
-    types["lodestar-types"]
-    utils["lodestar-utils"]
-    validator["lodestar-validator"]
-    state-trans["lodestar-beacon-state-transition"]
-
-    state-trans--&gt;lodestar
-    config--&gt;lodestar
-    db--&gt;lodestar
-    params--&gt;lodestar
-    types--&gt;lodestar
-    utils--&gt;lodestar
-    validator--&gt;lodestar
-    fork-choice--&gt;lodestar
-
-    config--&gt;db
-    utils--&gt;db
-
-    lodestar--&gt;cli
-    config--&gt;cli
-    types--&gt;cli
-    utils--&gt;cli
-    validator--&gt;cli
-
-    params--&gt;types
+<p>This is a diagram of the various <code>lodestar-*</code> packages in the Lodestar monorepo and how they fit together:</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>note: this dependency graph only applies to dependencies as they are used in the <code>src/</code> folders of each package, not in <code>test/</code></p>
+</div>
+<div class="mermaid">graph TD
+    lodestar["lodestar"]:::nodemodule
+    cli["lodestar-cli"]:::nodemodule
+    config["lodestar-config"]:::nodemodule
+    db["lodestar-db"]:::nodemodule
+    fork-choice["lodestar-fork-choice"]:::nodemodule
+    params["lodestar-params"]:::nodemodule
+    types["lodestar-types"]:::nodemodule
+    utils["lodestar-utils"]:::nodemodule
+    validator["lodestar-validator"]:::nodemodule
+    state-trans["lodestar-beacon-state-transition"]:::nodemodule
 
     params--&gt;config
-    types--&gt;config
+    params--&gt;types
 
-    state-trans--&gt;validator
-    config--&gt;validator
+    types--&gt;lodestar
+    types--&gt;cli
+    types--&gt;config
     types--&gt;validator
+    types--&gt;fork-choice
+
+    config--&gt;lodestar
+    config--&gt;cli
+    config--&gt;validator
+    config--&gt;fork-choice
+    config--&gt;state-trans
+    config--&gt;db
+
+    utils--&gt;lodestar
+    utils--&gt;db
+    utils--&gt;cli
     utils--&gt;validator
+    utils--&gt;fork-choice
+    utils--&gt;state-trans
+
+    state-trans--&gt;lodestar
+    state-trans--&gt;validator
+    state-trans--&gt;fork-choice
+
+    db--&gt;lodestar
     db--&gt;validator
 
-    state-trans--&gt;fork-choice
-    config--&gt;fork-choice
-    params--&gt;fork-choice
-    types--&gt;fork-choice
-    utils--&gt;fork-choice
+    fork-choice--&gt;lodestar
 
-    config--&gt;state-trans
-    utils--&gt;state-trans
+    lodestar--&gt;cli
+    validator--&gt;cli
 
     click cli "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-cli"
     click lodestar "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar"
@@ -342,7 +433,33 @@
     click types "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-types"
     click utils "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-utils"
     click config "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-config"
+
+    classDef nodemodule fill:grey,stroke-width:2px,stroke:black,color:white;
+    linkStyle default stroke:grey, fill:none,stroke-width:1.5px;
 </div>
+<p>For a list of all the packages in the monorepo and a description for each, click <a href="https://github.com/ChainSafe/lodestar#packages">here</a>.</p>
+<p>Let's talk about how each package fits together in finer detail, from top to bottom, following the chart.</p>
+<h2 id="chainsafelodestar-params">@chainsafe/lodestar-params<a class="headerlink" href="#chainsafelodestar-params" title="Permanent link">¶</a></h2>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-params">@chainsafe/lodestar-params</a> contains the parameters for configuring an eth2 network.  For example, the <a href="https://github.com/ethereum/eth2.0-specs/blob/dev/configs/mainnet/phase0.yaml">mainnet params</a></p>
+<h2 id="chainsafelodestar-types">@chainsafe/lodestar-types<a class="headerlink" href="#chainsafelodestar-types" title="Permanent link">¶</a></h2>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-types">@chainsafe/lodestar-types</a> contains eth2 ssz types and datastructrues.</p>
+<h2 id="chainsafelodestar-config">@chainsafe/lodestar-config<a class="headerlink" href="#chainsafelodestar-config" title="Permanent link">¶</a></h2>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-config">@chainsafe/lodestar-config</a> combines <a href="#chainsafelodestar-params"><code>lodestar-params</code></a> and <a href="#chainsafelodestar-types"><code>lodestar-types</code></a> together to be used as a single config object across the other Lodestar packages.</p>
+<h2 id="chainsafelodestar-utils">@chainsafe/lodestar-utils<a class="headerlink" href="#chainsafelodestar-utils" title="Permanent link">¶</a></h2>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-utils">@chainsafe/lodestar-utils</a> contains various utilities that are common among the various Lodestar monorepo packages.</p>
+<h2 id="chainsafelodestar-beacon-state-transition">@chainsafe/lodestar-beacon-state-transition<a class="headerlink" href="#chainsafelodestar-beacon-state-transition" title="Permanent link">¶</a></h2>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-beacon-state-transition">@chainsafe/lodestar-beacon-state-transition</a> contains the Lodestar implementation of the <a href="https://github.com/ethereum/eth2.0-specs/blob/v0.10.0/specs/phase0/beacon-chain.md#beacon-chain-state-transition-function">beacon state transition function</a>, which is used by <a href="#chainsafelodestar"><code>@chainsafe/lodestar</code></a> to perform the actual beacon state transition.  This package also contains various functions used to calculate info about the beacon chain (such as <code>computeEpochAtSlot</code>) which are used by <a href="#chainsafelodestar-fork-choice">@chainsafe/lodestar-fork-choice</a> and <a href="#chainsafelodestar-validator">@chainsafe/lodestar-validator</a></p>
+<h2 id="chainsafelodestar-db">@chainsafe/lodestar-db<a class="headerlink" href="#chainsafelodestar-db" title="Permanent link">¶</a></h2>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-db">@chainsafe/lodestar-db</a> is where all persistent data about the beacon node is stored.  Any package that needs to read or write persistent beacon node data depends on <code>lodestar-db</code>.</p>
+<h2 id="chainsafelodestar-fork-choice">@chainsafe/lodestar-fork-choice<a class="headerlink" href="#chainsafelodestar-fork-choice" title="Permanent link">¶</a></h2>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-fork-choice">@chainsafe/lodestar-fork-choice</a> holds the methods for reading/writing the fork choice DAG.  The <a href="#chainsafelodestar"><code>@chainsafe/lodestar</code></a> package is the sole consumer of this package because the beacon node itself is what controls when the fork choice DAG is updated.
+For a good explainer on how the fork choice itself works, see the <a href="https://github.com/ethereum/annotated-spec/blob/master/phase0/fork-choice.md">annotated fork choice spec</a>.  This is an annotated version of the <a href="https://github.com/ethereum/eth2.0-specs/blob/v0.12.1/specs/phase0/fork-choice.md">Eth2 fork choice spec</a> which <code>lodestar-fork-choice</code> is based on.</p>
+<h2 id="chainsafelodestar-validator">@chainsafe/lodestar-validator<a class="headerlink" href="#chainsafelodestar-validator" title="Permanent link">¶</a></h2>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-validator">@chainsafe/lodestar-validator</a> contains the validator client.  The sole consumer of this package is <a href="#chainsafelodestar-cli">@chainsafe/lodestar-cli</a>, which provides CLI access to run and configure the validator client.  However, the validator client communicates to a REST API that is contained in <a href="#chainsafelodestar">@chainsafe/lodestar</a> (specifically in the <a href="../architecture/#api"><code>api</code> module</a>) to perform the validator duties.</p>
+<h2 id="chainsafelodestar">@chainsafe/lodestar<a class="headerlink" href="#chainsafelodestar" title="Permanent link">¶</a></h2>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar">@chainsafe/lodestar</a> contains the actual beacon node process itself, which is the aggregate of all the above packages and the "brain" of the Lodestar beacon chain implementation.  All of the <a href="../architecture">node modules</a> live in this package as well.</p>
+<h2 id="chainsafelodestar-cli">@chainsafe/lodestar-cli<a class="headerlink" href="#chainsafelodestar-cli" title="Permanent link">¶</a></h2>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-cli">@chainsafe/lodestar-cli</a> combines everything together for CLI usage and configuration of the beacon node and validator.</p>
 </article>
 </div>
 </div>
