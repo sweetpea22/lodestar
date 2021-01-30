@@ -262,13 +262,8 @@
 <nav aria-label="Functions" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#getaggregationbits">
-    getAggregationBits
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#getaggregatormodulo">
-    getAggregatorModulo
+<a class="md-nav__link" href="#mapsecretkeystovalidators">
+    mapSecretKeysToValidators
   </a>
 </li>
 </ul>
@@ -294,13 +289,12 @@
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#getaggregationbits">getAggregationBits</a></li>
-<li><a href="./#getaggregatormodulo">getAggregatorModulo</a></li>
+<li><a href="./#mapsecretkeystovalidators">mapSecretKeysToValidators</a></li>
 </ul>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
-<h3 id="getaggregationbits">getAggregationBits<a class="headerlink" href="#getaggregationbits" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getAggregationBits</strong>(<code>committeeLength</code>: number, <code>validatorIndexInCommittee</code>: number): <em>boolean[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/81cc35c/packages/lodestar-validator/src/services/utils.ts#L12">packages/lodestar-validator/src/services/utils.ts:12</a></em></p>
+<h3 id="mapsecretkeystovalidators">mapSecretKeysToValidators<a class="headerlink" href="#mapsecretkeystovalidators" title="Permanent link">¶</a></h3>
+<p>▸ <strong>mapSecretKeysToValidators</strong>(<code>secretKeys</code>: SecretKey[]): <em><a href="../../interfaces/reflection-10940.reflection-10941._.reflection-10943._lodestar_src_chain.ieventmap/#map">Map</a>‹<a href="../reflection-10940.reflection-10941/#publickeyhex">PublicKeyHex</a>, <a href="../reflection-10940.reflection-10941/#validatorandsecret">ValidatorAndSecret</a>›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c209a22/packages/lodestar-validator/src/services/utils.ts#L4">packages/lodestar-validator/src/services/utils.ts:4</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -311,41 +305,12 @@
 </thead>
 <tbody>
 <tr>
-<td><code>committeeLength</code></td>
-<td>number</td>
-</tr>
-<tr>
-<td><code>validatorIndexInCommittee</code></td>
-<td>number</td>
+<td><code>secretKeys</code></td>
+<td>SecretKey[]</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>boolean[]</em></p>
-<hr/>
-<h3 id="getaggregatormodulo">getAggregatorModulo<a class="headerlink" href="#getaggregatormodulo" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getAggregatorModulo</strong>(<code>config</code>: IBeaconConfig, <code>duty</code>: AttesterDuty): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/81cc35c/packages/lodestar-validator/src/services/utils.ts#L8">packages/lodestar-validator/src/services/utils.ts:8</a></em></p>
-<p>Return the modulo needed to calculate whether the validator is an aggregator.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>config</code></td>
-<td>IBeaconConfig</td>
-</tr>
-<tr>
-<td><code>duty</code></td>
-<td>AttesterDuty</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>number</em></p>
+<p><strong>Returns:</strong> <em><a href="../../interfaces/reflection-10940.reflection-10941._.reflection-10943._lodestar_src_chain.ieventmap/#map">Map</a>‹<a href="../reflection-10940.reflection-10941/#publickeyhex">PublicKeyHex</a>, <a href="../reflection-10940.reflection-10941/#validatorandsecret">ValidatorAndSecret</a>›</em></p>
 </article>
 </div>
 </div>
