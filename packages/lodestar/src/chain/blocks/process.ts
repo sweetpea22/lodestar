@@ -14,6 +14,9 @@ import {BlockError, BlockErrorCode, ChainSegmentError} from "../errors";
 import {IBeaconDb} from "../../db";
 import {verifySignatureSetsBatch} from "../bls";
 import {groupBlocksByEpoch} from "./util";
+import {Gwei} from "@chainsafe/lodestar-types";
+import {isActiveIFlatValidator} from "@chainsafe/lodestar-beacon-state-transition/lib/fast/util";
+import {sleep} from "@chainsafe/lodestar-utils";
 
 export async function processBlock({
   forkChoice,
@@ -145,7 +148,7 @@ export async function processChainSegment({
       }
 
       for (const block of blocksInEpoch) {
-        preStateContext = await runStateTransition(emitter, forkChoice, db, preStateContext, {
+        preStateContext = runStateTransition(emitter, forkChoice, db, preStateContext, {
           reprocess: job.reprocess,
           prefinalized: job.prefinalized,
           signedBlock: block,
@@ -153,6 +156,20 @@ export async function processChainSegment({
           validSignatures: true,
         });
         importedBlocks++;
+        // current justified checkpoint should be prev epoch or current epoch if it's just updated
+        // it should always have epochBalances there bc it's a checkpoint state, ie got through processEpoch
+        const justifiedBalances: Gwei[] = [];
+        if (preStateContext.state.currentJustifiedCheckpoint.epoch > forkChoice.getJustifiedCheckpoint().epoch) {
+          const justifiedStateContext = await db.checkpointStateCache.get(
+            preStateContext.state.currentJustifiedCheckpoint
+          );
+          const justifiedEpoch = justifiedStateContext?.epochCtx.currentShuffling.epoch;
+          justifiedStateContext?.state.flatValidators().readOnlyForEach((v) => {
+            justifiedBalances.push(isActiveIFlatValidator(v, justifiedEpoch!) ? v.effectiveBalance : BigInt(0));
+          });
+        }
+        forkChoice.onBlock(block.message, preStateContext.state.getOriginalState(), justifiedBalances);
+        await sleep(0);
       }
     } catch (e) {
       if (e instanceof RegenError) {

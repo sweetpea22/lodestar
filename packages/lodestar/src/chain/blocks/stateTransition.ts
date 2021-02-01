@@ -1,5 +1,5 @@
 import {byteArrayEquals} from "@chainsafe/ssz";
-import {Gwei, Slot} from "@chainsafe/lodestar-types";
+import {Slot} from "@chainsafe/lodestar-types";
 import {assert} from "@chainsafe/lodestar-utils";
 import {
   ZERO_HASH,
@@ -16,7 +16,6 @@ import {ChainEvent, ChainEventEmitter} from "../emitter";
 import {IBlockJob} from "../interface";
 import {sleep} from "@chainsafe/lodestar-utils";
 import {IBeaconDb} from "../../db";
-import {isActiveIFlatValidator} from "@chainsafe/lodestar-beacon-state-transition/lib/fast/util";
 
 /**
  * Emits a properly formed "checkpoint" event, given a checkpoint state context
@@ -122,13 +121,13 @@ export function emitBlockEvent(emitter: ChainEventEmitter, job: IBlockJob, postC
   emitter.emit(ChainEvent.block, job.signedBlock, postCtx, job);
 }
 
-export async function runStateTransition(
+export function runStateTransition(
   emitter: ChainEventEmitter,
   forkChoice: IForkChoice,
   db: IBeaconDb,
   stateContext: ITreeStateContext,
   job: IBlockJob
-): Promise<ITreeStateContext> {
+): ITreeStateContext {
   const config = stateContext.epochCtx.config;
   const {SLOTS_PER_EPOCH} = config.params;
   const postSlot = job.signedBlock.message.slot;
@@ -142,18 +141,6 @@ export async function runStateTransition(
 
   const oldHead = forkChoice.getHead();
 
-  // current justified checkpoint should be prev epoch or current epoch if it's just updated
-  // it should always have epochBalances there bc it's a checkpoint state, ie got through processEpoch
-  const justifiedBalances: Gwei[] = [];
-  if (postStateContext.state.currentJustifiedCheckpoint.epoch > forkChoice.getJustifiedCheckpoint().epoch) {
-    const justifiedStateContext = await db.checkpointStateCache.get(postStateContext.state.currentJustifiedCheckpoint);
-    const justifiedEpoch = justifiedStateContext?.epochCtx.currentShuffling.epoch;
-    justifiedStateContext?.state.flatValidators().readOnlyForEach((v) => {
-      justifiedBalances.push(isActiveIFlatValidator(v, justifiedEpoch!) ? v.effectiveBalance : BigInt(0));
-    });
-  }
-  forkChoice.onBlock(job.signedBlock.message, postStateContext.state.getOriginalState(), justifiedBalances);
-
   if (postSlot % SLOTS_PER_EPOCH === 0) {
     emitCheckpointEvent(emitter, postStateContext);
   }
@@ -161,7 +148,5 @@ export async function runStateTransition(
   emitBlockEvent(emitter, job, postStateContext);
   emitForkChoiceHeadEvents(emitter, forkChoice, forkChoice.getHead(), oldHead);
 
-  // this avoids keeping our node busy processing blocks
-  await sleep(0);
   return postStateContext;
 }
