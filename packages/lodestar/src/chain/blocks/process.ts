@@ -8,7 +8,7 @@ import {
 
 import {ChainEventEmitter} from "../emitter";
 import {IBlockJob, IChainSegmentJob} from "../interface";
-import {runStateTransition} from "./stateTransition";
+import {emitBlockEvent, emitCheckpointEvent, emitForkChoiceHeadEvents, runStateTransition} from "./stateTransition";
 import {IStateRegenerator, RegenError} from "../regen";
 import {BlockError, BlockErrorCode, ChainSegmentError} from "../errors";
 import {IBeaconDb} from "../../db";
@@ -148,14 +148,18 @@ export async function processChainSegment({
       }
 
       for (const block of blocksInEpoch) {
-        preStateContext = runStateTransition(emitter, forkChoice, db, preStateContext, {
+        const blockJob = {
           reprocess: job.reprocess,
           prefinalized: job.prefinalized,
           signedBlock: block,
           validProposerSignature: true,
           validSignatures: true,
-        });
+        };
+        preStateContext = runStateTransition(emitter, forkChoice, db, preStateContext, blockJob);
         importedBlocks++;
+
+        const oldHead = forkChoice.getHead();
+
         // current justified checkpoint should be prev epoch or current epoch if it's just updated
         // it should always have epochBalances there bc it's a checkpoint state, ie got through processEpoch
         const justifiedBalances: Gwei[] = [];
@@ -169,6 +173,12 @@ export async function processChainSegment({
           });
         }
         forkChoice.onBlock(block.message, preStateContext.state.getOriginalState(), justifiedBalances);
+        if (block.message.slot % config.params.SLOTS_PER_EPOCH === 0) {
+          emitCheckpointEvent(emitter, preStateContext);
+        }
+
+        emitBlockEvent(emitter, blockJob, preStateContext);
+        emitForkChoiceHeadEvents(emitter, forkChoice, forkChoice.getHead(), oldHead);
         await sleep(0);
       }
     } catch (e) {

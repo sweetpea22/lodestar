@@ -128,25 +128,12 @@ export function runStateTransition(
   stateContext: ITreeStateContext,
   job: IBlockJob
 ): ITreeStateContext {
-  const config = stateContext.epochCtx.config;
-  const {SLOTS_PER_EPOCH} = config.params;
-  const postSlot = job.signedBlock.message.slot;
-
   // if block is trusted don't verify proposer or op signature
   const postStateContext = fastStateTransition(stateContext, job.signedBlock, {
     verifyStateRoot: true,
     verifyProposer: !job.validSignatures && !job.validProposerSignature,
     verifySignatures: !job.validSignatures,
   });
-
-  const oldHead = forkChoice.getHead();
-
-  if (postSlot % SLOTS_PER_EPOCH === 0) {
-    emitCheckpointEvent(emitter, postStateContext);
-  }
-
-  emitBlockEvent(emitter, job, postStateContext);
-  emitForkChoiceHeadEvents(emitter, forkChoice, forkChoice.getHead(), oldHead);
 
   return postStateContext;
 }
