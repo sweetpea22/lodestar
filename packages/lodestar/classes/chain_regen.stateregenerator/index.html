@@ -291,6 +291,11 @@
 <nav aria-label="Properties" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#private-checkpointstatecache">
+    Private checkpointStateCache
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#private-config">
     Private config
   </a>
@@ -308,6 +313,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#private-forkchoice">
     Private forkChoice
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-statecache">
+    Private stateCache
   </a>
 </li>
 </ul>
@@ -370,10 +380,12 @@
 </ul>
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#private-checkpointstatecache">checkpointStateCache</a></li>
 <li><a href="./#private-config">config</a></li>
 <li><a href="./#private-db">db</a></li>
 <li><a href="./#private-emitter">emitter</a></li>
 <li><a href="./#private-forkchoice">forkChoice</a></li>
+<li><a href="./#private-statecache">stateCache</a></li>
 </ul>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">¶</a></h3>
 <ul>
@@ -385,7 +397,7 @@
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new StateRegenerator</strong>(<code>__namedParameters</code>: object): <em><a href="./">StateRegenerator</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/19e8602/packages/lodestar/src/chain/regen/regen.ts#L20">packages/lodestar/src/chain/regen/regen.ts:20</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fdb3f2d/packages/lodestar/src/chain/regen/regen.ts#L23">packages/lodestar/src/chain/regen/regen.ts:23</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -396,6 +408,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>checkpointStateCache</code></td>
+<td><a href="../chain_statecache.checkpointstatecache/">CheckpointStateCache</a>‹›</td>
+</tr>
 <tr>
 <td><code>config</code></td>
 <td>IBeaconConfig</td>
@@ -412,29 +428,41 @@
 <td><code>forkChoice</code></td>
 <td>IForkChoice</td>
 </tr>
+<tr>
+<td><code>stateCache</code></td>
+<td><a href="../chain_statecache.statecontextcache/">StateContextCache</a>‹›</td>
+</tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em><a href="./">StateRegenerator</a></em></p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
+<h3 id="private-checkpointstatecache"><code>Private</code> checkpointStateCache<a class="headerlink" href="#private-checkpointstatecache" title="Permanent link">¶</a></h3>
+<p>• <strong>checkpointStateCache</strong>: <em><a href="../chain_statecache.checkpointstatecache/">CheckpointStateCache</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fdb3f2d/packages/lodestar/src/chain/regen/regen.ts#L22">packages/lodestar/src/chain/regen/regen.ts:22</a></em></p>
+<hr/>
 <h3 id="private-config"><code>Private</code> config<a class="headerlink" href="#private-config" title="Permanent link">¶</a></h3>
 <p>• <strong>config</strong>: <em>IBeaconConfig</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/19e8602/packages/lodestar/src/chain/regen/regen.ts#L17">packages/lodestar/src/chain/regen/regen.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fdb3f2d/packages/lodestar/src/chain/regen/regen.ts#L18">packages/lodestar/src/chain/regen/regen.ts:18</a></em></p>
 <hr/>
 <h3 id="private-db"><code>Private</code> db<a class="headerlink" href="#private-db" title="Permanent link">¶</a></h3>
 <p>• <strong>db</strong>: <em><a href="../../interfaces/db_api_beacon.ibeacondb/">IBeaconDb</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/19e8602/packages/lodestar/src/chain/regen/regen.ts#L20">packages/lodestar/src/chain/regen/regen.ts:20</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fdb3f2d/packages/lodestar/src/chain/regen/regen.ts#L23">packages/lodestar/src/chain/regen/regen.ts:23</a></em></p>
 <hr/>
 <h3 id="private-emitter"><code>Private</code> emitter<a class="headerlink" href="#private-emitter" title="Permanent link">¶</a></h3>
 <p>• <strong>emitter</strong>: <em><a href="../chain.chaineventemitter/">ChainEventEmitter</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/19e8602/packages/lodestar/src/chain/regen/regen.ts#L18">packages/lodestar/src/chain/regen/regen.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fdb3f2d/packages/lodestar/src/chain/regen/regen.ts#L19">packages/lodestar/src/chain/regen/regen.ts:19</a></em></p>
 <hr/>
 <h3 id="private-forkchoice"><code>Private</code> forkChoice<a class="headerlink" href="#private-forkchoice" title="Permanent link">¶</a></h3>
 <p>• <strong>forkChoice</strong>: <em>IForkChoice</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/19e8602/packages/lodestar/src/chain/regen/regen.ts#L19">packages/lodestar/src/chain/regen/regen.ts:19</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fdb3f2d/packages/lodestar/src/chain/regen/regen.ts#L20">packages/lodestar/src/chain/regen/regen.ts:20</a></em></p>
+<hr/>
+<h3 id="private-statecache"><code>Private</code> stateCache<a class="headerlink" href="#private-statecache" title="Permanent link">¶</a></h3>
+<p>• <strong>stateCache</strong>: <em><a href="../chain_statecache.statecontextcache/">StateContextCache</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fdb3f2d/packages/lodestar/src/chain/regen/regen.ts#L21">packages/lodestar/src/chain/regen/regen.ts:21</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="getblockslotstate">getBlockSlotState<a class="headerlink" href="#getblockslotstate" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getBlockSlotState</strong>(<code>blockRoot</code>: <a href="../../modules/reflection-10409.reflection-10410._.reflection-10412._lodestar_types_src_types/#root">Root</a>, <code>slot</code>: <a href="../../modules/reflection-10409.reflection-10410._.reflection-10412._lodestar_types_src_types/#slot">Slot</a>): <em>Promise‹<a href="../../interfaces/db_api_beacon.itreestatecontext/">ITreeStateContext</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/19e8602/packages/lodestar/src/chain/regen/regen.ts#L73">packages/lodestar/src/chain/regen/regen.ts:73</a></em></p>
+<p>▸ <strong>getBlockSlotState</strong>(<code>blockRoot</code>: <a href="../../modules/reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#root">Root</a>, <code>slot</code>: <a href="../../modules/reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#slot">Slot</a>): <em>Promise‹<a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a>›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fdb3f2d/packages/lodestar/src/chain/regen/regen.ts#L82">packages/lodestar/src/chain/regen/regen.ts:82</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -446,19 +474,19 @@
 <tbody>
 <tr>
 <td><code>blockRoot</code></td>
-<td><a href="../../modules/reflection-10409.reflection-10410._.reflection-10412._lodestar_types_src_types/#root">Root</a></td>
+<td><a href="../../modules/reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#root">Root</a></td>
 </tr>
 <tr>
 <td><code>slot</code></td>
-<td><a href="../../modules/reflection-10409.reflection-10410._.reflection-10412._lodestar_types_src_types/#slot">Slot</a></td>
+<td><a href="../../modules/reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#slot">Slot</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise‹<a href="../../interfaces/db_api_beacon.itreestatecontext/">ITreeStateContext</a>›</em></p>
+<p><strong>Returns:</strong> <em>Promise‹<a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a>›</em></p>
 <hr/>
 <h3 id="getcheckpointstate">getCheckpointState<a class="headerlink" href="#getcheckpointstate" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getCheckpointState</strong>(<code>cp</code>: Checkpoint): <em>Promise‹<a href="../../interfaces/db_api_beacon.itreestatecontext/">ITreeStateContext</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/19e8602/packages/lodestar/src/chain/regen/regen.ts#L68">packages/lodestar/src/chain/regen/regen.ts:68</a></em></p>
+<p>▸ <strong>getCheckpointState</strong>(<code>cp</code>: Checkpoint): <em>Promise‹<a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a>›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fdb3f2d/packages/lodestar/src/chain/regen/regen.ts#L77">packages/lodestar/src/chain/regen/regen.ts:77</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -474,11 +502,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise‹<a href="../../interfaces/db_api_beacon.itreestatecontext/">ITreeStateContext</a>›</em></p>
+<p><strong>Returns:</strong> <em>Promise‹<a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a>›</em></p>
 <hr/>
 <h3 id="getprestate">getPreState<a class="headerlink" href="#getprestate" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getPreState</strong>(<code>block</code>: BeaconBlock): <em>Promise‹<a href="../../interfaces/db_api_beacon.itreestatecontext/">ITreeStateContext</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/19e8602/packages/lodestar/src/chain/regen/regen.ts#L39">packages/lodestar/src/chain/regen/regen.ts:39</a></em></p>
+<p>▸ <strong>getPreState</strong>(<code>block</code>: BeaconBlock): <em>Promise‹<a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a>›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fdb3f2d/packages/lodestar/src/chain/regen/regen.ts#L48">packages/lodestar/src/chain/regen/regen.ts:48</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -494,11 +522,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise‹<a href="../../interfaces/db_api_beacon.itreestatecontext/">ITreeStateContext</a>›</em></p>
+<p><strong>Returns:</strong> <em>Promise‹<a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a>›</em></p>
 <hr/>
 <h3 id="getstate">getState<a class="headerlink" href="#getstate" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getState</strong>(<code>stateRoot</code>: <a href="../../modules/reflection-10409.reflection-10410._.reflection-10412._lodestar_types_src_types/#root">Root</a>): <em>Promise‹<a href="../../interfaces/db_api_beacon.itreestatecontext/">ITreeStateContext</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/19e8602/packages/lodestar/src/chain/regen/regen.ts#L108">packages/lodestar/src/chain/regen/regen.ts:108</a></em></p>
+<p>▸ <strong>getState</strong>(<code>stateRoot</code>: <a href="../../modules/reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#root">Root</a>): <em>Promise‹<a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a>›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fdb3f2d/packages/lodestar/src/chain/regen/regen.ts#L117">packages/lodestar/src/chain/regen/regen.ts:117</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -510,11 +538,11 @@
 <tbody>
 <tr>
 <td><code>stateRoot</code></td>
-<td><a href="../../modules/reflection-10409.reflection-10410._.reflection-10412._lodestar_types_src_types/#root">Root</a></td>
+<td><a href="../../modules/reflection-10424.reflection-10425._.reflection-10427._lodestar_types_src_types/#root">Root</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise‹<a href="../../interfaces/db_api_beacon.itreestatecontext/">ITreeStateContext</a>›</em></p>
+<p><strong>Returns:</strong> <em>Promise‹<a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a>›</em></p>
 </article>
 </div>
 </div>
