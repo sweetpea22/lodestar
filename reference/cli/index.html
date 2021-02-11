@@ -285,6 +285,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#account-validator-voluntary-exit">
+    account  validator  voluntary-exit
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -415,6 +420,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#account-validator-voluntary-exit">
+    account  validator  voluntary-exit
+  </a>
 </li>
 </ul>
 </nav>
@@ -978,6 +988,85 @@
 <td><code>--file</code></td>
 <td>string</td>
 <td>The slashing protection interchange file to export to (.json).</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="account-validator-voluntary-exit"><code>account  validator  voluntary-exit</code><a class="headerlink" href="#account-validator-voluntary-exit" title="Permanent link">¶</a></h4>
+<p>Performs a voluntary exit for a given validator (as identified via <code>publicKey</code>.  If no <code>publicKey</code> is provided, a prompt will ask the user which validator they would like to choose for the voluntary exit.</p>
+<p><strong>Examples</strong></p>
+<p>Perform a voluntary exit for the validator who has a public key 0xF00</p>
+<div class="highlight"><pre><span></span><code>account validator voluntary-exit --publicKey 0xF00
+</code></pre></div>
+<p><strong>Options</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--keystoresDir</code></td>
+<td>string</td>
+<td>Directory for storing validator keystores.</td>
+<td>$rootDir/keystores</td>
+</tr>
+<tr>
+<td><code>--secretsDir</code></td>
+<td>string</td>
+<td>Directory for storing validator keystore secrets.</td>
+<td>$rootDir/secrets</td>
+</tr>
+<tr>
+<td><code>--logFile</code></td>
+<td>string</td>
+<td>Path to output all logs to a persistent log file</td>
+<td></td>
+</tr>
+<tr>
+<td><code>--validatorsDbDir</code></td>
+<td>string</td>
+<td>Data directory for validator databases.</td>
+<td>$rootDir/validator-db</td>
+</tr>
+<tr>
+<td><code>--server</code></td>
+<td>string</td>
+<td>Address to connect to BeaconNode</td>
+<td>http://127.0.0.1:9596</td>
+</tr>
+<tr>
+<td><code>--force</code></td>
+<td>boolean</td>
+<td>Open validators even if there's a lockfile. Use with caution</td>
+<td></td>
+</tr>
+<tr>
+<td><code>--graffiti</code></td>
+<td>string</td>
+<td>Specify your custom graffiti to be included in blocks (plain UTF8 text, 32 characters max)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>--logLevel</code></td>
+<td>string</td>
+<td>Set the log level for the winston logger.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>--publicKey</code></td>
+<td>string</td>
+<td>The public key of the validator to voluntarily exit</td>
+<td></td>
+</tr>
+<tr>
+<td><code>--exitEpoch</code></td>
+<td>number</td>
+<td>The epoch upon which to submit the voluntary exit.  If no value is provided, then we default to the currentEpoch.</td>
 <td></td>
 </tr>
 </tbody>
