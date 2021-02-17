@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#event-iterator">
+<a class="md-skip" href="#chainsafelodestar-beacon-state-transition">
           Skip to content
         </a>
 </div>
@@ -240,294 +240,40 @@
 <a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/lodestar-beacon-state-transition/README.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="./">event-iterator</a> › <a href="globals/">Globals</a></p>
-<h1 id="event-iterator">event-iterator<a class="headerlink" href="#event-iterator" title="Permanent link">¶</a></h1>
-<h1 id="eventiterator-convert-any-js-event-emitter-to-async-iterators">EventIterator: convert any JS event emitter to async iterators<a class="headerlink" href="#eventiterator-convert-any-js-event-emitter-to-async-iterators" title="Permanent link">¶</a></h1>
-<h2 id="highlights">Highlights<a class="headerlink" href="#highlights" title="Permanent link">¶</a></h2>
-<p><code>EventIterator</code> is a small module that greatly simplifies converting event
-emitters, event targets, and similar objects into EcmaScript async iterators. It
-works in browser and Node.js environments.</p>
-<p>As a bonus you get utility functions:</p>
-<ul>
-<li><code>subscribe</code> to subscribe to events on a DOM event target with an async iterator</li>
-<li><code>stream</code> to consume data from a Node.js readable stream as an async iterator</li>
-</ul>
-<h2 id="basic-examples">Basic examples<a class="headerlink" href="#basic-examples" title="Permanent link">¶</a></h2>
-<p>For client-side browser events:</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="s2">"core-js/es7/symbol"</span> <span class="cm">/* If necessary */</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">subscribe</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
-<span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"a.example"</span><span class="p">)</span>
+<p><a href="./">@chainsafe/lodestar-beacon-state-transition</a> › <a href="globals/">Globals</a></p>
+<h1 id="chainsafelodestar-beacon-state-transition">@chainsafe/lodestar-beacon-state-transition<a class="headerlink" href="#chainsafelodestar-beacon-state-transition" title="Permanent link">¶</a></h1>
+<h1 id="lodestar-beacon-state-transition">lodestar-beacon-state-transition<a class="headerlink" href="#lodestar-beacon-state-transition" title="Permanent link">¶</a></h1>
+<p><a href="https://www.npmjs.com/package/@chainsafe/lodestar-beacon-state-transition"><img alt="npm" src="https://img.shields.io/npm/v/@chainsafe/lodestar-beacon-state-transition"/></a>
+<a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+<img alt="ETH2.0_Spec_Version 0.12.1" src="https://img.shields.io/badge/ETH2.0_Spec_Version-0.12.1-2e86c1.svg"/>
+<img alt="ES Version" src="https://img.shields.io/badge/ES-2020-yellow"/>
+<img alt="Node Version" src="https://img.shields.io/badge/node-12.x-green"/></p>
+<blockquote>
+<p>This package is part of <a href="https://lodestar.chainsafe.io">ChainSafe's Lodestar</a> project</p>
+</blockquote>
+<p>The beacon state transition and state transition utilities</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">stateTransition</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"@chainsafe/lodestar-beacon-state-transition"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">BeaconBlock</span><span class="p">,</span> <span class="nx">BeaconState</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"@chainsafe/lodestar-types"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">mainnetConfig</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"@chainsafe/lodestar-config/mainnet"</span><span class="p">;</span>
 
-<span class="k">for</span> <span class="k">await</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">click</span> <span class="k">of</span> <span class="nx">subscribe</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="s2">"click"</span><span class="p">))</span> <span class="p">{</span>
-  <span class="cm">/* Asynchronously iterate over click events on the element. */</span>
+<span class="kd">const</span> <span class="nx">state</span>: <span class="kt">BeaconState</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">block</span>: <span class="kt">BeaconBlock</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...</span>
+<span class="p">};</span>
+
+<span class="kd">let</span> <span class="nx">postStateContext</span>: <span class="kt">BeaconState</span><span class="p">;</span>
+<span class="k">try</span> <span class="p">{</span>
+  <span class="nx">postStateContext</span> <span class="o">=</span> <span class="nx">stateTransition</span><span class="p">(</span><span class="nx">mainnetConfig</span><span class="p">,</span> <span class="nx">state</span><span class="p">,</span> <span class="nx">block</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>For server-side Node.js events:</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="s2">"core-js/es7/symbol"</span> <span class="cm">/* If necessary */</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">stream</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
-<span class="kd">const</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"fs"</span><span class="p">).</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">"example-file"</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="k">await</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">chunk</span> <span class="k">of</span> <span class="nx">stream</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">file</span><span class="p">))</span> <span class="p">{</span>
-  <span class="cm">/* Asynchronously iterate over buffer chunks read from file. */</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="advanced-examples">Advanced examples<a class="headerlink" href="#advanced-examples" title="Permanent link">¶</a></h2>
-<p>Let's look at how <code>subscribe()</code> and <code>stream()</code> are implemented.</p>
-<p>For client-side browser events:</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="s2">"core-js/es7/symbol"</span> <span class="cm">/* If necessary */</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
-
-<span class="k">export</span> <span class="kd">function</span> <span class="nx">subscribe</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-  <span class="cm">/* "this" refers to a DOM event target. */</span>
-  <span class="k">return</span> <span class="k">new</span> <span class="nx">EventIterator</span><span class="p">(</span>
-    <span class="p">({</span><span class="nx">push</span><span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">push</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
-      <span class="k">return</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">push</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
-    <span class="p">}</span>
-  <span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>For server-side Node.js events:</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="s2">"core-js/es7/symbol"</span> <span class="cm">/* If necessary */</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
-
-<span class="k">export</span> <span class="kd">function</span> <span class="nx">stream</span><span class="p">()</span> <span class="p">{</span>
-  <span class="cm">/* "this" refers to a Node.js readable stream. */</span>
-  <span class="k">return</span> <span class="k">new</span> <span class="nx">EventIterator</span><span class="p">(</span>
-    <span class="nx">queue</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span> <span class="nx">queue</span><span class="p">.</span><span class="nx">push</span><span class="p">)</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s2">"close"</span><span class="p">,</span> <span class="nx">queue</span><span class="p">.</span><span class="nx">stop</span><span class="p">)</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s2">"error"</span><span class="p">,</span> <span class="nx">queue</span><span class="p">.</span><span class="nx">fail</span><span class="p">)</span>
-
-      <span class="nx">queue</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"highWater"</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">pause</span><span class="p">())</span>
-      <span class="nx">queue</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"lowWater"</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">resume</span><span class="p">())</span>
-
-      <span class="k">return</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span> <span class="nx">queue</span><span class="p">.</span><span class="nx">push</span><span class="p">)</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">(</span><span class="s2">"close"</span><span class="p">,</span> <span class="nx">queue</span><span class="p">.</span><span class="nx">stop</span><span class="p">)</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">(</span><span class="s2">"error"</span><span class="p">,</span> <span class="nx">queue</span><span class="p">.</span><span class="nx">fail</span><span class="p">)</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">destroy</span><span class="p">()</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="backpressure">Backpressure<a class="headerlink" href="#backpressure" title="Permanent link">¶</a></h3>
-<p>If you cannot reasonably consume all emitted events with your async iterator;
-the internal <code>EventIterator</code> queue can fill up indefinitely.</p>
-<p>A warning will be emitted when the queue reaches the high water mark (100 items
-by default).</p>
-<p>However, if you are able to control the event stream then you can listen to the
-<code>highWater</code>, and <code>lowWater</code> events to exert backpressure.</p>
-<p>When these events are emitted can be changed or disabled by setting
-<code>highWaterMark</code> and <code>lowWaterMark</code> in the options of the <code>EventIterator</code>
-constructor.</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
-
-<span class="kd">const</span> <span class="nx">eventIterator</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventIterator</span><span class="p">(</span>
-  <span class="p">({</span><span class="nx">push</span><span class="p">,</span> <span class="nx">on</span><span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kd">const</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"fs"</span><span class="p">).</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">"example-file"</span><span class="p">)</span>
-    <span class="nx">file</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span> <span class="nx">push</span><span class="p">)</span>
-    <span class="nx">on</span><span class="p">(</span><span class="s2">"highWater"</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">file</span><span class="p">.</span><span class="nx">pause</span><span class="p">())</span>
-    <span class="nx">on</span><span class="p">(</span><span class="s2">"lowWater"</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">file</span><span class="p">.</span><span class="nx">resume</span><span class="p">())</span>
-    <span class="k">return</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">file</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span> <span class="nx">push</span><span class="p">)</span>
-  <span class="p">},</span>
-  <span class="p">{</span><span class="nx">highWaterMark</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">lowWaterMark</span><span class="o">:</span> <span class="mf">5</span><span class="p">}</span>
-<span class="p">)</span>
-</code></pre></div>
-<h2 id="api-specification">API specification<a class="headerlink" href="#api-specification" title="Permanent link">¶</a></h2>
-<p>Create a new event iterator with <code>new EventIterator(listen)</code>. This
-object implements the async iterator protocol by having a <code>Symbol.asyncIterator</code>
-property.</p>
-<p>Note: you must set up any <code>Symbol.asyncIterator</code> polyfills <strong>before</strong> importing
-<code>EventIterator</code>.</p>
-<p>The <code>listen</code> handler is called every time a new iterator is created to set up
-your event listeners. The optional <code>remove</code> handler is called when the event
-listeners need to be removed. The <code>listen</code> handler returns the <code>remove</code>
-handler, making it easy to call <code>addListener</code>/<code>removeListener</code> or similar
-functions.</p>
-<p>Type definitions:</p>
-<div class="highlight"><pre><span></span><code><span class="k">export</span> <span class="kd">interface</span> <span class="nx">Queue</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">{</span>
-  <span class="nx">push</span><span class="p">(</span><span class="nx">value</span>: <span class="kt">T</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span>
-  <span class="nx">stop</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span>
-  <span class="nx">fail</span><span class="p">(</span><span class="nx">error</span>: <span class="kt">Error</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span>
-  <span class="nx">on</span><span class="p">(</span><span class="nx">event</span><span class="o">:</span> <span class="s2">"highWater"</span> <span class="o">|</span> <span class="s2">"lowWater"</span><span class="p">,</span> <span class="nx">fn</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="k">export</span> <span class="kd">type</span> <span class="nx">RemoveHandler</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">void</span>
-<span class="k">export</span> <span class="kd">type</span> <span class="nx">ListenHandler</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">(</span><span class="nx">queue</span>: <span class="kt">Queue</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">void</span> <span class="o">|</span> <span class="nx">RemoveHandler</span>
-
-<span class="cm">/* High water mark defaults to 100. Set to undefined to disable warnings. */</span>
-<span class="kd">interface</span> <span class="nx">EventIteratorOptions</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">highWaterMark?</span>: <span class="kt">number</span><span class="p">,</span>
-  <span class="nx">lowWaterMark?</span>: <span class="kt">number</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nx">EventIterator</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">{</span>
-    <span class="kr">constructor</span><span class="p">(</span><span class="nx">ListenHandler</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">options?</span>: <span class="kt">EventIteratorOptions</span><span class="p">)</span>
-
-    <span class="p">[</span><span class="nb">Symbol</span><span class="p">.</span><span class="nx">asyncIterator</span><span class="p">]()</span><span class="o">:</span> <span class="nx">AsyncIterator</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">¶</a></h2>
-<p>The <code>EventIterator</code> class is an adapter to transform any browser or Node.js
-event emitter into an async iterator that iterates over events.</p>
-<p>Imagine you have a bunch of text files and in Node.js and you want to decide
-whether they are longer or shorter than a certain number of lines. The files
-should not be binary to avoid cluttering the results. To be more specific, we
-want a function that will:</p>
-<ul>
-<li>return <code>true</code> if the number of lines is 1000 or greater</li>
-<li>return <code>false</code> if the number of lines is less than 1000</li>
-<li>throw an exception if the file appears to be binary (contains NULL bytes)</li>
-<li>returns as quickly as possible</li>
-<li>conserves memory by not reading entire files at once</li>
-</ul>
-<p>A naive solution would look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">countLines</span><span class="p">(</span><span class="nx">buffer</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">buffer</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="s2">"\0"</span><span class="p">))</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">"Binary file!"</span><span class="p">)</span>
-  <span class="k">return</span> <span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\n/g</span><span class="p">)</span> <span class="o">||</span> <span class="p">[]).</span><span class="nx">length</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">isLongTextFile</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">lines</span> <span class="o">=</span> <span class="mf">1</span>
-
-  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">file</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span> <span class="nx">chunk</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">lines</span> <span class="o">+=</span> <span class="nx">countLines</span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span>
-    <span class="p">})</span>
-
-    <span class="nx">file</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"end"</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">resolve</span><span class="p">(</span><span class="nx">lines</span> <span class="o">&gt;=</span> <span class="mf">1000</span><span class="p">)</span>
-    <span class="p">})</span>
-
-    <span class="nx">file</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"error"</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-    <span class="p">})</span>
-  <span class="p">})</span>
-<span class="p">}</span>
-
-<span class="nx">isLongTextFile</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">"..."</span><span class="p">)).</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div>
-<p>Unfortunately, this solution has some problems:</p>
-<ul>
-<li>the entire file is read even if the file is way longer than 1000 lines</li>
-<li>the entire file is read even if an exception occurs (a NULL byte was found)</li>
-<li>multiple exceptions can be thrown if NULL bytes are found in multiple chunks</li>
-</ul>
-<p>So we improve our solution, and we arrive at something like this:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">isLongTextFile</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">lines</span> <span class="o">=</span> <span class="mf">1</span>
-
-  <span class="kd">const</span> <span class="nx">isLong</span> <span class="o">=</span> <span class="nx">n</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">&gt;=</span> <span class="mf">1000</span>
-
-  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">file</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span> <span class="nx">chunk</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="k">try</span> <span class="p">{</span>
-        <span class="nx">lines</span> <span class="o">+=</span> <span class="nx">countLines</span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">isLong</span><span class="p">(</span><span class="nx">lines</span><span class="p">))</span> <span class="p">{</span>
-          <span class="nx">file</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
-          <span class="nx">resolve</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
-        <span class="p">}</span>
-      <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">file</span><span class="p">.</span><span class="nx">destroy</span><span class="p">()</span>
-        <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-      <span class="p">}</span>
-    <span class="p">})</span>
-
-    <span class="nx">file</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"end"</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">resolve</span><span class="p">(</span><span class="nx">isLong</span><span class="p">(</span><span class="nx">lines</span><span class="p">))</span>
-    <span class="p">})</span>
-
-    <span class="nx">file</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">"error"</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
-    <span class="p">})</span>
-  <span class="p">})</span>
-<span class="p">}</span>
-
-<span class="nx">isLongTextFile</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">"..."</span><span class="p">)).</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div>
-<p>This works and we're happy to have solved the problem!</p>
-<p>But what if there were a nicer way to do this? Async iterators sure seem like a
-nice fit for this problem. They are a stage 3 EcmaScript proposal and can be
-used by using TypeScript or Babel.</p>
-<p>A similar solution using async iterators could look like this:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="k">async</span> <span class="nx">isLongTextFile</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">let</span> <span class="nx">lines</span> <span class="o">=</span> <span class="mf">1</span>
-  <span class="k">for</span> <span class="k">await</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">chunk</span> <span class="k">of</span> <span class="nx">stream</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">file</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// or file::stream()</span>
-    <span class="nx">lines</span> <span class="o">+=</span> <span class="nx">countLines</span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">lines</span> <span class="o">&gt;</span> <span class="mf">1000</span><span class="p">)</span> <span class="k">return</span> <span class="kc">true</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="kc">false</span>
-<span class="p">}</span>
-
-<span class="nx">isLongTextFile</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">"..."</span><span class="p">)).</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
-</code></pre></div>
-<p>The question is: how do you create an async iterator from a readable stream?
-Conceptually they are very similar; they both:</p>
-<ul>
-<li>can signal that a next value is available</li>
-<li>can signal when the end has been reached</li>
-<li>can emit an error, after which no new values will become available</li>
-</ul>
-<p>Async iterators have a few additional advantages that translate in simpler code:</p>
-<ul>
-<li>early returns and exceptions will stop the iterator and release resources</li>
-<li>exceptions in the iterator and in calling code can be handled without additional boilerplate</li>
-</ul>
-<p>So how do you transform a readble stream into an async iterator? With an <code>EventIterator</code>.</p>
-<p>We can define the <code>stream</code> function above as:</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
-
-<span class="kd">function</span> <span class="nx">stream</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="k">new</span> <span class="nx">EventIterator</span><span class="p">(</span>
-    <span class="p">({</span> <span class="nx">push</span><span class="p">,</span> <span class="nx">stop</span><span class="p">,</span> <span class="nx">fail</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span> <span class="nx">push</span><span class="p">)</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s2">"end"</span><span class="p">,</span> <span class="nx">stop</span><span class="p">)</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">addListener</span><span class="p">(</span><span class="s2">"error"</span><span class="p">,</span> <span class="nx">fail</span><span class="p">)</span>
-
-      <span class="k">return</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">(</span><span class="s2">"data"</span><span class="p">,</span> <span class="nx">push</span><span class="p">)</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">(</span><span class="s2">"end"</span><span class="p">,</span> <span class="nx">stop</span><span class="p">)</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">(</span><span class="s2">"error"</span><span class="p">,</span> <span class="nx">fail</span><span class="p">)</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">destroy</span><span class="p">()</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>The <code>EventIterator</code> takes care of:</p>
-<ul>
-<li>conforming to the async iterator spec</li>
-<li>returning placeholder promises to the async iterator if no value is available</li>
-<li>queueing values when more data is ready than consumed by the iterator</li>
-<li>installing callbacks to release resources so you can remove any listener handlers or do other cleanup</li>
-</ul>
-<p>Why create an abstract <code>EventIterator</code> that requires you to define your own
-integration code? Several reasons:</p>
-<ul>
-<li>the event emitters as defined by Node.js have a different API than the event targets as defined in the DOM</li>
-<li>the events that you are interested in may have different names depending on your use case</li>
-<li>you may want to specify custom behaviour when the iterator throws or returns early</li>
-</ul>
-<h2 id="licensed-under-mit-license">Licensed under MIT license<a class="headerlink" href="#licensed-under-mit-license" title="Permanent link">¶</a></h2>
-<p>Copyright (c) 2017-2020 Rolf Timmermans</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.</p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">¶</a></h2>
+<p>Apache-2.0 <a href="https://chainsafe.io">ChainSafe Systems</a></p>
 </article>
 </div>
 </div>
