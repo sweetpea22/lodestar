@@ -343,8 +343,8 @@
 </ul>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="beaconblocksbyrange">beaconBlocksByRange<a class="headerlink" href="#beaconblocksbyrange" title="Permanent link">¶</a></h3>
-<p>▸ <strong>beaconBlocksByRange</strong>(<code>peerId</code>: PeerId, <code>request</code>: BeaconBlocksByRangeRequest): <em>Promise‹SignedBeaconBlock[] | null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/37566fd/packages/lodestar/src/network/interface.ts#L30">packages/lodestar/src/network/interface.ts:30</a></em></p>
+<p>▸ <strong>beaconBlocksByRange</strong>(<code>peerId</code>: PeerId, <code>request</code>: BeaconBlocksByRangeRequest): <em>Promise‹SignedBeaconBlock[]›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/25ac0d1/packages/lodestar/src/network/interface.ts#L30">packages/lodestar/src/network/interface.ts:30</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -364,11 +364,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise‹SignedBeaconBlock[] | null›</em></p>
+<p><strong>Returns:</strong> <em>Promise‹SignedBeaconBlock[]›</em></p>
 <hr/>
 <h3 id="beaconblocksbyroot">beaconBlocksByRoot<a class="headerlink" href="#beaconblocksbyroot" title="Permanent link">¶</a></h3>
-<p>▸ <strong>beaconBlocksByRoot</strong>(<code>peerId</code>: PeerId, <code>request</code>: <a href="../../modules/reflection-10507.reflection-10508._.reflection-10510._lodestar_types_src_types/#beaconblocksbyrootrequest">BeaconBlocksByRootRequest</a>): <em>Promise‹SignedBeaconBlock[] | null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/37566fd/packages/lodestar/src/network/interface.ts#L31">packages/lodestar/src/network/interface.ts:31</a></em></p>
+<p>▸ <strong>beaconBlocksByRoot</strong>(<code>peerId</code>: PeerId, <code>request</code>: <a href="../../modules/reflection-10510.reflection-10511._.reflection-10513._lodestar_types_src_types/#beaconblocksbyrootrequest">BeaconBlocksByRootRequest</a>): <em>Promise‹SignedBeaconBlock[]›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/25ac0d1/packages/lodestar/src/network/interface.ts#L31">packages/lodestar/src/network/interface.ts:31</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -384,15 +384,15 @@
 </tr>
 <tr>
 <td><code>request</code></td>
-<td><a href="../../modules/reflection-10507.reflection-10508._.reflection-10510._lodestar_types_src_types/#beaconblocksbyrootrequest">BeaconBlocksByRootRequest</a></td>
+<td><a href="../../modules/reflection-10510.reflection-10511._.reflection-10513._lodestar_types_src_types/#beaconblocksbyrootrequest">BeaconBlocksByRootRequest</a></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise‹SignedBeaconBlock[] | null›</em></p>
+<p><strong>Returns:</strong> <em>Promise‹SignedBeaconBlock[]›</em></p>
 <hr/>
 <h3 id="goodbye">goodbye<a class="headerlink" href="#goodbye" title="Permanent link">¶</a></h3>
 <p>▸ <strong>goodbye</strong>(<code>peerId</code>: PeerId, <code>request</code>: <a href="../../enums/constants.method/#goodbye">Goodbye</a>): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/37566fd/packages/lodestar/src/network/interface.ts#L27">packages/lodestar/src/network/interface.ts:27</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/25ac0d1/packages/lodestar/src/network/interface.ts#L27">packages/lodestar/src/network/interface.ts:27</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -415,8 +415,8 @@
 <p><strong>Returns:</strong> <em>Promise‹void›</em></p>
 <hr/>
 <h3 id="metadata">metadata<a class="headerlink" href="#metadata" title="Permanent link">¶</a></h3>
-<p>▸ <strong>metadata</strong>(<code>peerId</code>: PeerId): <em>Promise‹Metadata | null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/37566fd/packages/lodestar/src/network/interface.ts#L29">packages/lodestar/src/network/interface.ts:29</a></em></p>
+<p>▸ <strong>metadata</strong>(<code>peerId</code>: PeerId): <em>Promise‹Metadata›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/25ac0d1/packages/lodestar/src/network/interface.ts#L29">packages/lodestar/src/network/interface.ts:29</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -432,11 +432,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise‹Metadata | null›</em></p>
+<p><strong>Returns:</strong> <em>Promise‹Metadata›</em></p>
 <hr/>
 <h3 id="ping">ping<a class="headerlink" href="#ping" title="Permanent link">¶</a></h3>
-<p>▸ <strong>ping</strong>(<code>peerId</code>: PeerId, <code>request</code>: <a href="../../enums/constants.method/#ping">Ping</a>): <em>Promise‹<a href="../../enums/constants.method/#ping">Ping</a> | null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/37566fd/packages/lodestar/src/network/interface.ts#L28">packages/lodestar/src/network/interface.ts:28</a></em></p>
+<p>▸ <strong>ping</strong>(<code>peerId</code>: PeerId, <code>request</code>: <a href="../../enums/constants.method/#ping">Ping</a>): <em>Promise‹<a href="../../enums/constants.method/#ping">Ping</a>›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/25ac0d1/packages/lodestar/src/network/interface.ts#L28">packages/lodestar/src/network/interface.ts:28</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -456,11 +456,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise‹<a href="../../enums/constants.method/#ping">Ping</a> | null›</em></p>
+<p><strong>Returns:</strong> <em>Promise‹<a href="../../enums/constants.method/#ping">Ping</a>›</em></p>
 <hr/>
 <h3 id="registerhandler">registerHandler<a class="headerlink" href="#registerhandler" title="Permanent link">¶</a></h3>
 <p>▸ <strong>registerHandler</strong>(<code>handler</code>: <a href="../../modules/network/#reqresphandler">ReqRespHandler</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/37566fd/packages/lodestar/src/network/interface.ts#L32">packages/lodestar/src/network/interface.ts:32</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/25ac0d1/packages/lodestar/src/network/interface.ts#L32">packages/lodestar/src/network/interface.ts:32</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -479,8 +479,8 @@
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="status">status<a class="headerlink" href="#status" title="Permanent link">¶</a></h3>
-<p>▸ <strong>status</strong>(<code>peerId</code>: PeerId, <code>request</code>: Status): <em>Promise‹Status | null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/37566fd/packages/lodestar/src/network/interface.ts#L26">packages/lodestar/src/network/interface.ts:26</a></em></p>
+<p>▸ <strong>status</strong>(<code>peerId</code>: PeerId, <code>request</code>: Status): <em>Promise‹Status›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/25ac0d1/packages/lodestar/src/network/interface.ts#L26">packages/lodestar/src/network/interface.ts:26</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -500,11 +500,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise‹Status | null›</em></p>
+<p><strong>Returns:</strong> <em>Promise‹Status›</em></p>
 <hr/>
 <h3 id="unregisterhandler">unregisterHandler<a class="headerlink" href="#unregisterhandler" title="Permanent link">¶</a></h3>
 <p>▸ <strong>unregisterHandler</strong>(): <em><a href="../../modules/network/#reqresphandler">ReqRespHandler</a> | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/37566fd/packages/lodestar/src/network/interface.ts#L33">packages/lodestar/src/network/interface.ts:33</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/25ac0d1/packages/lodestar/src/network/interface.ts#L33">packages/lodestar/src/network/interface.ts:33</a></em></p>
 <p><strong>Returns:</strong> <em><a href="../../modules/network/#reqresphandler">ReqRespHandler</a> | null</em></p>
 </article>
 </div>
