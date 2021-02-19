@@ -303,9 +303,8 @@
 <h1 id="interface-isyncstats">Interface: ISyncStats<a class="headerlink" href="#interface-isyncstats" title="Permanent link">¶</a></h1>
 <h2 id="hierarchy">Hierarchy<a class="headerlink" href="#hierarchy" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../node.iservice/">IService</a></li>
+<li><strong>ISyncStats</strong></li>
 </ul>
-<p>↳ <strong>ISyncStats</strong></p>
 <h2 id="implemented-by">Implemented by<a class="headerlink" href="#implemented-by" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="../../classes/sync_stats.syncstats/">SyncStats</a></li>
@@ -321,7 +320,7 @@
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="getestimate">getEstimate<a class="headerlink" href="#getestimate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getEstimate</strong>(<code>headSlot</code>: Slot, <code>targetSlot</code>: Slot): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar/src/sync/stats/interface.ts#L15">packages/lodestar/src/sync/stats/interface.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b70222d/packages/lodestar/src/sync/stats/interface.ts#L17">packages/lodestar/src/sync/stats/interface.ts:17</a></em></p>
 <p>Estimate how much time (in seconds) will take to sync to target.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -349,21 +348,19 @@
 <hr/>
 <h3 id="getsyncspeed">getSyncSpeed<a class="headerlink" href="#getsyncspeed" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getSyncSpeed</strong>(): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar/src/sync/stats/interface.ts#L8">packages/lodestar/src/sync/stats/interface.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b70222d/packages/lodestar/src/sync/stats/interface.ts#L10">packages/lodestar/src/sync/stats/interface.ts:10</a></em></p>
 <p>Returns blocks per second processing</p>
 <p><strong>Returns:</strong> <em>number</em></p>
 <hr/>
 <h3 id="start">start<a class="headerlink" href="#start" title="Permanent link">¶</a></h3>
-<p>▸ <strong>start</strong>(): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../sync.ibeaconsync/">IBeaconSync</a>.<a href="../sync.ibeaconsync/#start">start</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar/src/node/nodejs.ts#L28">packages/lodestar/src/node/nodejs.ts:28</a></em></p>
-<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<p>▸ <strong>start</strong>(): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b70222d/packages/lodestar/src/sync/stats/interface.ts#L4">packages/lodestar/src/sync/stats/interface.ts:4</a></em></p>
+<p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="stop">stop<a class="headerlink" href="#stop" title="Permanent link">¶</a></h3>
-<p>▸ <strong>stop</strong>(): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../sync.ibeaconsync/">IBeaconSync</a>.<a href="../sync.ibeaconsync/#stop">stop</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar/src/node/nodejs.ts#L30">packages/lodestar/src/node/nodejs.ts:30</a></em></p>
-<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<p>▸ <strong>stop</strong>(): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b70222d/packages/lodestar/src/sync/stats/interface.ts#L5">packages/lodestar/src/sync/stats/interface.ts:5</a></em></p>
+<p><strong>Returns:</strong> <em>void</em></p>
 </article>
 </div>
 </div>
