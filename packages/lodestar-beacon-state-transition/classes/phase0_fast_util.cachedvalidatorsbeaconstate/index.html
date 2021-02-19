@@ -512,7 +512,7 @@ When read, just return the cache.</beaconstate></beaconstate></p>
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new CachedValidatorsBeaconState</strong>(<code>state</code>: BeaconState, <code>cachedValidators</code>: Vector‹<a href="../../interfaces/phase0_fast_util.iflatvalidator/">IFlatValidator</a>›): <em><a href="./">CachedValidatorsBeaconState</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/31e72d0/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L46">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:46</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L46">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:46</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -536,120 +536,120 @@ When read, just return the cache.</beaconstate></beaconstate></p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="private-_cachedvalidators"><code>Private</code> _cachedValidators<a class="headerlink" href="#private-_cachedvalidators" title="Permanent link">¶</a></h3>
 <p>• <strong>_cachedValidators</strong>: <em>Vector‹<a href="../../interfaces/phase0_fast_util.iflatvalidator/">IFlatValidator</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/31e72d0/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L46">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:46</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L46">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:46</a></em></p>
 <hr/>
 <h3 id="private-_state"><code>Private</code> _state<a class="headerlink" href="#private-_state" title="Permanent link">¶</a></h3>
 <p>• <strong>_state</strong>: <em>BeaconState</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/31e72d0/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L44">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:44</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L44">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:44</a></em></p>
 <hr/>
 <h3 id="balances">balances<a class="headerlink" href="#balances" title="Permanent link">¶</a></h3>
-<p>• <strong>balances</strong>: <em>List‹Gwei›</em></p>
+<p>• <strong>balances</strong>: <em>List‹<a href="../../modules/phase0/#gwei">Gwei</a>›</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#balances">balances</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:20</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:20</p>
 <hr/>
 <h3 id="blockroots">blockRoots<a class="headerlink" href="#blockroots" title="Permanent link">¶</a></h3>
-<p>• <strong>blockRoots</strong>: <em>Vector‹Root›</em></p>
+<p>• <strong>blockRoots</strong>: <em>Vector‹<a href="../../modules/phase0/#root">Root</a>›</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#blockroots">blockRoots</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:13</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:13</p>
 <hr/>
 <h3 id="currentepochattestations">currentEpochAttestations<a class="headerlink" href="#currentepochattestations" title="Permanent link">¶</a></h3>
 <p>• <strong>currentEpochAttestations</strong>: <em>List‹PendingAttestation›</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#currentepochattestations">currentEpochAttestations</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:24</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:24</p>
 <hr/>
 <h3 id="currentjustifiedcheckpoint">currentJustifiedCheckpoint<a class="headerlink" href="#currentjustifiedcheckpoint" title="Permanent link">¶</a></h3>
 <p>• <strong>currentJustifiedCheckpoint</strong>: <em>Checkpoint</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#currentjustifiedcheckpoint">currentJustifiedCheckpoint</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:27</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:27</p>
 <hr/>
 <h3 id="eth1data">eth1Data<a class="headerlink" href="#eth1data" title="Permanent link">¶</a></h3>
 <p>• <strong>eth1Data</strong>: <em>Eth1Data</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#eth1data">eth1Data</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:16</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:16</p>
 <hr/>
 <h3 id="eth1datavotes">eth1DataVotes<a class="headerlink" href="#eth1datavotes" title="Permanent link">¶</a></h3>
 <p>• <strong>eth1DataVotes</strong>: <em>List‹Eth1Data›</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#eth1datavotes">eth1DataVotes</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:17</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:17</p>
 <hr/>
 <h3 id="eth1depositindex">eth1DepositIndex<a class="headerlink" href="#eth1depositindex" title="Permanent link">¶</a></h3>
-<p>• <strong>eth1DepositIndex</strong>: <em>Number64</em></p>
+<p>• <strong>eth1DepositIndex</strong>: <em><a href="../../modules/phase0/#number64">Number64</a></em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#eth1depositindex">eth1DepositIndex</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:18</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:18</p>
 <hr/>
 <h3 id="finalizedcheckpoint">finalizedCheckpoint<a class="headerlink" href="#finalizedcheckpoint" title="Permanent link">¶</a></h3>
 <p>• <strong>finalizedCheckpoint</strong>: <em>Checkpoint</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#finalizedcheckpoint">finalizedCheckpoint</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:28</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:28</p>
 <hr/>
 <h3 id="fork">fork<a class="headerlink" href="#fork" title="Permanent link">¶</a></h3>
 <p>• <strong>fork</strong>: <em>Fork</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#fork">fork</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:11</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:11</p>
 <hr/>
 <h3 id="genesistime">genesisTime<a class="headerlink" href="#genesistime" title="Permanent link">¶</a></h3>
-<p>• <strong>genesisTime</strong>: <em>Number64</em></p>
+<p>• <strong>genesisTime</strong>: <em><a href="../../modules/phase0/#number64">Number64</a></em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#genesistime">genesisTime</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:8</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:8</p>
 <hr/>
 <h3 id="genesisvalidatorsroot">genesisValidatorsRoot<a class="headerlink" href="#genesisvalidatorsroot" title="Permanent link">¶</a></h3>
-<p>• <strong>genesisValidatorsRoot</strong>: <em>Root</em></p>
+<p>• <strong>genesisValidatorsRoot</strong>: <em><a href="../../modules/phase0/#root">Root</a></em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#genesisvalidatorsroot">genesisValidatorsRoot</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:9</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:9</p>
 <hr/>
 <h3 id="historicalroots">historicalRoots<a class="headerlink" href="#historicalroots" title="Permanent link">¶</a></h3>
-<p>• <strong>historicalRoots</strong>: <em>List‹Root›</em></p>
+<p>• <strong>historicalRoots</strong>: <em>List‹<a href="../../modules/phase0/#root">Root</a>›</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#historicalroots">historicalRoots</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:15</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:15</p>
 <hr/>
 <h3 id="justificationbits">justificationBits<a class="headerlink" href="#justificationbits" title="Permanent link">¶</a></h3>
 <p>• <strong>justificationBits</strong>: <em>BitVector</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#justificationbits">justificationBits</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:25</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:25</p>
 <hr/>
 <h3 id="latestblockheader">latestBlockHeader<a class="headerlink" href="#latestblockheader" title="Permanent link">¶</a></h3>
 <p>• <strong>latestBlockHeader</strong>: <em>BeaconBlockHeader</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#latestblockheader">latestBlockHeader</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:12</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:12</p>
 <hr/>
 <h3 id="previousepochattestations">previousEpochAttestations<a class="headerlink" href="#previousepochattestations" title="Permanent link">¶</a></h3>
 <p>• <strong>previousEpochAttestations</strong>: <em>List‹PendingAttestation›</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#previousepochattestations">previousEpochAttestations</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:23</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:23</p>
 <hr/>
 <h3 id="previousjustifiedcheckpoint">previousJustifiedCheckpoint<a class="headerlink" href="#previousjustifiedcheckpoint" title="Permanent link">¶</a></h3>
 <p>• <strong>previousJustifiedCheckpoint</strong>: <em>Checkpoint</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#previousjustifiedcheckpoint">previousJustifiedCheckpoint</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:26</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:26</p>
 <hr/>
 <h3 id="randaomixes">randaoMixes<a class="headerlink" href="#randaomixes" title="Permanent link">¶</a></h3>
-<p>• <strong>randaoMixes</strong>: <em>Vector‹Bytes32›</em></p>
+<p>• <strong>randaoMixes</strong>: <em>Vector‹<a href="../../modules/phase0/#bytes32">Bytes32</a>›</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#randaomixes">randaoMixes</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:21</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:21</p>
 <hr/>
 <h3 id="slashings">slashings<a class="headerlink" href="#slashings" title="Permanent link">¶</a></h3>
-<p>• <strong>slashings</strong>: <em>Vector‹Gwei›</em></p>
+<p>• <strong>slashings</strong>: <em>Vector‹<a href="../../modules/phase0/#gwei">Gwei</a>›</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#slashings">slashings</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:22</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:22</p>
 <hr/>
 <h3 id="slot">slot<a class="headerlink" href="#slot" title="Permanent link">¶</a></h3>
-<p>• <strong>slot</strong>: <em>Slot</em></p>
+<p>• <strong>slot</strong>: <em><a href="../../modules/phase0/#slot">Slot</a></em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#slot">slot</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:10</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:10</p>
 <hr/>
 <h3 id="stateroots">stateRoots<a class="headerlink" href="#stateroots" title="Permanent link">¶</a></h3>
-<p>• <strong>stateRoots</strong>: <em>Vector‹Root›</em></p>
+<p>• <strong>stateRoots</strong>: <em>Vector‹<a href="../../modules/phase0/#root">Root</a>›</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#stateroots">stateRoots</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:14</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:14</p>
 <hr/>
 <h3 id="validators">validators<a class="headerlink" href="#validators" title="Permanent link">¶</a></h3>
 <p>• <strong>validators</strong>: <em>List‹Validator›</em></p>
 <p><em>Inherited from <a href="./">CachedValidatorsBeaconState</a>.<a href="./#validators">validators</a></em></p>
-<p>Defined in packages/lodestar-types/lib/types/state.d.ts:19</p>
+<p>Defined in packages/lodestar-types/lib/phase0/types/state.d.ts:19</p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="addvalidator">addValidator<a class="headerlink" href="#addvalidator" title="Permanent link">¶</a></h3>
 <p>▸ <strong>addValidator</strong>(<code>validator</code>: Validator): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/31e72d0/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L31">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:31</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L31">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:31</a></em></p>
 <p>Add validator to both the cache and BeaconState
 _cachedValidators refers to a new instance</p>
 <p><strong>Parameters:</strong></p>
@@ -671,29 +671,29 @@ _cachedValidators refers to a new instance</p>
 <hr/>
 <h3 id="clone">clone<a class="headerlink" href="#clone" title="Permanent link">¶</a></h3>
 <p>▸ <strong>clone</strong>(): <em><a href="./">CachedValidatorsBeaconState</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/31e72d0/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L33">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:33</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L33">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:33</a></em></p>
 <p>This is very cheap thanks to persistent-merkle-tree and persistent-vector.</p>
 <p><strong>Returns:</strong> <em><a href="./">CachedValidatorsBeaconState</a></em></p>
 <hr/>
 <h3 id="createproxy">createProxy<a class="headerlink" href="#createproxy" title="Permanent link">¶</a></h3>
 <p>▸ <strong>createProxy</strong>(): <em><a href="./">CachedValidatorsBeaconState</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/31e72d0/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L53">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:53</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L53">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:53</a></em></p>
 <p><strong>Returns:</strong> <em><a href="./">CachedValidatorsBeaconState</a></em></p>
 <hr/>
 <h3 id="flatvalidators">flatValidators<a class="headerlink" href="#flatvalidators" title="Permanent link">¶</a></h3>
 <p>▸ <strong>flatValidators</strong>(): <em>Vector‹<a href="../../interfaces/phase0_fast_util.iflatvalidator/">IFlatValidator</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/31e72d0/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L29">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:29</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L29">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:29</a></em></p>
 <p>Loop through the cached validators, not the TreeBacked validators inside BeaconState.</p>
 <p><strong>Returns:</strong> <em>Vector‹<a href="../../interfaces/phase0_fast_util.iflatvalidator/">IFlatValidator</a>›</em></p>
 <hr/>
 <h3 id="getoriginalstate">getOriginalState<a class="headerlink" href="#getoriginalstate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getOriginalState</strong>(): <em>BeaconState</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/31e72d0/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L32">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:32</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L32">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:32</a></em></p>
 <p><strong>Returns:</strong> <em>BeaconState</em></p>
 <hr/>
 <h3 id="updatevalidator">updateValidator<a class="headerlink" href="#updatevalidator" title="Permanent link">¶</a></h3>
-<p>▸ <strong>updateValidator</strong>(<code>i</code>: ValidatorIndex, <code>value</code>: Partial‹<a href="../../interfaces/phase0_fast_util.iflatvalidator/">IFlatValidator</a>›): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/31e72d0/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L30">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:30</a></em></p>
+<p>▸ <strong>updateValidator</strong>(<code>i</code>: <a href="../../modules/phase0/#validatorindex">ValidatorIndex</a>, <code>value</code>: Partial‹<a href="../../interfaces/phase0_fast_util.iflatvalidator/">IFlatValidator</a>›): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/14ae103/packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts#L30">packages/lodestar-beacon-state-transition/src/phase0/fast/util/interface.ts:30</a></em></p>
 <p>Write to both the cached validator and BeaconState.
 _cachedValidators refers to a new instance</p>
 <p><strong>Parameters:</strong></p>
@@ -707,7 +707,7 @@ _cachedValidators refers to a new instance</p>
 <tbody>
 <tr>
 <td><code>i</code></td>
-<td>ValidatorIndex</td>
+<td><a href="../../modules/phase0/#validatorindex">ValidatorIndex</a></td>
 </tr>
 <tr>
 <td><code>value</code></td>
