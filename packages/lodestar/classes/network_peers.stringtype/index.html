@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-stringtype">
+<a class="md-skip" href="#class-stringtype-t">
           Skip to content
         </a>
 </div>
@@ -237,6 +237,11 @@
     </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#type-parameters">
+    Type parameters
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#hierarchy">
     Hierarchy
   </a>
@@ -398,10 +403,13 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
 <p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/network_peers/">network/peers</a> › <a href="./">StringType</a></p>
-<h1 id="class-stringtype">Class: StringType<a class="headerlink" href="#class-stringtype" title="Permanent link">¶</a></h1>
+<h1 id="class-stringtype-t">Class: StringType ‹<strong>T</strong>›<a class="headerlink" href="#class-stringtype-t" title="Permanent link">¶</a></h1>
+<p>Dedicated string type only used here, so not worth to keep it in <code>lodestar-types</code></p>
+<h2 id="type-parameters">Type parameters<a class="headerlink" href="#type-parameters" title="Permanent link">¶</a></h2>
+<p>▪ <strong>T</strong>: <em>string</em></p>
 <h2 id="hierarchy">Hierarchy<a class="headerlink" href="#hierarchy" title="Permanent link">¶</a></h2>
 <ul>
-<li>BasicType‹string›</li>
+<li>BasicType‹T›</li>
 </ul>
 <p>↳ <strong>StringType</strong></p>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
@@ -436,20 +444,20 @@
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new StringType</strong>(): <em><a href="./">StringType</a></em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#constructor">constructor</a></em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#constructor">constructor</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:19</p>
 <p><strong>Returns:</strong> <em><a href="./">StringType</a></em></p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="_typesymbols">_typeSymbols<a class="headerlink" href="#_typesymbols" title="Permanent link">¶</a></h3>
 <p>• <strong>_typeSymbols</strong>: <em>Set‹symbol›</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#_typesymbols">_typeSymbols</a></em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#_typesymbols">_typeSymbols</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:19</p>
 <p>Symbols used to track the identity of a type</p>
 <p>Used by various isFooType functions</p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="assertvalidvalue">assertValidValue<a class="headerlink" href="#assertvalidvalue" title="Permanent link">¶</a></h3>
-<p>▸ <strong>assertValidValue</strong>(<code>value</code>: unknown): <em>asserts value is string</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#assertvalidvalue">assertValidValue</a></em></p>
+<p>▸ <strong>assertValidValue</strong>(<code>value</code>: unknown): <em>asserts value is T</em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#assertvalidvalue">assertValidValue</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:25</p>
 <p>Valid value assertion</p>
 <p><strong>Parameters:</strong></p>
@@ -467,11 +475,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>asserts value is string</em></p>
+<p><strong>Returns:</strong> <em>asserts value is T</em></p>
 <hr/>
 <h3 id="clone">clone<a class="headerlink" href="#clone" title="Permanent link">¶</a></h3>
-<p>▸ <strong>clone</strong>(<code>value</code>: string): <em>string</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#clone">clone</a></em></p>
+<p>▸ <strong>clone</strong>(<code>value</code>: T): <em>T</em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#clone">clone</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:33</p>
 <p>Clone / copy</p>
 <p><strong>Parameters:</strong></p>
@@ -485,23 +493,23 @@
 <tbody>
 <tr>
 <td><code>value</code></td>
-<td>string</td>
+<td>T</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>string</em></p>
+<p><strong>Returns:</strong> <em>T</em></p>
 <hr/>
 <h3 id="defaultvalue">defaultValue<a class="headerlink" href="#defaultvalue" title="Permanent link">¶</a></h3>
-<p>▸ <strong>defaultValue</strong>(): <em>string</em></p>
+<p>▸ <strong>defaultValue</strong>(): <em>T</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#defaultvalue">defaultValue</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:29</p>
 <p>Default constructor</p>
-<p><strong>Returns:</strong> <em>string</em></p>
+<p><strong>Returns:</strong> <em>T</em></p>
 <hr/>
 <h3 id="deserialize">deserialize<a class="headerlink" href="#deserialize" title="Permanent link">¶</a></h3>
-<p>▸ <strong>deserialize</strong>(<code>data</code>: Uint8Array): <em>string</em></p>
-<p><em>Overrides <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#deserialize">deserialize</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/sszTypes.ts#L8">packages/lodestar/src/network/peers/sszTypes.ts:8</a></em></p>
+<p>▸ <strong>deserialize</strong>(<code>data</code>: Uint8Array): <em>T</em></p>
+<p><em>Overrides <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#deserialize">deserialize</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/metastore.ts#L72">packages/lodestar/src/network/peers/metastore.ts:72</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -517,11 +525,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>string</em></p>
+<p><strong>Returns:</strong> <em>T</em></p>
 <hr/>
 <h3 id="equals">equals<a class="headerlink" href="#equals" title="Permanent link">¶</a></h3>
-<p>▸ <strong>equals</strong>(<code>value1</code>: string, <code>value2</code>: string): <em>boolean</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#equals">equals</a></em></p>
+<p>▸ <strong>equals</strong>(<code>value1</code>: T, <code>value2</code>: T): <em>boolean</em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#equals">equals</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:37</p>
 <p>Equality</p>
 <p><strong>Parameters:</strong></p>
@@ -535,19 +543,19 @@
 <tbody>
 <tr>
 <td><code>value1</code></td>
-<td>string</td>
+<td>T</td>
 </tr>
 <tr>
 <td><code>value2</code></td>
-<td>string</td>
+<td>T</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>boolean</em></p>
 <hr/>
 <h3 id="frombytes">fromBytes<a class="headerlink" href="#frombytes" title="Permanent link">¶</a></h3>
-<p>▸ <strong>fromBytes</strong>(<code>data</code>: Uint8Array, <code>offset</code>: number): <em>string</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#frombytes">fromBytes</a></em></p>
+<p>▸ <strong>fromBytes</strong>(<code>data</code>: Uint8Array, <code>offset</code>: number): <em>T</em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#frombytes">fromBytes</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:65</p>
 <p>Low-level deserialization</p>
 <p><strong>Parameters:</strong></p>
@@ -569,10 +577,10 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>string</em></p>
+<p><strong>Returns:</strong> <em>T</em></p>
 <hr/>
 <h3 id="fromjson">fromJson<a class="headerlink" href="#fromjson" title="Permanent link">¶</a></h3>
-<p>▸ <strong>fromJson</strong>(<code>data</code>: Json): <em>string</em></p>
+<p>▸ <strong>fromJson</strong>(<code>data</code>: Json): <em>T</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#fromjson">fromJson</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:87</p>
 <p>Convert from JSON-serializable object</p>
@@ -591,11 +599,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>string</em></p>
+<p><strong>Returns:</strong> <em>T</em></p>
 <hr/>
 <h3 id="hashtreeroot">hashTreeRoot<a class="headerlink" href="#hashtreeroot" title="Permanent link">¶</a></h3>
-<p>▸ <strong>hashTreeRoot</strong>(<code>value</code>: string): <em>Uint8Array</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#hashtreeroot">hashTreeRoot</a></em></p>
+<p>▸ <strong>hashTreeRoot</strong>(<code>value</code>: T): <em>Uint8Array</em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#hashtreeroot">hashTreeRoot</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:83</p>
 <p>Merkleization</p>
 <p><strong>Parameters:</strong></p>
@@ -609,21 +617,21 @@
 <tbody>
 <tr>
 <td><code>value</code></td>
-<td>string</td>
+<td>T</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Uint8Array</em></p>
 <hr/>
 <h3 id="isbasic">isBasic<a class="headerlink" href="#isbasic" title="Permanent link">¶</a></h3>
-<p>▸ <strong>isBasic</strong>(): <em>this is BasicType‹string›</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#isbasic">isBasic</a></em></p>
+<p>▸ <strong>isBasic</strong>(): <em>this is BasicType‹T›</em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#isbasic">isBasic</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:21</p>
-<p><strong>Returns:</strong> <em>this is BasicType‹string›</em></p>
+<p><strong>Returns:</strong> <em>this is BasicType‹T›</em></p>
 <hr/>
 <h3 id="isvariablesize">isVariableSize<a class="headerlink" href="#isvariablesize" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isVariableSize</strong>(): <em>boolean</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#isvariablesize">isVariableSize</a></em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#isvariablesize">isVariableSize</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:43</p>
 <p>Check if type has a variable number of elements (or subelements)</p>
 <p>For basic types, this is always false</p>
@@ -631,22 +639,22 @@
 <hr/>
 <h3 id="maxsize">maxSize<a class="headerlink" href="#maxsize" title="Permanent link">¶</a></h3>
 <p>▸ <strong>maxSize</strong>(): <em>number</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#maxsize">maxSize</a></em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#maxsize">maxSize</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:51</p>
 <p>Maximal serialized byte length</p>
 <p><strong>Returns:</strong> <em>number</em></p>
 <hr/>
 <h3 id="minsize">minSize<a class="headerlink" href="#minsize" title="Permanent link">¶</a></h3>
 <p>▸ <strong>minSize</strong>(): <em>number</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#minsize">minSize</a></em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#minsize">minSize</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:55</p>
 <p>Minimal serialized byte length</p>
 <p><strong>Returns:</strong> <em>number</em></p>
 <hr/>
 <h3 id="serialize">serialize<a class="headerlink" href="#serialize" title="Permanent link">¶</a></h3>
-<p>▸ <strong>serialize</strong>(<code>value</code>: string): <em>Uint8Array</em></p>
+<p>▸ <strong>serialize</strong>(<code>value</code>: T): <em>Uint8Array</em></p>
 <p><em>Overrides void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/sszTypes.ts#L4">packages/lodestar/src/network/peers/sszTypes.ts:4</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/metastore.ts#L68">packages/lodestar/src/network/peers/metastore.ts:68</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -658,7 +666,7 @@
 <tbody>
 <tr>
 <td><code>value</code></td>
-<td>string</td>
+<td>T</td>
 </tr>
 </tbody>
 </table>
@@ -666,13 +674,13 @@
 <hr/>
 <h3 id="size">size<a class="headerlink" href="#size" title="Permanent link">¶</a></h3>
 <p>▸ <strong>size</strong>(): <em>number</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#size">size</a></em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#size">size</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:47</p>
 <p>Serialized byte length</p>
 <p><strong>Returns:</strong> <em>number</em></p>
 <hr/>
 <h3 id="tobytes">toBytes<a class="headerlink" href="#tobytes" title="Permanent link">¶</a></h3>
-<p>▸ <strong>toBytes</strong>(<code>value</code>: string, <code>output</code>: Uint8Array, <code>offset</code>: number): <em>number</em></p>
+<p>▸ <strong>toBytes</strong>(<code>value</code>: T, <code>output</code>: Uint8Array, <code>offset</code>: number): <em>number</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#tobytes">toBytes</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:75</p>
 <p>Low-level serialization</p>
@@ -688,7 +696,7 @@
 <tbody>
 <tr>
 <td><code>value</code></td>
-<td>string</td>
+<td>T</td>
 </tr>
 <tr>
 <td><code>output</code></td>
@@ -703,7 +711,7 @@
 <p><strong>Returns:</strong> <em>number</em></p>
 <hr/>
 <h3 id="tojson">toJson<a class="headerlink" href="#tojson" title="Permanent link">¶</a></h3>
-<p>▸ <strong>toJson</strong>(<code>value</code>: string): <em>Json</em></p>
+<p>▸ <strong>toJson</strong>(<code>value</code>: T): <em>Json</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#tojson">toJson</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:91</p>
 <p>Convert to JSON-serializable object</p>
@@ -718,7 +726,7 @@
 <tbody>
 <tr>
 <td><code>value</code></td>
-<td>string</td>
+<td>T</td>
 </tr>
 </tbody>
 </table>
@@ -726,7 +734,7 @@
 <hr/>
 <h3 id="validatebytes">validateBytes<a class="headerlink" href="#validatebytes" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateBytes</strong>(<code>data</code>: Uint8Array, <code>offset</code>: number): <em>void</em></p>
-<p><em>Inherited from <a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10576.reflection-10577._.reflection-10579._lodestar_types_src_ssz_utils.stringtype/#validatebytes">validateBytes</a></em></p>
+<p><em>Inherited from <a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/">StringType</a>.<a href="../reflection-10527.reflection-10528._.reflection-10530._lodestar_types_src_ssz_utils.stringtype/#validatebytes">validateBytes</a></em></p>
 <p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:61</p>
 <p>Validate bytes before calling fromBytes</p>
 <p><strong>Parameters:</strong></p>

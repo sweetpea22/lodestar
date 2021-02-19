@@ -248,11 +248,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#enumerations">
-    Enumerations
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#classes">
     Classes
   </a>
@@ -260,6 +255,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#interfaces">
     Interfaces
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-aliases">
+    Type aliases
   </a>
 </li>
 <li class="md-nav__item">
@@ -294,6 +294,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#libp2ppeermetadatastore">
     Libp2pPeerMetadataStore
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#peerstorebucket">
+    PeerStoreBucket
   </a>
 </li>
 <li class="md-nav__item">
@@ -340,6 +345,29 @@
 <a class="md-nav__link" href="#syncpeerstodisconnect">
     syncPeersToDisconnect
   </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-aliases_1">
+    Type aliases
+  </a>
+<nav aria-label="Type aliases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#peerstorebucket_1">
+    PeerStoreBucket
+  </a>
+<nav aria-label="PeerStoreBucket" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -407,6 +435,7 @@
 <li><a href="./#ipeermetadatastore">IPeerMetadataStore</a></li>
 <li><a href="./#irpcscoretracker">IRpcScoreTracker</a></li>
 <li><a href="./#libp2ppeermetadatastore">Libp2pPeerMetadataStore</a></li>
+<li><a href="./#peerstorebucket">PeerStoreBucket</a></li>
 <li><a href="./#rpcscoreevent">RpcScoreEvent</a></li>
 <li><a href="./#simplerpcscoretracker">SimpleRpcScoreTracker</a></li>
 <li><a href="./#findmissingsubnets">findMissingSubnets</a></li>
@@ -417,10 +446,6 @@
 <li><a href="./#handlepeermetadatasequence">handlePeerMetadataSequence</a></li>
 <li><a href="./#syncpeerstodisconnect">syncPeersToDisconnect</a></li>
 </ul>
-<h3 id="enumerations">Enumerations<a class="headerlink" href="#enumerations" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="../../enums/network_peers.metadatakey/">MetadataKey</a></li>
-</ul>
 <h3 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="../../classes/network_peers.libp2ppeermetadatastore/">Libp2pPeerMetadataStore</a></li>
@@ -429,6 +454,10 @@
 <h3 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="../../interfaces/network_peers.ipeermetadatastore/">IPeerMetadataStore</a></li>
+</ul>
+<h3 id="type-aliases">Type aliases<a class="headerlink" href="#type-aliases" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#peerstorebucket">PeerStoreBucket</a></li>
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
@@ -452,6 +481,9 @@
 <hr/>
 <h3 id="libp2ppeermetadatastore">Libp2pPeerMetadataStore<a class="headerlink" href="#libp2ppeermetadatastore" title="Permanent link">¶</a></h3>
 <p>• <strong>Libp2pPeerMetadataStore</strong>:</p>
+<hr/>
+<h3 id="peerstorebucket">PeerStoreBucket<a class="headerlink" href="#peerstorebucket" title="Permanent link">¶</a></h3>
+<p>• <strong>PeerStoreBucket</strong>:</p>
 <hr/>
 <h3 id="rpcscoreevent">RpcScoreEvent<a class="headerlink" href="#rpcscoreevent" title="Permanent link">¶</a></h3>
 <p>• <strong>RpcScoreEvent</strong>:</p>
@@ -479,10 +511,29 @@
 <hr/>
 <h3 id="syncpeerstodisconnect">syncPeersToDisconnect<a class="headerlink" href="#syncpeerstodisconnect" title="Permanent link">¶</a></h3>
 <p>• <strong>syncPeersToDisconnect</strong>:</p>
+<h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
+<h3 id="peerstorebucket_1">PeerStoreBucket<a class="headerlink" href="#peerstorebucket_1" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>PeerStoreBucket</strong>: <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/metastore.ts#L18">packages/lodestar/src/network/peers/metastore.ts:18</a></em></p>
+<h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>get</strong>(): <em>function</em></p>
+</li>
+<li>
+<p>(<code>peer</code>: PeerId): <em>T | undefined</em></p>
+</li>
+<li>
+<p><strong>set</strong>(): <em>function</em></p>
+</li>
+<li>
+<p>(<code>peer</code>: PeerId, <code>value</code>: T): <em>void</em></p>
+</li>
+</ul>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="findmissingsubnets_1">findMissingSubnets<a class="headerlink" href="#findmissingsubnets_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>findMissingSubnets</strong>(<code>connectedPeers</code>: PeerId[], <code>network</code>: <a href="../../interfaces/network.inetwork/">INetwork</a>): <em>number[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/utils.ts#L64">packages/lodestar/src/network/peers/utils.ts:64</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/utils.ts#L63">packages/lodestar/src/network/peers/utils.ts:63</a></em></p>
 <p>Find subnets that we don't have at least 1 connected peer.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -507,7 +558,7 @@
 <hr/>
 <h3 id="getimportantpeers_1">getImportantPeers<a class="headerlink" href="#getimportantpeers_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getImportantPeers</strong>(<code>peers</code>: PeerId[], <code>peerMetadata</code>: <a href="../../interfaces/network_peers.ipeermetadatastore/">IPeerMetadataStore</a>): <em>Set‹PeerId›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/utils.ts#L177">packages/lodestar/src/network/peers/utils.ts:177</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/utils.ts#L176">packages/lodestar/src/network/peers/utils.ts:176</a></em></p>
 <p>Peers that should not be disconnected because they are the only connected to a certain subnet.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -535,7 +586,7 @@
 <hr/>
 <h3 id="getpeercountbysubnet_1">getPeerCountBySubnet<a class="headerlink" href="#getpeercountbysubnet_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getPeerCountBySubnet</strong>(<code>connectedPeers</code>: PeerId[], <code>peerMetadata</code>: <a href="../../interfaces/network_peers.ipeermetadatastore/">IPeerMetadataStore</a>, <code>subnetStrs</code>: string[]): <em><a href="../../interfaces/chain.ieventmap/#map">Map</a>‹string, number›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/utils.ts#L13">packages/lodestar/src/network/peers/utils.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/utils.ts#L13">packages/lodestar/src/network/peers/utils.ts:13</a></em></p>
 <p>Return number of peers by subnet.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -564,7 +615,7 @@
 <hr/>
 <h3 id="getsyncprotocolspeers_1">getSyncProtocolsPeers<a class="headerlink" href="#getsyncprotocolspeers_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getSyncProtocolsPeers</strong>(<code>connectedPeers</code>: LibP2p.Peer[]): <em>LibP2p.Peer[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/utils.ts#L83">packages/lodestar/src/network/peers/utils.ts:83</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/utils.ts#L82">packages/lodestar/src/network/peers/utils.ts:82</a></em></p>
 <p>Get sync peers from connected peers.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -585,7 +636,7 @@
 <hr/>
 <h3 id="gossippeerstodisconnect_1">gossipPeersToDisconnect<a class="headerlink" href="#gossippeerstodisconnect_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>gossipPeersToDisconnect</strong>(<code>connectedPeers</code>: LibP2p.Peer[], <code>network</code>: <a href="../../interfaces/network.inetwork/">INetwork</a>, <code>newPeer</code>: number, <code>maxPeer</code>: number, <code>retainRatio</code>: number): <em>PeerId[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/utils.ts#L130">packages/lodestar/src/network/peers/utils.ts:130</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/utils.ts#L129">packages/lodestar/src/network/peers/utils.ts:129</a></em></p>
 <p>This is supposed to be called when the node is synced.
 If we're too close to maxPeer, we may want to disconnect some peers
 before connecting to new peers with missing subnets.</p>
@@ -636,7 +687,7 @@ before connecting to new peers with missing subnets.</p>
 <hr/>
 <h3 id="handlepeermetadatasequence_1">handlePeerMetadataSequence<a class="headerlink" href="#handlepeermetadatasequence_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>handlePeerMetadataSequence</strong>(<code>network</code>: <a href="../../interfaces/network.inetwork/">INetwork</a>, <code>logger</code>: ILogger, <code>peer</code>: PeerId, <code>metadataSeq</code>: BigInt | null): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/utils.ts#L38">packages/lodestar/src/network/peers/utils.ts:38</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/utils.ts#L38">packages/lodestar/src/network/peers/utils.ts:38</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -668,7 +719,7 @@ before connecting to new peers with missing subnets.</p>
 <hr/>
 <h3 id="syncpeerstodisconnect_1">syncPeersToDisconnect<a class="headerlink" href="#syncpeerstodisconnect_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>syncPeersToDisconnect</strong>(<code>connectedPeers</code>: LibP2p.Peer[], <code>network</code>: <a href="../../interfaces/network.inetwork/">INetwork</a>): <em>PeerId[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/utils.ts#L101">packages/lodestar/src/network/peers/utils.ts:101</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/utils.ts#L100">packages/lodestar/src/network/peers/utils.ts:100</a></em></p>
 <p>Disconnect useless peers when node is syncing:
 + Disconnect all peers that do not support sync protocols
 + Disconnect half of bad score sync peers, gradually we'll only have good score sync peers.</p>

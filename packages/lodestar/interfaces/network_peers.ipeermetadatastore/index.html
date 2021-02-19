@@ -253,57 +253,37 @@
 <nav aria-label="Index" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#methods">
-    Methods
+<a class="md-nav__link" href="#properties">
+    Properties
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#methods_1">
-    Methods
+<a class="md-nav__link" href="#properties_1">
+    Properties
   </a>
-<nav aria-label="Methods" class="md-nav">
+<nav aria-label="Properties" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#getencoding">
-    getEncoding
+<a class="md-nav__link" href="#encoding">
+    encoding
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#getmetadata">
-    getMetadata
+<a class="md-nav__link" href="#metadata">
+    metadata
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#getrpcscore">
-    getRpcScore
+<a class="md-nav__link" href="#rpcscore">
+    rpcScore
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#getstatus">
-    getStatus
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setencoding">
-    setEncoding
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setmetadata">
-    setMetadata
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setrpcscore">
-    setRpcScore
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#setstatus">
-    setStatus
+<a class="md-nav__link" href="#status">
+    status
   </a>
 </li>
 </ul>
@@ -331,197 +311,29 @@
 <li><a href="../../classes/network_peers.libp2ppeermetadatastore/">Libp2pPeerMetadataStore</a></li>
 </ul>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
-<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">¶</a></h3>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#getencoding">getEncoding</a></li>
-<li><a href="./#getmetadata">getMetadata</a></li>
-<li><a href="./#getrpcscore">getRpcScore</a></li>
-<li><a href="./#getstatus">getStatus</a></li>
-<li><a href="./#setencoding">setEncoding</a></li>
-<li><a href="./#setmetadata">setMetadata</a></li>
-<li><a href="./#setrpcscore">setRpcScore</a></li>
-<li><a href="./#setstatus">setStatus</a></li>
+<li><a href="./#encoding">encoding</a></li>
+<li><a href="./#metadata">metadata</a></li>
+<li><a href="./#rpcscore">rpcScore</a></li>
+<li><a href="./#status">status</a></li>
 </ul>
-<h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
-<h3 id="getencoding">getEncoding<a class="headerlink" href="#getencoding" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getEncoding</strong>(<code>peer</code>: PeerId): <em><a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a> | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/interface.ts#L21">packages/lodestar/src/network/peers/interface.ts:21</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>peer</code></td>
-<td>PeerId</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em><a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a> | null</em></p>
+<h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
+<h3 id="encoding">encoding<a class="headerlink" href="#encoding" title="Permanent link">¶</a></h3>
+<p>• <strong>encoding</strong>: <em><a href="../../modules/network_peers/#peerstorebucket">PeerStoreBucket</a>‹<a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/metastore.ts#L12">packages/lodestar/src/network/peers/metastore.ts:12</a></em></p>
 <hr/>
-<h3 id="getmetadata">getMetadata<a class="headerlink" href="#getmetadata" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getMetadata</strong>(<code>peer</code>: PeerId): <em>Metadata | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/interface.ts#L19">packages/lodestar/src/network/peers/interface.ts:19</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>peer</code></td>
-<td>PeerId</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>Metadata | null</em></p>
+<h3 id="metadata">metadata<a class="headerlink" href="#metadata" title="Permanent link">¶</a></h3>
+<p>• <strong>metadata</strong>: <em><a href="../../modules/network_peers/#peerstorebucket">PeerStoreBucket</a>‹Metadata›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/metastore.ts#L13">packages/lodestar/src/network/peers/metastore.ts:13</a></em></p>
 <hr/>
-<h3 id="getrpcscore">getRpcScore<a class="headerlink" href="#getrpcscore" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getRpcScore</strong>(<code>peer</code>: PeerId): <em>number | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/interface.ts#L12">packages/lodestar/src/network/peers/interface.ts:12</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>peer</code></td>
-<td>PeerId</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>number | null</em></p>
+<h3 id="rpcscore">rpcScore<a class="headerlink" href="#rpcscore" title="Permanent link">¶</a></h3>
+<p>• <strong>rpcScore</strong>: <em><a href="../../modules/network_peers/#peerstorebucket">PeerStoreBucket</a>‹number›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/metastore.ts#L14">packages/lodestar/src/network/peers/metastore.ts:14</a></em></p>
 <hr/>
-<h3 id="getstatus">getStatus<a class="headerlink" href="#getstatus" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getStatus</strong>(<code>peer</code>: PeerId): <em>Status | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/interface.ts#L10">packages/lodestar/src/network/peers/interface.ts:10</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>peer</code></td>
-<td>PeerId</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>Status | null</em></p>
-<hr/>
-<h3 id="setencoding">setEncoding<a class="headerlink" href="#setencoding" title="Permanent link">¶</a></h3>
-<p>▸ <strong>setEncoding</strong>(<code>peer</code>: PeerId, <code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a> | null): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/interface.ts#L20">packages/lodestar/src/network/peers/interface.ts:20</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>peer</code></td>
-<td>PeerId</td>
-</tr>
-<tr>
-<td><code>encoding</code></td>
-<td><a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a> | null</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>void</em></p>
-<hr/>
-<h3 id="setmetadata">setMetadata<a class="headerlink" href="#setmetadata" title="Permanent link">¶</a></h3>
-<p>▸ <strong>setMetadata</strong>(<code>peer</code>: PeerId, <code>metadata</code>: Metadata | null): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/interface.ts#L18">packages/lodestar/src/network/peers/interface.ts:18</a></em></p>
-<p>It will never store metadata with lower seq number</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>peer</code></td>
-<td>PeerId</td>
-<td>-</td>
-</tr>
-<tr>
-<td><code>metadata</code></td>
-<td>Metadata | null</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>void</em></p>
-<hr/>
-<h3 id="setrpcscore">setRpcScore<a class="headerlink" href="#setrpcscore" title="Permanent link">¶</a></h3>
-<p>▸ <strong>setRpcScore</strong>(<code>peer</code>: PeerId, <code>score</code>: number | null): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/interface.ts#L11">packages/lodestar/src/network/peers/interface.ts:11</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>peer</code></td>
-<td>PeerId</td>
-</tr>
-<tr>
-<td><code>score</code></td>
-<td>number | null</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>void</em></p>
-<hr/>
-<h3 id="setstatus">setStatus<a class="headerlink" href="#setstatus" title="Permanent link">¶</a></h3>
-<p>▸ <strong>setStatus</strong>(<code>peer</code>: PeerId, <code>status</code>: Status | null): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5030cde/packages/lodestar/src/network/peers/interface.ts#L9">packages/lodestar/src/network/peers/interface.ts:9</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>peer</code></td>
-<td>PeerId</td>
-</tr>
-<tr>
-<td><code>status</code></td>
-<td>Status | null</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>void</em></p>
+<h3 id="status">status<a class="headerlink" href="#status" title="Permanent link">¶</a></h3>
+<p>• <strong>status</strong>: <em><a href="../../modules/network_peers/#peerstorebucket">PeerStoreBucket</a>‹Status›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d9a6a7/packages/lodestar/src/network/peers/metastore.ts#L15">packages/lodestar/src/network/peers/metastore.ts:15</a></em></p>
 </article>
 </div>
 </div>
