@@ -267,6 +267,11 @@
     Methods
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-literals">
+    Object literals
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -296,11 +301,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#private-currentforkdigest">
-    Private currentForkDigest
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#private-readonly-db">
     Private Readonly db
   </a>
@@ -327,11 +327,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#private-handleforkversion">
     Private handleForkVersion
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#handlesynccompleted">
-    handleSyncCompleted
   </a>
 </li>
 <li class="md-nav__item">
@@ -375,18 +370,32 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#private-subscribeblockandattestation">
-    Private subscribeBlockAndAttestation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#private-subscribevalidatortopics">
-    Private subscribeValidatorTopics
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#private-unsubscribe">
     Private unsubscribe
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#object-literals_1">
+    Object literals
+  </a>
+<nav aria-label="Object literals" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-state">
+    Private state
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#state-object">
+    ▪ state: object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#status">
+    status
   </a>
 </li>
 </ul>
@@ -420,7 +429,6 @@
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#private-readonly-chain">chain</a></li>
-<li><a href="./#private-currentforkdigest">currentForkDigest</a></li>
 <li><a href="./#private-readonly-db">db</a></li>
 <li><a href="./#private-readonly-logger">logger</a></li>
 <li><a href="./#private-readonly-network">network</a></li>
@@ -428,7 +436,6 @@
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#private-handleforkversion">handleForkVersion</a></li>
-<li><a href="./#handlesynccompleted">handleSyncCompleted</a></li>
 <li><a href="./#private-onaggregatedattestation">onAggregatedAttestation</a></li>
 <li><a href="./#private-onattesterslashing">onAttesterSlashing</a></li>
 <li><a href="./#private-onblock">onBlock</a></li>
@@ -437,14 +444,16 @@
 <li><a href="./#start">start</a></li>
 <li><a href="./#stop">stop</a></li>
 <li><a href="./#private-subscribe">subscribe</a></li>
-<li><a href="./#private-subscribeblockandattestation">subscribeBlockAndAttestation</a></li>
-<li><a href="./#private-subscribevalidatortopics">subscribeValidatorTopics</a></li>
 <li><a href="./#private-unsubscribe">unsubscribe</a></li>
+</ul>
+<h3 id="object-literals">Object literals<a class="headerlink" href="#object-literals" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#private-state">state</a></li>
 </ul>
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new BeaconGossipHandler</strong>(<code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>network</code>: <a href="../../interfaces/network.inetwork/">INetwork</a>, <code>db</code>: <a href="../../interfaces/db_api_beacon.ibeacondb/">IBeaconDb</a>, <code>logger</code>: ILogger): <em><a href="./">BeaconGossipHandler</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L15">packages/lodestar/src/sync/gossip/handler.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L28">packages/lodestar/src/sync/gossip/handler.ts:28</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -476,38 +485,28 @@
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="private-readonly-chain"><code>Private</code> <code>Readonly</code> chain<a class="headerlink" href="#private-readonly-chain" title="Permanent link">¶</a></h3>
 <p>• <strong>chain</strong>: <em><a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L11">packages/lodestar/src/sync/gossip/handler.ts:11</a></em></p>
-<hr/>
-<h3 id="private-currentforkdigest"><code>Private</code> currentForkDigest<a class="headerlink" href="#private-currentforkdigest" title="Permanent link">¶</a></h3>
-<p>• <strong>currentForkDigest</strong>: <em>ForkDigest</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L15">packages/lodestar/src/sync/gossip/handler.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L24">packages/lodestar/src/sync/gossip/handler.ts:24</a></em></p>
 <hr/>
 <h3 id="private-readonly-db"><code>Private</code> <code>Readonly</code> db<a class="headerlink" href="#private-readonly-db" title="Permanent link">¶</a></h3>
 <p>• <strong>db</strong>: <em><a href="../../interfaces/db_api_beacon.ibeacondb/">IBeaconDb</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L13">packages/lodestar/src/sync/gossip/handler.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L26">packages/lodestar/src/sync/gossip/handler.ts:26</a></em></p>
 <hr/>
 <h3 id="private-readonly-logger"><code>Private</code> <code>Readonly</code> logger<a class="headerlink" href="#private-readonly-logger" title="Permanent link">¶</a></h3>
 <p>• <strong>logger</strong>: <em>ILogger</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L14">packages/lodestar/src/sync/gossip/handler.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L27">packages/lodestar/src/sync/gossip/handler.ts:27</a></em></p>
 <hr/>
 <h3 id="private-readonly-network"><code>Private</code> <code>Readonly</code> network<a class="headerlink" href="#private-readonly-network" title="Permanent link">¶</a></h3>
 <p>• <strong>network</strong>: <em><a href="../../interfaces/network.inetwork/">INetwork</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L12">packages/lodestar/src/sync/gossip/handler.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L25">packages/lodestar/src/sync/gossip/handler.ts:25</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="private-handleforkversion"><code>Private</code> handleForkVersion<a class="headerlink" href="#private-handleforkversion" title="Permanent link">¶</a></h3>
 <p>▸ <strong>handleForkVersion</strong>(): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L39">packages/lodestar/src/sync/gossip/handler.ts:39</a></em></p>
-<p><strong>Returns:</strong> <em>void</em></p>
-<hr/>
-<h3 id="handlesynccompleted">handleSyncCompleted<a class="headerlink" href="#handlesynccompleted" title="Permanent link">¶</a></h3>
-<p>▸ <strong>handleSyncCompleted</strong>(): <em>void</em></p>
-<p><em>Implementation of <a href="../../interfaces/sync_gossip.igossiphandler/">IGossipHandler</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L35">packages/lodestar/src/sync/gossip/handler.ts:35</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L58">packages/lodestar/src/sync/gossip/handler.ts:58</a></em></p>
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="private-onaggregatedattestation"><code>Private</code> onAggregatedAttestation<a class="headerlink" href="#private-onaggregatedattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onAggregatedAttestation</strong>(<code>aggregate</code>: SignedAggregateAndProof): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L75">packages/lodestar/src/sync/gossip/handler.ts:75</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L91">packages/lodestar/src/sync/gossip/handler.ts:91</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -527,7 +526,7 @@
 <hr/>
 <h3 id="private-onattesterslashing"><code>Private</code> onAttesterSlashing<a class="headerlink" href="#private-onattesterslashing" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onAttesterSlashing</strong>(<code>attesterSlashing</code>: AttesterSlashing): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L79">packages/lodestar/src/sync/gossip/handler.ts:79</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L95">packages/lodestar/src/sync/gossip/handler.ts:95</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -547,7 +546,7 @@
 <hr/>
 <h3 id="private-onblock"><code>Private</code> onBlock<a class="headerlink" href="#private-onblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onBlock</strong>(<code>block</code>: SignedBeaconBlock): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L71">packages/lodestar/src/sync/gossip/handler.ts:71</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L87">packages/lodestar/src/sync/gossip/handler.ts:87</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -567,7 +566,7 @@
 <hr/>
 <h3 id="private-onproposerslashing"><code>Private</code> onProposerSlashing<a class="headerlink" href="#private-onproposerslashing" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onProposerSlashing</strong>(<code>proposerSlashing</code>: ProposerSlashing): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L83">packages/lodestar/src/sync/gossip/handler.ts:83</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L99">packages/lodestar/src/sync/gossip/handler.ts:99</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -587,7 +586,7 @@
 <hr/>
 <h3 id="private-onvoluntaryexit"><code>Private</code> onVoluntaryExit<a class="headerlink" href="#private-onvoluntaryexit" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onVoluntaryExit</strong>(<code>exit</code>: SignedVoluntaryExit): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L87">packages/lodestar/src/sync/gossip/handler.ts:87</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L103">packages/lodestar/src/sync/gossip/handler.ts:103</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -608,58 +607,18 @@
 <h3 id="start">start<a class="headerlink" href="#start" title="Permanent link">¶</a></h3>
 <p>▸ <strong>start</strong>(): <em>void</em></p>
 <p><em>Implementation of <a href="../../interfaces/sync_gossip.igossiphandler/">IGossipHandler</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L24">packages/lodestar/src/sync/gossip/handler.ts:24</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L37">packages/lodestar/src/sync/gossip/handler.ts:37</a></em></p>
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="stop">stop<a class="headerlink" href="#stop" title="Permanent link">¶</a></h3>
 <p>▸ <strong>stop</strong>(): <em>void</em></p>
 <p><em>Implementation of <a href="../../interfaces/sync_gossip.igossiphandler/">IGossipHandler</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L30">packages/lodestar/src/sync/gossip/handler.ts:30</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L48">packages/lodestar/src/sync/gossip/handler.ts:48</a></em></p>
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="private-subscribe"><code>Private</code> subscribe<a class="headerlink" href="#private-subscribe" title="Permanent link">¶</a></h3>
 <p>▸ <strong>subscribe</strong>(<code>forkDigest</code>: ForkDigest): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L47">packages/lodestar/src/sync/gossip/handler.ts:47</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>forkDigest</code></td>
-<td>ForkDigest</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>void</em></p>
-<hr/>
-<h3 id="private-subscribeblockandattestation"><code>Private</code> subscribeBlockAndAttestation<a class="headerlink" href="#private-subscribeblockandattestation" title="Permanent link">¶</a></h3>
-<p>▸ <strong>subscribeBlockAndAttestation</strong>(<code>forkDigest</code>: ForkDigest): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L52">packages/lodestar/src/sync/gossip/handler.ts:52</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>forkDigest</code></td>
-<td>ForkDigest</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>void</em></p>
-<hr/>
-<h3 id="private-subscribevalidatortopics"><code>Private</code> subscribeValidatorTopics<a class="headerlink" href="#private-subscribevalidatortopics" title="Permanent link">¶</a></h3>
-<p>▸ <strong>subscribeValidatorTopics</strong>(<code>forkDigest</code>: ForkDigest): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L57">packages/lodestar/src/sync/gossip/handler.ts:57</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L71">packages/lodestar/src/sync/gossip/handler.ts:71</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -679,7 +638,7 @@
 <hr/>
 <h3 id="private-unsubscribe"><code>Private</code> unsubscribe<a class="headerlink" href="#private-unsubscribe" title="Permanent link">¶</a></h3>
 <p>▸ <strong>unsubscribe</strong>(<code>forkDigest</code>: ForkDigest): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3147bb8/packages/lodestar/src/sync/gossip/handler.ts#L63">packages/lodestar/src/sync/gossip/handler.ts:63</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L79">packages/lodestar/src/sync/gossip/handler.ts:79</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -696,6 +655,13 @@
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>void</em></p>
+<h2 id="object-literals_1">Object literals<a class="headerlink" href="#object-literals_1" title="Permanent link">¶</a></h2>
+<h3 id="private-state"><code>Private</code> state<a class="headerlink" href="#private-state" title="Permanent link">¶</a></h3>
+<h3 id="state-object">▪ <strong>state</strong>: <em>object</em><a class="headerlink" href="#state-object" title="Permanent link">¶</a></h3>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L28">packages/lodestar/src/sync/gossip/handler.ts:28</a></em></p>
+<h3 id="status">status<a class="headerlink" href="#status" title="Permanent link">¶</a></h3>
+<p>• <strong>status</strong>: <em><a href="../../enums/sync_gossip.gossiphandlerstatus/#stopped">Stopped</a></em> = GossipHandlerStatus.Stopped</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e4d6b88/packages/lodestar/src/sync/gossip/handler.ts#L28">packages/lodestar/src/sync/gossip/handler.ts:28</a></em></p>
 </article>
 </div>
 </div>
