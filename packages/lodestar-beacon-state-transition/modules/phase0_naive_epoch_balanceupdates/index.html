@@ -8,13 +8,13 @@
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
 <link href="https://chainsafe.github.io/lodestar/packages/lodestar-beacon-state-transition/modules/phase0_naive_epoch_balanceupdates/" rel="canonical"/>
 <link href="../../../../images/favicon.ico" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-6.2.8" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.0.0" name="generator"/>
 <title>Phase0 naive epoch balanceupdates - Lodestar documentation</title>
-<link href="../../../../assets/stylesheets/main.cb6bc1d0.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.39b8e14a.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.a3f8f96a.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.7fa14f5b.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
-<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
 <link href="../../../../stylesheets/extras.css" rel="stylesheet"/>
 </head>
 <body data-md-color-accent="black" data-md-color-primary="" data-md-color-scheme="preference" dir="ltr">
@@ -30,21 +30,21 @@
 <div data-md-component="announce">
 </div>
 <header class="md-header" data-md-component="header">
-<nav aria-label="Header" class="md-header-nav md-grid">
-<a aria-label="Lodestar documentation" class="md-header-nav__button md-logo" href="https://chainsafe.github.io/lodestar" title="Lodestar documentation">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Lodestar documentation" class="md-header__button md-logo" href="https://chainsafe.github.io/lodestar" title="Lodestar documentation">
 <img alt="logo" src="../../../../assets/300ppi/short-LS-hookS-WHITE.png"/>
 </a>
-<label class="md-header-nav__button md-icon" for="__drawer">
+<label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
 </label>
-<div class="md-header-nav__title" data-md-component="header-title">
-<div class="md-header-nav__ellipsis">
-<div class="md-header-nav__topic">
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
 <span class="md-ellipsis">
             Lodestar documentation
           </span>
 </div>
-<div class="md-header-nav__topic">
+<div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
               Phase0 naive epoch balanceupdates
@@ -53,8 +53,10 @@
 </div>
 </div>
 </div>
-<label class="md-header-nav__button md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<div class="md-header__options">
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
 </label>
 <div class="md-search" data-md-component="search" role="dialog">
 <label class="md-search__overlay" for="__search"></label>
@@ -62,10 +64,10 @@
 <form class="md-search__form" name="search">
 <input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
 <label class="md-search__icon md-icon" for="__search">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </label>
-<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
 </button>
 </form>
@@ -81,10 +83,10 @@
 </div>
 </div>
 </div>
-<div class="md-header-nav__source">
-<a class="md-source" href="https://github.com/chainsafe/lodestar/" title="Go to repository">
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/chainsafe/lodestar/" title="Go to repository">
 <div class="md-source__icon md-icon">
-<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"></path></svg>
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
     chainsafe/lodestar
@@ -96,7 +98,7 @@
 <div class="md-container" data-md-component="container">
 <main class="md-main" data-md-component="main">
 <div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
@@ -107,9 +109,9 @@
     Lodestar documentation
   </label>
 <div class="md-nav__source">
-<a class="md-source" href="https://github.com/chainsafe/lodestar/" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/chainsafe/lodestar/" title="Go to repository">
 <div class="md-source__icon md-icon">
-<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"></path></svg>
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
     chainsafe/lodestar
@@ -227,7 +229,7 @@
 </div>
 </div>
 </div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -235,7 +237,7 @@
 <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-<ul class="md-nav__list" data-md-scrollfix="">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#index">
     Index
@@ -393,7 +395,7 @@
 </div>
 </div>
 </div>
-<div class="md-content">
+<div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/lodestar-beacon-state-transition/modules/phase0_naive_epoch_balanceupdates.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
@@ -463,7 +465,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getattestationcomponentdeltas">getAttestationComponentDeltas<a class="headerlink" href="#getattestationcomponentdeltas" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttestationComponentDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>attestations</code>: PendingAttestation[]): <em>[bigint[], bigint[]]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L43">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:43</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L43">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:43</a></em></p>
 <p>Helper with shared logic for use by get source, target, and head deltas functions</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -492,7 +494,7 @@
 <hr/>
 <h3 id="getattestationdeltas_1">getAttestationDeltas<a class="headerlink" href="#getattestationdeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttestationDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>[<a href="../phase0/#gwei">Gwei</a>[], <a href="../phase0/#gwei">Gwei</a>[]]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L148">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:148</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L148">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:148</a></em></p>
 <p>Return attestation reward/penalty deltas for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -517,7 +519,7 @@
 <hr/>
 <h3 id="getbasereward_1">getBaseReward<a class="headerlink" href="#getbasereward_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBaseReward</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>index</code>: <a href="../phase0/#validatorindex">ValidatorIndex</a>): <em><a href="../phase0/#gwei">Gwei</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts#L18">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts#L18">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts:18</a></em></p>
 <p>This is the reward that almost all other rewards in Ethereum are computed as a multiple of.
 Particularly, note that it's a desired goal of the spec that effective_balance * BASE_REWARD_FACTOR
 // integer_squareroot(total_balance) is the average per-epoch reward received by a validator under
@@ -550,7 +552,7 @@ BASE_REWARDS_PER_EPOCH, which is the number of times that a reward of this size 
 <hr/>
 <h3 id="geteligiblevalidatorindices">getEligibleValidatorIndices<a class="headerlink" href="#geteligiblevalidatorindices" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getEligibleValidatorIndices</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em><a href="../phase0/#validatorindex">ValidatorIndex</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L30">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:30</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L30">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:30</a></em></p>
 <p>Both active validators and slashed-but-not-yet-withdrawn validators are eligible to receive
 penalties. This is done to prevent self-slashing from being a way to escape inactivity leaks.</p>
 <p><strong>Parameters:</strong></p>
@@ -576,7 +578,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getfinalitydelay_1">getFinalityDelay<a class="headerlink" href="#getfinalitydelay_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getFinalityDelay</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts#L32">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts:32</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts#L32">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts:32</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -600,7 +602,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getheaddeltas_1">getHeadDeltas<a class="headerlink" href="#getheaddeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getHeadDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>[bigint[], bigint[]]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L93">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:93</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L93">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:93</a></em></p>
 <p>Return attester micro-rewards/penalties for head-vote for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -625,7 +627,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getinactivitypenaltydeltas_1">getInactivityPenaltyDeltas<a class="headerlink" href="#getinactivitypenaltydeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getInactivityPenaltyDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>bigint[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L125">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:125</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L125">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:125</a></em></p>
 <p>Return inactivity reward/penalty deltas for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -650,7 +652,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getinclusiondelaydeltas_1">getInclusionDelayDeltas<a class="headerlink" href="#getinclusiondelaydeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getInclusionDelayDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>bigint[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L102">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:102</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L102">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:102</a></em></p>
 <p>Return proposer and inclusion delay micro-rewards/penalties for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -675,7 +677,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getproposerreward_1">getProposerReward<a class="headerlink" href="#getproposerreward_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getProposerReward</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>index</code>: <a href="../phase0/#validatorindex">ValidatorIndex</a>): <em><a href="../phase0/#gwei">Gwei</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts#L28">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts#L28">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts:28</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -703,7 +705,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="getsourcedeltas_1">getSourceDeltas<a class="headerlink" href="#getsourcedeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getSourceDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>[bigint[], bigint[]]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L75">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:75</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L75">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:75</a></em></p>
 <p>Return attester micro-rewards/penalties for source-vote for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -728,7 +730,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="gettargetdeltas_1">getTargetDeltas<a class="headerlink" href="#gettargetdeltas_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getTargetDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>[bigint[], bigint[]]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L84">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:84</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts#L84">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/attestation.ts:84</a></em></p>
 <p>Return attester micro-rewards/penalties for target-vote for each validator.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -753,7 +755,7 @@ penalties. This is done to prevent self-slashing from being a way to escape inac
 <hr/>
 <h3 id="isininactivityleak_1">isInInactivityLeak<a class="headerlink" href="#isininactivityleak_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isInInactivityLeak</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts#L42">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts:42</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts#L42">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/util.ts:42</a></em></p>
 <p>If the chain has not been finalized for &gt;4 epochs, the chain enters an "inactivity leak" mode,
 where inactive validators get progressively penalized more and more, to reduce their influence
 until blocks get finalized again. See here (https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#inactivity-quotient) for what the inactivity leak is, what it's for and how
@@ -781,7 +783,7 @@ it works.</p>
 <hr/>
 <h3 id="processrewardsandpenalties">processRewardsAndPenalties<a class="headerlink" href="#processrewardsandpenalties" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processRewardsAndPenalties</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/index.ts#L15">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/index.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1497125/packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/index.ts#L15">packages/lodestar-beacon-state-transition/src/phase0/naive/epoch/balanceUpdates/index.ts:15</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -834,16 +836,10 @@ it works.</p>
 </div>
 </footer>
 </div>
-<script src="../../../../assets/javascripts/vendor.18f0862e.min.js"></script>
-<script src="../../../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-<script>
-        app = initialize({
-          base: "../../../..",
-          features: [],
-          search: Object.assign({
-            worker: "../../../../assets/javascripts/worker/search.9c0e82ba.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.217ffd95.min.js", "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.926459b3.min.js"></script>
 </body>
 </html>
