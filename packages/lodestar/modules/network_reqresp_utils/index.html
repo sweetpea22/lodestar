@@ -243,8 +243,18 @@
 <nav aria-label="Index" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#enumerations">
+    Enumerations
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#classes">
     Classes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-aliases">
+    Type aliases
   </a>
 </li>
 <li class="md-nav__item">
@@ -256,11 +266,30 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#type-aliases_1">
+    Type aliases
+  </a>
+<nav aria-label="Type aliases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blocksbyrangeerrortype">
+    BlocksByRangeErrorType
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#functions_1">
     Functions
   </a>
 <nav aria-label="Functions" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assertsequentialblocksinrange">
+    assertSequentialBlocksInRange
+  </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#decodeerrormessage">
     decodeErrorMessage
@@ -292,20 +321,66 @@
 <p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="./">network/reqresp/utils</a></p>
 <h1 id="module-networkreqresputils">Module: network/reqresp/utils<a class="headerlink" href="#module-networkreqresputils" title="Permanent link">¶</a></h1>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
+<h3 id="enumerations">Enumerations<a class="headerlink" href="#enumerations" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="../../enums/network_reqresp_utils.blocksbyrangeerrorcode/">BlocksByRangeErrorCode</a></li>
+</ul>
 <h3 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="../../classes/network_reqresp_utils.blocksbyrangeerror/">BlocksByRangeError</a></li>
 <li><a href="../../classes/network_reqresp_utils.bufferedsource/">BufferedSource</a></li>
+</ul>
+<h3 id="type-aliases">Type aliases<a class="headerlink" href="#type-aliases" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#blocksbyrangeerrortype">BlocksByRangeErrorType</a></li>
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#assertsequentialblocksinrange">assertSequentialBlocksInRange</a></li>
 <li><a href="./#decodeerrormessage">decodeErrorMessage</a></li>
 <li><a href="./#encodeerrormessage">encodeErrorMessage</a></li>
 <li><a href="./#onchunk">onChunk</a></li>
 </ul>
+<h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
+<h3 id="blocksbyrangeerrortype">BlocksByRangeErrorType<a class="headerlink" href="#blocksbyrangeerrortype" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>BlocksByRangeErrorType</strong>: <em>object | object | object | object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts#L51">packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts:51</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
+<h3 id="assertsequentialblocksinrange">assertSequentialBlocksInRange<a class="headerlink" href="#assertsequentialblocksinrange" title="Permanent link">¶</a></h3>
+<p>▸ <strong>assertSequentialBlocksInRange</strong>(<code>blocks</code>: SignedBeaconBlock[], <code>__namedParameters</code>: object): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts#L8">packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts:8</a></em></p>
+<p>Asserts a response from BeaconBlocksByRange respects the request and is sequential
+Note: MUST allow missing block for skipped slots.</p>
+<p><strong>Parameters:</strong></p>
+<p>▪ <strong>blocks</strong>: <em>SignedBeaconBlock[]</em></p>
+<p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>count</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>startSlot</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>step</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
 <h3 id="decodeerrormessage">decodeErrorMessage<a class="headerlink" href="#decodeerrormessage" title="Permanent link">¶</a></h3>
 <p>▸ <strong>decodeErrorMessage</strong>(<code>errorMessage</code>: Buffer): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d274056/packages/lodestar/src/network/reqresp/utils/errorMessage.ts#L23">packages/lodestar/src/network/reqresp/utils/errorMessage.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar/src/network/reqresp/utils/errorMessage.ts#L23">packages/lodestar/src/network/reqresp/utils/errorMessage.ts:23</a></em></p>
 <p>Decodes error message from network bytes and removes non printable, non ascii characters.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -326,7 +401,7 @@
 <hr/>
 <h3 id="encodeerrormessage">encodeErrorMessage<a class="headerlink" href="#encodeerrormessage" title="Permanent link">¶</a></h3>
 <p>▸ <strong>encodeErrorMessage</strong>(<code>errorMessage</code>: string): <em>Buffer</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d274056/packages/lodestar/src/network/reqresp/utils/errorMessage.ts#L15">packages/lodestar/src/network/reqresp/utils/errorMessage.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar/src/network/reqresp/utils/errorMessage.ts#L15">packages/lodestar/src/network/reqresp/utils/errorMessage.ts:15</a></em></p>
 <p>Encodes a UTF-8 string to 256 bytes max</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -347,7 +422,7 @@
 <hr/>
 <h3 id="onchunk">onChunk<a class="headerlink" href="#onchunk" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onChunk</strong>‹<strong>T</strong>›(<code>callback</code>: function): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d274056/packages/lodestar/src/network/reqresp/utils/onChunk.ts#L5">packages/lodestar/src/network/reqresp/utils/onChunk.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0c79b46/packages/lodestar/src/network/reqresp/utils/onChunk.ts#L5">packages/lodestar/src/network/reqresp/utils/onChunk.ts:5</a></em></p>
 <p>Calls <code>callback</code> with each <code>chunk</code> received from the <code>source</code> AsyncIterable
 Useful for logging, or cancelling timeouts</p>
 <p><strong>Type parameters:</strong></p>
