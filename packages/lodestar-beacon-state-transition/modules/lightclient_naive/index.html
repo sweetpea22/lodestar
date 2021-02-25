@@ -284,13 +284,33 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#processfinalupdates">
-    processFinalUpdates
+<a class="md-nav__link" href="#processepoch">
+    processEpoch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#processjustificationandfinalization">
+    processJustificationAndFinalization
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#processparticipationflagupdates">
+    processParticipationFlagUpdates
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#processrewardsandpenalties">
+    processRewardsAndPenalties
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#processsynccommittee">
     processSyncCommittee
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#processsynccommitteeupdates">
+    processSyncCommitteeUpdates
   </a>
 </li>
 <li class="md-nav__item">
@@ -337,11 +357,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#processfinalupdates_1">
-    processFinalUpdates
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#processsynccommittee_1">
     processSyncCommittee
   </a>
@@ -377,8 +392,12 @@
 <li><a href="./#getsynccommittee">getSyncCommittee</a></li>
 <li><a href="./#getsynccommitteeindices">getSyncCommitteeIndices</a></li>
 <li><a href="./#processblock">processBlock</a></li>
-<li><a href="./#processfinalupdates">processFinalUpdates</a></li>
+<li><a href="./#processepoch">processEpoch</a></li>
+<li><a href="./#processjustificationandfinalization">processJustificationAndFinalization</a></li>
+<li><a href="./#processparticipationflagupdates">processParticipationFlagUpdates</a></li>
+<li><a href="./#processrewardsandpenalties">processRewardsAndPenalties</a></li>
 <li><a href="./#processsynccommittee">processSyncCommittee</a></li>
+<li><a href="./#processsynccommitteeupdates">processSyncCommitteeUpdates</a></li>
 <li><a href="./#upgrade">upgrade</a></li>
 </ul>
 <h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
@@ -390,7 +409,6 @@
 <li><a href="./#getsynccommittee">getSyncCommittee</a></li>
 <li><a href="./#getsynccommitteeindices">getSyncCommitteeIndices</a></li>
 <li><a href="./#processblock">processBlock</a></li>
-<li><a href="./#processfinalupdates">processFinalUpdates</a></li>
 <li><a href="./#processsynccommittee">processSyncCommittee</a></li>
 <li><a href="./#statetransition">stateTransition</a></li>
 <li><a href="./#upgrade">upgrade</a></li>
@@ -405,22 +423,34 @@
 <h3 id="processblock">processBlock<a class="headerlink" href="#processblock" title="Permanent link">¶</a></h3>
 <p>• <strong>processBlock</strong>:</p>
 <hr/>
-<h3 id="processfinalupdates">processFinalUpdates<a class="headerlink" href="#processfinalupdates" title="Permanent link">¶</a></h3>
-<p>• <strong>processFinalUpdates</strong>:</p>
+<h3 id="processepoch">processEpoch<a class="headerlink" href="#processepoch" title="Permanent link">¶</a></h3>
+<p>• <strong>processEpoch</strong>:</p>
+<hr/>
+<h3 id="processjustificationandfinalization">processJustificationAndFinalization<a class="headerlink" href="#processjustificationandfinalization" title="Permanent link">¶</a></h3>
+<p>• <strong>processJustificationAndFinalization</strong>:</p>
+<hr/>
+<h3 id="processparticipationflagupdates">processParticipationFlagUpdates<a class="headerlink" href="#processparticipationflagupdates" title="Permanent link">¶</a></h3>
+<p>• <strong>processParticipationFlagUpdates</strong>:</p>
+<hr/>
+<h3 id="processrewardsandpenalties">processRewardsAndPenalties<a class="headerlink" href="#processrewardsandpenalties" title="Permanent link">¶</a></h3>
+<p>• <strong>processRewardsAndPenalties</strong>:</p>
 <hr/>
 <h3 id="processsynccommittee">processSyncCommittee<a class="headerlink" href="#processsynccommittee" title="Permanent link">¶</a></h3>
 <p>• <strong>processSyncCommittee</strong>:</p>
+<hr/>
+<h3 id="processsynccommitteeupdates">processSyncCommitteeUpdates<a class="headerlink" href="#processsynccommitteeupdates" title="Permanent link">¶</a></h3>
+<p>• <strong>processSyncCommitteeUpdates</strong>:</p>
 <hr/>
 <h3 id="upgrade">upgrade<a class="headerlink" href="#upgrade" title="Permanent link">¶</a></h3>
 <p>• <strong>upgrade</strong>:</p>
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
 <h3 id="const-max_random_byte"><code>Const</code> MAX_RANDOM_BYTE<a class="headerlink" href="#const-max_random_byte" title="Permanent link">¶</a></h3>
 <p>• <strong>MAX_RANDOM_BYTE</strong>: <em>bigint</em> = BigInt(2 ** 8 - 1)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/65dbabf/packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts#L21">packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts:21</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4eb15a4/packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts#L21">packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts:21</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getsynccommittee_1">getSyncCommittee<a class="headerlink" href="#getsynccommittee_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getSyncCommittee</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>epoch</code>: <a href="../phase0/#epoch">Epoch</a>): <em>SyncCommittee</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/65dbabf/packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts#L104">packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts:104</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4eb15a4/packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts#L104">packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts:104</a></em></p>
 <p>Return the sync committee for a given state and epoch.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -449,7 +479,7 @@
 <hr/>
 <h3 id="getsynccommitteeindices_1">getSyncCommitteeIndices<a class="headerlink" href="#getsynccommitteeindices_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getSyncCommitteeIndices</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>epoch</code>: <a href="../phase0/#epoch">Epoch</a>): <em><a href="../phase0/#validatorindex">ValidatorIndex</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/65dbabf/packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts#L74">packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts:74</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4eb15a4/packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts#L74">packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts:74</a></em></p>
 <p>Return the sync committee indices for a given state and epoch.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -478,7 +508,7 @@
 <hr/>
 <h3 id="processblock_1">processBlock<a class="headerlink" href="#processblock_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processBlock</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>block</code>: BeaconBlock, <code>verifySignatures</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/65dbabf/packages/lodestar-beacon-state-transition/src/lightclient/naive/block.ts#L6">packages/lodestar-beacon-state-transition/src/lightclient/naive/block.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4eb15a4/packages/lodestar-beacon-state-transition/src/lightclient/naive/block.ts#L6">packages/lodestar-beacon-state-transition/src/lightclient/naive/block.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -513,33 +543,9 @@
 </table>
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
-<h3 id="processfinalupdates_1">processFinalUpdates<a class="headerlink" href="#processfinalupdates_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processFinalUpdates</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/65dbabf/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch.ts#L8">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch.ts:8</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>config</code></td>
-<td>IBeaconConfig</td>
-</tr>
-<tr>
-<td><code>state</code></td>
-<td>BeaconState</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>void</em></p>
-<hr/>
 <h3 id="processsynccommittee_1">processSyncCommittee<a class="headerlink" href="#processsynccommittee_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processSyncCommittee</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>block</code>: BeaconBlock): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/65dbabf/packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts#L23">packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4eb15a4/packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts#L23">packages/lodestar-beacon-state-transition/src/lightclient/naive/sync_committee.ts:23</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -567,7 +573,7 @@
 <hr/>
 <h3 id="statetransition">stateTransition<a class="headerlink" href="#statetransition" title="Permanent link">¶</a></h3>
 <p>▸ <strong>stateTransition</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>signedBlock</code>: SignedBeaconBlock, <code>options?</code>: undefined | object): <em>BeaconState</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/65dbabf/packages/lodestar-beacon-state-transition/src/lightclient/naive/index.ts#L22">packages/lodestar-beacon-state-transition/src/lightclient/naive/index.ts:22</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4eb15a4/packages/lodestar-beacon-state-transition/src/lightclient/naive/index.ts#L22">packages/lodestar-beacon-state-transition/src/lightclient/naive/index.ts:22</a></em></p>
 <p>The ETH2.0 Beacon Chain state transition function</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -605,7 +611,7 @@
 <hr/>
 <h3 id="upgrade_1">upgrade<a class="headerlink" href="#upgrade_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>upgrade</strong>(<code>config</code>: IBeaconConfig, <code>pre</code>: BeaconState): <em>BeaconState</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/65dbabf/packages/lodestar-beacon-state-transition/src/lightclient/naive/upgrade.ts#L7">packages/lodestar-beacon-state-transition/src/lightclient/naive/upgrade.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4eb15a4/packages/lodestar-beacon-state-transition/src/lightclient/naive/upgrade.ts#L7">packages/lodestar-beacon-state-transition/src/lightclient/naive/upgrade.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
