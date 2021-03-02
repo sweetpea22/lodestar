@@ -347,11 +347,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#isbasic">
-    isBasic
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#isvariablesize">
     isVariableSize
   </a>
@@ -432,7 +427,6 @@
 <li><a href="./#frombytes">fromBytes</a></li>
 <li><a href="./#fromjson">fromJson</a></li>
 <li><a href="./#hashtreeroot">hashTreeRoot</a></li>
-<li><a href="./#isbasic">isBasic</a></li>
 <li><a href="./#isvariablesize">isVariableSize</a></li>
 <li><a href="./#maxsize">maxSize</a></li>
 <li><a href="./#minsize">minSize</a></li>
@@ -446,21 +440,21 @@
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new StringType</strong>(): <em><a href="./">StringType</a></em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#constructor">constructor</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:19</p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:9</p>
 <p><strong>Returns:</strong> <em><a href="./">StringType</a></em></p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="_typesymbols">_typeSymbols<a class="headerlink" href="#_typesymbols" title="Permanent link">¶</a></h3>
 <p>• <strong>_typeSymbols</strong>: <em>Set‹symbol›</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#_typesymbols">_typeSymbols</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:19</p>
+<p>Defined in node_modules/@chainsafe/ssz/lib/types/type.d.ts:20</p>
 <p>Symbols used to track the identity of a type</p>
 <p>Used by various isFooType functions</p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="assertvalidvalue">assertValidValue<a class="headerlink" href="#assertvalidvalue" title="Permanent link">¶</a></h3>
-<p>▸ <strong>assertValidValue</strong>(<code>value</code>: unknown): <em>asserts value is T</em></p>
-<p><em>Inherited from <a href="./">StringType</a>.<a href="./#assertvalidvalue">assertValidValue</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:25</p>
-<p>Valid value assertion</p>
+<p>▸ <strong>assertValidValue</strong>(<code>data</code>: unknown): <em>data is T</em></p>
+<p><em>Overrides void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/423124c/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L12">packages/lodestar-types/src/phase0/ssz/utils/string.ts:12</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -471,17 +465,18 @@
 </thead>
 <tbody>
 <tr>
-<td><code>value</code></td>
+<td><code>data</code></td>
 <td>unknown</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>asserts value is T</em></p>
+<p><strong>Returns:</strong> <em>data is T</em></p>
 <hr/>
 <h3 id="clone">clone<a class="headerlink" href="#clone" title="Permanent link">¶</a></h3>
 <p>▸ <strong>clone</strong>(<code>value</code>: T): <em>T</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#clone">clone</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:33</p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:14</p>
 <p>Clone / copy</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -503,13 +498,14 @@
 <h3 id="defaultvalue">defaultValue<a class="headerlink" href="#defaultvalue" title="Permanent link">¶</a></h3>
 <p>▸ <strong>defaultValue</strong>(): <em>T</em></p>
 <p><em>Overrides void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9377394/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L20">packages/lodestar-types/src/phase0/ssz/utils/string.ts:20</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/423124c/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L28">packages/lodestar-types/src/phase0/ssz/utils/string.ts:28</a></em></p>
 <p><strong>Returns:</strong> <em>T</em></p>
 <hr/>
 <h3 id="deserialize">deserialize<a class="headerlink" href="#deserialize" title="Permanent link">¶</a></h3>
 <p>▸ <strong>deserialize</strong>(<code>data</code>: Uint8Array): <em>T</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#deserialize">deserialize</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:69</p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:50</p>
 <p>Deserialization</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -531,7 +527,8 @@
 <h3 id="equals">equals<a class="headerlink" href="#equals" title="Permanent link">¶</a></h3>
 <p>▸ <strong>equals</strong>(<code>value1</code>: T, <code>value2</code>: T): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#equals">equals</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:37</p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:18</p>
 <p>Equality</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -555,35 +552,15 @@
 <p><strong>Returns:</strong> <em>boolean</em></p>
 <hr/>
 <h3 id="frombytes">fromBytes<a class="headerlink" href="#frombytes" title="Permanent link">¶</a></h3>
-<p>▸ <strong>fromBytes</strong>(<code>data</code>: Uint8Array, <code>offset</code>: number): <em>T</em></p>
-<p><em>Inherited from <a href="./">StringType</a>.<a href="./#frombytes">fromBytes</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:65</p>
-<p>Low-level deserialization</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>data</code></td>
-<td>Uint8Array</td>
-</tr>
-<tr>
-<td><code>offset</code></td>
-<td>number</td>
-</tr>
-</tbody>
-</table>
+<p>▸ <strong>fromBytes</strong>(): <em>T</em></p>
+<p><em>Overrides void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/423124c/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L24">packages/lodestar-types/src/phase0/ssz/utils/string.ts:24</a></em></p>
 <p><strong>Returns:</strong> <em>T</em></p>
 <hr/>
 <h3 id="fromjson">fromJson<a class="headerlink" href="#fromjson" title="Permanent link">¶</a></h3>
 <p>▸ <strong>fromJson</strong>(<code>data</code>: string): <em>T</em></p>
 <p><em>Overrides void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9377394/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L8">packages/lodestar-types/src/phase0/ssz/utils/string.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/423124c/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L8">packages/lodestar-types/src/phase0/ssz/utils/string.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -604,7 +581,8 @@
 <h3 id="hashtreeroot">hashTreeRoot<a class="headerlink" href="#hashtreeroot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>hashTreeRoot</strong>(<code>value</code>: T): <em>Uint8Array</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#hashtreeroot">hashTreeRoot</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:83</p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:58</p>
 <p>Merkleization</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -623,16 +601,11 @@
 </table>
 <p><strong>Returns:</strong> <em>Uint8Array</em></p>
 <hr/>
-<h3 id="isbasic">isBasic<a class="headerlink" href="#isbasic" title="Permanent link">¶</a></h3>
-<p>▸ <strong>isBasic</strong>(): <em>this is BasicType‹T›</em></p>
-<p><em>Inherited from <a href="./">StringType</a>.<a href="./#isbasic">isBasic</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:21</p>
-<p><strong>Returns:</strong> <em>this is BasicType‹T›</em></p>
-<hr/>
 <h3 id="isvariablesize">isVariableSize<a class="headerlink" href="#isvariablesize" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isVariableSize</strong>(): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#isvariablesize">isVariableSize</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:43</p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:24</p>
 <p>Check if type has a variable number of elements (or subelements)</p>
 <p>For basic types, this is always false</p>
 <p><strong>Returns:</strong> <em>boolean</em></p>
@@ -640,40 +613,43 @@
 <h3 id="maxsize">maxSize<a class="headerlink" href="#maxsize" title="Permanent link">¶</a></h3>
 <p>▸ <strong>maxSize</strong>(): <em>number</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#maxsize">maxSize</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:51</p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:32</p>
 <p>Maximal serialized byte length</p>
 <p><strong>Returns:</strong> <em>number</em></p>
 <hr/>
 <h3 id="minsize">minSize<a class="headerlink" href="#minsize" title="Permanent link">¶</a></h3>
 <p>▸ <strong>minSize</strong>(): <em>number</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#minsize">minSize</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:55</p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:36</p>
 <p>Minimal serialized byte length</p>
 <p><strong>Returns:</strong> <em>number</em></p>
 <hr/>
 <h3 id="serialize">serialize<a class="headerlink" href="#serialize" title="Permanent link">¶</a></h3>
 <p>▸ <strong>serialize</strong>(): <em>Uint8Array</em></p>
 <p><em>Overrides void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9377394/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L12">packages/lodestar-types/src/phase0/ssz/utils/string.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/423124c/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L16">packages/lodestar-types/src/phase0/ssz/utils/string.ts:16</a></em></p>
 <p><strong>Returns:</strong> <em>Uint8Array</em></p>
 <hr/>
 <h3 id="size">size<a class="headerlink" href="#size" title="Permanent link">¶</a></h3>
 <p>▸ <strong>size</strong>(): <em>number</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#size">size</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:47</p>
+<p><em>Overrides void</em></p>
+<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:28</p>
 <p>Serialized byte length</p>
 <p><strong>Returns:</strong> <em>number</em></p>
 <hr/>
 <h3 id="tobytes">toBytes<a class="headerlink" href="#tobytes" title="Permanent link">¶</a></h3>
 <p>▸ <strong>toBytes</strong>(): <em>number</em></p>
 <p><em>Overrides void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9377394/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L16">packages/lodestar-types/src/phase0/ssz/utils/string.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/423124c/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L20">packages/lodestar-types/src/phase0/ssz/utils/string.ts:20</a></em></p>
 <p><strong>Returns:</strong> <em>number</em></p>
 <hr/>
 <h3 id="tojson">toJson<a class="headerlink" href="#tojson" title="Permanent link">¶</a></h3>
 <p>▸ <strong>toJson</strong>(<code>value</code>: T): <em>string</em></p>
 <p><em>Overrides void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9377394/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L4">packages/lodestar-types/src/phase0/ssz/utils/string.ts:4</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/423124c/packages/lodestar-types/src/phase0/ssz/utils/string.ts#L4">packages/lodestar-types/src/phase0/ssz/utils/string.ts:4</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -694,7 +670,7 @@
 <h3 id="validatebytes">validateBytes<a class="headerlink" href="#validatebytes" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateBytes</strong>(<code>data</code>: Uint8Array, <code>offset</code>: number): <em>void</em></p>
 <p><em>Inherited from <a href="./">StringType</a>.<a href="./#validatebytes">validateBytes</a></em></p>
-<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:61</p>
+<p>Defined in node_modules/@chainsafe/ssz/lib/types/basic/abstract.d.ts:42</p>
 <p>Validate bytes before calling fromBytes</p>
 <p><strong>Parameters:</strong></p>
 <table>
