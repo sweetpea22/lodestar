@@ -289,43 +289,29 @@ See <a href="https://github.com/ChainSafe/lodestar/tree/master/packages">package
 <h1 id="style-guide">Style Guide<a class="headerlink" href="#style-guide" title="Permanent link">¶</a></h1>
 <ul>
 <li>PRs should usually only update a single package (in our monorepo) at a time</li>
-<li>Many module class constructors have the following signature: <code>(options, dependencies)</code><ul>
+<li>Many module class constructors have the following signature: <code>(options, dependencies)</code></li>
 <li>eg: <code>public constructor(opts: IExampleOptions, {db, logger}: IExampleModules)</code></li>
-</ul>
-</li>
-<li>Modules should be designed to "do one thing and do it well"<ul>
+<li>Modules should be designed to "do one thing and do it well"</li>
 <li>Consider the interface of a module -- events included, and make sure it is coherent</li>
-</ul>
-</li>
-<li>Make sure your code is properly linted<ul>
+<li>Make sure your code is properly linted</li>
 <li>use an IDE that will show linter errors/warnings</li>
 <li>run <code>yarn lint</code> from the command line</li>
 <li>common rules:<ul>
 <li>Functions and variables should be <a href="https://en.wikipedia.org/wiki/Camel_case"><code>camelCase</code></a>, classes should be <a href="http://wiki.c2.com/?PascalCase"><code>PascalCase</code></a>, constants should be <code>UPPERCASE_WITH_UNDERSCORES</code>.</li>
 <li>Use <code>"</code> instead of <code>'</code></li>
 <li>All functions should have types declared for all parameters and return value</li>
-<li>All interfaces should be prefixed with a <code>I</code><ul>
+<li>All interfaces should be prefixed with a <code>I</code></li>
 <li>eg: <code>IMyInterface</code></li>
-</ul>
-</li>
 <li>You probably shouldn't be using Typescript's <code>any</code></li>
-<li>Private class properties should not be prefixed with a <code>_</code><ul>
+<li>Private class properties should not be prefixed with a <code>_</code></li>
 <li>eg: <code>private dirty;</code>, not <code>private _dirty;</code></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Make sure that your code is properly type checked: <ul>
+<li>Make sure that your code is properly type checked:</li>
 <li>use an IDE that will show type errors</li>
 <li>run <code>yarn check-types</code> from the command line</li>
-</ul>
-</li>
-<li>Make sure that the tests are still passing: <ul>
+<li>Make sure that the tests are still passing:</li>
 <li>run <code>yarn test:unit</code> from the command line</li>
-</ul>
-</li>
 </ul>
 <h1 id="community">Community<a class="headerlink" href="#community" title="Permanent link">¶</a></h1>
 <p>Come chat with us on <a href="https://discord.gg/aMxzVcr">discord</a>!</p>

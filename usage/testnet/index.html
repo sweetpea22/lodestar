@@ -297,9 +297,9 @@
 <div class="highlight"><pre><span></span><code>./lodestar --help
 </code></pre></div>
 <p>For a complete list of beacon node CLI commands and options, see the <a href="../../reference/cli/">Command Line Reference</a></p>
-<p>For a list of available testnets to use for the <code>--network</code> flag (as shown anywhere below where <code>--network $NETWORK_NAME</code> is shown), look for the <code>testnet</code> option as listed with the <code>--help</code> flag above.  You should see something like this:</p>
+<p>For a list of available testnets to use for the <code>--network</code> flag (as shown anywhere below where <code>--network $NETWORK_NAME</code> is shown), look for the <code>testnet</code> option as listed with the <code>--help</code> flag above. You should see something like this:</p>
 <blockquote>
-<p>--network                    Use a network configuration [string] [choices: "pyrmont", "mainnet"]</p>
+<p>--network Use a network configuration [string][choices: "pyrmont", "mainnet"]</p>
 </blockquote>
 <p>In this case, the two networks that are available are the pyrmont multiclient testnet, and the eth2 mainnet.</p>
 <!-- prettier-ignore-start -->
@@ -355,13 +355,13 @@
 <p>To start a Lodestar validator run the command:</p>
 <div class="highlight"><pre><span></span><code>./lodestar validator --network <span class="nv">$NETWORK_NAME</span>
 </code></pre></div>
-<p>You should see confirmation that modules have started. </p>
-<div class="highlight"><pre><span></span><code><span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[]</span>                 info: Decrypted <span class="m">2</span> validator keystores 
-<span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[</span>VALIDATOR 0X8BAC4815<span class="o">]</span> info: Setting up validator client... 
-<span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[</span>VALIDATOR 0X8BAC4815<span class="o">]</span> info: Setting up RPC connection... 
-<span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[]</span>                 info: Checking genesis <span class="nb">time</span> and beacon node connection 
-<span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[</span>VALIDATOR 0X8E44237B<span class="o">]</span> info: Setting up validator client... 
-<span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[</span>VALIDATOR 0X8E44237B<span class="o">]</span> info: Setting up RPC connection... 
+<p>You should see confirmation that modules have started.</p>
+<div class="highlight"><pre><span></span><code><span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[]</span>                 info: Decrypted <span class="m">2</span> validator keystores
+<span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[</span>VALIDATOR 0X8BAC4815<span class="o">]</span> info: Setting up validator client...
+<span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[</span>VALIDATOR 0X8BAC4815<span class="o">]</span> info: Setting up RPC connection...
+<span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[]</span>                 info: Checking genesis <span class="nb">time</span> and beacon node connection
+<span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[</span>VALIDATOR 0X8E44237B<span class="o">]</span> info: Setting up validator client...
+<span class="m">2020</span>-08-07 <span class="m">14</span>:14:24  <span class="o">[</span>VALIDATOR 0X8E44237B<span class="o">]</span> info: Setting up RPC connection...
 </code></pre></div>
 </article>
 </div>
