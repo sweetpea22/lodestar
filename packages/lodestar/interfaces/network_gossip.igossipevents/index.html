@@ -244,6 +244,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#indexable">
+    Indexable
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#index">
     Index
   </a>
@@ -264,83 +269,13 @@
 <nav aria-label="Properties" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#gossipeventaggregate_and_proof">
-    [GossipEvent.AGGREGATE_AND_PROOF]
-  </a>
-<nav aria-label="[GossipEvent.AGGREGATE_AND_PROOF]" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration">
-    Type declaration:
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gossipeventattester_slashing">
-    [GossipEvent.ATTESTER_SLASHING]
-  </a>
-<nav aria-label="[GossipEvent.ATTESTER_SLASHING]" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_1">
-    Type declaration:
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gossipeventblock">
-    [GossipEvent.BLOCK]
-  </a>
-<nav aria-label="[GossipEvent.BLOCK]" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_2">
-    Type declaration:
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gossipeventproposer_slashing">
-    [GossipEvent.PROPOSER_SLASHING]
-  </a>
-<nav aria-label="[GossipEvent.PROPOSER_SLASHING]" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_3">
-    Type declaration:
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gossipeventvoluntary_exit">
-    [GossipEvent.VOLUNTARY_EXIT]
-  </a>
-<nav aria-label="[GossipEvent.VOLUNTARY_EXIT]" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_4">
-    Type declaration:
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#networkeventgossipheartbeat">
     [NetworkEvent.gossipHeartbeat]
   </a>
 <nav aria-label="[NetworkEvent.gossipHeartbeat]" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_5">
+<a class="md-nav__link" href="#type-declaration">
     Type declaration:
   </a>
 </li>
@@ -354,7 +289,7 @@
 <nav aria-label="[NetworkEvent.gossipStart]" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_6">
+<a class="md-nav__link" href="#type-declaration_1">
     Type declaration:
   </a>
 </li>
@@ -368,7 +303,7 @@
 <nav aria-label="[NetworkEvent.gossipStop]" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_7">
+<a class="md-nav__link" href="#type-declaration_2">
     Type declaration:
   </a>
 </li>
@@ -394,140 +329,34 @@
 <ul>
 <li><strong>IGossipEvents</strong></li>
 </ul>
+<h2 id="indexable">Indexable<a class="headerlink" href="#indexable" title="Permanent link">¶</a></h2>
+<ul>
+<li>[ <strong>topic</strong>: <em>string</em>]: <a href="../../modules/network_gossip/#gossipfn">GossipFn</a></li>
+</ul>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#[gossipevent.aggregate_and_proof]">[GossipEvent.AGGREGATE_AND_PROOF]</a></li>
-<li><a href="./#[gossipevent.attester_slashing]">[GossipEvent.ATTESTER_SLASHING]</a></li>
-<li><a href="./#[gossipevent.block]">[GossipEvent.BLOCK]</a></li>
-<li><a href="./#[gossipevent.proposer_slashing]">[GossipEvent.PROPOSER_SLASHING]</a></li>
-<li><a href="./#[gossipevent.voluntary_exit]">[GossipEvent.VOLUNTARY_EXIT]</a></li>
 <li><a href="./#[networkevent.gossipheartbeat]">[NetworkEvent.gossipHeartbeat]</a></li>
 <li><a href="./#[networkevent.gossipstart]">[NetworkEvent.gossipStart]</a></li>
 <li><a href="./#[networkevent.gossipstop]">[NetworkEvent.gossipStop]</a></li>
 </ul>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
-<h3 id="gossipeventaggregate_and_proof">[GossipEvent.AGGREGATE_AND_PROOF]<a class="headerlink" href="#gossipeventaggregate_and_proof" title="Permanent link">¶</a></h3>
-<p>• <strong>[GossipEvent.AGGREGATE_AND_PROOF]</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/511c1eb/packages/lodestar/src/network/gossip/interface.ts#L21">packages/lodestar/src/network/gossip/interface.ts:21</a></em></p>
-<h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
-<p>▸ (<code>attestation</code>: SignedAggregateAndProof): <em>void</em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>attestation</code></td>
-<td>SignedAggregateAndProof</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h3 id="gossipeventattester_slashing">[GossipEvent.ATTESTER_SLASHING]<a class="headerlink" href="#gossipeventattester_slashing" title="Permanent link">¶</a></h3>
-<p>• <strong>[GossipEvent.ATTESTER_SLASHING]</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/511c1eb/packages/lodestar/src/network/gossip/interface.ts#L24">packages/lodestar/src/network/gossip/interface.ts:24</a></em></p>
-<h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
-<p>▸ (<code>attesterSlashing</code>: AttesterSlashing): <em>void</em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>attesterSlashing</code></td>
-<td>AttesterSlashing</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h3 id="gossipeventblock">[GossipEvent.BLOCK]<a class="headerlink" href="#gossipeventblock" title="Permanent link">¶</a></h3>
-<p>• <strong>[GossipEvent.BLOCK]</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/511c1eb/packages/lodestar/src/network/gossip/interface.ts#L20">packages/lodestar/src/network/gossip/interface.ts:20</a></em></p>
-<h4 id="type-declaration_2">Type declaration:<a class="headerlink" href="#type-declaration_2" title="Permanent link">¶</a></h4>
-<p>▸ (<code>signedBlock</code>: SignedBeaconBlock): <em>void</em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>signedBlock</code></td>
-<td>SignedBeaconBlock</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h3 id="gossipeventproposer_slashing">[GossipEvent.PROPOSER_SLASHING]<a class="headerlink" href="#gossipeventproposer_slashing" title="Permanent link">¶</a></h3>
-<p>• <strong>[GossipEvent.PROPOSER_SLASHING]</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/511c1eb/packages/lodestar/src/network/gossip/interface.ts#L23">packages/lodestar/src/network/gossip/interface.ts:23</a></em></p>
-<h4 id="type-declaration_3">Type declaration:<a class="headerlink" href="#type-declaration_3" title="Permanent link">¶</a></h4>
-<p>▸ (<code>proposerSlashing</code>: ProposerSlashing): <em>void</em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>proposerSlashing</code></td>
-<td>ProposerSlashing</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h3 id="gossipeventvoluntary_exit">[GossipEvent.VOLUNTARY_EXIT]<a class="headerlink" href="#gossipeventvoluntary_exit" title="Permanent link">¶</a></h3>
-<p>• <strong>[GossipEvent.VOLUNTARY_EXIT]</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/511c1eb/packages/lodestar/src/network/gossip/interface.ts#L22">packages/lodestar/src/network/gossip/interface.ts:22</a></em></p>
-<h4 id="type-declaration_4">Type declaration:<a class="headerlink" href="#type-declaration_4" title="Permanent link">¶</a></h4>
-<p>▸ (<code>voluntaryExit</code>: SignedVoluntaryExit): <em>void</em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>voluntaryExit</code></td>
-<td>SignedVoluntaryExit</td>
-</tr>
-</tbody>
-</table>
-<hr/>
 <h3 id="networkeventgossipheartbeat">[NetworkEvent.gossipHeartbeat]<a class="headerlink" href="#networkeventgossipheartbeat" title="Permanent link">¶</a></h3>
 <p>• <strong>[NetworkEvent.gossipHeartbeat]</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/511c1eb/packages/lodestar/src/network/gossip/interface.ts#L25">packages/lodestar/src/network/gossip/interface.ts:25</a></em></p>
-<h4 id="type-declaration_5">Type declaration:<a class="headerlink" href="#type-declaration_5" title="Permanent link">¶</a></h4>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/91f16a2/packages/lodestar/src/network/gossip/interface.ts#L85">packages/lodestar/src/network/gossip/interface.ts:85</a></em></p>
+<h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <p>▸ (): <em>void</em></p>
 <hr/>
 <h3 id="networkeventgossipstart">[NetworkEvent.gossipStart]<a class="headerlink" href="#networkeventgossipstart" title="Permanent link">¶</a></h3>
 <p>• <strong>[NetworkEvent.gossipStart]</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/511c1eb/packages/lodestar/src/network/gossip/interface.ts#L26">packages/lodestar/src/network/gossip/interface.ts:26</a></em></p>
-<h4 id="type-declaration_6">Type declaration:<a class="headerlink" href="#type-declaration_6" title="Permanent link">¶</a></h4>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/91f16a2/packages/lodestar/src/network/gossip/interface.ts#L86">packages/lodestar/src/network/gossip/interface.ts:86</a></em></p>
+<h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
 <p>▸ (): <em>void</em></p>
 <hr/>
 <h3 id="networkeventgossipstop">[NetworkEvent.gossipStop]<a class="headerlink" href="#networkeventgossipstop" title="Permanent link">¶</a></h3>
 <p>• <strong>[NetworkEvent.gossipStop]</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/511c1eb/packages/lodestar/src/network/gossip/interface.ts#L27">packages/lodestar/src/network/gossip/interface.ts:27</a></em></p>
-<h4 id="type-declaration_7">Type declaration:<a class="headerlink" href="#type-declaration_7" title="Permanent link">¶</a></h4>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/91f16a2/packages/lodestar/src/network/gossip/interface.ts#L87">packages/lodestar/src/network/gossip/interface.ts:87</a></em></p>
+<h4 id="type-declaration_2">Type declaration:<a class="headerlink" href="#type-declaration_2" title="Permanent link">¶</a></h4>
 <p>▸ (): <em>void</em></p>
 </article>
 </div>
