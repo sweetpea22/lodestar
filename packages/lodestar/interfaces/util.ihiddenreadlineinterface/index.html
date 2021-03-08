@@ -307,11 +307,6 @@
     Readonly terminal
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#static-defaultmaxlisteners">
-    Static defaultMaxListeners
-  </a>
-</li>
 </ul>
 </nav>
 </li>
@@ -349,6 +344,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#eventnames">
     eventNames
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getcursorpos">
+    getCursorPos
   </a>
 </li>
 <li class="md-nav__item">
@@ -441,11 +441,6 @@
     write
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#static-listenercount">
-    Static listenerCount
-  </a>
-</li>
 </ul>
 </nav>
 </li>
@@ -477,7 +472,6 @@
 <li><a href="./#readonly-line">line</a></li>
 <li><a href="./#optional-output">output</a></li>
 <li><a href="./#readonly-terminal">terminal</a></li>
-<li><a href="./#static-defaultmaxlisteners">defaultMaxListeners</a></li>
 </ul>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">¶</a></h3>
 <ul>
@@ -487,6 +481,7 @@
 <li><a href="./#close">close</a></li>
 <li><a href="./#emit">emit</a></li>
 <li><a href="./#eventnames">eventNames</a></li>
+<li><a href="./#getcursorpos">getCursorPos</a></li>
 <li><a href="./#getmaxlisteners">getMaxListeners</a></li>
 <li><a href="./#listenercount">listenerCount</a></li>
 <li><a href="./#listeners">listeners</a></li>
@@ -505,7 +500,6 @@
 <li><a href="./#setmaxlisteners">setMaxListeners</a></li>
 <li><a href="./#setprompt">setPrompt</a></li>
 <li><a href="./#write">write</a></li>
-<li><a href="./#static-listenercount">listenerCount</a></li>
 </ul>
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="protected-constructor"><code>Protected</code> constructor<a class="headerlink" href="#protected-constructor" title="Permanent link">¶</a></h3>
@@ -586,27 +580,22 @@
 <hr/>
 <h3 id="optional-output"><code>Optional</code> output<a class="headerlink" href="#optional-output" title="Permanent link">¶</a></h3>
 <p>• <strong>output</strong>? : <em>any</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/91f16a2/packages/lodestar/src/util/io.ts#L5">packages/lodestar/src/util/io.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/03f7474/packages/lodestar/src/util/io.ts#L5">packages/lodestar/src/util/io.ts:5</a></em></p>
 <hr/>
 <h3 id="readonly-terminal"><code>Readonly</code> terminal<a class="headerlink" href="#readonly-terminal" title="Permanent link">¶</a></h3>
 <p>• <strong>terminal</strong>: <em>boolean</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#readonly-terminal">terminal</a></em></p>
 <p>Defined in node_modules/@types/node/readline.d.ts:14</p>
-<hr/>
-<h3 id="static-defaultmaxlisteners"><code>Static</code> defaultMaxListeners<a class="headerlink" href="#static-defaultmaxlisteners" title="Permanent link">¶</a></h3>
-<p>▪ <strong>defaultMaxListeners</strong>: <em>number</em></p>
-<p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#static-defaultmaxlisteners">defaultMaxListeners</a></em></p>
-<p>Defined in node_modules/@types/node/events.d.ts:30</p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="symbolasynciterator">[Symbol.asyncIterator]<a class="headerlink" href="#symbolasynciterator" title="Permanent link">¶</a></h3>
 <p>▸ <strong>[Symbol.asyncIterator]</strong>(): <em>AsyncIterableIterator‹string›</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#[symbol.asynciterator]">[Symbol.asyncIterator]</a></em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:114</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:121</p>
 <p><strong>Returns:</strong> <em>AsyncIterableIterator‹string›</em></p>
 <hr/>
 <h3 id="optional-_writetooutput"><code>Optional</code> _writeToOutput<a class="headerlink" href="#optional-_writetooutput" title="Permanent link">¶</a></h3>
 <p>▸ <strong>_writeToOutput</strong>(<code>stringToWrite</code>: string): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/91f16a2/packages/lodestar/src/util/io.ts#L7">packages/lodestar/src/util/io.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/03f7474/packages/lodestar/src/util/io.ts#L7">packages/lodestar/src/util/io.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -628,7 +617,7 @@
 <p>▸ <strong>addListener</strong>(<code>event</code>: string, <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#addlistener">addListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:61</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:68</p>
 <p>events.EventEmitter
 1. close
 2. line
@@ -660,7 +649,7 @@
 <p>▸ <strong>addListener</strong>(<code>event</code>: "close", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#addlistener">addListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:62</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:69</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"close"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -669,7 +658,7 @@
 <p>▸ <strong>addListener</strong>(<code>event</code>: "line", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#addlistener">addListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:63</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:70</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"line"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -693,7 +682,7 @@
 <p>▸ <strong>addListener</strong>(<code>event</code>: "pause", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#addlistener">addListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:64</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:71</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"pause"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -702,7 +691,7 @@
 <p>▸ <strong>addListener</strong>(<code>event</code>: "resume", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#addlistener">addListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:65</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:72</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"resume"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -711,7 +700,7 @@
 <p>▸ <strong>addListener</strong>(<code>event</code>: "SIGCONT", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#addlistener">addListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:66</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:73</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGCONT"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -720,7 +709,7 @@
 <p>▸ <strong>addListener</strong>(<code>event</code>: "SIGINT", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#addlistener">addListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:67</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:74</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGINT"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -729,7 +718,7 @@
 <p>▸ <strong>addListener</strong>(<code>event</code>: "SIGTSTP", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#addlistener">addListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:68</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:75</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGTSTP"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -746,7 +735,7 @@
 <p>▸ <strong>emit</strong>(<code>event</code>: string | symbol, ...<code>args</code>: any[]): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#emit">emit</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:70</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:77</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -770,7 +759,7 @@
 <p>▸ <strong>emit</strong>(<code>event</code>: "close"): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#emit">emit</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:71</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:78</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -790,7 +779,7 @@
 <p>▸ <strong>emit</strong>(<code>event</code>: "line", <code>input</code>: string): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#emit">emit</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:72</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:79</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -814,7 +803,7 @@
 <p>▸ <strong>emit</strong>(<code>event</code>: "pause"): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#emit">emit</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:73</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:80</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -834,7 +823,7 @@
 <p>▸ <strong>emit</strong>(<code>event</code>: "resume"): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#emit">emit</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:74</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:81</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -854,7 +843,7 @@
 <p>▸ <strong>emit</strong>(<code>event</code>: "SIGCONT"): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#emit">emit</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:75</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:82</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -874,7 +863,7 @@
 <p>▸ <strong>emit</strong>(<code>event</code>: "SIGINT"): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#emit">emit</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:76</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:83</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -894,7 +883,7 @@
 <p>▸ <strong>emit</strong>(<code>event</code>: "SIGTSTP"): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#emit">emit</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:77</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:84</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -915,22 +904,28 @@
 <h3 id="eventnames">eventNames<a class="headerlink" href="#eventnames" title="Permanent link">¶</a></h3>
 <p>▸ <strong>eventNames</strong>(): <em>Array‹string | symbol›</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#eventnames">eventNames</a></em></p>
-<p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/events.d.ts:45</p>
+<p>Defined in node_modules/@types/node/events.d.ts:77</p>
 <p><strong>Returns:</strong> <em>Array‹string | symbol›</em></p>
+<hr/>
+<h3 id="getcursorpos">getCursorPos<a class="headerlink" href="#getcursorpos" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getCursorPos</strong>(): <em>CursorPos</em></p>
+<p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#getcursorpos">getCursorPos</a></em></p>
+<p>Defined in node_modules/@types/node/readline.d.ts:55</p>
+<p>Returns the real position of the cursor in relation to the input
+prompt + string.  Long input (wrapping) strings, as well as multiple
+line prompts are included in the calculations.</p>
+<p><strong>Returns:</strong> <em>CursorPos</em></p>
 <hr/>
 <h3 id="getmaxlisteners">getMaxListeners<a class="headerlink" href="#getmaxlisteners" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getMaxListeners</strong>(): <em>number</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#getmaxlisteners">getMaxListeners</a></em></p>
-<p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/events.d.ts:41</p>
+<p>Defined in node_modules/@types/node/events.d.ts:69</p>
 <p><strong>Returns:</strong> <em>number</em></p>
 <hr/>
 <h3 id="listenercount">listenerCount<a class="headerlink" href="#listenercount" title="Permanent link">¶</a></h3>
-<p>▸ <strong>listenerCount</strong>(<code>type</code>: string | symbol): <em>number</em></p>
-<p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#static-listenercount">listenerCount</a></em></p>
-<p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/events.d.ts:46</p>
+<p>▸ <strong>listenerCount</strong>(<code>event</code>: string | symbol): <em>number</em></p>
+<p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#listenercount">listenerCount</a></em></p>
+<p>Defined in node_modules/@types/node/events.d.ts:73</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -941,7 +936,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>type</code></td>
+<td><code>event</code></td>
 <td>string | symbol</td>
 </tr>
 </tbody>
@@ -951,8 +946,7 @@
 <h3 id="listeners">listeners<a class="headerlink" href="#listeners" title="Permanent link">¶</a></h3>
 <p>▸ <strong>listeners</strong>(<code>event</code>: string | symbol): <em>Function[]</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#listeners">listeners</a></em></p>
-<p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/events.d.ts:42</p>
+<p>Defined in node_modules/@types/node/events.d.ts:70</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -973,8 +967,7 @@
 <h3 id="off">off<a class="headerlink" href="#off" title="Permanent link">¶</a></h3>
 <p>▸ <strong>off</strong>(<code>event</code>: string | symbol, <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#off">off</a></em></p>
-<p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/events.d.ts:38</p>
+<p>Defined in node_modules/@types/node/events.d.ts:66</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>string | symbol</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1000,7 +993,7 @@
 <p>▸ <strong>on</strong>(<code>event</code>: string, <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#on">on</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:79</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:86</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>string</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1024,7 +1017,7 @@
 <p>▸ <strong>on</strong>(<code>event</code>: "close", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#on">on</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:80</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:87</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"close"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1033,7 +1026,7 @@
 <p>▸ <strong>on</strong>(<code>event</code>: "line", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#on">on</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:81</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:88</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"line"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1057,7 +1050,7 @@
 <p>▸ <strong>on</strong>(<code>event</code>: "pause", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#on">on</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:82</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:89</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"pause"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1066,7 +1059,7 @@
 <p>▸ <strong>on</strong>(<code>event</code>: "resume", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#on">on</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:83</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:90</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"resume"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1075,7 +1068,7 @@
 <p>▸ <strong>on</strong>(<code>event</code>: "SIGCONT", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#on">on</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:84</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:91</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGCONT"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1084,7 +1077,7 @@
 <p>▸ <strong>on</strong>(<code>event</code>: "SIGINT", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#on">on</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:85</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:92</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGINT"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1093,7 +1086,7 @@
 <p>▸ <strong>on</strong>(<code>event</code>: "SIGTSTP", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#on">on</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:86</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:93</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGTSTP"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1104,7 +1097,7 @@
 <p>▸ <strong>once</strong>(<code>event</code>: string, <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#once">once</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:88</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:95</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>string</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1128,7 +1121,7 @@
 <p>▸ <strong>once</strong>(<code>event</code>: "close", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#once">once</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:89</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:96</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"close"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1137,7 +1130,7 @@
 <p>▸ <strong>once</strong>(<code>event</code>: "line", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#once">once</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:90</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:97</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"line"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1161,7 +1154,7 @@
 <p>▸ <strong>once</strong>(<code>event</code>: "pause", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#once">once</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:91</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:98</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"pause"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1170,7 +1163,7 @@
 <p>▸ <strong>once</strong>(<code>event</code>: "resume", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#once">once</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:92</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:99</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"resume"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1179,7 +1172,7 @@
 <p>▸ <strong>once</strong>(<code>event</code>: "SIGCONT", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#once">once</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:93</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:100</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGCONT"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1188,7 +1181,7 @@
 <p>▸ <strong>once</strong>(<code>event</code>: "SIGINT", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#once">once</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:94</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:101</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGINT"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1197,7 +1190,7 @@
 <p>▸ <strong>once</strong>(<code>event</code>: "SIGTSTP", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#once">once</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:95</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:102</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGTSTP"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1214,7 +1207,7 @@
 <p>▸ <strong>prependListener</strong>(<code>event</code>: string, <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependlistener">prependListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:97</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:104</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>string</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1238,7 +1231,7 @@
 <p>▸ <strong>prependListener</strong>(<code>event</code>: "close", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependlistener">prependListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:98</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:105</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"close"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1247,7 +1240,7 @@
 <p>▸ <strong>prependListener</strong>(<code>event</code>: "line", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependlistener">prependListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:99</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:106</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"line"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1271,7 +1264,7 @@
 <p>▸ <strong>prependListener</strong>(<code>event</code>: "pause", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependlistener">prependListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:100</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:107</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"pause"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1280,7 +1273,7 @@
 <p>▸ <strong>prependListener</strong>(<code>event</code>: "resume", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependlistener">prependListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:101</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:108</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"resume"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1289,7 +1282,7 @@
 <p>▸ <strong>prependListener</strong>(<code>event</code>: "SIGCONT", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependlistener">prependListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:102</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:109</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGCONT"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1298,7 +1291,7 @@
 <p>▸ <strong>prependListener</strong>(<code>event</code>: "SIGINT", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependlistener">prependListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:103</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:110</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGINT"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1307,7 +1300,7 @@
 <p>▸ <strong>prependListener</strong>(<code>event</code>: "SIGTSTP", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependlistener">prependListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:104</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:111</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGTSTP"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1318,7 +1311,7 @@
 <p>▸ <strong>prependOnceListener</strong>(<code>event</code>: string, <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependoncelistener">prependOnceListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:106</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:113</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>string</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1342,7 +1335,7 @@
 <p>▸ <strong>prependOnceListener</strong>(<code>event</code>: "close", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependoncelistener">prependOnceListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:107</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:114</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"close"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1351,7 +1344,7 @@
 <p>▸ <strong>prependOnceListener</strong>(<code>event</code>: "line", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependoncelistener">prependOnceListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:108</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:115</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"line"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1375,7 +1368,7 @@
 <p>▸ <strong>prependOnceListener</strong>(<code>event</code>: "pause", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependoncelistener">prependOnceListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:109</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:116</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"pause"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1384,7 +1377,7 @@
 <p>▸ <strong>prependOnceListener</strong>(<code>event</code>: "resume", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependoncelistener">prependOnceListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:110</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:117</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"resume"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1393,7 +1386,7 @@
 <p>▸ <strong>prependOnceListener</strong>(<code>event</code>: "SIGCONT", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependoncelistener">prependOnceListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:111</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:118</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGCONT"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1402,7 +1395,7 @@
 <p>▸ <strong>prependOnceListener</strong>(<code>event</code>: "SIGINT", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependoncelistener">prependOnceListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:112</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:119</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGINT"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1411,7 +1404,7 @@
 <p>▸ <strong>prependOnceListener</strong>(<code>event</code>: "SIGTSTP", <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#prependoncelistener">prependOnceListener</a></em></p>
 <p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/readline.d.ts:113</p>
+<p>Defined in node_modules/@types/node/readline.d.ts:120</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>"SIGTSTP"</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1467,8 +1460,7 @@
 <h3 id="rawlisteners">rawListeners<a class="headerlink" href="#rawlisteners" title="Permanent link">¶</a></h3>
 <p>▸ <strong>rawListeners</strong>(<code>event</code>: string | symbol): <em>Function[]</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#rawlisteners">rawListeners</a></em></p>
-<p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/events.d.ts:43</p>
+<p>Defined in node_modules/@types/node/events.d.ts:71</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1489,8 +1481,7 @@
 <h3 id="removealllisteners">removeAllListeners<a class="headerlink" href="#removealllisteners" title="Permanent link">¶</a></h3>
 <p>▸ <strong>removeAllListeners</strong>(<code>event?</code>: string | symbol): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#removealllisteners">removeAllListeners</a></em></p>
-<p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/events.d.ts:39</p>
+<p>Defined in node_modules/@types/node/events.d.ts:67</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1511,8 +1502,7 @@
 <h3 id="removelistener">removeListener<a class="headerlink" href="#removelistener" title="Permanent link">¶</a></h3>
 <p>▸ <strong>removeListener</strong>(<code>event</code>: string | symbol, <code>listener</code>: function): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#removelistener">removeListener</a></em></p>
-<p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/events.d.ts:37</p>
+<p>Defined in node_modules/@types/node/events.d.ts:65</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>event</strong>: <em>string | symbol</em></p>
 <p>▪ <strong>listener</strong>: <em>function</em></p>
@@ -1543,8 +1533,7 @@
 <h3 id="setmaxlisteners">setMaxListeners<a class="headerlink" href="#setmaxlisteners" title="Permanent link">¶</a></h3>
 <p>▸ <strong>setMaxListeners</strong>(<code>n</code>: number): <em>this</em></p>
 <p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#setmaxlisteners">setMaxListeners</a></em></p>
-<p><em>Overrides void</em></p>
-<p>Defined in node_modules/@types/node/events.d.ts:40</p>
+<p>Defined in node_modules/@types/node/events.d.ts:68</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1607,32 +1596,6 @@
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>void</em></p>
-<hr/>
-<h3 id="static-listenercount"><code>Static</code> listenerCount<a class="headerlink" href="#static-listenercount" title="Permanent link">¶</a></h3>
-<p>▸ <strong>listenerCount</strong>(<code>emitter</code>: EventEmitter, <code>event</code>: string | symbol): <em>number</em></p>
-<p><em>Inherited from <a href="./">IHiddenReadlineInterface</a>.<a href="./#static-listenercount">listenerCount</a></em></p>
-<p>Defined in node_modules/@types/node/events.d.ts:29</p>
-<p><strong><code>deprecated</code></strong> since v4.0.0</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>emitter</code></td>
-<td>EventEmitter</td>
-</tr>
-<tr>
-<td><code>event</code></td>
-<td>string | symbol</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>number</em></p>
 </article>
 </div>
 </div>
