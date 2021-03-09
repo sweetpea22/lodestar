@@ -398,11 +398,11 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="isignatureset_1">ISignatureSet<a class="headerlink" href="#isignatureset_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ISignatureSet</strong>: <em>object | object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a1f88d5/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/types.ts#L9">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/types.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d4f183b/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/types.ts#L9">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/types.ts:9</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getallblocksignaturesets">getAllBlockSignatureSets<a class="headerlink" href="#getallblocksignaturesets" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAllBlockSignatureSets</strong>(<code>epochCtx</code>: <a href="../../classes/phase0_fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a1f88d5/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/index.ts#L17">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/index.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d4f183b/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/index.ts#L17">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/index.ts:17</a></em></p>
 <p>Includes all signatures on the block (except the deposit signatures) for verification.
 Deposits are not included because they can legally have invalid signatures.</p>
 <p><strong>Parameters:</strong></p>
@@ -432,7 +432,7 @@ Deposits are not included because they can legally have invalid signatures.</p>
 <hr/>
 <h3 id="getallblocksignaturesetsexceptproposer">getAllBlockSignatureSetsExceptProposer<a class="headerlink" href="#getallblocksignaturesetsexceptproposer" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAllBlockSignatureSetsExceptProposer</strong>(<code>epochCtx</code>: <a href="../../classes/phase0_fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a1f88d5/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/index.ts#L32">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/index.ts:32</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d4f183b/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/index.ts#L32">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/index.ts:32</a></em></p>
 <p>Includes all signatures on the block (except the deposit signatures) for verification.
 Useful since block proposer signature is verified beforehand on gossip validation</p>
 <p><strong>Parameters:</strong></p>
@@ -462,7 +462,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getattestationssignaturesets">getAttestationsSignatureSets<a class="headerlink" href="#getattestationssignaturesets" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttestationsSignatureSets</strong>(<code>epochCtx</code>: <a href="../../classes/phase0_fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a1f88d5/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/attestations.ts#L7">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/attestations.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d4f183b/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/attestations.ts#L7">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/attestations.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -490,7 +490,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getattesterslashingssignaturesets">getAttesterSlashingsSignatureSets<a class="headerlink" href="#getattesterslashingssignaturesets" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttesterSlashingsSignatureSets</strong>(<code>epochCtx</code>: <a href="../../classes/phase0_fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a1f88d5/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/attesterSlashings.ts#L7">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/attesterSlashings.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d4f183b/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/attesterSlashings.ts#L7">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/attesterSlashings.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -518,7 +518,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getproposerslashingssignaturesets">getProposerSlashingsSignatureSets<a class="headerlink" href="#getproposerslashingssignaturesets" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getProposerSlashingsSignatureSets</strong>(<code>epochCtx</code>: <a href="../../classes/phase0_fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a1f88d5/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/proposerSlashings.ts#L7">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/proposerSlashings.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d4f183b/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/proposerSlashings.ts#L7">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/proposerSlashings.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -546,7 +546,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getvoluntaryexitssignaturesets">getVoluntaryExitsSignatureSets<a class="headerlink" href="#getvoluntaryexitssignaturesets" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getVoluntaryExitsSignatureSets</strong>(<code>epochCtx</code>: <a href="../../classes/phase0_fast_util.epochcontext/">EpochContext</a>, <code>state</code>: BeaconState, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a1f88d5/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/voluntaryExits.ts#L7">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/voluntaryExits.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d4f183b/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/voluntaryExits.ts#L7">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/voluntaryExits.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -574,7 +574,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="verifysignatureset_1">verifySignatureSet<a class="headerlink" href="#verifysignatureset_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>verifySignatureSet</strong>(<code>signatureSet</code>: <a href="./#isignatureset">ISignatureSet</a>): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a1f88d5/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/verify.ts#L4">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/verify.ts:4</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d4f183b/packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/verify.ts#L4">packages/lodestar-beacon-state-transition/src/phase0/fast/signatureSets/verify.ts:4</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
