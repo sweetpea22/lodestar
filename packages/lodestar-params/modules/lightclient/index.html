@@ -288,6 +288,11 @@
 <nav aria-label="Variables" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#const-bigint64">
+    Const BigInt64
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#const-bytevector4">
     Const ByteVector4
   </a>
@@ -329,6 +334,7 @@
 </ul>
 <h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#const-bigint64">BigInt64</a></li>
 <li><a href="./#const-bytevector4">ByteVector4</a></li>
 <li><a href="./#const-lightclientparams">LightclientParams</a></li>
 <li><a href="./#const-number64">Number64</a></li>
@@ -340,9 +346,13 @@
 <h3 id="lightclientparams">LightclientParams<a class="headerlink" href="#lightclientparams" title="Permanent link">¶</a></h3>
 <p>• <strong>LightclientParams</strong>:</p>
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
+<h3 id="const-bigint64"><code>Const</code> BigInt64<a class="headerlink" href="#const-bigint64" title="Permanent link">¶</a></h3>
+<p>• <strong>BigInt64</strong>: <em>BigIntUintType‹›</em> = new BigIntUintType({byteLength: 8})</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-params/src/lightclient/ssz.ts#L8">lightclient/ssz.ts:8</a></em></p>
+<hr/>
 <h3 id="const-bytevector4"><code>Const</code> ByteVector4<a class="headerlink" href="#const-bytevector4" title="Permanent link">¶</a></h3>
 <p>• <strong>ByteVector4</strong>: <em>ByteVectorType‹›</em> = new ByteVectorType({length: 4})</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/820a0a2/packages/lodestar-params/src/lightclient/ssz.ts#L8">lightclient/ssz.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-params/src/lightclient/ssz.ts#L9">lightclient/ssz.ts:9</a></em></p>
 <hr/>
 <h3 id="const-lightclientparams"><code>Const</code> LightclientParams<a class="headerlink" href="#const-lightclientparams" title="Permanent link">¶</a></h3>
 <p>• <strong>LightclientParams</strong>: <em>ContainerType‹<a href="../../interfaces/lightclient.ilightclientparams/">ILightclientParams</a>›</em> = new ContainerType<ilightclientparams>({
@@ -353,13 +363,16 @@
     DOMAIN_SYNC_COMMITTEE: ByteVector4,
     LIGHTCLIENT_PATCH_FORK_VERSION: ByteVector4,
     LIGHTCLIENT_PATCH_FORK_SLOT: Number64,
+    HF1_INACTIVITY_PENALTY_QUOTIENT: BigInt64,
+    HF1_MIN_SLASHING_PENALTY_QUOTIENT: Number64,
+    HF1_PROPORTIONAL_SLASHING_MULTIPLIER: Number64,
   },
 })</ilightclientparams></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/820a0a2/packages/lodestar-params/src/lightclient/ssz.ts#L10">lightclient/ssz.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-params/src/lightclient/ssz.ts#L11">lightclient/ssz.ts:11</a></em></p>
 <hr/>
 <h3 id="const-number64"><code>Const</code> Number64<a class="headerlink" href="#const-number64" title="Permanent link">¶</a></h3>
 <p>• <strong>Number64</strong>: <em>NumberUintType‹›</em> = new NumberUintType({byteLength: 8})</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/820a0a2/packages/lodestar-params/src/lightclient/ssz.ts#L7">lightclient/ssz.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-params/src/lightclient/ssz.ts#L7">lightclient/ssz.ts:7</a></em></p>
 </article>
 </div>
 </div>

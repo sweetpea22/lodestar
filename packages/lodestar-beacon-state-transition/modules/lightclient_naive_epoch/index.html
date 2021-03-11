@@ -293,6 +293,11 @@
 <nav aria-label="Functions" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#getbasereward">
+    getBaseReward
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#getflagdeltas">
     getFlagDeltas
   </a>
@@ -352,6 +357,7 @@
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#getbasereward">getBaseReward</a></li>
 <li><a href="./#getflagdeltas">getFlagDeltas</a></li>
 <li><a href="./#getinactivitypenaltydeltas">getInactivityPenaltyDeltas</a></li>
 <li><a href="./#processepoch">processEpoch</a></li>
@@ -373,9 +379,37 @@
 <h3 id="processsynccommitteeupdates">processSyncCommitteeUpdates<a class="headerlink" href="#processsynccommitteeupdates" title="Permanent link">¶</a></h3>
 <p>• <strong>processSyncCommitteeUpdates</strong>:</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
+<h3 id="getbasereward">getBaseReward<a class="headerlink" href="#getbasereward" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getBaseReward</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>index</code>: <a href="../phase0/#validatorindex">ValidatorIndex</a>): <em><a href="../phase0/#gwei">Gwei</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/balance_utils.ts#L80">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/balance_utils.ts:80</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td><a href="../phase0/#validatorindex">ValidatorIndex</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em><a href="../phase0/#gwei">Gwei</a></em></p>
+<hr/>
 <h3 id="getflagdeltas">getFlagDeltas<a class="headerlink" href="#getflagdeltas" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getFlagDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>flag</code>: <a href="../phase0/#validatorflag">ValidatorFlag</a>, <code>numerator</code>: number): <em>[<a href="../phase0/#gwei">Gwei</a>[], <a href="../phase0/#gwei">Gwei</a>[]]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/820a0a2/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/balance_utils.ts#L14">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/balance_utils.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/balance_utils.ts#L15">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/balance_utils.ts:15</a></em></p>
 <p>Compute the rewards and penalties associated with a particular duty, by scanning through the participation
  flags to determine who participated and who did not and assigning them the appropriate rewards and penalties.</p>
 <p><strong>Parameters:</strong></p>
@@ -409,7 +443,7 @@
 <hr/>
 <h3 id="getinactivitypenaltydeltas">getInactivityPenaltyDeltas<a class="headerlink" href="#getinactivitypenaltydeltas" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getInactivityPenaltyDeltas</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>[<a href="../phase0/#gwei">Gwei</a>[], <a href="../phase0/#gwei">Gwei</a>[]]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/820a0a2/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/balance_utils.ts#L53">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/balance_utils.ts:53</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/balance_utils.ts#L54">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/balance_utils.ts:54</a></em></p>
 <p>Compute the penalties associated with the inactivity leak, by scanning through the participation
   flags to determine who participated and who did not, applying the leak penalty globally and applying
   compensatory rewards to participants.</p>
@@ -435,8 +469,8 @@
 <p><strong>Returns:</strong> <em>[<a href="../phase0/#gwei">Gwei</a>[], <a href="../phase0/#gwei">Gwei</a>[]]</em></p>
 <hr/>
 <h3 id="processepoch">processEpoch<a class="headerlink" href="#processepoch" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processEpoch</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>BeaconState</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/820a0a2/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/index.ts#L14">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/index.ts:14</a></em></p>
+<p>▸ <strong>processEpoch</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState &amp; BeaconState): <em>BeaconState</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/index.ts#L14">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/index.ts:14</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -452,7 +486,7 @@
 </tr>
 <tr>
 <td><code>state</code></td>
-<td>BeaconState</td>
+<td>BeaconState &amp; BeaconState</td>
 </tr>
 </tbody>
 </table>
@@ -460,7 +494,7 @@
 <hr/>
 <h3 id="processjustificationandfinalization_1">processJustificationAndFinalization<a class="headerlink" href="#processjustificationandfinalization_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processJustificationAndFinalization</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/820a0a2/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/justification_finalization.ts#L14">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/justification_finalization.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/justification_finalization.ts#L14">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/justification_finalization.ts:14</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -484,7 +518,7 @@
 <hr/>
 <h3 id="processparticipationflagupdates_1">processParticipationFlagUpdates<a class="headerlink" href="#processparticipationflagupdates_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processParticipationFlagUpdates</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/820a0a2/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/flag.ts#L8">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/flag.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/flag.ts#L8">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/flag.ts:8</a></em></p>
 <p>Call to <code>process_participation_flag_updates</code> added to <code>process_epoch</code> in HF1</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -509,7 +543,7 @@
 <hr/>
 <h3 id="processrewardsandpenalties_1">processRewardsAndPenalties<a class="headerlink" href="#processrewardsandpenalties_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processRewardsAndPenalties</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/820a0a2/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/rewards_and_penalties.ts#L8">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/rewards_and_penalties.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/rewards_and_penalties.ts#L8">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/rewards_and_penalties.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -533,7 +567,7 @@
 <hr/>
 <h3 id="processsynccommitteeupdates_1">processSyncCommitteeUpdates<a class="headerlink" href="#processsynccommitteeupdates_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processSyncCommitteeUpdates</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/820a0a2/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/sync_committee.ts#L9">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/sync_committee.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/sync_committee.ts#L9">packages/lodestar-beacon-state-transition/src/lightclient/naive/epoch/sync_committee.ts:9</a></em></p>
 <p>Call to <code>proces_sync_committee_updates</code> added to <code>process_epoch</code> in HF1</p>
 <p><strong>Parameters:</strong></p>
 <table>
