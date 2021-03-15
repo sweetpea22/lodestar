@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
 <link href="https://chainsafe.github.io/lodestar/packages/lodestar/classes/chain_statecache.checkpointstatecache/" rel="canonical"/>
-<link href="../../../../images/favicon.ico" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-7.0.5" name="generator"/>
+<link href="../../../../images/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.0.6" name="generator"/>
 <title>Chain statecache.checkpointstatecache - Lodestar documentation</title>
-<link href="../../../../assets/stylesheets/main.77f3fd56.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.2c0c5eaf.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.7fa14f5b.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
@@ -31,7 +31,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Lodestar documentation" class="md-header__button md-logo" href="https://chainsafe.github.io/lodestar" title="Lodestar documentation">
+<a aria-label="Lodestar documentation" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Lodestar documentation">
 <img alt="logo" src="../../../../assets/300ppi/short-LS-hookS-WHITE.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -103,7 +103,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Lodestar documentation" class="md-nav__button md-logo" href="https://chainsafe.github.io/lodestar" title="Lodestar documentation">
+<a aria-label="Lodestar documentation" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Lodestar documentation">
 <img alt="logo" src="../../../../assets/300ppi/short-LS-hookS-WHITE.png"/>
 </a>
     Lodestar documentation
@@ -322,11 +322,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#private-clone">
-    Private clone
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#delete">
     delete
   </a>
@@ -371,7 +366,7 @@
 </a>
 <p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/chain_statecache/">chain/stateCache</a> › <a href="./">CheckpointStateCache</a></p>
 <h1 id="class-checkpointstatecache">Class: CheckpointStateCache<a class="headerlink" href="#class-checkpointstatecache" title="Permanent link">¶</a></h1>
-<p>In memory cache of BeaconState and connected EpochContext
+<p>In memory cache of CachedBeaconState
 belonging to checkpoint</p>
 <p>Similar API to Repository</p>
 <h2 id="hierarchy">Hierarchy<a class="headerlink" href="#hierarchy" title="Permanent link">¶</a></h2>
@@ -393,7 +388,6 @@ belonging to checkpoint</p>
 <ul>
 <li><a href="./#add">add</a></li>
 <li><a href="./#clear">clear</a></li>
-<li><a href="./#private-clone">clone</a></li>
 <li><a href="./#delete">delete</a></li>
 <li><a href="./#deleteallepochitems">deleteAllEpochItems</a></li>
 <li><a href="./#get">get</a></li>
@@ -404,7 +398,7 @@ belonging to checkpoint</p>
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new CheckpointStateCache</strong>(<code>config</code>: IBeaconConfig): <em><a href="./">CheckpointStateCache</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L18">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L18">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:18</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -423,21 +417,21 @@ belonging to checkpoint</p>
 <p><strong>Returns:</strong> <em><a href="./">CheckpointStateCache</a></em></p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="private-cache"><code>Private</code> cache<a class="headerlink" href="#private-cache" title="Permanent link">¶</a></h3>
-<p>• <strong>cache</strong>: <em>Record‹string, <a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L14">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:14</a></em></p>
+<p>• <strong>cache</strong>: <em>Record‹string, CachedBeaconState‹BeaconState››</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L14">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:14</a></em></p>
 <hr/>
 <h3 id="private-readonly-config"><code>Private</code> <code>Readonly</code> config<a class="headerlink" href="#private-readonly-config" title="Permanent link">¶</a></h3>
 <p>• <strong>config</strong>: <em>IBeaconConfig</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L13">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L13">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:13</a></em></p>
 <hr/>
 <h3 id="private-epochindex"><code>Private</code> epochIndex<a class="headerlink" href="#private-epochindex" title="Permanent link">¶</a></h3>
 <p>• <strong>epochIndex</strong>: <em>Record‹Epoch, Set‹string››</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L18">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L18">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:18</a></em></p>
 <p>Epoch -&gt; Set<blockroot></blockroot></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="add">add<a class="headerlink" href="#add" title="Permanent link">¶</a></h3>
-<p>▸ <strong>add</strong>(<code>cp</code>: Checkpoint, <code>item</code>: <a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L34">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:34</a></em></p>
+<p>▸ <strong>add</strong>(<code>cp</code>: Checkpoint, <code>item</code>: CachedBeaconState‹BeaconState›): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L34">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:34</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -453,7 +447,7 @@ belonging to checkpoint</p>
 </tr>
 <tr>
 <td><code>item</code></td>
-<td><a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a></td>
+<td>CachedBeaconState‹BeaconState›</td>
 </tr>
 </tbody>
 </table>
@@ -461,32 +455,12 @@ belonging to checkpoint</p>
 <hr/>
 <h3 id="clear">clear<a class="headerlink" href="#clear" title="Permanent link">¶</a></h3>
 <p>▸ <strong>clear</strong>(): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L106">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:106</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L106">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:106</a></em></p>
 <p><strong>Returns:</strong> <em>void</em></p>
-<hr/>
-<h3 id="private-clone"><code>Private</code> clone<a class="headerlink" href="#private-clone" title="Permanent link">¶</a></h3>
-<p>▸ <strong>clone</strong>(<code>item</code>: <a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a>): <em><a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L111">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:111</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>item</code></td>
-<td><a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em><a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a></em></p>
 <hr/>
 <h3 id="delete">delete<a class="headerlink" href="#delete" title="Permanent link">¶</a></h3>
 <p>▸ <strong>delete</strong>(<code>cp</code>: Checkpoint): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L87">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:87</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L87">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:87</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -506,7 +480,7 @@ belonging to checkpoint</p>
 <hr/>
 <h3 id="deleteallepochitems">deleteAllEpochItems<a class="headerlink" href="#deleteallepochitems" title="Permanent link">¶</a></h3>
 <p>▸ <strong>deleteAllEpochItems</strong>(<code>epoch</code>: Epoch): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L97">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:97</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L97">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:97</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -525,8 +499,8 @@ belonging to checkpoint</p>
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="get">get<a class="headerlink" href="#get" title="Permanent link">¶</a></h3>
-<p>▸ <strong>get</strong>(<code>cp</code>: Checkpoint): <em><a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a> | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L26">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:26</a></em></p>
+<p>▸ <strong>get</strong>(<code>cp</code>: Checkpoint): <em>CachedBeaconState‹BeaconState› | null</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L26">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:26</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -542,11 +516,11 @@ belonging to checkpoint</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em><a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a> | null</em></p>
+<p><strong>Returns:</strong> <em>CachedBeaconState‹BeaconState› | null</em></p>
 <hr/>
 <h3 id="getlatest">getLatest<a class="headerlink" href="#getlatest" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getLatest</strong>(<code>__namedParameters</code>: object): <em><a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a> | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L51">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:51</a></em></p>
+<p>▸ <strong>getLatest</strong>(<code>__namedParameters</code>: object): <em>CachedBeaconState‹BeaconState› | null</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L51">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:51</a></em></p>
 <p>Searches for the latest cached state with a <code>root</code>, starting with <code>epoch</code> and descending</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
@@ -568,11 +542,11 @@ belonging to checkpoint</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em><a href="../../interfaces/chain.itreestatecontext/">ITreeStateContext</a> | null</em></p>
+<p><strong>Returns:</strong> <em>CachedBeaconState‹BeaconState› | null</em></p>
 <hr/>
 <h3 id="prune">prune<a class="headerlink" href="#prune" title="Permanent link">¶</a></h3>
 <p>▸ <strong>prune</strong>(<code>finalizedEpoch</code>: Epoch, <code>justifiedEpoch</code>: Epoch): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L75">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:75</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L75">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:75</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -596,7 +570,7 @@ belonging to checkpoint</p>
 <hr/>
 <h3 id="prunefinalized">pruneFinalized<a class="headerlink" href="#prunefinalized" title="Permanent link">¶</a></h3>
 <p>▸ <strong>pruneFinalized</strong>(<code>finalizedEpoch</code>: Epoch): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L67">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:67</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts#L67">packages/lodestar/src/chain/stateCache/stateContextCheckpointsCache.ts:67</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -649,6 +623,6 @@ belonging to checkpoint</p>
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
-<script src="../../../../assets/javascripts/bundle.5cf3e710.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
 </body>
 </html>

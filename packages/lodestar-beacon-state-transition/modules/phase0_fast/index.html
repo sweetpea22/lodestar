@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
 <link href="https://chainsafe.github.io/lodestar/packages/lodestar-beacon-state-transition/modules/phase0_fast/" rel="canonical"/>
-<link href="../../../../images/favicon.ico" rel="shortcut icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-7.0.5" name="generator"/>
+<link href="../../../../images/favicon.ico" rel="icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.0.6" name="generator"/>
 <title>Phase0 fast - Lodestar documentation</title>
-<link href="../../../../assets/stylesheets/main.77f3fd56.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.2c0c5eaf.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.7fa14f5b.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
@@ -31,7 +31,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Lodestar documentation" class="md-header__button md-logo" href="https://chainsafe.github.io/lodestar" title="Lodestar documentation">
+<a aria-label="Lodestar documentation" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Lodestar documentation">
 <img alt="logo" src="../../../../assets/300ppi/short-LS-hookS-WHITE.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -103,7 +103,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Lodestar documentation" class="md-nav__button md-logo" href="https://chainsafe.github.io/lodestar" title="Lodestar documentation">
+<a aria-label="Lodestar documentation" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Lodestar documentation">
 <img alt="logo" src="../../../../assets/300ppi/short-LS-hookS-WHITE.png"/>
 </a>
     Lodestar documentation
@@ -264,8 +264,28 @@
 <nav aria-label="References" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cachedvalidatorsbeaconstate">
-    CachedValidatorsBeaconState
+<a class="md-nav__link" href="#beaconstatecontext">
+    BeaconStateContext
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cachedbeaconstate">
+    CachedBeaconState
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cachedbeaconstateproxyhandler">
+    CachedBeaconStateProxyHandler
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cachedvalidatorlist">
+    CachedValidatorList
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cachedvalidatorlistproxyhandler">
+    CachedValidatorListProxyHandler
   </a>
 </li>
 <li class="md-nav__item">
@@ -334,11 +354,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#iflatvalidator">
-    IFlatValidator
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#ireadonlyepochshuffling">
     IReadonlyEpochShuffling
   </a>
@@ -349,13 +364,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#istatecontext">
-    IStateContext
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#readonlyepochcontext">
-    ReadonlyEpochContext
+<a class="md-nav__link" href="#pubkeyindexmap">
+    PubkeyIndexMap
   </a>
 </li>
 <li class="md-nav__item">
@@ -374,6 +384,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#computeproposers">
+    computeProposers
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#computesubnetforattestation">
     computeSubnetForAttestation
   </a>
@@ -384,8 +399,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#createcachedvalidatorsbeaconstate">
-    createCachedValidatorsBeaconState
+<a class="md-nav__link" href="#createcachedbeaconstate">
+    createCachedBeaconState
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#createepochcontext">
+    createEpochContext
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#createflat">
+    createFlat
   </a>
 </li>
 <li class="md-nav__item">
@@ -431,11 +456,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#hasmarkers">
     hasMarkers
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#isactiveiflatvalidator">
-    isActiveIFlatValidator
   </a>
 </li>
 <li class="md-nav__item">
@@ -539,6 +559,16 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#rotateepochs">
+    rotateEpochs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#syncpubkeys">
+    syncPubkeys
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#verifyblocksignature">
     verifyBlockSignature
   </a>
@@ -580,7 +610,11 @@
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#cachedvalidatorsbeaconstate">CachedValidatorsBeaconState</a></li>
+<li><a href="./#beaconstatecontext">BeaconStateContext</a></li>
+<li><a href="./#cachedbeaconstate">CachedBeaconState</a></li>
+<li><a href="./#cachedbeaconstateproxyhandler">CachedBeaconStateProxyHandler</a></li>
+<li><a href="./#cachedvalidatorlist">CachedValidatorList</a></li>
+<li><a href="./#cachedvalidatorlistproxyhandler">CachedValidatorListProxyHandler</a></li>
 <li><a href="./#epochcontext">EpochContext</a></li>
 <li><a href="./#flag_curr_head_attester">FLAG_CURR_HEAD_ATTESTER</a></li>
 <li><a href="./#flag_curr_source_attester">FLAG_CURR_SOURCE_ATTESTER</a></li>
@@ -594,17 +628,18 @@
 <li><a href="./#iepochprocess">IEpochProcess</a></li>
 <li><a href="./#iepochshuffling">IEpochShuffling</a></li>
 <li><a href="./#iepochstakesummary">IEpochStakeSummary</a></li>
-<li><a href="./#iflatvalidator">IFlatValidator</a></li>
 <li><a href="./#ireadonlyepochshuffling">IReadonlyEpochShuffling</a></li>
 <li><a href="./#isignatureset">ISignatureSet</a></li>
-<li><a href="./#istatecontext">IStateContext</a></li>
-<li><a href="./#readonlyepochcontext">ReadonlyEpochContext</a></li>
+<li><a href="./#pubkeyindexmap">PubkeyIndexMap</a></li>
 <li><a href="./#signaturesettype">SignatureSetType</a></li>
 <li><a href="./#computecommitteecount">computeCommitteeCount</a></li>
 <li><a href="./#computeepochshuffling">computeEpochShuffling</a></li>
+<li><a href="./#computeproposers">computeProposers</a></li>
 <li><a href="./#computesubnetforattestation">computeSubnetForAttestation</a></li>
 <li><a href="./#computesubnetforslot">computeSubnetForSlot</a></li>
-<li><a href="./#createcachedvalidatorsbeaconstate">createCachedValidatorsBeaconState</a></li>
+<li><a href="./#createcachedbeaconstate">createCachedBeaconState</a></li>
+<li><a href="./#createepochcontext">createEpochContext</a></li>
+<li><a href="./#createflat">createFlat</a></li>
 <li><a href="./#createiattesterstatus">createIAttesterStatus</a></li>
 <li><a href="./#createiepochprocess">createIEpochProcess</a></li>
 <li><a href="./#createiflatvalidator">createIFlatValidator</a></li>
@@ -614,7 +649,6 @@
 <li><a href="./#getblocksignatureset">getBlockSignatureSet</a></li>
 <li><a href="./#getneweth1data">getNewEth1Data</a></li>
 <li><a href="./#hasmarkers">hasMarkers</a></li>
-<li><a href="./#isactiveiflatvalidator">isActiveIFlatValidator</a></li>
 <li><a href="./#isvalidindexedattestation">isValidIndexedAttestation</a></li>
 <li><a href="./#prepareepochprocessstate">prepareEpochProcessState</a></li>
 <li><a href="./#processattestation">processAttestation</a></li>
@@ -635,6 +669,8 @@
 <li><a href="./#processslot">processSlot</a></li>
 <li><a href="./#processslots">processSlots</a></li>
 <li><a href="./#processvoluntaryexit">processVoluntaryExit</a></li>
+<li><a href="./#rotateepochs">rotateEpochs</a></li>
+<li><a href="./#syncpubkeys">syncPubkeys</a></li>
 <li><a href="./#verifyblocksignature">verifyBlockSignature</a></li>
 <li><a href="./#verifysignatureset">verifySignatureSet</a></li>
 </ul>
@@ -643,8 +679,20 @@
 <li><a href="./#faststatetransition">fastStateTransition</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
-<h3 id="cachedvalidatorsbeaconstate">CachedValidatorsBeaconState<a class="headerlink" href="#cachedvalidatorsbeaconstate" title="Permanent link">¶</a></h3>
-<p>• <strong>CachedValidatorsBeaconState</strong>:</p>
+<h3 id="beaconstatecontext">BeaconStateContext<a class="headerlink" href="#beaconstatecontext" title="Permanent link">¶</a></h3>
+<p>• <strong>BeaconStateContext</strong>:</p>
+<hr/>
+<h3 id="cachedbeaconstate">CachedBeaconState<a class="headerlink" href="#cachedbeaconstate" title="Permanent link">¶</a></h3>
+<p>• <strong>CachedBeaconState</strong>:</p>
+<hr/>
+<h3 id="cachedbeaconstateproxyhandler">CachedBeaconStateProxyHandler<a class="headerlink" href="#cachedbeaconstateproxyhandler" title="Permanent link">¶</a></h3>
+<p>• <strong>CachedBeaconStateProxyHandler</strong>:</p>
+<hr/>
+<h3 id="cachedvalidatorlist">CachedValidatorList<a class="headerlink" href="#cachedvalidatorlist" title="Permanent link">¶</a></h3>
+<p>• <strong>CachedValidatorList</strong>:</p>
+<hr/>
+<h3 id="cachedvalidatorlistproxyhandler">CachedValidatorListProxyHandler<a class="headerlink" href="#cachedvalidatorlistproxyhandler" title="Permanent link">¶</a></h3>
+<p>• <strong>CachedValidatorListProxyHandler</strong>:</p>
 <hr/>
 <h3 id="epochcontext">EpochContext<a class="headerlink" href="#epochcontext" title="Permanent link">¶</a></h3>
 <p>• <strong>EpochContext</strong>:</p>
@@ -685,20 +733,14 @@
 <h3 id="iepochstakesummary">IEpochStakeSummary<a class="headerlink" href="#iepochstakesummary" title="Permanent link">¶</a></h3>
 <p>• <strong>IEpochStakeSummary</strong>:</p>
 <hr/>
-<h3 id="iflatvalidator">IFlatValidator<a class="headerlink" href="#iflatvalidator" title="Permanent link">¶</a></h3>
-<p>• <strong>IFlatValidator</strong>:</p>
-<hr/>
 <h3 id="ireadonlyepochshuffling">IReadonlyEpochShuffling<a class="headerlink" href="#ireadonlyepochshuffling" title="Permanent link">¶</a></h3>
 <p>• <strong>IReadonlyEpochShuffling</strong>:</p>
 <hr/>
 <h3 id="isignatureset">ISignatureSet<a class="headerlink" href="#isignatureset" title="Permanent link">¶</a></h3>
 <p>• <strong>ISignatureSet</strong>:</p>
 <hr/>
-<h3 id="istatecontext">IStateContext<a class="headerlink" href="#istatecontext" title="Permanent link">¶</a></h3>
-<p>• <strong>IStateContext</strong>:</p>
-<hr/>
-<h3 id="readonlyepochcontext">ReadonlyEpochContext<a class="headerlink" href="#readonlyepochcontext" title="Permanent link">¶</a></h3>
-<p>• <strong>ReadonlyEpochContext</strong>:</p>
+<h3 id="pubkeyindexmap">PubkeyIndexMap<a class="headerlink" href="#pubkeyindexmap" title="Permanent link">¶</a></h3>
+<p>• <strong>PubkeyIndexMap</strong>:</p>
 <hr/>
 <h3 id="signaturesettype">SignatureSetType<a class="headerlink" href="#signaturesettype" title="Permanent link">¶</a></h3>
 <p>• <strong>SignatureSetType</strong>:</p>
@@ -709,14 +751,23 @@
 <h3 id="computeepochshuffling">computeEpochShuffling<a class="headerlink" href="#computeepochshuffling" title="Permanent link">¶</a></h3>
 <p>• <strong>computeEpochShuffling</strong>:</p>
 <hr/>
+<h3 id="computeproposers">computeProposers<a class="headerlink" href="#computeproposers" title="Permanent link">¶</a></h3>
+<p>• <strong>computeProposers</strong>:</p>
+<hr/>
 <h3 id="computesubnetforattestation">computeSubnetForAttestation<a class="headerlink" href="#computesubnetforattestation" title="Permanent link">¶</a></h3>
 <p>• <strong>computeSubnetForAttestation</strong>:</p>
 <hr/>
 <h3 id="computesubnetforslot">computeSubnetForSlot<a class="headerlink" href="#computesubnetforslot" title="Permanent link">¶</a></h3>
 <p>• <strong>computeSubnetForSlot</strong>:</p>
 <hr/>
-<h3 id="createcachedvalidatorsbeaconstate">createCachedValidatorsBeaconState<a class="headerlink" href="#createcachedvalidatorsbeaconstate" title="Permanent link">¶</a></h3>
-<p>• <strong>createCachedValidatorsBeaconState</strong>:</p>
+<h3 id="createcachedbeaconstate">createCachedBeaconState<a class="headerlink" href="#createcachedbeaconstate" title="Permanent link">¶</a></h3>
+<p>• <strong>createCachedBeaconState</strong>:</p>
+<hr/>
+<h3 id="createepochcontext">createEpochContext<a class="headerlink" href="#createepochcontext" title="Permanent link">¶</a></h3>
+<p>• <strong>createEpochContext</strong>:</p>
+<hr/>
+<h3 id="createflat">createFlat<a class="headerlink" href="#createflat" title="Permanent link">¶</a></h3>
+<p>• <strong>createFlat</strong>:</p>
 <hr/>
 <h3 id="createiattesterstatus">createIAttesterStatus<a class="headerlink" href="#createiattesterstatus" title="Permanent link">¶</a></h3>
 <p>• <strong>createIAttesterStatus</strong>:</p>
@@ -744,9 +795,6 @@
 <hr/>
 <h3 id="hasmarkers">hasMarkers<a class="headerlink" href="#hasmarkers" title="Permanent link">¶</a></h3>
 <p>• <strong>hasMarkers</strong>:</p>
-<hr/>
-<h3 id="isactiveiflatvalidator">isActiveIFlatValidator<a class="headerlink" href="#isactiveiflatvalidator" title="Permanent link">¶</a></h3>
-<p>• <strong>isActiveIFlatValidator</strong>:</p>
 <hr/>
 <h3 id="isvalidindexedattestation">isValidIndexedAttestation<a class="headerlink" href="#isvalidindexedattestation" title="Permanent link">¶</a></h3>
 <p>• <strong>isValidIndexedAttestation</strong>:</p>
@@ -808,6 +856,12 @@
 <h3 id="processvoluntaryexit">processVoluntaryExit<a class="headerlink" href="#processvoluntaryexit" title="Permanent link">¶</a></h3>
 <p>• <strong>processVoluntaryExit</strong>:</p>
 <hr/>
+<h3 id="rotateepochs">rotateEpochs<a class="headerlink" href="#rotateepochs" title="Permanent link">¶</a></h3>
+<p>• <strong>rotateEpochs</strong>:</p>
+<hr/>
+<h3 id="syncpubkeys">syncPubkeys<a class="headerlink" href="#syncpubkeys" title="Permanent link">¶</a></h3>
+<p>• <strong>syncPubkeys</strong>:</p>
+<hr/>
 <h3 id="verifyblocksignature">verifyBlockSignature<a class="headerlink" href="#verifyblocksignature" title="Permanent link">¶</a></h3>
 <p>• <strong>verifyBlockSignature</strong>:</p>
 <hr/>
@@ -815,11 +869,10 @@
 <p>• <strong>verifySignatureSet</strong>:</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="faststatetransition">fastStateTransition<a class="headerlink" href="#faststatetransition" title="Permanent link">¶</a></h3>
-<p>▸ <strong>fastStateTransition</strong>(<code>__namedParameters</code>: object, <code>signedBlock</code>: SignedBeaconBlock, <code>options?</code>: undefined | object): <em><a href="../../interfaces/phase0_fast_util.istatecontext/">IStateContext</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/89cf68f/packages/lodestar-beacon-state-transition/src/phase0/fast/index.ts#L15">packages/lodestar-beacon-state-transition/src/phase0/fast/index.ts:15</a></em></p>
+<p>▸ <strong>fastStateTransition</strong>(<code>state</code>: <a href="./#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock, <code>options?</code>: undefined | object): <em><a href="./#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1ea9278/packages/lodestar-beacon-state-transition/src/phase0/fast/index.ts#L15">packages/lodestar-beacon-state-transition/src/phase0/fast/index.ts:15</a></em></p>
 <p>Implementation of protolambda's eth2fastspec (https://github.com/protolambda/eth2fastspec)</p>
 <p><strong>Parameters:</strong></p>
-<p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
 <thead>
 <tr>
@@ -829,18 +882,20 @@
 </thead>
 <tbody>
 <tr>
-<td><code>epochCtx</code></td>
-<td><a href="../../classes/phase0_fast_util.epochcontext/">EpochContext</a>‹›</td>
+<td><code>state</code></td>
+<td><a href="./#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›</td>
 </tr>
 <tr>
-<td><code>state</code></td>
-<td><a href="../../classes/phase0_fast_util.cachedvalidatorsbeaconstate/">CachedValidatorsBeaconState</a>‹›</td>
+<td><code>signedBlock</code></td>
+<td>SignedBeaconBlock</td>
+</tr>
+<tr>
+<td><code>options?</code></td>
+<td>undefined | object</td>
 </tr>
 </tbody>
 </table>
-<p>▪ <strong>signedBlock</strong>: <em>SignedBeaconBlock</em></p>
-<p>▪<code>Optional</code> <strong>options</strong>: <em>undefined | object</em></p>
-<p><strong>Returns:</strong> <em><a href="../../interfaces/phase0_fast_util.istatecontext/">IStateContext</a></em></p>
+<p><strong>Returns:</strong> <em><a href="./#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›</em></p>
 </article>
 </div>
 </div>
@@ -877,6 +932,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
-<script src="../../../../assets/javascripts/bundle.5cf3e710.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
 </body>
 </html>
