@@ -264,13 +264,27 @@
 <nav aria-label="Properties" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#abort">
+    abort
+  </a>
+<nav aria-label="abort" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#close">
     close
   </a>
 <nav aria-label="close" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration">
+<a class="md-nav__link" href="#type-declaration_1">
     Type declaration:
   </a>
 </li>
@@ -284,7 +298,7 @@
 <nav aria-label="reset" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_1">
+<a class="md-nav__link" href="#type-declaration_2">
     Type declaration:
   </a>
 </li>
@@ -298,7 +312,7 @@
 <nav aria-label="sink" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_2">
+<a class="md-nav__link" href="#type-declaration_3">
     Type declaration:
   </a>
 </li>
@@ -334,28 +348,55 @@ These source and sink types are more precise to our usage</p>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#abort">abort</a></li>
 <li><a href="./#close">close</a></li>
 <li><a href="./#reset">reset</a></li>
 <li><a href="./#sink">sink</a></li>
 <li><a href="./#source">source</a></li>
 </ul>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
+<h3 id="abort">abort<a class="headerlink" href="#abort" title="Permanent link">¶</a></h3>
+<p>• <strong>abort</strong>: <em>function</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5ed8bd/packages/lodestar/src/network/reqresp/interface.ts#L57">packages/lodestar/src/network/reqresp/interface.ts:57</a></em></p>
+<p><code>libp2p-mplex</code>: Close for reading and writing (local error)</p>
+<h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
+<p>▸ (<code>err</code>: <a href="../../classes/chain_regen.regenerror/#static-error">Error</a>): <em>void</em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>err</code></td>
+<td><a href="../../classes/chain_regen.regenerror/#static-error">Error</a></td>
+</tr>
+</tbody>
+</table>
+<hr/>
 <h3 id="close">close<a class="headerlink" href="#close" title="Permanent link">¶</a></h3>
 <p>• <strong>close</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5e801a/packages/lodestar/src/network/reqresp/interface.ts#L43">packages/lodestar/src/network/reqresp/interface.ts:43</a></em></p>
-<h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5ed8bd/packages/lodestar/src/network/reqresp/interface.ts#L49">packages/lodestar/src/network/reqresp/interface.ts:49</a></em></p>
+<p><code>libp2p-mplex</code>: Close for reading
+<div class="highlight"><pre><span></span><code><span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">stream</span><span class="p">.</span><span class="nx">source</span><span class="p">.</span><span class="nx">end</span><span class="p">()</span>
+</code></pre></div></p>
+<h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
 <p>▸ (): <em>void</em></p>
 <hr/>
 <h3 id="reset">reset<a class="headerlink" href="#reset" title="Permanent link">¶</a></h3>
 <p>• <strong>reset</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5e801a/packages/lodestar/src/network/reqresp/interface.ts#L44">packages/lodestar/src/network/reqresp/interface.ts:44</a></em></p>
-<h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5ed8bd/packages/lodestar/src/network/reqresp/interface.ts#L53">packages/lodestar/src/network/reqresp/interface.ts:53</a></em></p>
+<p><code>libp2p-mplex</code>: Close immediately for reading and writing (remote error)</p>
+<h4 id="type-declaration_2">Type declaration:<a class="headerlink" href="#type-declaration_2" title="Permanent link">¶</a></h4>
 <p>▸ (): <em>void</em></p>
 <hr/>
 <h3 id="sink">sink<a class="headerlink" href="#sink" title="Permanent link">¶</a></h3>
 <p>• <strong>sink</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5e801a/packages/lodestar/src/network/reqresp/interface.ts#L42">packages/lodestar/src/network/reqresp/interface.ts:42</a></em></p>
-<h4 id="type-declaration_2">Type declaration:<a class="headerlink" href="#type-declaration_2" title="Permanent link">¶</a></h4>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5ed8bd/packages/lodestar/src/network/reqresp/interface.ts#L42">packages/lodestar/src/network/reqresp/interface.ts:42</a></em></p>
+<h4 id="type-declaration_3">Type declaration:<a class="headerlink" href="#type-declaration_3" title="Permanent link">¶</a></h4>
 <p>▸ (<code>source</code>: AsyncIterable‹Buffer›): <em>Promise‹void›</em></p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -375,7 +416,7 @@ These source and sink types are more precise to our usage</p>
 <hr/>
 <h3 id="source">source<a class="headerlink" href="#source" title="Permanent link">¶</a></h3>
 <p>• <strong>source</strong>: <em>AsyncIterable‹Buffer›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5e801a/packages/lodestar/src/network/reqresp/interface.ts#L41">packages/lodestar/src/network/reqresp/interface.ts:41</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5ed8bd/packages/lodestar/src/network/reqresp/interface.ts#L41">packages/lodestar/src/network/reqresp/interface.ts:41</a></em></p>
 </article>
 </div>
 </div>
