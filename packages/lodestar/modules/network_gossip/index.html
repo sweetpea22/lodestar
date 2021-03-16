@@ -1121,7 +1121,7 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="gossipdeserializer_1">GossipDeserializer<a class="headerlink" href="#gossipdeserializer_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>GossipDeserializer</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/interface.ts#L116">packages/lodestar/src/network/gossip/interface.ts:116</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/interface.ts#L116">packages/lodestar/src/network/gossip/interface.ts:116</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <p>▸ (<code>buf</code>: Uint8Array): <em><a href="./#gossipobject">GossipObject</a></em></p>
 <p><strong>Parameters:</strong></p>
@@ -1142,15 +1142,15 @@
 <hr/>
 <h3 id="gossipeventemitter_1">GossipEventEmitter<a class="headerlink" href="#gossipeventemitter_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>GossipEventEmitter</strong>: <em>StrictEventEmitter‹EventEmitter, <a href="../../interfaces/network_gossip.igossipevents/">IGossipEvents</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/interface.ts#L89">packages/lodestar/src/network/gossip/interface.ts:89</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/interface.ts#L89">packages/lodestar/src/network/gossip/interface.ts:89</a></em></p>
 <hr/>
 <h3 id="gossipfn_1">GossipFn<a class="headerlink" href="#gossipfn_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>GossipFn</strong>: <em>function | function | function | function | function | function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/interface.ts#L75">packages/lodestar/src/network/gossip/interface.ts:75</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/interface.ts#L75">packages/lodestar/src/network/gossip/interface.ts:75</a></em></p>
 <hr/>
 <h3 id="gossiphandlerfn_1">GossipHandlerFn<a class="headerlink" href="#gossiphandlerfn_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>GossipHandlerFn</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/interface.ts#L112">packages/lodestar/src/network/gossip/interface.ts:112</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/interface.ts#L112">packages/lodestar/src/network/gossip/interface.ts:112</a></em></p>
 <h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
 <p>▸ (<code>gossipObject</code>: <a href="./#gossipobject">GossipObject</a>): <em>Promise‹void› | void</em></p>
 <p><strong>Parameters:</strong></p>
@@ -1171,14 +1171,14 @@
 <hr/>
 <h3 id="gossipobject_1">GossipObject<a class="headerlink" href="#gossipobject_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>GossipObject</strong>: <em>SignedBeaconBlock | SignedAggregateAndProof | Attestation | SignedVoluntaryExit | ProposerSlashing | AttesterSlashing</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/interface.ts#L104">packages/lodestar/src/network/gossip/interface.ts:104</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/interface.ts#L104">packages/lodestar/src/network/gossip/interface.ts:104</a></em></p>
 <p>Contains various methods for validation of incoming gossip topic data.
 The conditions for valid gossip topics and how they are handled are specified here:
 https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/p2p-interface.md#global-topics</p>
 <hr/>
 <h3 id="gossipserializer_1">GossipSerializer<a class="headerlink" href="#gossipserializer_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>GossipSerializer</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/interface.ts#L114">packages/lodestar/src/network/gossip/interface.ts:114</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/interface.ts#L114">packages/lodestar/src/network/gossip/interface.ts:114</a></em></p>
 <h4 id="type-declaration_2">Type declaration:<a class="headerlink" href="#type-declaration_2" title="Permanent link">¶</a></h4>
 <p>▸ (<code>obj</code>: <a href="./#gossipobject">GossipObject</a>): <em>Uint8Array</em></p>
 <p><strong>Parameters:</strong></p>
@@ -1199,12 +1199,12 @@ https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/p2p-interface.md#
 <hr/>
 <h3 id="gossiptopic_1">GossipTopic<a class="headerlink" href="#gossiptopic_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>GossipTopic</strong>: <em><a href="../../interfaces/network_gossip.ibeaconblocktopic/">IBeaconBlockTopic</a> | <a href="../../interfaces/network_gossip.ibeaconaggregateandprooftopic/">IBeaconAggregateAndProofTopic</a> | <a href="../../interfaces/network_gossip.ibeaconattestationtopic/">IBeaconAttestationTopic</a> | <a href="../../interfaces/network_gossip.ivoluntaryexittopic/">IVoluntaryExitTopic</a> | <a href="../../interfaces/network_gossip.iproposerslashingtopic/">IProposerSlashingTopic</a> | <a href="../../interfaces/network_gossip.iattesterslashingtopic/">IAttesterSlashingTopic</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/interface.ts#L67">packages/lodestar/src/network/gossip/interface.ts:67</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/interface.ts#L67">packages/lodestar/src/network/gossip/interface.ts:67</a></em></p>
 <p>Gossip topic split into a struct</p>
 <hr/>
 <h3 id="objectvalidatorfn_1">ObjectValidatorFn<a class="headerlink" href="#objectvalidatorfn_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ObjectValidatorFn</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/interface.ts#L130">packages/lodestar/src/network/gossip/interface.ts:130</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/interface.ts#L130">packages/lodestar/src/network/gossip/interface.ts:130</a></em></p>
 <p>Intermediate type for gossip validation functions.</p>
 <p>Gossip validation functions defined with this signature are easier to unit test</p>
 <h4 id="type-declaration_3">Type declaration:<a class="headerlink" href="#type-declaration_3" title="Permanent link">¶</a></h4>
@@ -1235,7 +1235,7 @@ https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/p2p-interface.md#
 <hr/>
 <h3 id="topicvalidatorfn_1">TopicValidatorFn<a class="headerlink" href="#topicvalidatorfn_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>TopicValidatorFn</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/interface.ts#L141">packages/lodestar/src/network/gossip/interface.ts:141</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/interface.ts#L141">packages/lodestar/src/network/gossip/interface.ts:141</a></em></p>
 <p>Top-level type for gossip validation functions</p>
 <p>js-libp2p-gossipsub expects validation functions that look like this</p>
 <h4 id="type-declaration_4">Type declaration:<a class="headerlink" href="#type-declaration_4" title="Permanent link">¶</a></h4>
@@ -1262,33 +1262,33 @@ https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/p2p-interface.md#
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
 <h3 id="const-attestationsubnetregexp"><code>Const</code> AttestationSubnetRegExp<a class="headerlink" href="#const-attestationsubnetregexp" title="Permanent link">¶</a></h3>
 <p>• <strong>AttestationSubnetRegExp</strong>: <em>RegExp‹›</em> = new RegExp("^/eth2/[a-f0-9]{8}/beacon_attestation_([0-9]+)/\w+$")</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/topic.ts#L39">packages/lodestar/src/network/gossip/topic.ts:39</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/topic.ts#L39">packages/lodestar/src/network/gossip/topic.ts:39</a></em></p>
 <hr/>
 <h3 id="const-default_encoding"><code>Const</code> DEFAULT_ENCODING<a class="headerlink" href="#const-default_encoding" title="Permanent link">¶</a></h3>
 <p>• <strong>DEFAULT_ENCODING</strong>: <em><a href="../../enums/network_gossip.gossipencoding/#ssz_snappy">ssz_snappy</a></em> = GossipEncoding.ssz_snappy</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/constants.ts#L19">packages/lodestar/src/network/gossip/constants.ts:19</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/constants.ts#L19">packages/lodestar/src/network/gossip/constants.ts:19</a></em></p>
 <hr/>
 <h3 id="const-gossip_msgid_length"><code>Const</code> GOSSIP_MSGID_LENGTH<a class="headerlink" href="#const-gossip_msgid_length" title="Permanent link">¶</a></h3>
 <p>• <strong>GOSSIP_MSGID_LENGTH</strong>: <em>20</em> = 20</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/constants.ts#L7">packages/lodestar/src/network/gossip/constants.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/constants.ts#L7">packages/lodestar/src/network/gossip/constants.ts:7</a></em></p>
 <hr/>
 <h3 id="const-gossiptopicregexp"><code>Const</code> GossipTopicRegExp<a class="headerlink" href="#const-gossiptopicregexp" title="Permanent link">¶</a></h3>
 <p>• <strong>GossipTopicRegExp</strong>: <em>RegExp‹›</em> = new RegExp("^(/eth2/)([a-f0-9]{8})/(\w+)/(\w+)")</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/topic.ts#L36">packages/lodestar/src/network/gossip/topic.ts:36</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/topic.ts#L36">packages/lodestar/src/network/gossip/topic.ts:36</a></em></p>
 <hr/>
 <h3 id="const-message_domain_invalid_snappy"><code>Const</code> MESSAGE_DOMAIN_INVALID_SNAPPY<a class="headerlink" href="#const-message_domain_invalid_snappy" title="Permanent link">¶</a></h3>
 <p>• <strong>MESSAGE_DOMAIN_INVALID_SNAPPY</strong>: <em>Buffer‹›</em> = Buffer.from("01000000", "hex")</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/constants.ts#L17">packages/lodestar/src/network/gossip/constants.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/constants.ts#L17">packages/lodestar/src/network/gossip/constants.ts:17</a></em></p>
 <p>4-byte domain for gossip message-id isolation of <em>valid</em> snappy messages</p>
 <hr/>
 <h3 id="const-message_domain_valid_snappy"><code>Const</code> MESSAGE_DOMAIN_VALID_SNAPPY<a class="headerlink" href="#const-message_domain_valid_snappy" title="Permanent link">¶</a></h3>
 <p>• <strong>MESSAGE_DOMAIN_VALID_SNAPPY</strong>: <em>Buffer‹›</em> = Buffer.from("00000000", "hex")</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/constants.ts#L12">packages/lodestar/src/network/gossip/constants.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/constants.ts#L12">packages/lodestar/src/network/gossip/constants.ts:12</a></em></p>
 <p>4-byte domain for gossip message-id isolation of <em>invalid</em> snappy messages</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="computemsgid_1">computeMsgId<a class="headerlink" href="#computemsgid_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>computeMsgId</strong>(<code>topic</code>: string, <code>data</code>: Uint8Array): <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/encoding.ts#L67">packages/lodestar/src/network/gossip/encoding.ts:67</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/encoding.ts#L67">packages/lodestar/src/network/gossip/encoding.ts:67</a></em></p>
 <p>Computing the message id requires uncompressing data, if applicable
 Return both the computed message id and uncompressed data</p>
 <p><strong>Parameters:</strong></p>
@@ -1322,7 +1322,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="createtopicvalidatorfn_1">createTopicValidatorFn<a class="headerlink" href="#createtopicvalidatorfn_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>createTopicValidatorFn</strong>(<code>modules</code>: <a href="../../interfaces/network_gossip.iobjectvalidatormodules/">IObjectValidatorModules</a>, <code>objectValidatorFn</code>: <a href="./#objectvalidatorfn">ObjectValidatorFn</a>): <em><a href="./#topicvalidatorfn">TopicValidatorFn</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/validator.ts#L301">packages/lodestar/src/network/gossip/validator.ts:301</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/validator.ts#L301">packages/lodestar/src/network/gossip/validator.ts:301</a></em></p>
 <p>Wrap an ObjectValidatorFn as a TopicValidatorFn</p>
 <p>See TopicValidatorFn here https://github.com/libp2p/js-libp2p-interfaces/blob/v0.5.2/src/pubsub/index.js#L529</p>
 <p><strong>Parameters:</strong></p>
@@ -1348,7 +1348,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="createtopicvalidatorfnmap_1">createTopicValidatorFnMap<a class="headerlink" href="#createtopicvalidatorfnmap_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>createTopicValidatorFnMap</strong>(<code>modules</code>: <a href="../../interfaces/network_gossip.iobjectvalidatormodules/">IObjectValidatorModules</a>): <em><a href="../../interfaces/chain.ieventmap/#map">Map</a>‹string, <a href="./#topicvalidatorfn">TopicValidatorFn</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/validator.ts#L315">packages/lodestar/src/network/gossip/validator.ts:315</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/validator.ts#L315">packages/lodestar/src/network/gossip/validator.ts:315</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1368,7 +1368,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="decodemessagedata_1">decodeMessageData<a class="headerlink" href="#decodemessagedata_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>decodeMessageData</strong>(<code>encoding</code>: <a href="./#gossipencoding">GossipEncoding</a>, <code>data</code>: Uint8Array): <em>Uint8Array</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/encoding.ts#L18">packages/lodestar/src/network/gossip/encoding.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/encoding.ts#L18">packages/lodestar/src/network/gossip/encoding.ts:18</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1392,7 +1392,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="encodemessagedata_1">encodeMessageData<a class="headerlink" href="#encodemessagedata_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>encodeMessageData</strong>(<code>encoding</code>: <a href="./#gossipencoding">GossipEncoding</a>, <code>data</code>: Uint8Array): <em>Uint8Array</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/encoding.ts#L31">packages/lodestar/src/network/gossip/encoding.ts:31</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/encoding.ts#L31">packages/lodestar/src/network/gossip/encoding.ts:31</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1416,7 +1416,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="getgossipsszdeserializer_1">getGossipSSZDeserializer<a class="headerlink" href="#getgossipsszdeserializer_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getGossipSSZDeserializer</strong>(<code>config</code>: IBeaconConfig, <code>topic</code>: <a href="./#gossiptopic">GossipTopic</a>): <em><a href="./#gossipdeserializer">GossipDeserializer</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/topic.ts#L109">packages/lodestar/src/network/gossip/topic.ts:109</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/topic.ts#L109">packages/lodestar/src/network/gossip/topic.ts:109</a></em></p>
 <p>Return a ssz deserialize function for a gossip topic</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1441,7 +1441,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="getgossipsszserializer_1">getGossipSSZSerializer<a class="headerlink" href="#getgossipsszserializer_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getGossipSSZSerializer</strong>(<code>config</code>: IBeaconConfig, <code>topic</code>: <a href="./#gossiptopic">GossipTopic</a>): <em><a href="./#gossipserializer">GossipSerializer</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/topic.ts#L128">packages/lodestar/src/network/gossip/topic.ts:128</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/topic.ts#L128">packages/lodestar/src/network/gossip/topic.ts:128</a></em></p>
 <p>Return a ssz serialize function for a gossip topic</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1466,7 +1466,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="getgossipssztype_1">getGossipSSZType<a class="headerlink" href="#getgossipssztype_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getGossipSSZType</strong>‹<strong>T</strong>›(<code>config</code>: IBeaconConfig, <code>topic</code>: <a href="./#gossiptopic">GossipTopic</a>): <em>ContainerType‹T›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/topic.ts#L87">packages/lodestar/src/network/gossip/topic.ts:87</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/topic.ts#L87">packages/lodestar/src/network/gossip/topic.ts:87</a></em></p>
 <p><strong>Type parameters:</strong></p>
 <p>▪ <strong>T</strong>: <em><a href="./#gossipobject">GossipObject</a></em></p>
 <p><strong>Parameters:</strong></p>
@@ -1492,7 +1492,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="getgossiptopic_1">getGossipTopic<a class="headerlink" href="#getgossiptopic_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getGossipTopic</strong>(<code>config</code>: IBeaconConfig, <code>topic</code>: string, <code>genesisValidatorsRoot</code>: Root): <em><a href="./#gossiptopic">GossipTopic</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/topic.ts#L55">packages/lodestar/src/network/gossip/topic.ts:55</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/topic.ts#L55">packages/lodestar/src/network/gossip/topic.ts:55</a></em></p>
 <p>Create a <code>GossipTopic</code> from a gossip topic string</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1521,7 +1521,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="getgossiptopicstring_1">getGossipTopicString<a class="headerlink" href="#getgossiptopicstring_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getGossipTopicString</strong>(<code>config</code>: IBeaconConfig, <code>topic</code>: <a href="./#gossiptopic">GossipTopic</a>, <code>genesisValidatorsRoot</code>: Root): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/topic.ts#L25">packages/lodestar/src/network/gossip/topic.ts:25</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/topic.ts#L25">packages/lodestar/src/network/gossip/topic.ts:25</a></em></p>
 <p>Create a gossip topic string</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1550,7 +1550,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="getmessagedecoder_1">getMessageDecoder<a class="headerlink" href="#getmessagedecoder_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getMessageDecoder</strong>(<code>encoding</code>: <a href="./#gossipencoding">GossipEncoding</a>): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/encoding.ts#L44">packages/lodestar/src/network/gossip/encoding.ts:44</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/encoding.ts#L44">packages/lodestar/src/network/gossip/encoding.ts:44</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1586,7 +1586,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="getmsgid_1">getMsgId<a class="headerlink" href="#getmsgid_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getMsgId</strong>(<code>msg</code>: <a href="../../interfaces/network_gossip.igossipmessage/">IGossipMessage</a>): <em>Uint8Array</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/utils.ts#L21">packages/lodestar/src/network/gossip/utils.ts:21</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/utils.ts#L21">packages/lodestar/src/network/gossip/utils.ts:21</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1606,7 +1606,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="getsubnetfromattestationsubnettopic_1">getSubnetFromAttestationSubnetTopic<a class="headerlink" href="#getsubnetfromattestationsubnettopic_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getSubnetFromAttestationSubnetTopic</strong>(<code>topic</code>: string): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/topic.ts#L45">packages/lodestar/src/network/gossip/topic.ts:45</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/topic.ts#L45">packages/lodestar/src/network/gossip/topic.ts:45</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1626,7 +1626,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="gettopicencoding_1">getTopicEncoding<a class="headerlink" href="#gettopicencoding_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getTopicEncoding</strong>(<code>topic</code>: string): <em><a href="./#gossipencoding">GossipEncoding</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/encoding.ts#L6">packages/lodestar/src/network/gossip/encoding.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/encoding.ts#L6">packages/lodestar/src/network/gossip/encoding.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1646,7 +1646,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="isattestationsubnettopic_1">isAttestationSubnetTopic<a class="headerlink" href="#isattestationsubnettopic_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isAttestationSubnetTopic</strong>(<code>topic</code>: string): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/topic.ts#L41">packages/lodestar/src/network/gossip/topic.ts:41</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/topic.ts#L41">packages/lodestar/src/network/gossip/topic.ts:41</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1666,7 +1666,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="messageisvalid_1">messageIsValid<a class="headerlink" href="#messageisvalid_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>messageIsValid</strong>(<code>message</code>: InMessage): <em>boolean | undefined</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/utils.ts#L13">packages/lodestar/src/network/gossip/utils.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/utils.ts#L13">packages/lodestar/src/network/gossip/utils.ts:13</a></em></p>
 <p>Basic sanity check on gossip message</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1687,7 +1687,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="msgidtostring_1">msgIdToString<a class="headerlink" href="#msgidtostring_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>msgIdToString</strong>(<code>msgId</code>: Uint8Array): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/utils.ts#L17">packages/lodestar/src/network/gossip/utils.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/utils.ts#L17">packages/lodestar/src/network/gossip/utils.ts:17</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1707,7 +1707,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="validateaggregatedattestation_1">validateAggregatedAttestation<a class="headerlink" href="#validateaggregatedattestation_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateAggregatedAttestation</strong>(<code>__namedParameters</code>: object, <code>_topic</code>: <a href="./#gossiptopic">GossipTopic</a>, <code>signedAggregateAndProof</code>: SignedAggregateAndProof): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/validator.ts#L102">packages/lodestar/src/network/gossip/validator.ts:102</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/validator.ts#L102">packages/lodestar/src/network/gossip/validator.ts:102</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -1742,7 +1742,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="validateattesterslashing_1">validateAttesterSlashing<a class="headerlink" href="#validateattesterslashing_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateAttesterSlashing</strong>(<code>__namedParameters</code>: object, <code>_topic</code>: <a href="./#gossiptopic">GossipTopic</a>, <code>attesterSlashing</code>: AttesterSlashing): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/validator.ts#L270">packages/lodestar/src/network/gossip/validator.ts:270</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/validator.ts#L270">packages/lodestar/src/network/gossip/validator.ts:270</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -1777,7 +1777,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="validatebeaconblock_1">validateBeaconBlock<a class="headerlink" href="#validatebeaconblock_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateBeaconBlock</strong>(<code>__namedParameters</code>: object, <code>_topic</code>: <a href="./#gossiptopic">GossipTopic</a>, <code>signedBlock</code>: SignedBeaconBlock): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/validator.ts#L53">packages/lodestar/src/network/gossip/validator.ts:53</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/validator.ts#L53">packages/lodestar/src/network/gossip/validator.ts:53</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -1812,7 +1812,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="validatecommitteeattestation_1">validateCommitteeAttestation<a class="headerlink" href="#validatecommitteeattestation_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateCommitteeAttestation</strong>(<code>__namedParameters</code>: object, <code>topic</code>: <a href="../../interfaces/network_gossip.ibeaconattestationtopic/">IBeaconAttestationTopic</a>, <code>attestation</code>: Attestation): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/validator.ts#L158">packages/lodestar/src/network/gossip/validator.ts:158</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/validator.ts#L158">packages/lodestar/src/network/gossip/validator.ts:158</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -1847,7 +1847,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="validateproposerslashing_1">validateProposerSlashing<a class="headerlink" href="#validateproposerslashing_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateProposerSlashing</strong>(<code>__namedParameters</code>: object, <code>_topic</code>: <a href="./#gossiptopic">GossipTopic</a>, <code>proposerSlashing</code>: ProposerSlashing): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/validator.ts#L244">packages/lodestar/src/network/gossip/validator.ts:244</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/validator.ts#L244">packages/lodestar/src/network/gossip/validator.ts:244</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -1882,7 +1882,7 @@ Return both the computed message id and uncompressed data</p>
 <hr/>
 <h3 id="validatevoluntaryexit_1">validateVoluntaryExit<a class="headerlink" href="#validatevoluntaryexit_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateVoluntaryExit</strong>(<code>__namedParameters</code>: object, <code>_topic</code>: <a href="./#gossiptopic">GossipTopic</a>, <code>voluntaryExit</code>: SignedVoluntaryExit): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3e91c68/packages/lodestar/src/network/gossip/validator.ts#L218">packages/lodestar/src/network/gossip/validator.ts:218</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/94c8304/packages/lodestar/src/network/gossip/validator.ts#L218">packages/lodestar/src/network/gossip/validator.ts:218</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>

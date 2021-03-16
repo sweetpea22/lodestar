@@ -265,6 +265,20 @@
 <li>Run <code>lerna run test:e2e</code> for end-to-end tests</li>
 <li>Run <code>lerna run test</code> to run all tests</li>
 </ul>
+<h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">¶</a></h1>
+<p>The docker-compose file requires that a <code>.env</code> file be present in this directory. The <code>default.env</code> file provides a template and can be copied <code>.env</code>:</p>
+<div class="highlight"><pre><span></span><code>cp default.env .env
+</code></pre></div>
+<p><strong>Beacon node only</strong></p>
+<div class="highlight"><pre><span></span><code>docker-compose up -d
+</code></pre></div>
+<p><strong>Beacon node and validator</strong></p>
+<p>First, you must have keystores and their secrets available locally at <code>./keystores</code> and <code>./secrets</code></p>
+<div class="highlight"><pre><span></span><code>docker-compose -f docker-compose.yml -f docker-compose.validator.yml up -d
+</code></pre></div>
+<p><strong>Dockerized metrics + local beacon node</strong></p>
+<div class="highlight"><pre><span></span><code>docker-compose -f docker/docker-compose.local.yml up -d
+</code></pre></div>
 <h1 id="first-time-contributor">First-time Contributor?<a class="headerlink" href="#first-time-contributor" title="Permanent link">¶</a></h1>
 <p>Unsure where to begin contributing to Lodestar? Here are some ideas!</p>
 <ul>
