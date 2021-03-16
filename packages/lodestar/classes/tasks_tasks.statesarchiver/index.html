@@ -6,10 +6,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
-<link href="https://chainsafe.github.io/lodestar/packages/lodestar/modules/reflection-9863.reflection-9864._.reflection-9866._/" rel="canonical"/>
+<link href="https://chainsafe.github.io/lodestar/packages/lodestar/classes/tasks_tasks.statesarchiver/" rel="canonical"/>
 <link href="../../../../images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-7.0.6" name="generator"/>
-<title>Reflection 9863.reflection 9864. .reflection 9866. - Lodestar documentation</title>
+<title>Tasks tasks.statesarchiver - Lodestar documentation</title>
 <link href="../../../../assets/stylesheets/main.2c0c5eaf.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.7fa14f5b.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#module">
+<a class="md-skip" href="#class-statesarchiver">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Reflection 9863.reflection 9864. .reflection 9866. 
+              Tasks tasks.statesarchiver
             
           </span>
 </div>
@@ -239,14 +239,91 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#hierarchy">
+    Hierarchy
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#index">
     Index
   </a>
 <nav aria-label="Index" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#modules">
-    Modules
+<a class="md-nav__link" href="#constructors">
+    Constructors
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties">
+    Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#methods">
+    Methods
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constructors_1">
+    Constructors
+  </a>
+<nav aria-label="Constructors" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constructor">
+    constructor
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties_1">
+    Properties
+  </a>
+<nav aria-label="Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-readonly-chain">
+    Private Readonly chain
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-readonly-config">
+    Private Readonly config
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-readonly-db">
+    Private Readonly db
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-readonly-logger">
+    Private Readonly logger
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#methods_1">
+    Methods
+  </a>
+<nav aria-label="Methods" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#archivestate">
+    archiveState
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#maybearchivestate">
+    maybeArchiveState
   </a>
 </li>
 </ul>
@@ -259,16 +336,124 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/lodestar/modules/reflection-9863.reflection-9864._.reflection-9866._.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/lodestar/classes/tasks_tasks.statesarchiver.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="../reflection-9863/"></a> › <a href="../reflection-9863.reflection-9864/"></a> › <a href="../reflection-9863.reflection-9864._/">/</a> › <a href="../reflection-9863.reflection-9864._.reflection-9866/"></a> › <a href="./">/</a></p>
-<h1 id="module">Module: /<a class="headerlink" href="#module" title="Permanent link">¶</a></h1>
-<h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
-<h3 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">¶</a></h3>
+<p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/tasks_tasks/">tasks/tasks</a> › <a href="./">StatesArchiver</a></p>
+<h1 id="class-statesarchiver">Class: StatesArchiver<a class="headerlink" href="#class-statesarchiver" title="Permanent link">¶</a></h1>
+<p>Archives finalized states from active bucket to archive bucket.</p>
+<p>Only the new finalized state is stored to disk</p>
+<h2 id="hierarchy">Hierarchy<a class="headerlink" href="#hierarchy" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../reflection-9863.reflection-9864._.reflection-9866._.reflection-9868/"></a></li>
+<li><strong>StatesArchiver</strong></li>
 </ul>
+<h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
+<h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#constructor">constructor</a></li>
+</ul>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#private-readonly-chain">chain</a></li>
+<li><a href="./#private-readonly-config">config</a></li>
+<li><a href="./#private-readonly-db">db</a></li>
+<li><a href="./#private-readonly-logger">logger</a></li>
+</ul>
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#archivestate">archiveState</a></li>
+<li><a href="./#maybearchivestate">maybeArchiveState</a></li>
+</ul>
+<h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
+<h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
+<p>+ <strong>new StatesArchiver</strong>(<code>config</code>: IBeaconConfig, <code>modules</code>: <a href="../../modules/tasks_tasks/#statesarchivermodules">StatesArchiverModules</a>): <em><a href="./">StatesArchiver</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5e801a/packages/lodestar/src/tasks/tasks/archiveStates.ts#L37">packages/lodestar/src/tasks/tasks/archiveStates.ts:37</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>modules</code></td>
+<td><a href="../../modules/tasks_tasks/#statesarchivermodules">StatesArchiverModules</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em><a href="./">StatesArchiver</a></em></p>
+<h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
+<h3 id="private-readonly-chain"><code>Private</code> <code>Readonly</code> chain<a class="headerlink" href="#private-readonly-chain" title="Permanent link">¶</a></h3>
+<p>• <strong>chain</strong>: <em><a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5e801a/packages/lodestar/src/tasks/tasks/archiveStates.ts#L35">packages/lodestar/src/tasks/tasks/archiveStates.ts:35</a></em></p>
+<hr/>
+<h3 id="private-readonly-config"><code>Private</code> <code>Readonly</code> config<a class="headerlink" href="#private-readonly-config" title="Permanent link">¶</a></h3>
+<p>• <strong>config</strong>: <em>IBeaconConfig</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5e801a/packages/lodestar/src/tasks/tasks/archiveStates.ts#L34">packages/lodestar/src/tasks/tasks/archiveStates.ts:34</a></em></p>
+<hr/>
+<h3 id="private-readonly-db"><code>Private</code> <code>Readonly</code> db<a class="headerlink" href="#private-readonly-db" title="Permanent link">¶</a></h3>
+<p>• <strong>db</strong>: <em><a href="../../interfaces/db_api_beacon.ibeacondb/">IBeaconDb</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5e801a/packages/lodestar/src/tasks/tasks/archiveStates.ts#L36">packages/lodestar/src/tasks/tasks/archiveStates.ts:36</a></em></p>
+<hr/>
+<h3 id="private-readonly-logger"><code>Private</code> <code>Readonly</code> logger<a class="headerlink" href="#private-readonly-logger" title="Permanent link">¶</a></h3>
+<p>• <strong>logger</strong>: <em>ILogger</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5e801a/packages/lodestar/src/tasks/tasks/archiveStates.ts#L37">packages/lodestar/src/tasks/tasks/archiveStates.ts:37</a></em></p>
+<h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
+<h3 id="archivestate">archiveState<a class="headerlink" href="#archivestate" title="Permanent link">¶</a></h3>
+<p>▸ <strong>archiveState</strong>(<code>finalized</code>: Checkpoint): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5e801a/packages/lodestar/src/tasks/tasks/archiveStates.ts#L81">packages/lodestar/src/tasks/tasks/archiveStates.ts:81</a></em></p>
+<p>Archives finalized states from active bucket to archive bucket.
+Only the new finalized state is stored to disk</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>finalized</code></td>
+<td>Checkpoint</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="maybearchivestate">maybeArchiveState<a class="headerlink" href="#maybearchivestate" title="Permanent link">¶</a></h3>
+<p>▸ <strong>maybeArchiveState</strong>(<code>finalized</code>: Checkpoint): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5e801a/packages/lodestar/src/tasks/tasks/archiveStates.ts#L58">packages/lodestar/src/tasks/tasks/archiveStates.ts:58</a></em></p>
+<p>Persist states every some epochs to
+- Minimize disk space, storing the least states possible
+- Minimize the sync progress lost on unexpected crash, storing temp state every few epochs</p>
+<p>At epoch <code>e</code> there will be states peristed at intervals of <code>PERSIST_STATE_EVERY_EPOCHS</code> = 32
+and one at <code>PERSIST_TEMP_STATE_EVERY_EPOCHS</code> = 1024
+<div class="highlight"><pre><span></span><code>       |                |             |           .
+epoch - 1024*2    epoch - 1024    epoch - 32    epoch
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>finalized</code></td>
+<td>Checkpoint</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
 </article>
 </div>
 </div>
