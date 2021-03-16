@@ -579,7 +579,7 @@
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new LodestarForkChoice</strong>(<code>__namedParameters</code>: object): <em><a href="./">LodestarForkChoice</a></em></p>
 <p><em>Overrides void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e5ed8bd/packages/lodestar/src/chain/forkChoice/forkChoice.ts#L18">packages/lodestar/src/chain/forkChoice/forkChoice.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4c8e289/packages/lodestar/src/chain/forkChoice/forkChoice.ts#L17">packages/lodestar/src/chain/forkChoice/forkChoice.ts:17</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -591,6 +591,10 @@
 </thead>
 <tbody>
 <tr>
+<td><code>anchorState</code></td>
+<td>BeaconState</td>
+</tr>
+<tr>
 <td><code>config</code></td>
 <td>IBeaconConfig</td>
 </tr>
@@ -601,10 +605,6 @@
 <tr>
 <td><code>emitter</code></td>
 <td><a href="../chain.chaineventemitter/">ChainEventEmitter</a>‹›</td>
-</tr>
-<tr>
-<td><code>state</code></td>
-<td>CachedBeaconState‹BeaconState›</td>
 </tr>
 </tbody>
 </table>
@@ -667,13 +667,13 @@ Each vote contains the latest message and previous message</p>
 <h3 id="forwarditerateblocksummaries">forwardIterateBlockSummaries<a class="headerlink" href="#forwarditerateblocksummaries" title="Permanent link">¶</a></h3>
 <p>▸ <strong>forwardIterateBlockSummaries</strong>(): <em>IBlockSummary[]</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#forwarditerateblocksummaries">forwardIterateBlockSummaries</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:177</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:176</p>
 <p><strong>Returns:</strong> <em>IBlockSummary[]</em></p>
 <hr/>
 <h3 id="getancestor">getAncestor<a class="headerlink" href="#getancestor" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAncestor</strong>(<code>blockRoot</code>: phase0.Root, <code>ancestorSlot</code>: Slot): <em>Uint8Array</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#getancestor">getAncestor</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:86</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:85</p>
 <p>Returns the block root of an ancestor of <code>blockRoot</code> at the given <code>slot</code>.
 (Note: <code>slot</code> refers to the block that is <em>returned</em>, not the one that is supplied.)</p>
 <h2 id="specification">Specification<a class="headerlink" href="#specification" title="Permanent link">¶</a></h2>
@@ -703,7 +703,7 @@ Each vote contains the latest message and previous message</p>
 <h3 id="getblock">getBlock<a class="headerlink" href="#getblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBlock</strong>(<code>blockRoot</code>: phase0.Root): <em>IBlockSummary | null</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#getblock">getBlock</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:153</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:152</p>
 <p>Returns a <code>IBlockSummary</code> if the block is known <strong>and</strong> a descendant of the finalized root.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -725,7 +725,7 @@ Each vote contains the latest message and previous message</p>
 <h3 id="getblocksummariesatslot">getBlockSummariesAtSlot<a class="headerlink" href="#getblocksummariesatslot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBlockSummariesAtSlot</strong>(<code>slot</code>: Slot): <em>IBlockSummary[]</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#getblocksummariesatslot">getBlockSummariesAtSlot</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:179</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:178</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -746,7 +746,7 @@ Each vote contains the latest message and previous message</p>
 <h3 id="getblocksummariesbyparentroot">getBlockSummariesByParentRoot<a class="headerlink" href="#getblocksummariesbyparentroot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBlockSummariesByParentRoot</strong>(<code>parentRoot</code>: phase0.Root): <em>IBlockSummary[]</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#getblocksummariesbyparentroot">getBlockSummariesByParentRoot</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:178</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:177</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -767,7 +767,7 @@ Each vote contains the latest message and previous message</p>
 <h3 id="getcanonicalblocksummaryatslot">getCanonicalBlockSummaryAtSlot<a class="headerlink" href="#getcanonicalblocksummaryatslot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getCanonicalBlockSummaryAtSlot</strong>(<code>slot</code>: Slot): <em>IBlockSummary | null</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#getcanonicalblocksummaryatslot">getCanonicalBlockSummaryAtSlot</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:176</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:175</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -788,25 +788,25 @@ Each vote contains the latest message and previous message</p>
 <h3 id="getfinalizedblock">getFinalizedBlock<a class="headerlink" href="#getfinalizedblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getFinalizedBlock</strong>(): <em>IBlockSummary</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#getfinalizedblock">getFinalizedBlock</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:154</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:153</p>
 <p><strong>Returns:</strong> <em>IBlockSummary</em></p>
 <hr/>
 <h3 id="getfinalizedcheckpoint">getFinalizedCheckpoint<a class="headerlink" href="#getfinalizedcheckpoint" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getFinalizedCheckpoint</strong>(): <em>Checkpoint</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#getfinalizedcheckpoint">getFinalizedCheckpoint</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:99</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:98</p>
 <p><strong>Returns:</strong> <em>Checkpoint</em></p>
 <hr/>
 <h3 id="gethead">getHead<a class="headerlink" href="#gethead" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getHead</strong>(): <em>IBlockSummary</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#gethead">getHead</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:97</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:96</p>
 <p><strong>Returns:</strong> <em>IBlockSummary</em></p>
 <hr/>
 <h3 id="getheadroot">getHeadRoot<a class="headerlink" href="#getheadroot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getHeadRoot</strong>(): <em>Uint8Array</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#getheadroot">getHeadRoot</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:96</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:95</p>
 <p>Run the fork choice rule to determine the head.</p>
 <h2 id="specification_1">Specification<a class="headerlink" href="#specification_1" title="Permanent link">¶</a></h2>
 <p>Is equivalent to:</p>
@@ -816,19 +816,19 @@ Each vote contains the latest message and previous message</p>
 <h3 id="getheads">getHeads<a class="headerlink" href="#getheads" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getHeads</strong>(): <em>IBlockSummary[]</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#getheads">getHeads</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:98</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:97</p>
 <p><strong>Returns:</strong> <em>IBlockSummary[]</em></p>
 <hr/>
 <h3 id="getjustifiedcheckpoint">getJustifiedCheckpoint<a class="headerlink" href="#getjustifiedcheckpoint" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getJustifiedCheckpoint</strong>(): <em>Checkpoint</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#getjustifiedcheckpoint">getJustifiedCheckpoint</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:100</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:99</p>
 <p><strong>Returns:</strong> <em>Checkpoint</em></p>
 <hr/>
 <h3 id="getlatestmessage">getLatestMessage<a class="headerlink" href="#getlatestmessage" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getLatestMessage</strong>(<code>validatorIndex</code>: ValidatorIndex): <em>ILatestMessage | undefined</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#getlatestmessage">getLatestMessage</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:140</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:139</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -849,13 +849,13 @@ Each vote contains the latest message and previous message</p>
 <h3 id="gettime">getTime<a class="headerlink" href="#gettime" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getTime</strong>(): <em>Slot</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#gettime">getTime</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:145</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:144</p>
 <p><strong>Returns:</strong> <em>Slot</em></p>
 <hr/>
 <h3 id="hasblock">hasBlock<a class="headerlink" href="#hasblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>hasBlock</strong>(<code>blockRoot</code>: phase0.Root): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#hasblock">hasBlock</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:149</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:148</p>
 <p>Returns <code>true</code> if the block is known <strong>and</strong> a descendant of the finalized root.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -877,7 +877,7 @@ Each vote contains the latest message and previous message</p>
 <h3 id="isdescendant">isDescendant<a class="headerlink" href="#isdescendant" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isDescendant</strong>(<code>ancestorRoot</code>: phase0.Root, <code>descendantRoot</code>: phase0.Root): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#isdescendant">isDescendant</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:165</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:164</p>
 <p>Returns true if the <code>descendantRoot</code> has an ancestor with <code>ancestorRoot</code>.</p>
 <p>Always returns <code>false</code> if either input roots are unknown.
 Still returns <code>true</code> if <code>ancestorRoot===descendantRoot</code> (and the roots are known)</p>
@@ -905,7 +905,7 @@ Still returns <code>true</code> if <code>ancestorRoot===descendantRoot</code> (a
 <h3 id="isdescendantoffinalized">isDescendantOfFinalized<a class="headerlink" href="#isdescendantoffinalized" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isDescendantOfFinalized</strong>(<code>blockRoot</code>: phase0.Root): <em>boolean</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#isdescendantoffinalized">isDescendantOfFinalized</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:158</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:157</p>
 <p>Return <code>true</code> if <code>block_root</code> is equal to the finalized root, or a known descendant of it.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -927,7 +927,7 @@ Still returns <code>true</code> if <code>ancestorRoot===descendantRoot</code> (a
 <h3 id="iterateblocksummaries">iterateBlockSummaries<a class="headerlink" href="#iterateblocksummaries" title="Permanent link">¶</a></h3>
 <p>▸ <strong>iterateBlockSummaries</strong>(<code>blockRoot</code>: phase0.Root): <em>IBlockSummary[]</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#iterateblocksummaries">iterateBlockSummaries</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:171</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:170</p>
 <p>Iterates backwards through block summaries, starting from a block root</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -949,7 +949,7 @@ Still returns <code>true</code> if <code>ancestorRoot===descendantRoot</code> (a
 <h3 id="iteratenonancestors">iterateNonAncestors<a class="headerlink" href="#iteratenonancestors" title="Permanent link">¶</a></h3>
 <p>▸ <strong>iterateNonAncestors</strong>(<code>blockRoot</code>: phase0.Root): <em>IBlockSummary[]</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#iteratenonancestors">iterateNonAncestors</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:175</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:174</p>
 <p>The same to iterateBlockSummaries but this gets non-ancestor nodes instead of ancestor nodes.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -971,7 +971,7 @@ Still returns <code>true</code> if <code>ancestorRoot===descendantRoot</code> (a
 <h3 id="onattestation">onAttestation<a class="headerlink" href="#onattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onAttestation</strong>(<code>attestation</code>: IndexedAttestation): <em>void</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#onattestation">onAttestation</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:139</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:138</p>
 <p>Register <code>attestation</code> with the fork choice DAG so that it may influence future calls to <code>getHead</code>.</p>
 <h2 id="specification_2">Specification<a class="headerlink" href="#specification_2" title="Permanent link">¶</a></h2>
 <p>Approximates:</p>
@@ -1002,7 +1002,7 @@ will not be run here.</p>
 <h3 id="onblock">onBlock<a class="headerlink" href="#onblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onBlock</strong>(<code>block</code>: BeaconBlock, <code>state</code>: BeaconState, <code>justifiedBalances?</code>: Gwei[]): <em>void</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#onblock">onBlock</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:120</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:119</p>
 <p>Add <code>block</code> to the fork choice DAG.</p>
 <h2 id="specification_3">Specification<a class="headerlink" href="#specification_3" title="Permanent link">¶</a></h2>
 <p>Approximates:</p>
@@ -1041,7 +1041,7 @@ This ensures that the forkchoice is never out of sync.</p>
 <h3 id="prune">prune<a class="headerlink" href="#prune" title="Permanent link">¶</a></h3>
 <p>▸ <strong>prune</strong>(<code>finalizedRoot</code>: phase0.Root): <em>IBlockSummary[]</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#prune">prune</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:166</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:165</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1062,7 +1062,7 @@ This ensures that the forkchoice is never out of sync.</p>
 <h3 id="setprunethreshold">setPruneThreshold<a class="headerlink" href="#setprunethreshold" title="Permanent link">¶</a></h3>
 <p>▸ <strong>setPruneThreshold</strong>(<code>threshold</code>: number): <em>void</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#setprunethreshold">setPruneThreshold</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:167</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:166</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1083,7 +1083,7 @@ This ensures that the forkchoice is never out of sync.</p>
 <h3 id="updatetime">updateTime<a class="headerlink" href="#updatetime" title="Permanent link">¶</a></h3>
 <p>▸ <strong>updateTime</strong>(<code>currentSlot</code>: Slot): <em>void</em></p>
 <p><em>Inherited from <a href="./">LodestarForkChoice</a>.<a href="./#updatetime">updateTime</a></em></p>
-<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:144</p>
+<p>Defined in packages/lodestar-fork-choice/lib/forkChoice/forkChoice.d.ts:143</p>
 <p>Call <code>onTick</code> for all slots between <code>fcStore.getCurrentSlot()</code> and the provided <code>currentSlot</code>.</p>
 <p><strong>Parameters:</strong></p>
 <table>
