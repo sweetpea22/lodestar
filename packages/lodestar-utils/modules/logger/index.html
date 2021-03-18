@@ -329,13 +329,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#winstonlogger">
-    WinstonLogger
+<a class="md-nav__link" href="#transportopts">
+    TransportOpts
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#consoletransport">
-    consoleTransport
+<a class="md-nav__link" href="#transporttype">
+    TransportType
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#winstonlogger">
+    WinstonLogger
   </a>
 </li>
 <li class="md-nav__item">
@@ -354,8 +359,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#filetransport">
-    fileTransport
+<a class="md-nav__link" href="#fromtransportopts">
+    fromTransportOpts
   </a>
 </li>
 <li class="md-nav__item">
@@ -411,6 +416,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transportopts_1">
+    TransportOpts
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -423,11 +433,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#const-loglevels">
     Const LogLevels
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#const-consoletransport">
-    Const consoleTransport
   </a>
 </li>
 <li class="md-nav__item">
@@ -455,8 +460,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#const-filetransport">
-    Const fileTransport
+<a class="md-nav__link" href="#fromtransportopts_1">
+    fromTransportOpts
   </a>
 </li>
 <li class="md-nav__item">
@@ -533,6 +538,21 @@
     warn
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-defaulttransportopts">
+    Const defaultTransportOpts
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defaulttransportopts-object">
+    ▪ defaultTransportOpts: object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type">
+    type
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -558,12 +578,13 @@
 <li><a href="./#loghandler">LogHandler</a></li>
 <li><a href="./#loglevel">LogLevel</a></li>
 <li><a href="./#loglevels">LogLevels</a></li>
+<li><a href="./#transportopts">TransportOpts</a></li>
+<li><a href="./#transporttype">TransportType</a></li>
 <li><a href="./#winstonlogger">WinstonLogger</a></li>
-<li><a href="./#consoletransport">consoleTransport</a></li>
 <li><a href="./#customcolors">customColors</a></li>
 <li><a href="./#defaultloglevel">defaultLogLevel</a></li>
 <li><a href="./#extractstacktracefromjson">extractStackTraceFromJson</a></li>
-<li><a href="./#filetransport">fileTransport</a></li>
+<li><a href="./#fromtransportopts">fromTransportOpts</a></li>
 <li><a href="./#getformat">getFormat</a></li>
 <li><a href="./#logformats">logFormats</a></li>
 <li><a href="./#printstacktracelast">printStackTraceLast</a></li>
@@ -571,6 +592,7 @@
 <h3 id="enumerations">Enumerations<a class="headerlink" href="#enumerations" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="../../enums/logger.loglevel/">LogLevel</a></li>
+<li><a href="../../enums/logger.transporttype/">TransportType</a></li>
 </ul>
 <h3 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">¶</a></h3>
 <ul>
@@ -588,18 +610,18 @@
 <li><a href="./#format">Format</a></li>
 <li><a href="./#logformat">LogFormat</a></li>
 <li><a href="./#loghandler">LogHandler</a></li>
+<li><a href="./#transportopts">TransportOpts</a></li>
 </ul>
 <h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#const-loglevels">LogLevels</a></li>
-<li><a href="./#const-consoletransport">consoleTransport</a></li>
 <li><a href="./#const-defaultloglevel">defaultLogLevel</a></li>
 <li><a href="./#const-logformats">logFormats</a></li>
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#extractstacktracefromjson">extractStackTraceFromJson</a></li>
-<li><a href="./#const-filetransport">fileTransport</a></li>
+<li><a href="./#fromtransportopts">fromTransportOpts</a></li>
 <li><a href="./#getformat">getFormat</a></li>
 <li><a href="./#humanreadablelogformat">humanReadableLogFormat</a></li>
 <li><a href="./#humanreadabletemplatefn">humanReadableTemplateFn</a></li>
@@ -609,6 +631,7 @@
 <h3 id="object-literals">Object literals<a class="headerlink" href="#object-literals" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#const-customcolors">customColors</a></li>
+<li><a href="./#const-defaulttransportopts">defaultTransportOpts</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">¶</a></h3>
@@ -632,11 +655,14 @@
 <h3 id="loglevels">LogLevels<a class="headerlink" href="#loglevels" title="Permanent link">¶</a></h3>
 <p>• <strong>LogLevels</strong>:</p>
 <hr/>
+<h3 id="transportopts">TransportOpts<a class="headerlink" href="#transportopts" title="Permanent link">¶</a></h3>
+<p>• <strong>TransportOpts</strong>:</p>
+<hr/>
+<h3 id="transporttype">TransportType<a class="headerlink" href="#transporttype" title="Permanent link">¶</a></h3>
+<p>• <strong>TransportType</strong>:</p>
+<hr/>
 <h3 id="winstonlogger">WinstonLogger<a class="headerlink" href="#winstonlogger" title="Permanent link">¶</a></h3>
 <p>• <strong>WinstonLogger</strong>:</p>
-<hr/>
-<h3 id="consoletransport">consoleTransport<a class="headerlink" href="#consoletransport" title="Permanent link">¶</a></h3>
-<p>• <strong>consoleTransport</strong>:</p>
 <hr/>
 <h3 id="customcolors">customColors<a class="headerlink" href="#customcolors" title="Permanent link">¶</a></h3>
 <p>• <strong>customColors</strong>:</p>
@@ -647,8 +673,8 @@
 <h3 id="extractstacktracefromjson">extractStackTraceFromJson<a class="headerlink" href="#extractstacktracefromjson" title="Permanent link">¶</a></h3>
 <p>• <strong>extractStackTraceFromJson</strong>:</p>
 <hr/>
-<h3 id="filetransport">fileTransport<a class="headerlink" href="#filetransport" title="Permanent link">¶</a></h3>
-<p>• <strong>fileTransport</strong>:</p>
+<h3 id="fromtransportopts">fromTransportOpts<a class="headerlink" href="#fromtransportopts" title="Permanent link">¶</a></h3>
+<p>• <strong>fromTransportOpts</strong>:</p>
 <hr/>
 <h3 id="getformat">getFormat<a class="headerlink" href="#getformat" title="Permanent link">¶</a></h3>
 <p>• <strong>getFormat</strong>:</p>
@@ -661,21 +687,21 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="context_1">Context<a class="headerlink" href="#context_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>Context</strong>: <em>string | number | boolean | bigint | null | object | <a href="./#context">Context</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L40">packages/lodestar-utils/src/logger/interface.ts:40</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L40">packages/lodestar-utils/src/logger/interface.ts:40</a></em></p>
 <hr/>
 <h3 id="format">Format<a class="headerlink" href="#format" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>Format</strong>: <em>ReturnType‹typeof combine›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/format.ts#L6">packages/lodestar-utils/src/logger/format.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/format.ts#L6">packages/lodestar-utils/src/logger/format.ts:6</a></em></p>
 <hr/>
 <h3 id="logformat_1">LogFormat<a class="headerlink" href="#logformat_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>LogFormat</strong>: <em>"human" | "json"</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L30">packages/lodestar-utils/src/logger/interface.ts:30</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L30">packages/lodestar-utils/src/logger/interface.ts:30</a></em></p>
 <hr/>
 <h3 id="loghandler_1">LogHandler<a class="headerlink" href="#loghandler_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>LogHandler</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L51">packages/lodestar-utils/src/logger/interface.ts:51</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L51">packages/lodestar-utils/src/logger/interface.ts:51</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
-<p>▸ (<code>message</code>: string, <code>context?</code>: <a href="./#context">Context</a>, <code>error?</code>: <a href="../../classes/reflection-531.reflection-1.assertionerror/#static-error">Error</a>): <em>void</em></p>
+<p>▸ (<code>message</code>: string, <code>context?</code>: <a href="./#context">Context</a>, <code>error?</code>: <a href="../../classes/reflection-537.reflection-1.assertionerror/#static-error">Error</a>): <em>void</em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -695,34 +721,30 @@
 </tr>
 <tr>
 <td><code>error?</code></td>
-<td><a href="../../classes/reflection-531.reflection-1.assertionerror/#static-error">Error</a></td>
+<td><a href="../../classes/reflection-537.reflection-1.assertionerror/#static-error">Error</a></td>
 </tr>
 </tbody>
 </table>
+<hr/>
+<h3 id="transportopts_1">TransportOpts<a class="headerlink" href="#transportopts_1" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>TransportOpts</strong>: <em>object | object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/transport.ts#L10">packages/lodestar-utils/src/logger/transport.ts:10</a></em></p>
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
 <h3 id="const-loglevels"><code>Const</code> LogLevels<a class="headerlink" href="#const-loglevels" title="Permanent link">¶</a></h3>
 <p>• <strong>LogLevels</strong>: <em>(<a href="../../enums/logger.loglevel/#error">error</a> | <a href="../../enums/logger.loglevel/#warn">warn</a> | <a href="../../enums/logger.loglevel/#info">info</a> | <a href="../../enums/logger.loglevel/#verbose">verbose</a> | <a href="../../enums/logger.loglevel/#debug">debug</a> | <a href="../../enums/logger.loglevel/#silly">silly</a>)[]</em> = Object.values(LogLevel)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L17">packages/lodestar-utils/src/logger/interface.ts:17</a></em></p>
-<hr/>
-<h3 id="const-consoletransport"><code>Const</code> consoleTransport<a class="headerlink" href="#const-consoletransport" title="Permanent link">¶</a></h3>
-<p>• <strong>consoleTransport</strong>: <em>TransportStream</em> = new winstonTransports.Console({
-  debugStdout: true,
-  level: "silly",
-  handleExceptions: true,
-})</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/winston.ts#L12">packages/lodestar-utils/src/logger/winston.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L17">packages/lodestar-utils/src/logger/interface.ts:17</a></em></p>
 <hr/>
 <h3 id="const-defaultloglevel"><code>Const</code> defaultLogLevel<a class="headerlink" href="#const-defaultloglevel" title="Permanent link">¶</a></h3>
 <p>• <strong>defaultLogLevel</strong>: <em><a href="../../enums/logger.loglevel/#info">info</a></em> = LogLevel.info</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L28">packages/lodestar-utils/src/logger/interface.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L28">packages/lodestar-utils/src/logger/interface.ts:28</a></em></p>
 <hr/>
 <h3 id="const-logformats"><code>Const</code> logFormats<a class="headerlink" href="#const-logformats" title="Permanent link">¶</a></h3>
 <p>• <strong>logFormats</strong>: <em><a href="./#logformat">LogFormat</a>[]</em> = ["human", "json"]</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L31">packages/lodestar-utils/src/logger/interface.ts:31</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L31">packages/lodestar-utils/src/logger/interface.ts:31</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="extractstacktracefromjson_1">extractStackTraceFromJson<a class="headerlink" href="#extractstacktracefromjson_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>extractStackTraceFromJson</strong>(<code>json</code>: Json, <code>stackTraces</code>: string[]): <em>string[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/format.ts#L101">packages/lodestar-utils/src/logger/format.ts:101</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/format.ts#L101">packages/lodestar-utils/src/logger/format.ts:101</a></em></p>
 <p>Extract 'stack' from Json-ified error recursively.
 Mutates the <code>json</code> argument deleting all 'stack' properties.
 <code>json</code> argument must not contain circular properties, which should be guaranteed by <code>toJson()</code></p>
@@ -750,9 +772,9 @@ Mutates the <code>json</code> argument deleting all 'stack' properties.
 </table>
 <p><strong>Returns:</strong> <em>string[]</em></p>
 <hr/>
-<h3 id="const-filetransport"><code>Const</code> fileTransport<a class="headerlink" href="#const-filetransport" title="Permanent link">¶</a></h3>
-<p>▸ <strong>fileTransport</strong>(<code>filename</code>: string): <em>TransportStream</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/winston.ts#L18">packages/lodestar-utils/src/logger/winston.ts:18</a></em></p>
+<h3 id="fromtransportopts_1">fromTransportOpts<a class="headerlink" href="#fromtransportopts_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>fromTransportOpts</strong>(<code>transportOpts</code>: <a href="./#transportopts">TransportOpts</a>): <em>TransportStream</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/transport.ts#L14">packages/lodestar-utils/src/logger/transport.ts:14</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -763,8 +785,8 @@ Mutates the <code>json</code> argument deleting all 'stack' properties.
 </thead>
 <tbody>
 <tr>
-<td><code>filename</code></td>
-<td>string</td>
+<td><code>transportOpts</code></td>
+<td><a href="./#transportopts">TransportOpts</a></td>
 </tr>
 </tbody>
 </table>
@@ -772,7 +794,7 @@ Mutates the <code>json</code> argument deleting all 'stack' properties.
 <hr/>
 <h3 id="getformat_1">getFormat<a class="headerlink" href="#getformat_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getFormat</strong>(<code>opts</code>: <a href="../../interfaces/logger.iloggeroptions/">ILoggerOptions</a>): <em>Format</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/format.ts#L20">packages/lodestar-utils/src/logger/format.ts:20</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/format.ts#L20">packages/lodestar-utils/src/logger/format.ts:20</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -792,7 +814,7 @@ Mutates the <code>json</code> argument deleting all 'stack' properties.
 <hr/>
 <h3 id="humanreadablelogformat">humanReadableLogFormat<a class="headerlink" href="#humanreadablelogformat" title="Permanent link">¶</a></h3>
 <p>▸ <strong>humanReadableLogFormat</strong>(<code>opts</code>: <a href="../../interfaces/logger.iloggeroptions/">ILoggerOptions</a>): <em>Format</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/format.ts#L31">packages/lodestar-utils/src/logger/format.ts:31</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/format.ts#L31">packages/lodestar-utils/src/logger/format.ts:31</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -812,7 +834,7 @@ Mutates the <code>json</code> argument deleting all 'stack' properties.
 <hr/>
 <h3 id="humanreadabletemplatefn">humanReadableTemplateFn<a class="headerlink" href="#humanreadabletemplatefn" title="Permanent link">¶</a></h3>
 <p>▸ <strong>humanReadableTemplateFn</strong>(<code>_info</code>: object): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/format.ts#L57">packages/lodestar-utils/src/logger/format.ts:57</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/format.ts#L57">packages/lodestar-utils/src/logger/format.ts:57</a></em></p>
 <p>Winston template function print a human readable string given a log object</p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>_info</strong>: <em>object</em></p>
@@ -838,7 +860,7 @@ Mutates the <code>json</code> argument deleting all 'stack' properties.
 <hr/>
 <h3 id="jsonlogformat">jsonLogFormat<a class="headerlink" href="#jsonlogformat" title="Permanent link">¶</a></h3>
 <p>▸ <strong>jsonLogFormat</strong>(<code>opts</code>: <a href="../../interfaces/logger.iloggeroptions/">ILoggerOptions</a>): <em>Format</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/format.ts#L39">packages/lodestar-utils/src/logger/format.ts:39</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/format.ts#L39">packages/lodestar-utils/src/logger/format.ts:39</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -857,8 +879,8 @@ Mutates the <code>json</code> argument deleting all 'stack' properties.
 <p><strong>Returns:</strong> <em>Format</em></p>
 <hr/>
 <h3 id="printstacktracelast_1">printStackTraceLast<a class="headerlink" href="#printstacktracelast_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>printStackTraceLast</strong>(<code>context?</code>: <a href="./#context">Context</a> | <a href="../../classes/reflection-531.reflection-1.assertionerror/#static-error">Error</a>): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/format.ts#L81">packages/lodestar-utils/src/logger/format.ts:81</a></em></p>
+<p>▸ <strong>printStackTraceLast</strong>(<code>context?</code>: <a href="./#context">Context</a> | <a href="../../classes/reflection-537.reflection-1.assertionerror/#static-error">Error</a>): <em>string</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/format.ts#L81">packages/lodestar-utils/src/logger/format.ts:81</a></em></p>
 <p>Extract stack property from context to allow appending at the end of the log</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -871,7 +893,7 @@ Mutates the <code>json</code> argument deleting all 'stack' properties.
 <tbody>
 <tr>
 <td><code>context?</code></td>
-<td><a href="./#context">Context</a> | <a href="../../classes/reflection-531.reflection-1.assertionerror/#static-error">Error</a></td>
+<td><a href="./#context">Context</a> | <a href="../../classes/reflection-537.reflection-1.assertionerror/#static-error">Error</a></td>
 </tr>
 </tbody>
 </table>
@@ -879,25 +901,32 @@ Mutates the <code>json</code> argument deleting all 'stack' properties.
 <h2 id="object-literals_1">Object literals<a class="headerlink" href="#object-literals_1" title="Permanent link">¶</a></h2>
 <h3 id="const-customcolors"><code>Const</code> customColors<a class="headerlink" href="#const-customcolors" title="Permanent link">¶</a></h3>
 <h3 id="customcolors-object">▪ <strong>customColors</strong>: <em>object</em><a class="headerlink" href="#customcolors-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L19">packages/lodestar-utils/src/logger/interface.ts:19</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L19">packages/lodestar-utils/src/logger/interface.ts:19</a></em></p>
 <h3 id="debug">debug<a class="headerlink" href="#debug" title="Permanent link">¶</a></h3>
 <p>• <strong>debug</strong>: <em>string</em> = "pink"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L24">packages/lodestar-utils/src/logger/interface.ts:24</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L24">packages/lodestar-utils/src/logger/interface.ts:24</a></em></p>
 <h3 id="error">error<a class="headerlink" href="#error" title="Permanent link">¶</a></h3>
 <p>• <strong>error</strong>: <em>string</em> = "red"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L20">packages/lodestar-utils/src/logger/interface.ts:20</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L20">packages/lodestar-utils/src/logger/interface.ts:20</a></em></p>
 <h3 id="info">info<a class="headerlink" href="#info" title="Permanent link">¶</a></h3>
 <p>• <strong>info</strong>: <em>string</em> = "white"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L22">packages/lodestar-utils/src/logger/interface.ts:22</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L22">packages/lodestar-utils/src/logger/interface.ts:22</a></em></p>
 <h3 id="silly">silly<a class="headerlink" href="#silly" title="Permanent link">¶</a></h3>
 <p>• <strong>silly</strong>: <em>string</em> = "purple"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L25">packages/lodestar-utils/src/logger/interface.ts:25</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L25">packages/lodestar-utils/src/logger/interface.ts:25</a></em></p>
 <h3 id="verbose">verbose<a class="headerlink" href="#verbose" title="Permanent link">¶</a></h3>
 <p>• <strong>verbose</strong>: <em>string</em> = "green"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L23">packages/lodestar-utils/src/logger/interface.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L23">packages/lodestar-utils/src/logger/interface.ts:23</a></em></p>
 <h3 id="warn">warn<a class="headerlink" href="#warn" title="Permanent link">¶</a></h3>
 <p>• <strong>warn</strong>: <em>string</em> = "yellow"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/22cad66/packages/lodestar-utils/src/logger/interface.ts#L21">packages/lodestar-utils/src/logger/interface.ts:21</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/interface.ts#L21">packages/lodestar-utils/src/logger/interface.ts:21</a></em></p>
+<hr/>
+<h3 id="const-defaulttransportopts"><code>Const</code> defaultTransportOpts<a class="headerlink" href="#const-defaulttransportopts" title="Permanent link">¶</a></h3>
+<h3 id="defaulttransportopts-object">▪ <strong>defaultTransportOpts</strong>: <em>object</em><a class="headerlink" href="#defaulttransportopts-object" title="Permanent link">¶</a></h3>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/winston.ts#L12">packages/lodestar-utils/src/logger/winston.ts:12</a></em></p>
+<h3 id="type">type<a class="headerlink" href="#type" title="Permanent link">¶</a></h3>
+<p>• <strong>type</strong>: <em><a href="../../enums/logger.transporttype/#console">console</a></em> = TransportType.console</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9b48ffb/packages/lodestar-utils/src/logger/winston.ts#L12">packages/lodestar-utils/src/logger/winston.ts:12</a></em></p>
 </article>
 </div>
 </div>
