@@ -346,11 +346,11 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="blocksbyrangeerrortype">BlocksByRangeErrorType<a class="headerlink" href="#blocksbyrangeerrortype" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>BlocksByRangeErrorType</strong>: <em>object | object | object | object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/97141f7/packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts#L51">packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts:51</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4f259dd/packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts#L51">packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts:51</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="assertsequentialblocksinrange">assertSequentialBlocksInRange<a class="headerlink" href="#assertsequentialblocksinrange" title="Permanent link">¶</a></h3>
 <p>▸ <strong>assertSequentialBlocksInRange</strong>(<code>blocks</code>: SignedBeaconBlock[], <code>__namedParameters</code>: object): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/97141f7/packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts#L8">packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4f259dd/packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts#L8">packages/lodestar/src/network/reqresp/utils/assertSequentialBlocksInRange.ts:8</a></em></p>
 <p>Asserts a response from BeaconBlocksByRange respects the request and is sequential
 Note: MUST allow missing block for skipped slots.</p>
 <p><strong>Parameters:</strong></p>
@@ -382,7 +382,7 @@ Note: MUST allow missing block for skipped slots.</p>
 <hr/>
 <h3 id="decodeerrormessage">decodeErrorMessage<a class="headerlink" href="#decodeerrormessage" title="Permanent link">¶</a></h3>
 <p>▸ <strong>decodeErrorMessage</strong>(<code>errorMessage</code>: Buffer): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/97141f7/packages/lodestar/src/network/reqresp/utils/errorMessage.ts#L23">packages/lodestar/src/network/reqresp/utils/errorMessage.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4f259dd/packages/lodestar/src/network/reqresp/utils/errorMessage.ts#L23">packages/lodestar/src/network/reqresp/utils/errorMessage.ts:23</a></em></p>
 <p>Decodes error message from network bytes and removes non printable, non ascii characters.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -403,7 +403,7 @@ Note: MUST allow missing block for skipped slots.</p>
 <hr/>
 <h3 id="encodeerrormessage">encodeErrorMessage<a class="headerlink" href="#encodeerrormessage" title="Permanent link">¶</a></h3>
 <p>▸ <strong>encodeErrorMessage</strong>(<code>errorMessage</code>: string): <em>Buffer</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/97141f7/packages/lodestar/src/network/reqresp/utils/errorMessage.ts#L15">packages/lodestar/src/network/reqresp/utils/errorMessage.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4f259dd/packages/lodestar/src/network/reqresp/utils/errorMessage.ts#L15">packages/lodestar/src/network/reqresp/utils/errorMessage.ts:15</a></em></p>
 <p>Encodes a UTF-8 string to 256 bytes max</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -424,7 +424,7 @@ Note: MUST allow missing block for skipped slots.</p>
 <hr/>
 <h3 id="onchunk">onChunk<a class="headerlink" href="#onchunk" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onChunk</strong>‹<strong>T</strong>›(<code>callback</code>: function): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/97141f7/packages/lodestar/src/network/reqresp/utils/onChunk.ts#L5">packages/lodestar/src/network/reqresp/utils/onChunk.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4f259dd/packages/lodestar/src/network/reqresp/utils/onChunk.ts#L5">packages/lodestar/src/network/reqresp/utils/onChunk.ts:5</a></em></p>
 <p>Calls <code>callback</code> with each <code>chunk</code> received from the <code>source</code> AsyncIterable
 Useful for logging, or cancelling timeouts</p>
 <p><strong>Type parameters:</strong></p>
