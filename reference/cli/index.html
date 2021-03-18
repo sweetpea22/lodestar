@@ -311,6 +311,11 @@
     account  wallet  list
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#account-wallet-recover">
+    account  wallet  recover
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -445,6 +450,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#account-wallet-list">
     account  wallet  list
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#account-wallet-recover">
+    account  wallet  recover
   </a>
 </li>
 </ul>
@@ -1137,15 +1147,21 @@
 </thead>
 <tbody>
 <tr>
+<td><code>--walletsDir</code></td>
+<td>string</td>
+<td>Directory for storing wallets.</td>
+<td>$rootDir/wallets</td>
+</tr>
+<tr>
 <td><code>--name</code></td>
 <td>string</td>
-<td>The wallet will be created with this name. It is not allowed to   create two wallets with the same name for the same --base-dir.</td>
+<td>The wallet will be created with this name. It is not allowed to create two wallets with the same name for the same --base-dir.</td>
 <td></td>
 </tr>
 <tr>
 <td><code>--passphraseFile</code></td>
 <td>string</td>
-<td>A path to a file containing the password which will unlock the wallet.   If the file does not exist, a random password will be generated and saved at that   path. To avoid confusion, if the file does not already exist it must include a   '.pass' suffix.</td>
+<td>A path to a file containing the password which will unlock the wallet. If the file does not exist, a random password will be generated and saved at that path. To avoid confusion, if the file does not already exist it must include a '.pass' suffix.</td>
 <td></td>
 </tr>
 <tr>
@@ -1168,6 +1184,61 @@
 <p>List all wallets in .network/wallets</p>
 <div class="highlight"><pre><span></span><code>account wallet list --walletsDir .network/wallets
 </code></pre></div>
+<h4 id="account-wallet-recover"><code>account  wallet  recover</code><a class="headerlink" href="#account-wallet-recover" title="Permanent link">¶</a></h4>
+<p>Recovers an EIP-2386 wallet from a given a BIP-39 mnemonic phrase.</p>
+<p><strong>Examples</strong></p>
+<p>Recover wallet</p>
+<div class="highlight"><pre><span></span><code>account wallet recover
+</code></pre></div>
+<p><strong>Options</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--walletsDir</code></td>
+<td>string</td>
+<td>Directory for storing wallets.</td>
+<td>$rootDir/wallets</td>
+</tr>
+<tr>
+<td><code>--name</code></td>
+<td>string</td>
+<td>The wallet will be created with this name. It is not allowed to create two wallets with the same name for the same --base-dir.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>--passphraseFile</code></td>
+<td>string</td>
+<td>A path to a file containing the password which will unlock the wallet. If the file does not exist, a random password will be generated and saved at that path. To avoid confusion, if the file does not already exist it must include a '.pass' suffix.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>--type</code></td>
+<td>string</td>
+<td>The type of wallet to create. Only HD (hierarchical-deterministic) wallets are supported presently.</td>
+<td>hd</td>
+</tr>
+<tr>
+<td><code>--mnemonicOutputPath</code></td>
+<td>string</td>
+<td>If present, the mnemonic will be saved to this file</td>
+<td></td>
+</tr>
+<tr>
+<td><code>--mnemonicInputPath</code></td>
+<td>string</td>
+<td>If present, the mnemonic will be read in from this file.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="init"><code>init</code><a class="headerlink" href="#init" title="Permanent link">¶</a></h2>
 <p>Initialize Lodestar directories and files necessary to run a beacon chain node. This step is not required, and should only be used to prepare special configurations</p>
 <p><strong>Examples</strong></p>
