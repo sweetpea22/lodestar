@@ -298,7 +298,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="assembleblock">assembleBlock<a class="headerlink" href="#assembleblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>assembleBlock</strong>(<code>config</code>: IBeaconConfig, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db_api_beacon.ibeacondb/">IBeaconDb</a>, <code>eth1</code>: <a href="../../interfaces/eth1.ieth1forblockproduction/">IEth1ForBlockProduction</a>, <code>slot</code>: Slot, <code>randaoReveal</code>: Bytes96, <code>graffiti</code>: Buffer‹›): <em>Promise‹BeaconBlock›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/chain/factory/block/index.ts#L14">packages/lodestar/src/chain/factory/block/index.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/chain/factory/block/index.ts#L14">packages/lodestar/src/chain/factory/block/index.ts:14</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -350,7 +350,7 @@
 <hr/>
 <h3 id="assemblebody">assembleBody<a class="headerlink" href="#assemblebody" title="Permanent link">¶</a></h3>
 <p>▸ <strong>assembleBody</strong>(<code>config</code>: IBeaconConfig, <code>db</code>: <a href="../../interfaces/db_api_beacon.ibeacondb/">IBeaconDb</a>, <code>eth1</code>: <a href="../../interfaces/eth1.ieth1forblockproduction/">IEth1ForBlockProduction</a>, <code>currentState</code>: CachedBeaconState‹BeaconState›, <code>randaoReveal</code>: Bytes96, <code>graffiti</code>: Bytes32): <em>Promise‹BeaconBlockBody›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/chain/factory/block/body.ts#L13">packages/lodestar/src/chain/factory/block/body.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/chain/factory/block/body.ts#L13">packages/lodestar/src/chain/factory/block/body.ts:13</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -390,7 +390,7 @@
 <hr/>
 <h3 id="computenewstateroot">computeNewStateRoot<a class="headerlink" href="#computenewstateroot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>computeNewStateRoot</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: CachedBeaconState‹BeaconState›, <code>block</code>: BeaconBlock): <em>Root</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/chain/factory/block/index.ts#L43">packages/lodestar/src/chain/factory/block/index.ts:43</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/chain/factory/block/index.ts#L43">packages/lodestar/src/chain/factory/block/index.ts:43</a></em></p>
 <p>Instead of running fastStateTransition(), only need to process block since
 state is processed until block.slot already (this is to avoid double
 epoch transition which happen at slot % 32 === 0)</p>

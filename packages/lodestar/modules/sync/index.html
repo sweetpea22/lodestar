@@ -284,11 +284,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#beaconreqresphandler">
-    BeaconReqRespHandler
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#beaconsync">
     BeaconSync
   </a>
@@ -316,16 +311,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#iregularsyncoptions">
     IRegularSyncOptions
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ireqresphandler">
-    IReqRespHandler
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ireqresphandlermodules">
-    IReqRespHandlerModules
   </a>
 </li>
 <li class="md-nav__item">
@@ -411,15 +396,12 @@
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#beacongossiphandler">BeaconGossipHandler</a></li>
-<li><a href="./#beaconreqresphandler">BeaconReqRespHandler</a></li>
 <li><a href="./#beaconsync">BeaconSync</a></li>
 <li><a href="./#ibeaconsync">IBeaconSync</a></li>
 <li><a href="./#iregularsync">IRegularSync</a></li>
 <li><a href="./#iregularsyncevents">IRegularSyncEvents</a></li>
 <li><a href="./#iregularsyncmodules">IRegularSyncModules</a></li>
 <li><a href="./#iregularsyncoptions">IRegularSyncOptions</a></li>
-<li><a href="./#ireqresphandler">IReqRespHandler</a></li>
-<li><a href="./#ireqresphandlermodules">IReqRespHandlerModules</a></li>
 <li><a href="./#islotrange">ISlotRange</a></li>
 <li><a href="./#isyncmodule">ISyncModule</a></li>
 <li><a href="./#isyncmodules">ISyncModules</a></li>
@@ -438,7 +420,6 @@
 <h3 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="../../interfaces/sync.ibeaconsync/">IBeaconSync</a></li>
-<li><a href="../../interfaces/sync.ireqresphandler/">IReqRespHandler</a></li>
 <li><a href="../../interfaces/sync.islotrange/">ISlotRange</a></li>
 <li><a href="../../interfaces/sync.isyncmodule/">ISyncModule</a></li>
 <li><a href="../../interfaces/sync.isyncmodules/">ISyncModules</a></li>
@@ -451,9 +432,6 @@
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <h3 id="beacongossiphandler">BeaconGossipHandler<a class="headerlink" href="#beacongossiphandler" title="Permanent link">¶</a></h3>
 <p>• <strong>BeaconGossipHandler</strong>:</p>
-<hr/>
-<h3 id="beaconreqresphandler">BeaconReqRespHandler<a class="headerlink" href="#beaconreqresphandler" title="Permanent link">¶</a></h3>
-<p>• <strong>BeaconReqRespHandler</strong>:</p>
 <hr/>
 <h3 id="beaconsync">BeaconSync<a class="headerlink" href="#beaconsync" title="Permanent link">¶</a></h3>
 <p>• <strong>BeaconSync</strong>:</p>
@@ -472,12 +450,6 @@
 <hr/>
 <h3 id="iregularsyncoptions">IRegularSyncOptions<a class="headerlink" href="#iregularsyncoptions" title="Permanent link">¶</a></h3>
 <p>• <strong>IRegularSyncOptions</strong>:</p>
-<hr/>
-<h3 id="ireqresphandler">IReqRespHandler<a class="headerlink" href="#ireqresphandler" title="Permanent link">¶</a></h3>
-<p>• <strong>IReqRespHandler</strong>:</p>
-<hr/>
-<h3 id="ireqresphandlermodules">IReqRespHandlerModules<a class="headerlink" href="#ireqresphandlermodules" title="Permanent link">¶</a></h3>
-<p>• <strong>IReqRespHandlerModules</strong>:</p>
 <hr/>
 <h3 id="islotrange">ISlotRange<a class="headerlink" href="#islotrange" title="Permanent link">¶</a></h3>
 <p>• <strong>ISlotRange</strong>:</p>
@@ -499,16 +471,16 @@
 <h2 id="object-literals_1">Object literals<a class="headerlink" href="#object-literals_1" title="Permanent link">¶</a></h2>
 <h3 id="const-defaultsyncoptions"><code>Const</code> defaultSyncOptions<a class="headerlink" href="#const-defaultsyncoptions" title="Permanent link">¶</a></h3>
 <h3 id="defaultsyncoptions-object">▪ <strong>defaultSyncOptions</strong>: <em>object</em><a class="headerlink" href="#defaultsyncoptions-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/sync/options.ts#L11">packages/lodestar/src/sync/options.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/sync/options.ts#L11">packages/lodestar/src/sync/options.ts:11</a></em></p>
 <h3 id="blockperchunk">blockPerChunk<a class="headerlink" href="#blockperchunk" title="Permanent link">¶</a></h3>
 <p>• <strong>blockPerChunk</strong>: <em>number</em> = 64</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/sync/options.ts#L15">packages/lodestar/src/sync/options.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/sync/options.ts#L15">packages/lodestar/src/sync/options.ts:15</a></em></p>
 <h3 id="maxslotimport">maxSlotImport<a class="headerlink" href="#maxslotimport" title="Permanent link">¶</a></h3>
 <p>• <strong>maxSlotImport</strong>: <em>number</em> = 64</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/sync/options.ts#L14">packages/lodestar/src/sync/options.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/sync/options.ts#L14">packages/lodestar/src/sync/options.ts:14</a></em></p>
 <h3 id="minpeers">minPeers<a class="headerlink" href="#minpeers" title="Permanent link">¶</a></h3>
 <p>• <strong>minPeers</strong>: <em>number</em> = 3</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/sync/options.ts#L12">packages/lodestar/src/sync/options.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/sync/options.ts#L12">packages/lodestar/src/sync/options.ts:12</a></em></p>
 </article>
 </div>
 </div>

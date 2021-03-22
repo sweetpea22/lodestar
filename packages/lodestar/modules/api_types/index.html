@@ -345,7 +345,7 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="nodeidentity_1">NodeIdentity<a class="headerlink" href="#nodeidentity_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>NodeIdentity</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/api/types/node.ts#L3">packages/lodestar/src/api/types/node.ts:3</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/api/types/node.ts#L4">packages/lodestar/src/api/types/node.ts:4</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <ul>
 <li>
@@ -367,11 +367,11 @@
 <hr/>
 <h3 id="nodepeer_1">NodePeer<a class="headerlink" href="#nodepeer_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>NodePeer</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/api/types/node.ts#L11">packages/lodestar/src/api/types/node.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/api/types/node.ts#L12">packages/lodestar/src/api/types/node.ts:12</a></em></p>
 <h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
 <ul>
 <li>
-<p><strong>direction</strong>: <em>"inbound" | "outbound" | null</em></p>
+<p><strong>direction</strong>: <em><a href="../network/#peerdirection">PeerDirection</a> | null</em></p>
 </li>
 <li>
 <p><strong>enr</strong>: <em>string</em></p>
@@ -383,7 +383,7 @@
 <p><strong>peerId</strong>: <em>string</em></p>
 </li>
 <li>
-<p><strong>state</strong>: <em>"disconnected" | "connecting" | "connected" | "disconnecting"</em></p>
+<p><strong>state</strong>: <em><a href="../network/#peerstate">PeerState</a></em></p>
 </li>
 </ul>
 </article>

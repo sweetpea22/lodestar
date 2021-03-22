@@ -289,6 +289,16 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ireqresp">
+    IReqResp
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ireqresphandler">
+    IReqRespHandler
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#ireqrespmodules">
     IReqRespModules
   </a>
@@ -306,11 +316,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#reqresphandler">
     ReqRespHandler
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reqresprequest">
-    ReqRespRequest
   </a>
 </li>
 <li class="md-nav__item">
@@ -336,34 +341,6 @@
 <a class="md-nav__link" href="#ireqrespoptions_1">
     IReqRespOptions
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reqresphandler_1">
-    ReqRespHandler
-  </a>
-<nav aria-label="ReqRespHandler" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration">
-    Type declaration:
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#reqresprequest_1">
-    ReqRespRequest
-  </a>
-<nav aria-label="ReqRespRequest" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_1">
-    Type declaration:
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#requestorresponsebody_1">
@@ -432,11 +409,12 @@
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#ilibp2pstream">ILibP2pStream</a></li>
+<li><a href="./#ireqresp">IReqResp</a></li>
+<li><a href="./#ireqresphandler">IReqRespHandler</a></li>
 <li><a href="./#ireqrespmodules">IReqRespModules</a></li>
 <li><a href="./#ireqrespoptions">IReqRespOptions</a></li>
 <li><a href="./#reqresp">ReqResp</a></li>
 <li><a href="./#reqresphandler">ReqRespHandler</a></li>
-<li><a href="./#reqresprequest">ReqRespRequest</a></li>
 <li><a href="./#requestorresponsebody">RequestOrResponseBody</a></li>
 <li><a href="./#requestorresponsetype">RequestOrResponseType</a></li>
 </ul>
@@ -447,13 +425,12 @@
 <h3 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="../../interfaces/network_reqresp.ilibp2pstream/">ILibP2pStream</a></li>
+<li><a href="../../interfaces/network_reqresp.ireqresp/">IReqResp</a></li>
 <li><a href="../../interfaces/network_reqresp.ireqrespmodules/">IReqRespModules</a></li>
 </ul>
 <h3 id="type-aliases">Type aliases<a class="headerlink" href="#type-aliases" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#ireqrespoptions">IReqRespOptions</a></li>
-<li><a href="./#reqresphandler">ReqRespHandler</a></li>
-<li><a href="./#reqresprequest">ReqRespRequest</a></li>
 <li><a href="./#requestorresponsebody">RequestOrResponseBody</a></li>
 <li><a href="./#requestorresponsetype">RequestOrResponseType</a></li>
 </ul>
@@ -469,6 +446,12 @@
 <h3 id="ilibp2pstream">ILibP2pStream<a class="headerlink" href="#ilibp2pstream" title="Permanent link">¶</a></h3>
 <p>• <strong>ILibP2pStream</strong>:</p>
 <hr/>
+<h3 id="ireqresp">IReqResp<a class="headerlink" href="#ireqresp" title="Permanent link">¶</a></h3>
+<p>• <strong>IReqResp</strong>:</p>
+<hr/>
+<h3 id="ireqresphandler">IReqRespHandler<a class="headerlink" href="#ireqresphandler" title="Permanent link">¶</a></h3>
+<p>• <strong>IReqRespHandler</strong>:</p>
+<hr/>
 <h3 id="ireqrespmodules">IReqRespModules<a class="headerlink" href="#ireqrespmodules" title="Permanent link">¶</a></h3>
 <p>• <strong>IReqRespModules</strong>:</p>
 <hr/>
@@ -481,9 +464,6 @@
 <h3 id="reqresphandler">ReqRespHandler<a class="headerlink" href="#reqresphandler" title="Permanent link">¶</a></h3>
 <p>• <strong>ReqRespHandler</strong>:</p>
 <hr/>
-<h3 id="reqresprequest">ReqRespRequest<a class="headerlink" href="#reqresprequest" title="Permanent link">¶</a></h3>
-<p>• <strong>ReqRespRequest</strong>:</p>
-<hr/>
 <h3 id="requestorresponsebody">RequestOrResponseBody<a class="headerlink" href="#requestorresponsebody" title="Permanent link">¶</a></h3>
 <p>• <strong>RequestOrResponseBody</strong>:</p>
 <hr/>
@@ -492,67 +472,19 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="ireqrespoptions_1">IReqRespOptions<a class="headerlink" href="#ireqrespoptions_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>IReqRespOptions</strong>: <em>Partial‹typeof timeoutOptions›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/network/reqresp/reqResp.ts#L21">packages/lodestar/src/network/reqresp/reqResp.ts:21</a></em></p>
-<hr/>
-<h3 id="reqresphandler_1">ReqRespHandler<a class="headerlink" href="#reqresphandler_1" title="Permanent link">¶</a></h3>
-<p>Ƭ <strong>ReqRespHandler</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/network/reqresp/interface.ts#L30">packages/lodestar/src/network/reqresp/interface.ts:30</a></em></p>
-<h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
-<p>▸ (<code>method</code>: <a href="../../enums/constants.method/">Method</a>, <code>requestBody</code>: phase0.RequestBody, <code>peerId</code>: PeerId): <em>AsyncIterable‹phase0.ResponseBody›</em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>method</code></td>
-<td><a href="../../enums/constants.method/">Method</a></td>
-</tr>
-<tr>
-<td><code>requestBody</code></td>
-<td>phase0.RequestBody</td>
-</tr>
-<tr>
-<td><code>peerId</code></td>
-<td>PeerId</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h3 id="reqresprequest_1">ReqRespRequest<a class="headerlink" href="#reqresprequest_1" title="Permanent link">¶</a></h3>
-<p>Ƭ <strong>ReqRespRequest</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/network/reqresp/interface.ts#L16">packages/lodestar/src/network/reqresp/interface.ts:16</a></em></p>
-<h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
-<ul>
-<li>
-<p><strong>body</strong>: <em>Body</em></p>
-</li>
-<li>
-<p><strong>encoding</strong>: <em><a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a></em></p>
-</li>
-<li>
-<p><strong>id</strong>: <em>phase0.RequestId</em></p>
-</li>
-<li>
-<p><strong>method</strong>: <em><a href="../../enums/constants.method/">Method</a></em></p>
-</li>
-</ul>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/network/reqresp/reqResp.ts#L22">packages/lodestar/src/network/reqresp/reqResp.ts:22</a></em></p>
 <hr/>
 <h3 id="requestorresponsebody_1">RequestOrResponseBody<a class="headerlink" href="#requestorresponsebody_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>RequestOrResponseBody</strong>: <em>phase0.ResponseBody | phase0.RequestBody</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/network/reqresp/interface.ts#L28">packages/lodestar/src/network/reqresp/interface.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/network/reqresp/interface.ts#L38">packages/lodestar/src/network/reqresp/interface.ts:38</a></em></p>
 <hr/>
 <h3 id="requestorresponsetype_1">RequestOrResponseType<a class="headerlink" href="#requestorresponsetype_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>RequestOrResponseType</strong>: <em>Exclude‹ReturnType‹typeof Methods[Method]["responseSSZType"]› | ReturnType‹typeof Methods[Method]["requestSSZType"]›, null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/network/reqresp/interface.ts#L23">packages/lodestar/src/network/reqresp/interface.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/network/reqresp/interface.ts#L33">packages/lodestar/src/network/reqresp/interface.ts:33</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="onoutgoingreqresperror">onOutgoingReqRespError<a class="headerlink" href="#onoutgoingreqresperror" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onOutgoingReqRespError</strong>(<code>e</code>: <a href="../../classes/chain_regen.regenerror/#static-error">Error</a>, <code>method</code>: <a href="../../enums/constants.method/">Method</a>): <em><a href="../../enums/network_peers.peeraction/">PeerAction</a> | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/network/reqresp/score.ts#L15">packages/lodestar/src/network/reqresp/score.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/network/reqresp/score.ts#L15">packages/lodestar/src/network/reqresp/score.ts:15</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -576,13 +508,13 @@
 <h2 id="object-literals_1">Object literals<a class="headerlink" href="#object-literals_1" title="Permanent link">¶</a></h2>
 <h3 id="const-libp2perrorcodes"><code>Const</code> libp2pErrorCodes<a class="headerlink" href="#const-libp2perrorcodes" title="Permanent link">¶</a></h3>
 <h3 id="libp2perrorcodes-object">▪ <strong>libp2pErrorCodes</strong>: <em>object</em><a class="headerlink" href="#libp2perrorcodes-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/network/reqresp/score.ts#L10">packages/lodestar/src/network/reqresp/score.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/network/reqresp/score.ts#L10">packages/lodestar/src/network/reqresp/score.ts:10</a></em></p>
 <p>libp2p-ts does not include types for the error codes.
 When libp2p has native types, this object won't be necessary.
 https://github.com/libp2p/js-libp2p/blob/6350a187c7c207086e42436ccbcabd59af6f5e3d/src/errors.js#L32</p>
 <h3 id="err_unsupported_protocol">ERR_UNSUPPORTED_PROTOCOL<a class="headerlink" href="#err_unsupported_protocol" title="Permanent link">¶</a></h3>
 <p>• <strong>ERR_UNSUPPORTED_PROTOCOL</strong>: <em>string</em> = "ERR_UNSUPPORTED_PROTOCOL"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/867db03/packages/lodestar/src/network/reqresp/score.ts#L12">packages/lodestar/src/network/reqresp/score.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5a35fce/packages/lodestar/src/network/reqresp/score.ts#L12">packages/lodestar/src/network/reqresp/score.ts:12</a></em></p>
 </article>
 </div>
 </div>
