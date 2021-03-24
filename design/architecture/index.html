@@ -419,15 +419,15 @@
 </a>
 <h1 id="beacon-node-module-architecture">Beacon Node Module Architecture<a class="headerlink" href="#beacon-node-module-architecture" title="Permanent link">¶</a></h1>
 <h2 id="lodestar-beacon-node-modules">Lodestar Beacon Node Modules<a class="headerlink" href="#lodestar-beacon-node-modules" title="Permanent link">¶</a></h2>
-<p>When <code>lodestar beacon --network NETWORK_NAME</code> (as described in <a href="../reference/cli">CLI Reference</a>) is ran, <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-cli">@chainsafe/lodestar-cli</a> does the following:</p>
+<p>When <code>lodestar beacon --network NETWORK_NAME</code> (as described in <a href="../reference/cli">CLI Reference</a>) is ran, <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/cli">@chainsafe/lodestar-cli</a> does the following:</p>
 <ul>
 <li>gathers data required to run the beacon node based on local configurations and CLI options</li>
 <li>bootstraps the <a href="https://github.com/ChainSafe/lodestar/blob/54e13c9908054b99f68e420ee7c0273fba9db3f9/packages/lodestar/src/node/nodejs.ts#L66"><code>BeaconNode</code></a> (in the <code>node</code> module) in <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar">@chainsafe/lodestar</a></li>
 </ul>
-<p>The <code>node</code> then bootstraps the other modules.  Within <a href="https://github.com/ChainSafe/lodestar">@chainsafe/lodestar</a>, there are several modules that are started by the <code>node</code> process that bootstraps the beacon node:</p>
+<p>The <code>node</code> then bootstraps the other modules. Within <a href="https://github.com/ChainSafe/lodestar">@chainsafe/lodestar</a>, there are several modules that are started by the <code>node</code> process that bootstraps the beacon node:</p>
 <h3 id="api"><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar/src/api">api</a><a class="headerlink" href="#api" title="Permanent link">¶</a></h3>
 <ul>
-<li>various REST API calls that can be made for:<ul>
+<li>various REST API calls that can be made for:</li>
 <li>beacon<ul>
 <li>get data about the beacon state and publish new data</li>
 </ul>
@@ -444,8 +444,6 @@
 <li>perform (and get relevant data for) validator duties</li>
 </ul>
 </li>
-</ul>
-</li>
 <li>based on <a href="https://github.com/ethereum/eth2.0-apis">https://github.com/ethereum/eth2.0-apis</a></li>
 </ul>
 <h3 id="chain"><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar/src/chain">chain</a><a class="headerlink" href="#chain" title="Permanent link">¶</a></h3>
@@ -454,7 +452,7 @@
 </ul>
 <h3 id="db"><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar/src/db">db</a><a class="headerlink" href="#db" title="Permanent link">¶</a></h3>
 <ul>
-<li>handles all persistent data stored to the local leveldb while running the beacon chain.  uses <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-db">@chainsafe/lodestar-db</a> under the hood.</li>
+<li>handles all persistent data stored to the local leveldb while running the beacon chain. uses <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/db">@chainsafe/lodestar-db</a> under the hood.</li>
 </ul>
 <h3 id="eth1"><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar/src/eth1">eth1</a><a class="headerlink" href="#eth1" title="Permanent link">¶</a></h3>
 <ul>
@@ -471,19 +469,17 @@
 <h3 id="node"><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar/src/node">node</a><a class="headerlink" href="#node" title="Permanent link">¶</a></h3>
 <ul>
 <li>contains the nodeJS process that bootstraps and runs Lodestar</li>
-<li>contains the entrypoint that <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-cli/">@chainsafe/lodestar-cli</a> calls to start the beacon node</li>
+<li>contains the entrypoint that <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/cli/">@chainsafe/lodestar-cli</a> calls to start the beacon node</li>
 </ul>
 <h3 id="sync"><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar/src/sync">sync</a><a class="headerlink" href="#sync" title="Permanent link">¶</a></h3>
 <ul>
-<li>"syncing" is the process by which the beacon node stays updated with new data published on eth2.  there are two such processes in Lodestar:<ul>
+<li>"syncing" is the process by which the beacon node stays updated with new data published on eth2. there are two such processes in Lodestar:</li>
 <li>initial sync<ul>
 <li>sync new data until we reach the head of the chain</li>
 </ul>
 </li>
 <li>regular sync<ul>
 <li>once we have finished initial sync (i.e. reached the head of the chain), regular sync keeps us updated in realtime as the chain head moves forward</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -496,21 +492,17 @@
 <h3 id="entry-paths-for-data">Entry Paths for Data<a class="headerlink" href="#entry-paths-for-data" title="Permanent link">¶</a></h3>
 <p>There are a few paths that data can be brought into the beacon chain via outside sources:</p>
 <ul>
-<li>via <code>api</code><ul>
+<li>via <code>api</code></li>
 <li>a validator can be proposing a new block</li>
-</ul>
-</li>
-<li>via <code>network</code><ul>
+<li>via <code>network</code></li>
 <li>req/resp - we can be explicitly requesting a block</li>
 <li>gossip - we receive a block propagating across the network</li>
 </ul>
-</li>
-</ul>
 <h3 id="data-flow-diagram">Data Flow Diagram<a class="headerlink" href="#data-flow-diagram" title="Permanent link">¶</a></h3>
-<p>Here's a diagram of how data flows across the modules of the beacon node.  Click on a module or package in the diagram to see where it exists in the lodestar repo.</p>
+<p>Here's a diagram of how data flows across the modules of the beacon node. Click on a module or package in the diagram to see where it exists in the lodestar repo.</p>
 <div class="mermaid">graph TD
     lodestar-validator(lodestar-validator)
-    click lodestar-validator "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-validator"
+    click lodestar-validator "https://github.com/ChainSafe/lodestar/tree/master/packages/validator"
     lodestar-validator--&gt;|proposes block|api
 
     api:::nodemodule
@@ -527,7 +519,7 @@
     api--&gt;|attestation subnet subscription|sync
 
     lodestar-fork-choice(lodestar-fork-choice)
-    click lodestar-fork-choice "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-fork-choice"
+    click lodestar-fork-choice "https://github.com/ChainSafe/lodestar/tree/master/packages/fork-choice"
     chain--&gt;|get/set DAG|lodestar-fork-choice
     chain--&gt;|block data|api
 
@@ -547,7 +539,7 @@
     peers--&gt;|incoming block|network
 
     db--&gt;lodestar-db[(lodestar-db)]
-    click lodestar-db "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-db"
+    click lodestar-db "https://github.com/ChainSafe/lodestar/tree/master/packages/db"
 
     click api "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar/src/api"
     click chain "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar/src/chain"

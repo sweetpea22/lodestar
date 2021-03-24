@@ -376,8 +376,8 @@
 <p>This is a diagram of the various <code>lodestar-*</code> packages in the Lodestar monorepo and how they fit together:</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>note: this dependency graph only applies to dependencies as they are used in the <code>src/</code> folders of each package, not in <code>test/</code></p>
 </div>
+<p>note: this dependency graph only applies to dependencies as they are used in the <code>src/</code> folders of each package, not in <code>test/</code></p>
 <div class="mermaid">graph TD
     lodestar["lodestar"]:::nodemodule
     cli["lodestar-cli"]:::nodemodule
@@ -425,16 +425,16 @@
     lodestar--&gt;cli
     validator--&gt;cli
 
-    click cli "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-cli"
+    click cli "https://github.com/ChainSafe/lodestar/tree/master/packages/cli"
     click lodestar "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar"
-    click validator "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-validator"
-    click db "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-db"
-    click params "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-params"
-    click state-trans "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-beacon-state-transition"
-    click fork-choice "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-fork-choice"
-    click types "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-types"
-    click utils "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-utils"
-    click config "https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-config"
+    click validator "https://github.com/ChainSafe/lodestar/tree/master/packages/validator"
+    click db "https://github.com/ChainSafe/lodestar/tree/master/packages/db"
+    click params "https://github.com/ChainSafe/lodestar/tree/master/packages/params"
+    click state-trans "https://github.com/ChainSafe/lodestar/tree/master/packages/beacon-state-transition"
+    click fork-choice "https://github.com/ChainSafe/lodestar/tree/master/packages/fork-choice"
+    click types "https://github.com/ChainSafe/lodestar/tree/master/packages/types"
+    click utils "https://github.com/ChainSafe/lodestar/tree/master/packages/utils"
+    click config "https://github.com/ChainSafe/lodestar/tree/master/packages/config"
 
     classDef nodemodule fill:grey,stroke-width:2px,stroke:black,color:white;
     linkStyle default stroke:grey, fill:none,stroke-width:1.5px;
@@ -442,26 +442,26 @@
 <p>For a list of all the packages in the monorepo and a description for each, click <a href="https://github.com/ChainSafe/lodestar#packages">here</a>.</p>
 <p>Let's talk about how each package fits together in finer detail, from top to bottom, following the chart.</p>
 <h2 id="chainsafelodestar-params">@chainsafe/lodestar-params<a class="headerlink" href="#chainsafelodestar-params" title="Permanent link">¶</a></h2>
-<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-params">@chainsafe/lodestar-params</a> contains the parameters for configuring an eth2 network.  For example, the <a href="https://github.com/ethereum/eth2.0-specs/blob/dev/configs/mainnet/phase0.yaml">mainnet params</a></p>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/params">@chainsafe/lodestar-params</a> contains the parameters for configuring an eth2 network. For example, the <a href="https://github.com/ethereum/eth2.0-specs/blob/dev/configs/mainnet/phase0.yaml">mainnet params</a></p>
 <h2 id="chainsafelodestar-types">@chainsafe/lodestar-types<a class="headerlink" href="#chainsafelodestar-types" title="Permanent link">¶</a></h2>
-<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-types">@chainsafe/lodestar-types</a> contains eth2 ssz types and datastructrues.</p>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/types">@chainsafe/lodestar-types</a> contains eth2 ssz types and datastructrues.</p>
 <h2 id="chainsafelodestar-config">@chainsafe/lodestar-config<a class="headerlink" href="#chainsafelodestar-config" title="Permanent link">¶</a></h2>
-<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-config">@chainsafe/lodestar-config</a> combines <a href="#chainsafelodestar-params"><code>lodestar-params</code></a> and <a href="#chainsafelodestar-types"><code>lodestar-types</code></a> together to be used as a single config object across the other Lodestar packages.</p>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/config">@chainsafe/lodestar-config</a> combines <a href="#chainsafelodestar-params"><code>lodestar-params</code></a> and <a href="#chainsafelodestar-types"><code>lodestar-types</code></a> together to be used as a single config object across the other Lodestar packages.</p>
 <h2 id="chainsafelodestar-utils">@chainsafe/lodestar-utils<a class="headerlink" href="#chainsafelodestar-utils" title="Permanent link">¶</a></h2>
-<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-utils">@chainsafe/lodestar-utils</a> contains various utilities that are common among the various Lodestar monorepo packages.</p>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/utils">@chainsafe/lodestar-utils</a> contains various utilities that are common among the various Lodestar monorepo packages.</p>
 <h2 id="chainsafelodestar-beacon-state-transition">@chainsafe/lodestar-beacon-state-transition<a class="headerlink" href="#chainsafelodestar-beacon-state-transition" title="Permanent link">¶</a></h2>
-<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-beacon-state-transition">@chainsafe/lodestar-beacon-state-transition</a> contains the Lodestar implementation of the <a href="https://github.com/ethereum/eth2.0-specs/blob/v0.10.0/specs/phase0/beacon-chain.md#beacon-chain-state-transition-function">beacon state transition function</a>, which is used by <a href="#chainsafelodestar"><code>@chainsafe/lodestar</code></a> to perform the actual beacon state transition.  This package also contains various functions used to calculate info about the beacon chain (such as <code>computeEpochAtSlot</code>) which are used by <a href="#chainsafelodestar-fork-choice">@chainsafe/lodestar-fork-choice</a> and <a href="#chainsafelodestar-validator">@chainsafe/lodestar-validator</a></p>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/beacon-state-transition">@chainsafe/lodestar-beacon-state-transition</a> contains the Lodestar implementation of the <a href="https://github.com/ethereum/eth2.0-specs/blob/v0.10.0/specs/phase0/beacon-chain.md#beacon-chain-state-transition-function">beacon state transition function</a>, which is used by <a href="#chainsafelodestar"><code>@chainsafe/lodestar</code></a> to perform the actual beacon state transition. This package also contains various functions used to calculate info about the beacon chain (such as <code>computeEpochAtSlot</code>) which are used by <a href="#chainsafelodestar-fork-choice">@chainsafe/lodestar-fork-choice</a> and <a href="#chainsafelodestar-validator">@chainsafe/lodestar-validator</a></p>
 <h2 id="chainsafelodestar-db">@chainsafe/lodestar-db<a class="headerlink" href="#chainsafelodestar-db" title="Permanent link">¶</a></h2>
-<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-db">@chainsafe/lodestar-db</a> is where all persistent data about the beacon node is stored.  Any package that needs to read or write persistent beacon node data depends on <code>lodestar-db</code>.</p>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/db">@chainsafe/lodestar-db</a> is where all persistent data about the beacon node is stored. Any package that needs to read or write persistent beacon node data depends on <code>lodestar-db</code>.</p>
 <h2 id="chainsafelodestar-fork-choice">@chainsafe/lodestar-fork-choice<a class="headerlink" href="#chainsafelodestar-fork-choice" title="Permanent link">¶</a></h2>
-<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-fork-choice">@chainsafe/lodestar-fork-choice</a> holds the methods for reading/writing the fork choice DAG.  The <a href="#chainsafelodestar"><code>@chainsafe/lodestar</code></a> package is the sole consumer of this package because the beacon node itself is what controls when the fork choice DAG is updated.
-For a good explainer on how the fork choice itself works, see the <a href="https://github.com/ethereum/annotated-spec/blob/master/phase0/fork-choice.md">annotated fork choice spec</a>.  This is an annotated version of the <a href="https://github.com/ethereum/eth2.0-specs/blob/v0.12.1/specs/phase0/fork-choice.md">Eth2 fork choice spec</a> which <code>lodestar-fork-choice</code> is based on.</p>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/fork-choice">@chainsafe/lodestar-fork-choice</a> holds the methods for reading/writing the fork choice DAG. The <a href="#chainsafelodestar"><code>@chainsafe/lodestar</code></a> package is the sole consumer of this package because the beacon node itself is what controls when the fork choice DAG is updated.
+For a good explainer on how the fork choice itself works, see the <a href="https://github.com/ethereum/annotated-spec/blob/master/phase0/fork-choice.md">annotated fork choice spec</a>. This is an annotated version of the <a href="https://github.com/ethereum/eth2.0-specs/blob/v0.12.1/specs/phase0/fork-choice.md">Eth2 fork choice spec</a> which <code>lodestar-fork-choice</code> is based on.</p>
 <h2 id="chainsafelodestar-validator">@chainsafe/lodestar-validator<a class="headerlink" href="#chainsafelodestar-validator" title="Permanent link">¶</a></h2>
-<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-validator">@chainsafe/lodestar-validator</a> contains the validator client.  The sole consumer of this package is <a href="#chainsafelodestar-cli">@chainsafe/lodestar-cli</a>, which provides CLI access to run and configure the validator client.  However, the validator client communicates to a REST API that is contained in <a href="#chainsafelodestar">@chainsafe/lodestar</a> (specifically in the <a href="../architecture/#api"><code>api</code> module</a>) to perform the validator duties.</p>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/validator">@chainsafe/lodestar-validator</a> contains the validator client. The sole consumer of this package is <a href="#chainsafelodestar-cli">@chainsafe/lodestar-cli</a>, which provides CLI access to run and configure the validator client. However, the validator client communicates to a REST API that is contained in <a href="#chainsafelodestar">@chainsafe/lodestar</a> (specifically in the <a href="../architecture/#api"><code>api</code> module</a>) to perform the validator duties.</p>
 <h2 id="chainsafelodestar">@chainsafe/lodestar<a class="headerlink" href="#chainsafelodestar" title="Permanent link">¶</a></h2>
-<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar">@chainsafe/lodestar</a> contains the actual beacon node process itself, which is the aggregate of all the above packages and the "brain" of the Lodestar beacon chain implementation.  All of the <a href="../architecture">node modules</a> live in this package as well.</p>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar">@chainsafe/lodestar</a> contains the actual beacon node process itself, which is the aggregate of all the above packages and the "brain" of the Lodestar beacon chain implementation. All of the <a href="../architecture">node modules</a> live in this package as well.</p>
 <h2 id="chainsafelodestar-cli">@chainsafe/lodestar-cli<a class="headerlink" href="#chainsafelodestar-cli" title="Permanent link">¶</a></h2>
-<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/lodestar-cli">@chainsafe/lodestar-cli</a> combines everything together for CLI usage and configuration of the beacon node and validator.</p>
+<p><a href="https://github.com/ChainSafe/lodestar/tree/master/packages/cli">@chainsafe/lodestar-cli</a> combines everything together for CLI usage and configuration of the beacon node and validator.</p>
 </article>
 </div>
 </div>
