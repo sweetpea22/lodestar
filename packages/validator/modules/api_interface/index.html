@@ -297,20 +297,6 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#beaconcommitteesubscription">
-    BeaconCommitteeSubscription
-  </a>
-<nav aria-label="BeaconCommitteeSubscription" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_2">
-    Type declaration:
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#beaconevent">
     BeaconEvent
   </a>
@@ -322,7 +308,7 @@
 <nav aria-label="ClockEpochEvent" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_3">
+<a class="md-nav__link" href="#type-declaration_2">
     Type declaration:
   </a>
 </li>
@@ -336,7 +322,7 @@
 <nav aria-label="ClockSlotEvent" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_4">
+<a class="md-nav__link" href="#type-declaration_3">
     Type declaration:
   </a>
 </li>
@@ -350,7 +336,7 @@
 <nav aria-label="HeadEvent" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-declaration_5">
+<a class="md-nav__link" href="#type-declaration_4">
     Type declaration:
   </a>
 </li>
@@ -393,7 +379,6 @@
 <ul>
 <li><a href="./#beaconblockevent">BeaconBlockEvent</a></li>
 <li><a href="./#beaconchainreorgevent">BeaconChainReorgEvent</a></li>
-<li><a href="./#beaconcommitteesubscription">BeaconCommitteeSubscription</a></li>
 <li><a href="./#beaconevent">BeaconEvent</a></li>
 <li><a href="./#clockepochevent">ClockEpochEvent</a></li>
 <li><a href="./#clockslotevent">ClockSlotEvent</a></li>
@@ -402,7 +387,7 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="beaconblockevent">BeaconBlockEvent<a class="headerlink" href="#beaconblockevent" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>BeaconBlockEvent</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4c43371/packages/validator/src/api/interface/events.ts#L10">packages/validator/src/api/interface/events.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/013d37b/packages/validator/src/api/interface/events.ts#L10">packages/validator/src/api/interface/events.ts:10</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <ul>
 <li>
@@ -415,7 +400,7 @@
 <hr/>
 <h3 id="beaconchainreorgevent">BeaconChainReorgEvent<a class="headerlink" href="#beaconchainreorgevent" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>BeaconChainReorgEvent</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4c43371/packages/validator/src/api/interface/events.ts#L15">packages/validator/src/api/interface/events.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/013d37b/packages/validator/src/api/interface/events.ts#L15">packages/validator/src/api/interface/events.ts:15</a></em></p>
 <h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
 <ul>
 <li>
@@ -426,36 +411,14 @@
 </li>
 </ul>
 <hr/>
-<h3 id="beaconcommitteesubscription">BeaconCommitteeSubscription<a class="headerlink" href="#beaconcommitteesubscription" title="Permanent link">¶</a></h3>
-<p>Ƭ <strong>BeaconCommitteeSubscription</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4c43371/packages/validator/src/api/interface/validators.ts#L3">packages/validator/src/api/interface/validators.ts:3</a></em></p>
-<h4 id="type-declaration_2">Type declaration:<a class="headerlink" href="#type-declaration_2" title="Permanent link">¶</a></h4>
-<ul>
-<li>
-<p><strong>committeeIndex</strong>: <em>number</em></p>
-</li>
-<li>
-<p><strong>committeesAtSlot</strong>: <em>number</em></p>
-</li>
-<li>
-<p><strong>isAggregator</strong>: <em>boolean</em></p>
-</li>
-<li>
-<p><strong>slot</strong>: <em>number</em></p>
-</li>
-<li>
-<p><strong>validatorIndex</strong>: <em>number</em></p>
-</li>
-</ul>
-<hr/>
 <h3 id="beaconevent">BeaconEvent<a class="headerlink" href="#beaconevent" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>BeaconEvent</strong>: <em><a href="./#beaconblockevent">BeaconBlockEvent</a> | <a href="./#beaconchainreorgevent">BeaconChainReorgEvent</a> | <a href="./#headevent">HeadEvent</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4c43371/packages/validator/src/api/interface/events.ts#L25">packages/validator/src/api/interface/events.ts:25</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/013d37b/packages/validator/src/api/interface/events.ts#L25">packages/validator/src/api/interface/events.ts:25</a></em></p>
 <hr/>
 <h3 id="clockepochevent">ClockEpochEvent<a class="headerlink" href="#clockepochevent" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ClockEpochEvent</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4c43371/packages/validator/src/api/interface/clock.ts#L13">packages/validator/src/api/interface/clock.ts:13</a></em></p>
-<h4 id="type-declaration_3">Type declaration:<a class="headerlink" href="#type-declaration_3" title="Permanent link">¶</a></h4>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/013d37b/packages/validator/src/api/interface/clock.ts#L13">packages/validator/src/api/interface/clock.ts:13</a></em></p>
+<h4 id="type-declaration_2">Type declaration:<a class="headerlink" href="#type-declaration_2" title="Permanent link">¶</a></h4>
 <ul>
 <li>
 <p><strong>message</strong>(): <em>object</em></p>
@@ -470,8 +433,8 @@
 <hr/>
 <h3 id="clockslotevent">ClockSlotEvent<a class="headerlink" href="#clockslotevent" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ClockSlotEvent</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4c43371/packages/validator/src/api/interface/clock.ts#L6">packages/validator/src/api/interface/clock.ts:6</a></em></p>
-<h4 id="type-declaration_4">Type declaration:<a class="headerlink" href="#type-declaration_4" title="Permanent link">¶</a></h4>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/013d37b/packages/validator/src/api/interface/clock.ts#L6">packages/validator/src/api/interface/clock.ts:6</a></em></p>
+<h4 id="type-declaration_3">Type declaration:<a class="headerlink" href="#type-declaration_3" title="Permanent link">¶</a></h4>
 <ul>
 <li>
 <p><strong>message</strong>(): <em>object</em></p>
@@ -486,8 +449,8 @@
 <hr/>
 <h3 id="headevent">HeadEvent<a class="headerlink" href="#headevent" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>HeadEvent</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4c43371/packages/validator/src/api/interface/events.ts#L20">packages/validator/src/api/interface/events.ts:20</a></em></p>
-<h4 id="type-declaration_5">Type declaration:<a class="headerlink" href="#type-declaration_5" title="Permanent link">¶</a></h4>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/013d37b/packages/validator/src/api/interface/events.ts#L20">packages/validator/src/api/interface/events.ts:20</a></em></p>
+<h4 id="type-declaration_4">Type declaration:<a class="headerlink" href="#type-declaration_4" title="Permanent link">¶</a></h4>
 <ul>
 <li>
 <p><strong>message</strong>: <em>ChainHead</em></p>
