@@ -8,17 +8,17 @@
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
 <link href="https://chainsafe.github.io/lodestar/packages/lodestar/modules/network_gossip_validatorfns/" rel="canonical"/>
 <link href="../../../../images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-7.0.7" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.1.0" name="generator"/>
 <title>Network gossip validatorfns - Lodestar documentation</title>
-<link href="../../../../assets/stylesheets/main.c772ddf0.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.7fa14f5b.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.33e2939f.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ef6f36e2.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
 <link href="../../../../stylesheets/extras.css" rel="stylesheet"/>
 </head>
 <body data-md-color-accent="black" data-md-color-primary="" data-md-color-scheme="preference" dir="ltr">
-<script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
+<script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -52,8 +52,6 @@
           </span>
 </div>
 </div>
-</div>
-<div class="md-header__options">
 </div>
 <label class="md-header__button md-icon" for="__search">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
@@ -374,7 +372,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="validateaggregatedattestation">validateAggregatedAttestation<a class="headerlink" href="#validateaggregatedattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateAggregatedAttestation</strong>(<code>__namedParameters</code>: object, <code>_topic</code>: <a href="../network_gossip/#gossiptopic">GossipTopic</a>, <code>signedAggregateAndProof</code>: SignedAggregateAndProof): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/aggregatedAttestation.ts#L9">packages/lodestar/src/network/gossip/validatorFns/aggregatedAttestation.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/aggregatedAttestation.ts#L9">packages/lodestar/src/network/gossip/validatorFns/aggregatedAttestation.ts:9</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -409,7 +407,7 @@
 <hr/>
 <h3 id="validateattesterslashing">validateAttesterSlashing<a class="headerlink" href="#validateattesterslashing" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateAttesterSlashing</strong>(<code>__namedParameters</code>: object, <code>_topic</code>: <a href="../network_gossip/#gossiptopic">GossipTopic</a>, <code>attesterSlashing</code>: AttesterSlashing): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/attesterSlashing.ts#L8">packages/lodestar/src/network/gossip/validatorFns/attesterSlashing.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/attesterSlashing.ts#L8">packages/lodestar/src/network/gossip/validatorFns/attesterSlashing.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -444,7 +442,7 @@
 <hr/>
 <h3 id="validatebeaconblock">validateBeaconBlock<a class="headerlink" href="#validatebeaconblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateBeaconBlock</strong>(<code>__namedParameters</code>: object, <code>_topic</code>: <a href="../network_gossip/#gossiptopic">GossipTopic</a>, <code>signedBlock</code>: SignedBeaconBlock): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/block.ts#L9">packages/lodestar/src/network/gossip/validatorFns/block.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/block.ts#L9">packages/lodestar/src/network/gossip/validatorFns/block.ts:9</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -479,7 +477,7 @@
 <hr/>
 <h3 id="validatecommitteeattestation">validateCommitteeAttestation<a class="headerlink" href="#validatecommitteeattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateCommitteeAttestation</strong>(<code>__namedParameters</code>: object, <code>topic</code>: <a href="../../interfaces/network_gossip.ibeaconattestationtopic/">IBeaconAttestationTopic</a>, <code>attestation</code>: Attestation): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/attestation.ts#L10">packages/lodestar/src/network/gossip/validatorFns/attestation.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/attestation.ts#L10">packages/lodestar/src/network/gossip/validatorFns/attestation.ts:10</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -514,7 +512,7 @@
 <hr/>
 <h3 id="validateproposerslashing">validateProposerSlashing<a class="headerlink" href="#validateproposerslashing" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateProposerSlashing</strong>(<code>__namedParameters</code>: object, <code>_topic</code>: <a href="../network_gossip/#gossiptopic">GossipTopic</a>, <code>proposerSlashing</code>: ProposerSlashing): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/proposerSlashing.ts#L8">packages/lodestar/src/network/gossip/validatorFns/proposerSlashing.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/proposerSlashing.ts#L8">packages/lodestar/src/network/gossip/validatorFns/proposerSlashing.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -549,7 +547,7 @@
 <hr/>
 <h3 id="validatevoluntaryexit">validateVoluntaryExit<a class="headerlink" href="#validatevoluntaryexit" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateVoluntaryExit</strong>(<code>__namedParameters</code>: object, <code>_topic</code>: <a href="../network_gossip/#gossiptopic">GossipTopic</a>, <code>voluntaryExit</code>: SignedVoluntaryExit): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/voluntaryExit.ts#L8">packages/lodestar/src/network/gossip/validatorFns/voluntaryExit.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/voluntaryExit.ts#L8">packages/lodestar/src/network/gossip/validatorFns/voluntaryExit.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
@@ -584,25 +582,25 @@
 <h2 id="object-literals_1">Object literals<a class="headerlink" href="#object-literals_1" title="Permanent link">¶</a></h2>
 <h3 id="const-objectvalidatorfns"><code>Const</code> objectValidatorFns<a class="headerlink" href="#const-objectvalidatorfns" title="Permanent link">¶</a></h3>
 <h3 id="objectvalidatorfns-object">▪ <strong>objectValidatorFns</strong>: <em>object</em><a class="headerlink" href="#objectvalidatorfns-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/index.ts#L9">packages/lodestar/src/network/gossip/validatorFns/index.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/index.ts#L9">packages/lodestar/src/network/gossip/validatorFns/index.ts:9</a></em></p>
 <h3 id="gossiptypeattester_slashing">[GossipType.attester_slashing]<a class="headerlink" href="#gossiptypeattester_slashing" title="Permanent link">¶</a></h3>
 <p>• <strong>[GossipType.attester_slashing]</strong>: <em><a href="./#validateattesterslashing">validateAttesterSlashing</a></em> = validateAttesterSlashing</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/index.ts#L15">packages/lodestar/src/network/gossip/validatorFns/index.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/index.ts#L15">packages/lodestar/src/network/gossip/validatorFns/index.ts:15</a></em></p>
 <h3 id="gossiptypebeacon_aggregate_and_proof">[GossipType.beacon_aggregate_and_proof]<a class="headerlink" href="#gossiptypebeacon_aggregate_and_proof" title="Permanent link">¶</a></h3>
 <p>• <strong>[GossipType.beacon_aggregate_and_proof]</strong>: <em><a href="./#validatecommitteeattestation">validateCommitteeAttestation</a></em> = validateCommitteeAttestation</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/index.ts#L11">packages/lodestar/src/network/gossip/validatorFns/index.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/index.ts#L11">packages/lodestar/src/network/gossip/validatorFns/index.ts:11</a></em></p>
 <h3 id="gossiptypebeacon_attestation">[GossipType.beacon_attestation]<a class="headerlink" href="#gossiptypebeacon_attestation" title="Permanent link">¶</a></h3>
 <p>• <strong>[GossipType.beacon_attestation]</strong>: <em><a href="./#validateaggregatedattestation">validateAggregatedAttestation</a></em> = validateAggregatedAttestation</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/index.ts#L12">packages/lodestar/src/network/gossip/validatorFns/index.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/index.ts#L12">packages/lodestar/src/network/gossip/validatorFns/index.ts:12</a></em></p>
 <h3 id="gossiptypebeacon_block">[GossipType.beacon_block]<a class="headerlink" href="#gossiptypebeacon_block" title="Permanent link">¶</a></h3>
 <p>• <strong>[GossipType.beacon_block]</strong>: <em><a href="./#validatebeaconblock">validateBeaconBlock</a></em> = validateBeaconBlock</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/index.ts#L10">packages/lodestar/src/network/gossip/validatorFns/index.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/index.ts#L10">packages/lodestar/src/network/gossip/validatorFns/index.ts:10</a></em></p>
 <h3 id="gossiptypeproposer_slashing">[GossipType.proposer_slashing]<a class="headerlink" href="#gossiptypeproposer_slashing" title="Permanent link">¶</a></h3>
 <p>• <strong>[GossipType.proposer_slashing]</strong>: <em><a href="./#validateproposerslashing">validateProposerSlashing</a></em> = validateProposerSlashing</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/index.ts#L14">packages/lodestar/src/network/gossip/validatorFns/index.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/index.ts#L14">packages/lodestar/src/network/gossip/validatorFns/index.ts:14</a></em></p>
 <h3 id="gossiptypevoluntary_exit">[GossipType.voluntary_exit]<a class="headerlink" href="#gossiptypevoluntary_exit" title="Permanent link">¶</a></h3>
 <p>• <strong>[GossipType.voluntary_exit]</strong>: <em><a href="./#validatevoluntaryexit">validateVoluntaryExit</a></em> = validateVoluntaryExit</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/214664e/packages/lodestar/src/network/gossip/validatorFns/index.ts#L13">packages/lodestar/src/network/gossip/validatorFns/index.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8eda110/packages/lodestar/src/network/gossip/validatorFns/index.ts#L13">packages/lodestar/src/network/gossip/validatorFns/index.ts:13</a></em></p>
 </article>
 </div>
 </div>
@@ -639,6 +637,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
-<script src="../../../../assets/javascripts/bundle.65ce87ac.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.d892486b.min.js"></script>
 </body>
 </html>
