@@ -243,61 +243,8 @@
 <nav aria-label="Index" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#references">
-    References
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#enumerations">
-    Enumerations
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-aliases">
-    Type aliases
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#functions">
     Functions
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#references_1">
-    References
-  </a>
-<nav aria-label="References" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#isignatureset">
-    ISignatureSet
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#signaturesettype">
-    SignatureSetType
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verifysignatureset">
-    verifySignatureSet
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-aliases_1">
-    Type aliases
-  </a>
-<nav aria-label="Type aliases" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#isignatureset_1">
-    ISignatureSet
   </a>
 </li>
 </ul>
@@ -339,11 +286,6 @@
     getVoluntaryExitsSignatureSets
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verifysignatureset_1">
-    verifySignatureSet
-  </a>
-</li>
 </ul>
 </nav>
 </li>
@@ -360,20 +302,6 @@
 <p><a href="../../">@chainsafe/lodestar-beacon-state-transition</a> › <a href="../../globals/">Globals</a> › <a href="./">phase0/fast/signatureSets</a></p>
 <h1 id="module-phase0fastsignaturesets">Module: phase0/fast/signatureSets<a class="headerlink" href="#module-phase0fastsignaturesets" title="Permanent link">¶</a></h1>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
-<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="./#isignatureset">ISignatureSet</a></li>
-<li><a href="./#signaturesettype">SignatureSetType</a></li>
-<li><a href="./#verifysignatureset">verifySignatureSet</a></li>
-</ul>
-<h3 id="enumerations">Enumerations<a class="headerlink" href="#enumerations" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="../../enums/phase0_fast_signaturesets.signaturesettype/">SignatureSetType</a></li>
-</ul>
-<h3 id="type-aliases">Type aliases<a class="headerlink" href="#type-aliases" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="./#isignatureset">ISignatureSet</a></li>
-</ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#getallblocksignaturesets">getAllBlockSignatureSets</a></li>
@@ -382,25 +310,11 @@
 <li><a href="./#getattesterslashingssignaturesets">getAttesterSlashingsSignatureSets</a></li>
 <li><a href="./#getproposerslashingssignaturesets">getProposerSlashingsSignatureSets</a></li>
 <li><a href="./#getvoluntaryexitssignaturesets">getVoluntaryExitsSignatureSets</a></li>
-<li><a href="./#verifysignatureset">verifySignatureSet</a></li>
 </ul>
-<h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
-<h3 id="isignatureset">ISignatureSet<a class="headerlink" href="#isignatureset" title="Permanent link">¶</a></h3>
-<p>• <strong>ISignatureSet</strong>:</p>
-<hr/>
-<h3 id="signaturesettype">SignatureSetType<a class="headerlink" href="#signaturesettype" title="Permanent link">¶</a></h3>
-<p>• <strong>SignatureSetType</strong>:</p>
-<hr/>
-<h3 id="verifysignatureset">verifySignatureSet<a class="headerlink" href="#verifysignatureset" title="Permanent link">¶</a></h3>
-<p>• <strong>verifySignatureSet</strong>:</p>
-<h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
-<h3 id="isignatureset_1">ISignatureSet<a class="headerlink" href="#isignatureset_1" title="Permanent link">¶</a></h3>
-<p>Ƭ <strong>ISignatureSet</strong>: <em>object | object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4564667/packages/beacon-state-transition/src/phase0/fast/signatureSets/types.ts#L9">packages/beacon-state-transition/src/phase0/fast/signatureSets/types.ts:9</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getallblocksignaturesets">getAllBlockSignatureSets<a class="headerlink" href="#getallblocksignaturesets" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getAllBlockSignatureSets</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4564667/packages/beacon-state-transition/src/phase0/fast/signatureSets/index.ts#L17">packages/beacon-state-transition/src/phase0/fast/signatureSets/index.ts:17</a></em></p>
+<p>▸ <strong>getAllBlockSignatureSets</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/ea43a75/packages/beacon-state-transition/src/phase0/fast/signatureSets/index.ts#L14">packages/beacon-state-transition/src/phase0/fast/signatureSets/index.ts:14</a></em></p>
 <p>Includes all signatures on the block (except the deposit signatures) for verification.
 Deposits are not included because they can legally have invalid signatures.</p>
 <p><strong>Parameters:</strong></p>
@@ -422,11 +336,11 @@ Deposits are not included because they can legally have invalid signatures.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
+<p><strong>Returns:</strong> <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
 <hr/>
 <h3 id="getallblocksignaturesetsexceptproposer">getAllBlockSignatureSetsExceptProposer<a class="headerlink" href="#getallblocksignaturesetsexceptproposer" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getAllBlockSignatureSetsExceptProposer</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4564667/packages/beacon-state-transition/src/phase0/fast/signatureSets/index.ts#L28">packages/beacon-state-transition/src/phase0/fast/signatureSets/index.ts:28</a></em></p>
+<p>▸ <strong>getAllBlockSignatureSetsExceptProposer</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/ea43a75/packages/beacon-state-transition/src/phase0/fast/signatureSets/index.ts#L25">packages/beacon-state-transition/src/phase0/fast/signatureSets/index.ts:25</a></em></p>
 <p>Includes all signatures on the block (except the deposit signatures) for verification.
 Useful since block proposer signature is verified beforehand on gossip validation</p>
 <p><strong>Parameters:</strong></p>
@@ -448,11 +362,11 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
+<p><strong>Returns:</strong> <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
 <hr/>
 <h3 id="getattestationssignaturesets">getAttestationsSignatureSets<a class="headerlink" href="#getattestationssignaturesets" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getAttestationsSignatureSets</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4564667/packages/beacon-state-transition/src/phase0/fast/signatureSets/attestations.ts#L7">packages/beacon-state-transition/src/phase0/fast/signatureSets/attestations.ts:7</a></em></p>
+<p>▸ <strong>getAttestationsSignatureSets</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/ea43a75/packages/beacon-state-transition/src/phase0/fast/signatureSets/attestations.ts#L7">packages/beacon-state-transition/src/phase0/fast/signatureSets/attestations.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -472,11 +386,11 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
+<p><strong>Returns:</strong> <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
 <hr/>
 <h3 id="getattesterslashingssignaturesets">getAttesterSlashingsSignatureSets<a class="headerlink" href="#getattesterslashingssignaturesets" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getAttesterSlashingsSignatureSets</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4564667/packages/beacon-state-transition/src/phase0/fast/signatureSets/attesterSlashings.ts#L7">packages/beacon-state-transition/src/phase0/fast/signatureSets/attesterSlashings.ts:7</a></em></p>
+<p>▸ <strong>getAttesterSlashingsSignatureSets</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/ea43a75/packages/beacon-state-transition/src/phase0/fast/signatureSets/attesterSlashings.ts#L7">packages/beacon-state-transition/src/phase0/fast/signatureSets/attesterSlashings.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -496,11 +410,11 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
+<p><strong>Returns:</strong> <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
 <hr/>
 <h3 id="getproposerslashingssignaturesets">getProposerSlashingsSignatureSets<a class="headerlink" href="#getproposerslashingssignaturesets" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getProposerSlashingsSignatureSets</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4564667/packages/beacon-state-transition/src/phase0/fast/signatureSets/proposerSlashings.ts#L7">packages/beacon-state-transition/src/phase0/fast/signatureSets/proposerSlashings.ts:7</a></em></p>
+<p>▸ <strong>getProposerSlashingsSignatureSets</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/ea43a75/packages/beacon-state-transition/src/phase0/fast/signatureSets/proposerSlashings.ts#L7">packages/beacon-state-transition/src/phase0/fast/signatureSets/proposerSlashings.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -520,11 +434,11 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
+<p><strong>Returns:</strong> <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
 <hr/>
 <h3 id="getvoluntaryexitssignaturesets">getVoluntaryExitsSignatureSets<a class="headerlink" href="#getvoluntaryexitssignaturesets" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getVoluntaryExitsSignatureSets</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4564667/packages/beacon-state-transition/src/phase0/fast/signatureSets/voluntaryExits.ts#L7">packages/beacon-state-transition/src/phase0/fast/signatureSets/voluntaryExits.ts:7</a></em></p>
+<p>▸ <strong>getVoluntaryExitsSignatureSets</strong>(<code>state</code>: <a href="../phase0_fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/ea43a75/packages/beacon-state-transition/src/phase0/fast/signatureSets/voluntaryExits.ts#L7">packages/beacon-state-transition/src/phase0/fast/signatureSets/voluntaryExits.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -544,27 +458,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em><a href="./#isignatureset">ISignatureSet</a>[]</em></p>
-<hr/>
-<h3 id="verifysignatureset_1">verifySignatureSet<a class="headerlink" href="#verifysignatureset_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>verifySignatureSet</strong>(<code>signatureSet</code>: <a href="./#isignatureset">ISignatureSet</a>): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4564667/packages/beacon-state-transition/src/phase0/fast/signatureSets/verify.ts#L4">packages/beacon-state-transition/src/phase0/fast/signatureSets/verify.ts:4</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>signatureSet</code></td>
-<td><a href="./#isignatureset">ISignatureSet</a></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>boolean</em></p>
+<p><strong>Returns:</strong> <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
 </article>
 </div>
 </div>

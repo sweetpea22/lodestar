@@ -262,13 +262,13 @@
 <nav aria-label="References" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#isvalidaggregateandproofsignature">
-    isValidAggregateAndProofSignature
+<a class="md-nav__link" href="#getaggregateandproofsignatureset">
+    getAggregateAndProofSignatureSet
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#isvalidselectionproofsignature">
-    isValidSelectionProofSignature
+<a class="md-nav__link" href="#getselectionproofsignatureset">
+    getSelectionProofSignatureSet
   </a>
 </li>
 </ul>
@@ -281,13 +281,13 @@
 <nav aria-label="Functions" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#isvalidaggregateandproofsignature_1">
-    isValidAggregateAndProofSignature
+<a class="md-nav__link" href="#getaggregateandproofsignatureset_1">
+    getAggregateAndProofSignatureSet
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#isvalidselectionproofsignature_1">
-    isValidSelectionProofSignature
+<a class="md-nav__link" href="#getselectionproofsignatureset_1">
+    getSelectionProofSignatureSet
   </a>
 </li>
 </ul>
@@ -308,24 +308,24 @@
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#isvalidaggregateandproofsignature">isValidAggregateAndProofSignature</a></li>
-<li><a href="./#isvalidselectionproofsignature">isValidSelectionProofSignature</a></li>
+<li><a href="./#getaggregateandproofsignatureset">getAggregateAndProofSignatureSet</a></li>
+<li><a href="./#getselectionproofsignatureset">getSelectionProofSignatureSet</a></li>
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#isvalidaggregateandproofsignature">isValidAggregateAndProofSignature</a></li>
-<li><a href="./#isvalidselectionproofsignature">isValidSelectionProofSignature</a></li>
+<li><a href="./#getaggregateandproofsignatureset">getAggregateAndProofSignatureSet</a></li>
+<li><a href="./#getselectionproofsignatureset">getSelectionProofSignatureSet</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
-<h3 id="isvalidaggregateandproofsignature">isValidAggregateAndProofSignature<a class="headerlink" href="#isvalidaggregateandproofsignature" title="Permanent link">¶</a></h3>
-<p>• <strong>isValidAggregateAndProofSignature</strong>:</p>
+<h3 id="getaggregateandproofsignatureset">getAggregateAndProofSignatureSet<a class="headerlink" href="#getaggregateandproofsignatureset" title="Permanent link">¶</a></h3>
+<p>• <strong>getAggregateAndProofSignatureSet</strong>:</p>
 <hr/>
-<h3 id="isvalidselectionproofsignature">isValidSelectionProofSignature<a class="headerlink" href="#isvalidselectionproofsignature" title="Permanent link">¶</a></h3>
-<p>• <strong>isValidSelectionProofSignature</strong>:</p>
+<h3 id="getselectionproofsignatureset">getSelectionProofSignatureSet<a class="headerlink" href="#getselectionproofsignatureset" title="Permanent link">¶</a></h3>
+<p>• <strong>getSelectionProofSignatureSet</strong>:</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
-<h3 id="isvalidaggregateandproofsignature_1">isValidAggregateAndProofSignature<a class="headerlink" href="#isvalidaggregateandproofsignature_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>isValidAggregateAndProofSignature</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>epoch</code>: Epoch, <code>aggregator</code>: PublicKey, <code>aggregateAndProof</code>: SignedAggregateAndProof): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4564667/packages/lodestar/src/chain/validation/utils/signature.ts#L19">packages/lodestar/src/chain/validation/utils/signature.ts:19</a></em></p>
+<h3 id="getaggregateandproofsignatureset_1">getAggregateAndProofSignatureSet<a class="headerlink" href="#getaggregateandproofsignatureset_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getAggregateAndProofSignatureSet</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>epoch</code>: Epoch, <code>aggregator</code>: PublicKey, <code>aggregateAndProof</code>: SignedAggregateAndProof): <em>ISignatureSet</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/ea43a75/packages/lodestar/src/chain/validation/utils/signature.ts#L30">packages/lodestar/src/chain/validation/utils/signature.ts:30</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -357,11 +357,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>boolean</em></p>
+<p><strong>Returns:</strong> <em>ISignatureSet</em></p>
 <hr/>
-<h3 id="isvalidselectionproofsignature_1">isValidSelectionProofSignature<a class="headerlink" href="#isvalidselectionproofsignature_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>isValidSelectionProofSignature</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>slot</code>: Slot, <code>aggregator</code>: PublicKey, <code>signature</code>: Uint8Array): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4564667/packages/lodestar/src/chain/validation/utils/signature.ts#L6">packages/lodestar/src/chain/validation/utils/signature.ts:6</a></em></p>
+<h3 id="getselectionproofsignatureset_1">getSelectionProofSignatureSet<a class="headerlink" href="#getselectionproofsignatureset_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getSelectionProofSignatureSet</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>slot</code>: Slot, <code>aggregator</code>: PublicKey, <code>aggregateAndProof</code>: SignedAggregateAndProof): <em>ISignatureSet</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/ea43a75/packages/lodestar/src/chain/validation/utils/signature.ts#L12">packages/lodestar/src/chain/validation/utils/signature.ts:12</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -388,12 +388,12 @@
 <td>PublicKey</td>
 </tr>
 <tr>
-<td><code>signature</code></td>
-<td>Uint8Array</td>
+<td><code>aggregateAndProof</code></td>
+<td>SignedAggregateAndProof</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>boolean</em></p>
+<p><strong>Returns:</strong> <em>ISignatureSet</em></p>
 </article>
 </div>
 </div>

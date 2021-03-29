@@ -357,18 +357,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#isignatureset">
-    ISignatureSet
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#pubkeyindexmap">
     PubkeyIndexMap
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#signaturesettype">
-    SignatureSetType
   </a>
 </li>
 <li class="md-nav__item">
@@ -439,6 +429,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#getblocksignatureset">
     getBlockSignatureSet
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getindexedattestationsignatureset">
+    getIndexedAttestationSignatureSet
   </a>
 </li>
 <li class="md-nav__item">
@@ -566,11 +561,6 @@
     verifyBlockSignature
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#verifysignatureset">
-    verifySignatureSet
-  </a>
-</li>
 </ul>
 </nav>
 </li>
@@ -622,9 +612,7 @@
 <li><a href="./#iepochshuffling">IEpochShuffling</a></li>
 <li><a href="./#iepochstakesummary">IEpochStakeSummary</a></li>
 <li><a href="./#ireadonlyepochshuffling">IReadonlyEpochShuffling</a></li>
-<li><a href="./#isignatureset">ISignatureSet</a></li>
 <li><a href="./#pubkeyindexmap">PubkeyIndexMap</a></li>
-<li><a href="./#signaturesettype">SignatureSetType</a></li>
 <li><a href="./#computecommitteecount">computeCommitteeCount</a></li>
 <li><a href="./#computeepochshuffling">computeEpochShuffling</a></li>
 <li><a href="./#computeproposers">computeProposers</a></li>
@@ -639,6 +627,7 @@
 <li><a href="./#getallblocksignaturesetsexceptproposer">getAllBlockSignatureSetsExceptProposer</a></li>
 <li><a href="./#getattestationdeltas">getAttestationDeltas</a></li>
 <li><a href="./#getblocksignatureset">getBlockSignatureSet</a></li>
+<li><a href="./#getindexedattestationsignatureset">getIndexedAttestationSignatureSet</a></li>
 <li><a href="./#getneweth1data">getNewEth1Data</a></li>
 <li><a href="./#hasmarkers">hasMarkers</a></li>
 <li><a href="./#isvalidindexedattestation">isValidIndexedAttestation</a></li>
@@ -664,7 +653,6 @@
 <li><a href="./#rotateepochs">rotateEpochs</a></li>
 <li><a href="./#syncpubkeys">syncPubkeys</a></li>
 <li><a href="./#verifyblocksignature">verifyBlockSignature</a></li>
-<li><a href="./#verifysignatureset">verifySignatureSet</a></li>
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
@@ -728,14 +716,8 @@
 <h3 id="ireadonlyepochshuffling">IReadonlyEpochShuffling<a class="headerlink" href="#ireadonlyepochshuffling" title="Permanent link">¶</a></h3>
 <p>• <strong>IReadonlyEpochShuffling</strong>:</p>
 <hr/>
-<h3 id="isignatureset">ISignatureSet<a class="headerlink" href="#isignatureset" title="Permanent link">¶</a></h3>
-<p>• <strong>ISignatureSet</strong>:</p>
-<hr/>
 <h3 id="pubkeyindexmap">PubkeyIndexMap<a class="headerlink" href="#pubkeyindexmap" title="Permanent link">¶</a></h3>
 <p>• <strong>PubkeyIndexMap</strong>:</p>
-<hr/>
-<h3 id="signaturesettype">SignatureSetType<a class="headerlink" href="#signaturesettype" title="Permanent link">¶</a></h3>
-<p>• <strong>SignatureSetType</strong>:</p>
 <hr/>
 <h3 id="computecommitteecount">computeCommitteeCount<a class="headerlink" href="#computecommitteecount" title="Permanent link">¶</a></h3>
 <p>• <strong>computeCommitteeCount</strong>:</p>
@@ -778,6 +760,9 @@
 <hr/>
 <h3 id="getblocksignatureset">getBlockSignatureSet<a class="headerlink" href="#getblocksignatureset" title="Permanent link">¶</a></h3>
 <p>• <strong>getBlockSignatureSet</strong>:</p>
+<hr/>
+<h3 id="getindexedattestationsignatureset">getIndexedAttestationSignatureSet<a class="headerlink" href="#getindexedattestationsignatureset" title="Permanent link">¶</a></h3>
+<p>• <strong>getIndexedAttestationSignatureSet</strong>:</p>
 <hr/>
 <h3 id="getneweth1data">getNewEth1Data<a class="headerlink" href="#getneweth1data" title="Permanent link">¶</a></h3>
 <p>• <strong>getNewEth1Data</strong>:</p>
@@ -853,13 +838,10 @@
 <hr/>
 <h3 id="verifyblocksignature">verifyBlockSignature<a class="headerlink" href="#verifyblocksignature" title="Permanent link">¶</a></h3>
 <p>• <strong>verifyBlockSignature</strong>:</p>
-<hr/>
-<h3 id="verifysignatureset">verifySignatureSet<a class="headerlink" href="#verifysignatureset" title="Permanent link">¶</a></h3>
-<p>• <strong>verifySignatureSet</strong>:</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="faststatetransition">fastStateTransition<a class="headerlink" href="#faststatetransition" title="Permanent link">¶</a></h3>
 <p>▸ <strong>fastStateTransition</strong>(<code>state</code>: <a href="./#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedBlock</code>: SignedBeaconBlock, <code>options?</code>: undefined | object): <em><a href="./#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4564667/packages/beacon-state-transition/src/phase0/fast/index.ts#L15">packages/beacon-state-transition/src/phase0/fast/index.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/ea43a75/packages/beacon-state-transition/src/phase0/fast/index.ts#L15">packages/beacon-state-transition/src/phase0/fast/index.ts:15</a></em></p>
 <p>Implementation of protolambda's eth2fastspec (https://github.com/protolambda/eth2fastspec)</p>
 <p><strong>Parameters:</strong></p>
 <table>
