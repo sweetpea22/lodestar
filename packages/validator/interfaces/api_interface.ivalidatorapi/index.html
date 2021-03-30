@@ -338,7 +338,7 @@
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="getaggregatedattestation">getAggregatedAttestation<a class="headerlink" href="#getaggregatedattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAggregatedAttestation</strong>(<code>attestationDataRoot</code>: Root, <code>slot</code>: Slot): <em>Promise‹Attestation›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/validator/src/api/interface/validators.ts#L17">packages/validator/src/api/interface/validators.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/validator/src/api/interface/validators.ts#L17">packages/validator/src/api/interface/validators.ts:17</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -362,7 +362,7 @@
 <hr/>
 <h3 id="getattesterduties">getAttesterDuties<a class="headerlink" href="#getattesterduties" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttesterDuties</strong>(<code>epoch</code>: Epoch, <code>indices</code>: ValidatorIndex[]): <em>Promise‹AttesterDuty[]›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/validator/src/api/interface/validators.ts#L6">packages/validator/src/api/interface/validators.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/validator/src/api/interface/validators.ts#L6">packages/validator/src/api/interface/validators.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -386,7 +386,7 @@
 <hr/>
 <h3 id="getproposerduties">getProposerDuties<a class="headerlink" href="#getproposerduties" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getProposerDuties</strong>(<code>epoch</code>: Epoch, <code>validatorPubKeys</code>: BLSPubkey[]): <em>Promise‹ProposerDuty[]›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/validator/src/api/interface/validators.ts#L4">packages/validator/src/api/interface/validators.ts:4</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/validator/src/api/interface/validators.ts#L4">packages/validator/src/api/interface/validators.ts:4</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -410,7 +410,7 @@
 <hr/>
 <h3 id="preparebeaconcommitteesubnet">prepareBeaconCommitteeSubnet<a class="headerlink" href="#preparebeaconcommitteesubnet" title="Permanent link">¶</a></h3>
 <p>▸ <strong>prepareBeaconCommitteeSubnet</strong>(<code>subscriptions</code>: BeaconCommitteeSubscription[]): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/validator/src/api/interface/validators.ts#L21">packages/validator/src/api/interface/validators.ts:21</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/validator/src/api/interface/validators.ts#L21">packages/validator/src/api/interface/validators.ts:21</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -430,7 +430,7 @@
 <hr/>
 <h3 id="produceattestationdata">produceAttestationData<a class="headerlink" href="#produceattestationdata" title="Permanent link">¶</a></h3>
 <p>▸ <strong>produceAttestationData</strong>(<code>index</code>: CommitteeIndex, <code>slot</code>: Slot): <em>Promise‹AttestationData›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/validator/src/api/interface/validators.ts#L15">packages/validator/src/api/interface/validators.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/validator/src/api/interface/validators.ts#L15">packages/validator/src/api/interface/validators.ts:15</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -454,7 +454,7 @@
 <hr/>
 <h3 id="produceblock">produceBlock<a class="headerlink" href="#produceblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>produceBlock</strong>(<code>slot</code>: Slot, <code>randaoReveal</code>: Uint8Array, <code>graffiti</code>: string): <em>Promise‹BeaconBlock›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/validator/src/api/interface/validators.ts#L13">packages/validator/src/api/interface/validators.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/validator/src/api/interface/validators.ts#L13">packages/validator/src/api/interface/validators.ts:13</a></em></p>
 <p>Requests a BeaconNode to produce a valid block,
 which can then be signed by a ValidatorClient.</p>
 <p><strong>Parameters:</strong></p>
@@ -485,7 +485,7 @@ which can then be signed by a ValidatorClient.</p>
 <hr/>
 <h3 id="publishaggregateandproofs">publishAggregateAndProofs<a class="headerlink" href="#publishaggregateandproofs" title="Permanent link">¶</a></h3>
 <p>▸ <strong>publishAggregateAndProofs</strong>(<code>signedAggregateAndProofs</code>: SignedAggregateAndProof[]): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/validator/src/api/interface/validators.ts#L19">packages/validator/src/api/interface/validators.ts:19</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/validator/src/api/interface/validators.ts#L19">packages/validator/src/api/interface/validators.ts:19</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

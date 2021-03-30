@@ -272,13 +272,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#isvalidlightclientupdate">
-    isValidLightclientUpdate
+<a class="md-nav__link" href="#isvalidaltairupdate">
+    isValidAltairUpdate
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#processlightclientupdate">
-    processLightclientUpdate
+<a class="md-nav__link" href="#processaltairupdate">
+    processAltairUpdate
   </a>
 </li>
 </ul>
@@ -301,13 +301,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#isvalidlightclientupdate_1">
-    isValidLightclientUpdate
+<a class="md-nav__link" href="#isvalidaltairupdate_1">
+    isValidAltairUpdate
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#processlightclientupdate_1">
-    processLightclientUpdate
+<a class="md-nav__link" href="#processaltairupdate_1">
+    processAltairUpdate
   </a>
 </li>
 <li class="md-nav__item">
@@ -334,8 +334,8 @@
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#applylightclientupdate">applyLightClientUpdate</a></li>
-<li><a href="./#isvalidlightclientupdate">isValidLightclientUpdate</a></li>
-<li><a href="./#processlightclientupdate">processLightclientUpdate</a></li>
+<li><a href="./#isvalidaltairupdate">isValidAltairUpdate</a></li>
+<li><a href="./#processaltairupdate">processAltairUpdate</a></li>
 </ul>
 <h3 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">¶</a></h3>
 <ul>
@@ -345,23 +345,23 @@
 <ul>
 <li><a href="./#applylightclientupdate">applyLightClientUpdate</a></li>
 <li><a href="./#bestupdate">bestUpdate</a></li>
-<li><a href="./#isvalidlightclientupdate">isValidLightclientUpdate</a></li>
-<li><a href="./#processlightclientupdate">processLightclientUpdate</a></li>
+<li><a href="./#isvalidaltairupdate">isValidAltairUpdate</a></li>
+<li><a href="./#processaltairupdate">processAltairUpdate</a></li>
 <li><a href="./#sumbits">sumBits</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <h3 id="applylightclientupdate">applyLightClientUpdate<a class="headerlink" href="#applylightclientupdate" title="Permanent link">¶</a></h3>
 <p>• <strong>applyLightClientUpdate</strong>:</p>
 <hr/>
-<h3 id="isvalidlightclientupdate">isValidLightclientUpdate<a class="headerlink" href="#isvalidlightclientupdate" title="Permanent link">¶</a></h3>
-<p>• <strong>isValidLightclientUpdate</strong>:</p>
+<h3 id="isvalidaltairupdate">isValidAltairUpdate<a class="headerlink" href="#isvalidaltairupdate" title="Permanent link">¶</a></h3>
+<p>• <strong>isValidAltairUpdate</strong>:</p>
 <hr/>
-<h3 id="processlightclientupdate">processLightclientUpdate<a class="headerlink" href="#processlightclientupdate" title="Permanent link">¶</a></h3>
-<p>• <strong>processLightclientUpdate</strong>:</p>
+<h3 id="processaltairupdate">processAltairUpdate<a class="headerlink" href="#processaltairupdate" title="Permanent link">¶</a></h3>
+<p>• <strong>processAltairUpdate</strong>:</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="applylightclientupdate_1">applyLightClientUpdate<a class="headerlink" href="#applylightclientupdate_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>applyLightClientUpdate</strong>(<code>config</code>: IBeaconConfig, <code>snapshot</code>: LightclientSnapshot, <code>update</code>: LightclientUpdate): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/light-client/src/sync/update.ts#L9">packages/light-client/src/sync/update.ts:9</a></em></p>
+<p>▸ <strong>applyLightClientUpdate</strong>(<code>config</code>: IBeaconConfig, <code>snapshot</code>: AltairSnapshot, <code>update</code>: AltairUpdate): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/light-client/src/sync/update.ts#L9">packages/light-client/src/sync/update.ts:9</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -377,19 +377,19 @@
 </tr>
 <tr>
 <td><code>snapshot</code></td>
-<td>LightclientSnapshot</td>
+<td>AltairSnapshot</td>
 </tr>
 <tr>
 <td><code>update</code></td>
-<td>LightclientUpdate</td>
+<td>AltairUpdate</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="bestupdate">bestUpdate<a class="headerlink" href="#bestupdate" title="Permanent link">¶</a></h3>
-<p>▸ <strong>bestUpdate</strong>(<code>updates</code>: LightclientUpdate[]): <em>LightclientUpdate | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/light-client/src/sync/update.ts#L49">packages/light-client/src/sync/update.ts:49</a></em></p>
+<p>▸ <strong>bestUpdate</strong>(<code>updates</code>: AltairUpdate[]): <em>AltairUpdate | null</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/light-client/src/sync/update.ts#L49">packages/light-client/src/sync/update.ts:49</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -401,15 +401,15 @@
 <tbody>
 <tr>
 <td><code>updates</code></td>
-<td>LightclientUpdate[]</td>
+<td>AltairUpdate[]</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>LightclientUpdate | null</em></p>
+<p><strong>Returns:</strong> <em>AltairUpdate | null</em></p>
 <hr/>
-<h3 id="isvalidlightclientupdate_1">isValidLightclientUpdate<a class="headerlink" href="#isvalidlightclientupdate_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>isValidLightclientUpdate</strong>(<code>config</code>: IBeaconConfig, <code>snapshot</code>: LightclientSnapshot, <code>update</code>: LightclientUpdate): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/light-client/src/sync/validation.ts#L17">packages/light-client/src/sync/validation.ts:17</a></em></p>
+<h3 id="isvalidaltairupdate_1">isValidAltairUpdate<a class="headerlink" href="#isvalidaltairupdate_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isValidAltairUpdate</strong>(<code>config</code>: IBeaconConfig, <code>snapshot</code>: AltairSnapshot, <code>update</code>: AltairUpdate): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/light-client/src/sync/validation.ts#L17">packages/light-client/src/sync/validation.ts:17</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -425,19 +425,19 @@
 </tr>
 <tr>
 <td><code>snapshot</code></td>
-<td>LightclientSnapshot</td>
+<td>AltairSnapshot</td>
 </tr>
 <tr>
 <td><code>update</code></td>
-<td>LightclientUpdate</td>
+<td>AltairUpdate</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>boolean</em></p>
 <hr/>
-<h3 id="processlightclientupdate_1">processLightclientUpdate<a class="headerlink" href="#processlightclientupdate_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processLightclientUpdate</strong>(<code>config</code>: IBeaconConfig, <code>store</code>: LightclientStore, <code>update</code>: LightclientUpdate, <code>currentSlot</code>: Slot): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/light-client/src/sync/update.ts#L29">packages/light-client/src/sync/update.ts:29</a></em></p>
+<h3 id="processaltairupdate_1">processAltairUpdate<a class="headerlink" href="#processaltairupdate_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>processAltairUpdate</strong>(<code>config</code>: IBeaconConfig, <code>store</code>: AltairStore, <code>update</code>: AltairUpdate, <code>currentSlot</code>: Slot): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/light-client/src/sync/update.ts#L29">packages/light-client/src/sync/update.ts:29</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -453,11 +453,11 @@
 </tr>
 <tr>
 <td><code>store</code></td>
-<td>LightclientStore</td>
+<td>AltairStore</td>
 </tr>
 <tr>
 <td><code>update</code></td>
-<td>LightclientUpdate</td>
+<td>AltairUpdate</td>
 </tr>
 <tr>
 <td><code>currentSlot</code></td>
@@ -469,7 +469,7 @@
 <hr/>
 <h3 id="sumbits">sumBits<a class="headerlink" href="#sumbits" title="Permanent link">¶</a></h3>
 <p>▸ <strong>sumBits</strong>(<code>bits</code>: ArrayLike‹boolean›): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/43b876d/packages/light-client/src/sync/update.ts#L63">packages/light-client/src/sync/update.ts:63</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5d7de45/packages/light-client/src/sync/update.ts#L63">packages/light-client/src/sync/update.ts:63</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
