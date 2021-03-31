@@ -296,6 +296,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#private-datarootindex">
+    Private dataRootIndex
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#protected-db">
     Protected db
   </a>
@@ -521,6 +526,7 @@ Removed when included on chain or old</p>
 <ul>
 <li><a href="./#protected-bucket">bucket</a></li>
 <li><a href="./#protected-config">config</a></li>
+<li><a href="./#private-datarootindex">dataRootIndex</a></li>
 <li><a href="./#protected-db">db</a></li>
 <li><a href="./#protected-type">type</a></li>
 </ul>
@@ -566,7 +572,7 @@ Removed when included on chain or old</p>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new AttestationRepository</strong>(<code>config</code>: IBeaconConfig, <code>db</code>: IDatabaseController‹Buffer, Buffer›): <em><a href="./">AttestationRepository</a></em></p>
 <p><em>Overrides void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/00988a9/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L12">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c8a9846/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L17">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:17</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -597,6 +603,10 @@ Removed when included on chain or old</p>
 <p>• <strong>config</strong>: <em>IBeaconConfig</em></p>
 <p><em>Inherited from <a href="../db_api_beacon_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_api_beacon_repositories.badblockrepository/#protected-config">config</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:16</p>
+<hr/>
+<h3 id="private-datarootindex"><code>Private</code> dataRootIndex<a class="headerlink" href="#private-datarootindex" title="Permanent link">¶</a></h3>
+<p>• <strong>dataRootIndex</strong>: <em>Map‹number, Map‹string, string[]››</em> = new Map<slot, map\<string,="" string[]="">&gt;()</slot,></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c8a9846/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L17">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:17</a></em></p>
 <hr/>
 <h3 id="protected-db"><code>Protected</code> db<a class="headerlink" href="#protected-db" title="Permanent link">¶</a></h3>
 <p>• <strong>db</strong>: <em>IDatabaseController‹Buffer, Buffer›</em></p>
@@ -923,7 +933,7 @@ Removed when included on chain or old</p>
 <hr/>
 <h3 id="geattestationsbytargetepoch">geAttestationsByTargetEpoch<a class="headerlink" href="#geattestationsbytargetepoch" title="Permanent link">¶</a></h3>
 <p>▸ <strong>geAttestationsByTargetEpoch</strong>(<code>epoch</code>: Epoch): <em>Promise‹Attestation[]›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/00988a9/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L40">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:40</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c8a9846/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L63">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:63</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -964,7 +974,7 @@ Removed when included on chain or old</p>
 <hr/>
 <h3 id="getattestationsbydataroot">getAttestationsByDataRoot<a class="headerlink" href="#getattestationsbydataroot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttestationsByDataRoot</strong>(<code>slot</code>: Slot, <code>attestationDataRoot</code>: Root): <em>Promise‹Attestation[]›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/00988a9/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L29">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:29</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c8a9846/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L54">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:54</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1009,7 +1019,7 @@ Removed when included on chain or old</p>
 <hr/>
 <h3 id="getcommiteeattestations">getCommiteeAttestations<a class="headerlink" href="#getcommiteeattestations" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getCommiteeAttestations</strong>(<code>epoch</code>: Epoch, <code>committeeIndex</code>: CommitteeIndex): <em>Promise‹Attestation[]›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/00988a9/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L17">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c8a9846/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L42">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:42</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1135,7 +1145,7 @@ Removed when included on chain or old</p>
 <hr/>
 <h3 id="prunefinalized">pruneFinalized<a class="headerlink" href="#prunefinalized" title="Permanent link">¶</a></h3>
 <p>▸ <strong>pruneFinalized</strong>(<code>finalizedEpoch</code>: Epoch): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/00988a9/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L45">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:45</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c8a9846/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L68">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:68</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1154,9 +1164,9 @@ Removed when included on chain or old</p>
 <p><strong>Returns:</strong> <em>Promise‹void›</em></p>
 <hr/>
 <h3 id="put">put<a class="headerlink" href="#put" title="Permanent link">¶</a></h3>
-<p>▸ <strong>put</strong>(<code>id</code>: Uint8Array, <code>value</code>: Attestation): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../db_api_beacon_repositories.blockrepository/">BlockRepository</a>.<a href="../db_api_beacon_repositories.blockrepository/#put">put</a></em></p>
-<p>Defined in packages/db/lib/abstractRepository.d.ts:28</p>
+<p>▸ <strong>put</strong>(<code>key</code>: Uint8Array, <code>value</code>: Attestation): <em>Promise‹void›</em></p>
+<p><em>Overrides <a href="../db_api_beacon_repositories.blockrepository/">BlockRepository</a>.<a href="../db_api_beacon_repositories.blockrepository/#put">put</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c8a9846/packages/lodestar/src/db/api/beacon/repositories/attestation.ts#L23">packages/lodestar/src/db/api/beacon/repositories/attestation.ts:23</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1167,7 +1177,7 @@ Removed when included on chain or old</p>
 </thead>
 <tbody>
 <tr>
-<td><code>id</code></td>
+<td><code>key</code></td>
 <td>Uint8Array</td>
 </tr>
 <tr>
