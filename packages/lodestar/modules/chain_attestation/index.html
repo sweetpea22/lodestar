@@ -282,6 +282,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#mapattestationerror">
+    mapAttestationError
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#processattestationjob">
     processAttestationJob
   </a>
@@ -319,6 +324,11 @@
 <nav aria-label="Functions" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#mapattestationerror_1">
+    mapAttestationError
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#processattestation">
     processAttestation
   </a>
@@ -326,11 +336,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#processattestationjob_1">
     processAttestationJob
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#validateattestation">
-    validateAttestation
   </a>
 </li>
 </ul>
@@ -353,6 +358,7 @@
 <ul>
 <li><a href="./#attestationpool">AttestationPool</a></li>
 <li><a href="./#attestationprocessor">AttestationProcessor</a></li>
+<li><a href="./#mapattestationerror">mapAttestationError</a></li>
 <li><a href="./#processattestationjob">processAttestationJob</a></li>
 </ul>
 <h3 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">¶</a></h3>
@@ -366,9 +372,9 @@
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#mapattestationerror">mapAttestationError</a></li>
 <li><a href="./#processattestation">processAttestation</a></li>
 <li><a href="./#processattestationjob">processAttestationJob</a></li>
-<li><a href="./#validateattestation">validateAttestation</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <h3 id="attestationpool">AttestationPool<a class="headerlink" href="#attestationpool" title="Permanent link">¶</a></h3>
@@ -377,12 +383,15 @@
 <h3 id="attestationprocessor">AttestationProcessor<a class="headerlink" href="#attestationprocessor" title="Permanent link">¶</a></h3>
 <p>• <strong>AttestationProcessor</strong>:</p>
 <hr/>
+<h3 id="mapattestationerror">mapAttestationError<a class="headerlink" href="#mapattestationerror" title="Permanent link">¶</a></h3>
+<p>• <strong>mapAttestationError</strong>:</p>
+<hr/>
 <h3 id="processattestationjob">processAttestationJob<a class="headerlink" href="#processattestationjob" title="Permanent link">¶</a></h3>
 <p>• <strong>processAttestationJob</strong>:</p>
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="attestationprocessormodules">AttestationProcessorModules<a class="headerlink" href="#attestationprocessormodules" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>AttestationProcessorModules</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0044fda/packages/lodestar/src/chain/attestation/processor.ts#L12">packages/lodestar/src/chain/attestation/processor.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/63a2fe2/packages/lodestar/src/chain/attestation/processor.ts#L18">packages/lodestar/src/chain/attestation/processor.ts:18</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <ul>
 <li>
@@ -402,9 +411,35 @@
 </li>
 </ul>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
+<h3 id="mapattestationerror_1">mapAttestationError<a class="headerlink" href="#mapattestationerror_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>mapAttestationError</strong>(<code>e</code>: <a href="../../classes/chain_regen.regenerror/#static-error">Error</a>, <code>job</code>: <a href="../../interfaces/chain.iattestationjob/">IAttestationJob</a>): <em><a href="../../classes/chain_errors.attestationerror/">AttestationError</a> | null</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/63a2fe2/packages/lodestar/src/chain/attestation/processor.ts#L62">packages/lodestar/src/chain/attestation/processor.ts:62</a></em></p>
+<p>Map ForkChoice attestation error to lodestar version.
+Return null if the error is not an attestation error.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>e</code></td>
+<td><a href="../../classes/chain_regen.regenerror/#static-error">Error</a></td>
+</tr>
+<tr>
+<td><code>job</code></td>
+<td><a href="../../interfaces/chain.iattestationjob/">IAttestationJob</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em><a href="../../classes/chain_errors.attestationerror/">AttestationError</a> | null</em></p>
+<hr/>
 <h3 id="processattestation">processAttestation<a class="headerlink" href="#processattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processAttestation</strong>(<code>__namedParameters</code>: object): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0044fda/packages/lodestar/src/chain/attestation/process.ts#L15">packages/lodestar/src/chain/attestation/process.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/63a2fe2/packages/lodestar/src/chain/attestation/process.ts#L15">packages/lodestar/src/chain/attestation/process.ts:15</a></em></p>
 <p>Expects valid attestation which is to be applied in forkchoice.</p>
 <p>Several final validations are performed in the process of converting the Attestation to an IndexedAttestation.</p>
 <p><strong>Parameters:</strong></p>
@@ -439,7 +474,7 @@
 <hr/>
 <h3 id="processattestationjob_1">processAttestationJob<a class="headerlink" href="#processattestationjob_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processAttestationJob</strong>(<code>modules</code>: <a href="./#attestationprocessormodules">AttestationProcessorModules</a>, <code>job</code>: <a href="../../interfaces/chain.iattestationjob/">IAttestationJob</a>): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0044fda/packages/lodestar/src/chain/attestation/processor.ts#L42">packages/lodestar/src/chain/attestation/processor.ts:42</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/63a2fe2/packages/lodestar/src/chain/attestation/processor.ts#L48">packages/lodestar/src/chain/attestation/processor.ts:48</a></em></p>
 <p>Validate and process an attestation</p>
 <p>The only effects of running this are:
 - forkChoice update, in the case of a valid attestation
@@ -466,41 +501,6 @@
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise‹void›</em></p>
-<hr/>
-<h3 id="validateattestation">validateAttestation<a class="headerlink" href="#validateattestation" title="Permanent link">¶</a></h3>
-<p>▸ <strong>validateAttestation</strong>(<code>__namedParameters</code>: object): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/0044fda/packages/lodestar/src/chain/attestation/validate.ts#L14">packages/lodestar/src/chain/attestation/validate.ts:14</a></em></p>
-<p>Based on:
-https://github.com/ethereum/eth2.0-specs/blob/v0.12.3/specs/phase0/fork-choice.md#validate_on_attestation</p>
-<p><strong>Parameters:</strong></p>
-<p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>clock</code></td>
-<td><a href="../../interfaces/chain_clock.ibeaconclock/">IBeaconClock</a></td>
-</tr>
-<tr>
-<td><code>config</code></td>
-<td>IBeaconConfig</td>
-</tr>
-<tr>
-<td><code>forkChoice</code></td>
-<td>IForkChoice</td>
-</tr>
-<tr>
-<td><code>job</code></td>
-<td><a href="../../interfaces/chain.iattestationjob/">IAttestationJob</a></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>void</em></p>
 </article>
 </div>
 </div>
