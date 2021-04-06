@@ -276,6 +276,11 @@
     getStateValidator
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getstatevalidators">
+    getStateValidators
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -289,7 +294,7 @@
 <a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/validator/interfaces/api_interface.ibeaconstateapi.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">@chainsafe/lodestar-validator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/api_interface/">api/interface</a> › <a href="./">IBeaconStateApi</a></p>
+<p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/api_interface/">api/interface</a> › <a href="./">IBeaconStateApi</a></p>
 <h1 id="interface-ibeaconstateapi">Interface: IBeaconStateApi<a class="headerlink" href="#interface-ibeaconstateapi" title="Permanent link">¶</a></h1>
 <h2 id="hierarchy">Hierarchy<a class="headerlink" href="#hierarchy" title="Permanent link">¶</a></h2>
 <ul>
@@ -304,11 +309,12 @@
 <ul>
 <li><a href="./#getfork">getFork</a></li>
 <li><a href="./#getstatevalidator">getStateValidator</a></li>
+<li><a href="./#getstatevalidators">getStateValidators</a></li>
 </ul>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="getfork">getFork<a class="headerlink" href="#getfork" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getFork</strong>(<code>stateId</code>: "head"): <em>Promise‹Fork | null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c5a10b4/packages/validator/src/api/interface/beacon.ts#L12">packages/validator/src/api/interface/beacon.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e01f1b3/packages/validator/src/api/interface/beacon.ts#L13">packages/validator/src/api/interface/beacon.ts:13</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -328,7 +334,7 @@
 <hr/>
 <h3 id="getstatevalidator">getStateValidator<a class="headerlink" href="#getstatevalidator" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getStateValidator</strong>(<code>stateId</code>: "head", <code>validatorId</code>: ValidatorIndex | BLSPubkey): <em>Promise‹ValidatorResponse | null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c5a10b4/packages/validator/src/api/interface/beacon.ts#L13">packages/validator/src/api/interface/beacon.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e01f1b3/packages/validator/src/api/interface/beacon.ts#L14">packages/validator/src/api/interface/beacon.ts:14</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -349,6 +355,30 @@
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise‹ValidatorResponse | null›</em></p>
+<hr/>
+<h3 id="getstatevalidators">getStateValidators<a class="headerlink" href="#getstatevalidators" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getStateValidators</strong>(<code>stateId</code>: "head", <code>filters?</code>: <a href="../util.ivalidatorfilters/">IValidatorFilters</a>): <em>Promise‹ValidatorResponse[] | null›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e01f1b3/packages/validator/src/api/interface/beacon.ts#L15">packages/validator/src/api/interface/beacon.ts:15</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stateId</code></td>
+<td>"head"</td>
+</tr>
+<tr>
+<td><code>filters?</code></td>
+<td><a href="../util.ivalidatorfilters/">IValidatorFilters</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹ValidatorResponse[] | null›</em></p>
 </article>
 </div>
 </div>

@@ -287,6 +287,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#ivalidatorfilters">
+    IValidatorFilters
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#abortabletimeout">
     abortableTimeout
   </a>
@@ -348,7 +353,7 @@
 <a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/validator/modules/util.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">@chainsafe/lodestar-validator</a> › <a href="../../globals/">Globals</a> › <a href="./">util</a></p>
+<p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="./">util</a></p>
 <h1 id="module-util">Module: util<a class="headerlink" href="#module-util" title="Permanent link">¶</a></h1>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
@@ -356,6 +361,7 @@
 <li><a href="./#httpclient">HttpClient</a></li>
 <li><a href="./#ihttpclientoptions">IHttpClientOptions</a></li>
 <li><a href="./#ihttpquery">IHttpQuery</a></li>
+<li><a href="./#ivalidatorfilters">IValidatorFilters</a></li>
 <li><a href="./#abortabletimeout">abortableTimeout</a></li>
 <li><a href="./#sleep">sleep</a></li>
 <li><a href="./#urljoin">urlJoin</a></li>
@@ -368,6 +374,7 @@
 <ul>
 <li><a href="../../interfaces/util.ihttpclientoptions/">IHttpClientOptions</a></li>
 <li><a href="../../interfaces/util.ihttpquery/">IHttpQuery</a></li>
+<li><a href="../../interfaces/util.ivalidatorfilters/">IValidatorFilters</a></li>
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
@@ -387,6 +394,9 @@
 <h3 id="ihttpquery">IHttpQuery<a class="headerlink" href="#ihttpquery" title="Permanent link">¶</a></h3>
 <p>• <strong>IHttpQuery</strong>:</p>
 <hr/>
+<h3 id="ivalidatorfilters">IValidatorFilters<a class="headerlink" href="#ivalidatorfilters" title="Permanent link">¶</a></h3>
+<p>• <strong>IValidatorFilters</strong>:</p>
+<hr/>
 <h3 id="abortabletimeout">abortableTimeout<a class="headerlink" href="#abortabletimeout" title="Permanent link">¶</a></h3>
 <p>• <strong>abortableTimeout</strong>:</p>
 <hr/>
@@ -398,7 +408,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="abortabletimeout_1">abortableTimeout<a class="headerlink" href="#abortabletimeout_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>abortableTimeout</strong>(<code>signal</code>: AbortSignal | undefined, <code>callback</code>: function): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c5a10b4/packages/validator/src/util/misc.ts#L7">packages/validator/src/util/misc.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e01f1b3/packages/validator/src/util/misc.ts#L7">packages/validator/src/util/misc.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>signal</strong>: <em>AbortSignal | undefined</em></p>
 <p>▪ <strong>callback</strong>: <em>function</em></p>
@@ -426,7 +436,7 @@
 <hr/>
 <h3 id="getaggregatormodulo">getAggregatorModulo<a class="headerlink" href="#getaggregatormodulo" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAggregatorModulo</strong>(<code>config</code>: IBeaconConfig, <code>duty</code>: AttesterDuty): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c5a10b4/packages/validator/src/util/aggregator.ts#L10">packages/validator/src/util/aggregator.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e01f1b3/packages/validator/src/util/aggregator.ts#L10">packages/validator/src/util/aggregator.ts:10</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -450,7 +460,7 @@
 <hr/>
 <h3 id="isvalidatoraggregator">isValidatorAggregator<a class="headerlink" href="#isvalidatoraggregator" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isValidatorAggregator</strong>(<code>slotSignature</code>: BLSSignature, <code>modulo</code>: Number64): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c5a10b4/packages/validator/src/util/aggregator.ts#L6">packages/validator/src/util/aggregator.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e01f1b3/packages/validator/src/util/aggregator.ts#L6">packages/validator/src/util/aggregator.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -474,7 +484,7 @@
 <hr/>
 <h3 id="sleep_1">sleep<a class="headerlink" href="#sleep_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>sleep</strong>(<code>ms</code>: number): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c5a10b4/packages/validator/src/util/misc.ts#L3">packages/validator/src/util/misc.ts:3</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e01f1b3/packages/validator/src/util/misc.ts#L3">packages/validator/src/util/misc.ts:3</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -494,7 +504,7 @@
 <hr/>
 <h3 id="urljoin_1">urlJoin<a class="headerlink" href="#urljoin_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>urlJoin</strong>(...<code>args</code>: string[]): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c5a10b4/packages/validator/src/util/url.ts#L8">packages/validator/src/util/url.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e01f1b3/packages/validator/src/util/url.ts#L8">packages/validator/src/util/url.ts:8</a></em></p>
 <p>Joins multiple url parts safely
 - Does not break the protocol double slash //
 - Cleans double slashes at any point</p>
