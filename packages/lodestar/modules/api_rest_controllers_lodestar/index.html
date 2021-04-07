@@ -257,13 +257,13 @@
 <nav aria-label="Object literals" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#const-getwtfnode">
-    Const getWtfNode
+<a class="md-nav__link" href="#const-getlatestweaksubjectivitycheckpointepoch">
+    Const getLatestWeakSubjectivityCheckpointEpoch
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#getwtfnode-object">
-    ▪ getWtfNode: object
+<a class="md-nav__link" href="#getlatestweaksubjectivitycheckpointepoch-object">
+    ▪ getLatestWeakSubjectivityCheckpointEpoch: object
   </a>
 </li>
 <li class="md-nav__item">
@@ -290,6 +290,40 @@
     handler
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-getwtfnode">
+    Const getWtfNode
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getwtfnode-object">
+    ▪ getWtfNode: object
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#opts_1">
+    opts
+  </a>
+<nav aria-label="opts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration_1">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#url_1">
+    url
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#handler_1">
+    handler
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -308,22 +342,57 @@
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
 <h3 id="object-literals">Object literals<a class="headerlink" href="#object-literals" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#const-getlatestweaksubjectivitycheckpointepoch">getLatestWeakSubjectivityCheckpointEpoch</a></li>
 <li><a href="./#const-getwtfnode">getWtfNode</a></li>
 </ul>
 <h2 id="object-literals_1">Object literals<a class="headerlink" href="#object-literals_1" title="Permanent link">¶</a></h2>
-<h3 id="const-getwtfnode"><code>Const</code> getWtfNode<a class="headerlink" href="#const-getwtfnode" title="Permanent link">¶</a></h3>
-<h3 id="getwtfnode-object">▪ <strong>getWtfNode</strong>: <em>object</em><a class="headerlink" href="#getwtfnode-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4e5ae5b/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L4">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:4</a></em></p>
+<h3 id="const-getlatestweaksubjectivitycheckpointepoch"><code>Const</code> getLatestWeakSubjectivityCheckpointEpoch<a class="headerlink" href="#const-getlatestweaksubjectivitycheckpointepoch" title="Permanent link">¶</a></h3>
+<h3 id="getlatestweaksubjectivitycheckpointepoch-object">▪ <strong>getLatestWeakSubjectivityCheckpointEpoch</strong>: <em>object</em><a class="headerlink" href="#getlatestweaksubjectivitycheckpointepoch-object" title="Permanent link">¶</a></h3>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L12">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:12</a></em></p>
 <h3 id="opts">opts<a class="headerlink" href="#opts" title="Permanent link">¶</a></h3>
 <p>• <strong>opts</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4e5ae5b/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L9">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L17">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:17</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <h3 id="url">url<a class="headerlink" href="#url" title="Permanent link">¶</a></h3>
-<p>• <strong>url</strong>: <em>string</em> = "/wtfnode/"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4e5ae5b/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L5">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:5</a></em></p>
+<p>• <strong>url</strong>: <em>string</em> = "/ws_epoch/"</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L13">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:13</a></em></p>
 <h3 id="handler">handler<a class="headerlink" href="#handler" title="Permanent link">¶</a></h3>
+<p>▸ <strong>handler</strong>(<code>req</code>: FastifyRequest‹IncomingMessage‹›, DefaultQuery, DefaultParams, DefaultHeaders, any›, <code>resp</code>: FastifyReply‹ServerResponse‹››): <em>Promise‹FastifyReply‹ServerResponse‹›››</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L14">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:14</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>req</code></td>
+<td>FastifyRequest‹IncomingMessage‹›, DefaultQuery, DefaultParams, DefaultHeaders, any›</td>
+</tr>
+<tr>
+<td><code>resp</code></td>
+<td>FastifyReply‹ServerResponse‹››</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹FastifyReply‹ServerResponse‹›››</em></p>
+<hr/>
+<h3 id="const-getwtfnode"><code>Const</code> getWtfNode<a class="headerlink" href="#const-getwtfnode" title="Permanent link">¶</a></h3>
+<h3 id="getwtfnode-object">▪ <strong>getWtfNode</strong>: <em>object</em><a class="headerlink" href="#getwtfnode-object" title="Permanent link">¶</a></h3>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L4">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:4</a></em></p>
+<h3 id="opts_1">opts<a class="headerlink" href="#opts_1" title="Permanent link">¶</a></h3>
+<p>• <strong>opts</strong>: <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L9">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:9</a></em></p>
+<h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
+<h3 id="url_1">url<a class="headerlink" href="#url_1" title="Permanent link">¶</a></h3>
+<p>• <strong>url</strong>: <em>string</em> = "/wtfnode/"</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L5">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:5</a></em></p>
+<h3 id="handler_1">handler<a class="headerlink" href="#handler_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>handler</strong>(<code>req</code>: FastifyRequest‹IncomingMessage‹›, DefaultQuery, DefaultParams, DefaultHeaders, any›, <code>resp</code>: FastifyReply‹ServerResponse‹››): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4e5ae5b/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L6">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/lodestar/src/api/rest/controllers/lodestar/index.ts#L6">packages/lodestar/src/api/rest/controllers/lodestar/index.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
