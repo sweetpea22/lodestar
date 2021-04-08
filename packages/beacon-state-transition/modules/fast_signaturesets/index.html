@@ -502,7 +502,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getallblocksignaturesets">getAllBlockSignatureSets<a class="headerlink" href="#getallblocksignaturesets" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAllBlockSignatureSets</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>signedBlock</code>: allForks.SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/index.ts#L22">packages/beacon-state-transition/src/fast/signatureSets/index.ts:22</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/index.ts#L22">packages/beacon-state-transition/src/fast/signatureSets/index.ts:22</a></em></p>
 <p>Includes all signatures on the block (except the deposit signatures) for verification.
 Deposits are not included because they can legally have invalid signatures.</p>
 <p><strong>Parameters:</strong></p>
@@ -528,7 +528,7 @@ Deposits are not included because they can legally have invalid signatures.</p>
 <hr/>
 <h3 id="getallblocksignaturesetsexceptproposer">getAllBlockSignatureSetsExceptProposer<a class="headerlink" href="#getallblocksignaturesetsexceptproposer" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAllBlockSignatureSetsExceptProposer</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>signedBlock</code>: allForks.SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/index.ts#L33">packages/beacon-state-transition/src/fast/signatureSets/index.ts:33</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/index.ts#L33">packages/beacon-state-transition/src/fast/signatureSets/index.ts:33</a></em></p>
 <p>Includes all signatures on the block (except the deposit signatures) for verification.
 Useful since block proposer signature is verified beforehand on gossip validation</p>
 <p><strong>Parameters:</strong></p>
@@ -554,7 +554,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getattestationssignaturesets_1">getAttestationsSignatureSets<a class="headerlink" href="#getattestationssignaturesets_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttestationsSignatureSets</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>signedBlock</code>: allForks.SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts#L31">packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts:31</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts#L31">packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts:31</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -578,7 +578,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getattesterslashingssignaturesets_1">getAttesterSlashingsSignatureSets<a class="headerlink" href="#getattesterslashingssignaturesets_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttesterSlashingsSignatureSets</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>signedBlock</code>: allForks.SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/attesterSlashings.ts#L7">packages/beacon-state-transition/src/fast/signatureSets/attesterSlashings.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/attesterSlashings.ts#L7">packages/beacon-state-transition/src/fast/signatureSets/attesterSlashings.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -602,7 +602,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getindexedattestationsignatureset_1">getIndexedAttestationSignatureSet<a class="headerlink" href="#getindexedattestationsignatureset_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getIndexedAttestationSignatureSet</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>indexedAttestation</code>: IndexedAttestation, <code>indices?</code>: number[]): <em><a href="../util/#isignatureset">ISignatureSet</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts#L14">packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts#L14">packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts:14</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -630,7 +630,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getproposersignatureset_1">getProposerSignatureSet<a class="headerlink" href="#getproposersignatureset_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getProposerSignatureSet</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>signedBlock</code>: allForks.SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/proposer.ts#L14">packages/beacon-state-transition/src/fast/signatureSets/proposer.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/proposer.ts#L14">packages/beacon-state-transition/src/fast/signatureSets/proposer.ts:14</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -654,7 +654,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getproposerslashingsignaturesets_1">getProposerSlashingSignatureSets<a class="headerlink" href="#getproposerslashingsignaturesets_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getProposerSlashingSignatureSets</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>proposerSlashing</code>: ProposerSlashing): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/proposerSlashings.ts#L9">packages/beacon-state-transition/src/fast/signatureSets/proposerSlashings.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/proposerSlashings.ts#L9">packages/beacon-state-transition/src/fast/signatureSets/proposerSlashings.ts:9</a></em></p>
 <p>Extract signatures to allow validating all block signatures at once</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -679,7 +679,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getproposerslashingssignaturesets_1">getProposerSlashingsSignatureSets<a class="headerlink" href="#getproposerslashingssignaturesets_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getProposerSlashingsSignatureSets</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>signedBlock</code>: allForks.SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/proposerSlashings.ts#L31">packages/beacon-state-transition/src/fast/signatureSets/proposerSlashings.ts:31</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/proposerSlashings.ts#L31">packages/beacon-state-transition/src/fast/signatureSets/proposerSlashings.ts:31</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -703,7 +703,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getrandaorevealsignatureset_1">getRandaoRevealSignatureSet<a class="headerlink" href="#getrandaorevealsignatureset_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getRandaoRevealSignatureSet</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>block</code>: allForks.BeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/randao.ts#L22">packages/beacon-state-transition/src/fast/signatureSets/randao.ts:22</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/randao.ts#L22">packages/beacon-state-transition/src/fast/signatureSets/randao.ts:22</a></em></p>
 <p>Extract signatures to allow validating all block signatures at once</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -728,7 +728,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getvoluntaryexitsignatureset_1">getVoluntaryExitSignatureSet<a class="headerlink" href="#getvoluntaryexitsignatureset_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getVoluntaryExitSignatureSet</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>signedVoluntaryExit</code>: SignedVoluntaryExit): <em><a href="../util/#isignatureset">ISignatureSet</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts#L16">packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts#L16">packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts:16</a></em></p>
 <p>Extract signatures to allow validating all block signatures at once</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -753,7 +753,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="getvoluntaryexitssignaturesets_1">getVoluntaryExitsSignatureSets<a class="headerlink" href="#getvoluntaryexitssignaturesets_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getVoluntaryExitsSignatureSets</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>signedBlock</code>: allForks.SignedBeaconBlock): <em><a href="../util/#isignatureset">ISignatureSet</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts#L31">packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts:31</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts#L31">packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts:31</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -777,7 +777,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="verifyindexedattestationsignature_1">verifyIndexedAttestationSignature<a class="headerlink" href="#verifyindexedattestationsignature_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>verifyIndexedAttestationSignature</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>indexedAttestation</code>: IndexedAttestation, <code>indices?</code>: number[]): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts#L6">packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts#L6">packages/beacon-state-transition/src/fast/signatureSets/indexedAttestation.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -805,7 +805,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="verifyproposersignature_1">verifyProposerSignature<a class="headerlink" href="#verifyproposersignature_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>verifyProposerSignature</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>signedBlock</code>: allForks.SignedBeaconBlock): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/proposer.ts#L6">packages/beacon-state-transition/src/fast/signatureSets/proposer.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/proposer.ts#L6">packages/beacon-state-transition/src/fast/signatureSets/proposer.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -829,7 +829,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="verifyrandaosignature_1">verifyRandaoSignature<a class="headerlink" href="#verifyrandaosignature_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>verifyRandaoSignature</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>block</code>: allForks.BeaconBlock): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/randao.ts#L12">packages/beacon-state-transition/src/fast/signatureSets/randao.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/randao.ts#L12">packages/beacon-state-transition/src/fast/signatureSets/randao.ts:12</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -853,7 +853,7 @@ Useful since block proposer signature is verified beforehand on gossip validatio
 <hr/>
 <h3 id="verifyvoluntaryexitsignature_1">verifyVoluntaryExitSignature<a class="headerlink" href="#verifyvoluntaryexitsignature_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>verifyVoluntaryExitSignature</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>signedVoluntaryExit</code>: SignedVoluntaryExit): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts#L6">packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/393836d/packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts#L6">packages/beacon-state-transition/src/fast/signatureSets/voluntaryExits.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
