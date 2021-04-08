@@ -267,6 +267,26 @@
 <nav aria-label="References" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#getbasereward">
+    getBaseReward
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getbaserewardperincrement">
+    getBaseRewardPerIncrement
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getflagindexdeltas">
+    getFlagIndexDeltas
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getinactivitypenaltydeltas">
+    getInactivityPenaltyDeltas
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#getsynccommittee">
     getSyncCommittee
   </a>
@@ -371,38 +391,48 @@
 <nav aria-label="Variables" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#const-flag_denominator">
-    Const FLAG_DENOMINATOR
+<a class="md-nav__link" href="#const-proposer_weight">
+    Const PROPOSER_WEIGHT
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#const-timely_head_flag">
-    Const TIMELY_HEAD_FLAG
+<a class="md-nav__link" href="#const-sync_reward_weight">
+    Const SYNC_REWARD_WEIGHT
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#const-timely_head_numerator">
-    Const TIMELY_HEAD_NUMERATOR
+<a class="md-nav__link" href="#const-timely_head_flag_index">
+    Const TIMELY_HEAD_FLAG_INDEX
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#const-timely_source_flag">
-    Const TIMELY_SOURCE_FLAG
+<a class="md-nav__link" href="#const-timely_head_weight">
+    Const TIMELY_HEAD_WEIGHT
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#const-timely_source_numerator">
-    Const TIMELY_SOURCE_NUMERATOR
+<a class="md-nav__link" href="#const-timely_source_flag_index">
+    Const TIMELY_SOURCE_FLAG_INDEX
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#const-timely_target_flag">
-    Const TIMELY_TARGET_FLAG
+<a class="md-nav__link" href="#const-timely_source_weight">
+    Const TIMELY_SOURCE_WEIGHT
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#const-timely_target_numerator">
-    Const TIMELY_TARGET_NUMERATOR
+<a class="md-nav__link" href="#const-timely_target_flag_index">
+    Const TIMELY_TARGET_FLAG_INDEX
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-timely_target_weight">
+    Const TIMELY_TARGET_WEIGHT
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-weight_denominator">
+    Const WEIGHT_DENOMINATOR
   </a>
 </li>
 </ul>
@@ -415,18 +445,18 @@
 <nav aria-label="Functions" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#addvalidatorflags">
-    addValidatorFlags
+<a class="md-nav__link" href="#addflag">
+    addFlag
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#getflagsandnumerators">
-    getFlagsAndNumerators
+<a class="md-nav__link" href="#getflagindicesandweights">
+    getFlagIndicesAndWeights
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hasvalidatorflags">
-    hasValidatorFlags
+<a class="md-nav__link" href="#hasflag">
+    hasFlag
   </a>
 </li>
 </ul>
@@ -447,6 +477,10 @@
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#getbasereward">getBaseReward</a></li>
+<li><a href="./#getbaserewardperincrement">getBaseRewardPerIncrement</a></li>
+<li><a href="./#getflagindexdeltas">getFlagIndexDeltas</a></li>
+<li><a href="./#getinactivitypenaltydeltas">getInactivityPenaltyDeltas</a></li>
 <li><a href="./#getsynccommittee">getSyncCommittee</a></li>
 <li><a href="./#getsynccommitteeindices">getSyncCommitteeIndices</a></li>
 <li><a href="./#getunslashedparticipatingindices">getUnslashedParticipatingIndices</a></li>
@@ -469,21 +503,35 @@
 </ul>
 <h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#const-flag_denominator">FLAG_DENOMINATOR</a></li>
-<li><a href="./#const-timely_head_flag">TIMELY_HEAD_FLAG</a></li>
-<li><a href="./#const-timely_head_numerator">TIMELY_HEAD_NUMERATOR</a></li>
-<li><a href="./#const-timely_source_flag">TIMELY_SOURCE_FLAG</a></li>
-<li><a href="./#const-timely_source_numerator">TIMELY_SOURCE_NUMERATOR</a></li>
-<li><a href="./#const-timely_target_flag">TIMELY_TARGET_FLAG</a></li>
-<li><a href="./#const-timely_target_numerator">TIMELY_TARGET_NUMERATOR</a></li>
+<li><a href="./#const-proposer_weight">PROPOSER_WEIGHT</a></li>
+<li><a href="./#const-sync_reward_weight">SYNC_REWARD_WEIGHT</a></li>
+<li><a href="./#const-timely_head_flag_index">TIMELY_HEAD_FLAG_INDEX</a></li>
+<li><a href="./#const-timely_head_weight">TIMELY_HEAD_WEIGHT</a></li>
+<li><a href="./#const-timely_source_flag_index">TIMELY_SOURCE_FLAG_INDEX</a></li>
+<li><a href="./#const-timely_source_weight">TIMELY_SOURCE_WEIGHT</a></li>
+<li><a href="./#const-timely_target_flag_index">TIMELY_TARGET_FLAG_INDEX</a></li>
+<li><a href="./#const-timely_target_weight">TIMELY_TARGET_WEIGHT</a></li>
+<li><a href="./#const-weight_denominator">WEIGHT_DENOMINATOR</a></li>
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#addvalidatorflags">addValidatorFlags</a></li>
-<li><a href="./#getflagsandnumerators">getFlagsAndNumerators</a></li>
-<li><a href="./#hasvalidatorflags">hasValidatorFlags</a></li>
+<li><a href="./#addflag">addFlag</a></li>
+<li><a href="./#getflagindicesandweights">getFlagIndicesAndWeights</a></li>
+<li><a href="./#hasflag">hasFlag</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
+<h3 id="getbasereward">getBaseReward<a class="headerlink" href="#getbasereward" title="Permanent link">¶</a></h3>
+<p>• <strong>getBaseReward</strong>:</p>
+<hr/>
+<h3 id="getbaserewardperincrement">getBaseRewardPerIncrement<a class="headerlink" href="#getbaserewardperincrement" title="Permanent link">¶</a></h3>
+<p>• <strong>getBaseRewardPerIncrement</strong>:</p>
+<hr/>
+<h3 id="getflagindexdeltas">getFlagIndexDeltas<a class="headerlink" href="#getflagindexdeltas" title="Permanent link">¶</a></h3>
+<p>• <strong>getFlagIndexDeltas</strong>:</p>
+<hr/>
+<h3 id="getinactivitypenaltydeltas">getInactivityPenaltyDeltas<a class="headerlink" href="#getinactivitypenaltydeltas" title="Permanent link">¶</a></h3>
+<p>• <strong>getInactivityPenaltyDeltas</strong>:</p>
+<hr/>
 <h3 id="getsynccommittee">getSyncCommittee<a class="headerlink" href="#getsynccommittee" title="Permanent link">¶</a></h3>
 <p>• <strong>getSyncCommittee</strong>:</p>
 <hr/>
@@ -541,37 +589,45 @@
 <h3 id="upgrade">upgrade<a class="headerlink" href="#upgrade" title="Permanent link">¶</a></h3>
 <p>• <strong>upgrade</strong>:</p>
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
-<h3 id="const-flag_denominator"><code>Const</code> FLAG_DENOMINATOR<a class="headerlink" href="#const-flag_denominator" title="Permanent link">¶</a></h3>
-<p>• <strong>FLAG_DENOMINATOR</strong>: <em>bigint</em> = BigInt(64)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/beacon-state-transition/src/altair/constants.ts#L10">packages/beacon-state-transition/src/altair/constants.ts:10</a></em></p>
+<h3 id="const-proposer_weight"><code>Const</code> PROPOSER_WEIGHT<a class="headerlink" href="#const-proposer_weight" title="Permanent link">¶</a></h3>
+<p>• <strong>PROPOSER_WEIGHT</strong>: <em>bigint</em> = BigInt(8)</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/constants.ts#L9">packages/beacon-state-transition/src/altair/constants.ts:9</a></em></p>
 <hr/>
-<h3 id="const-timely_head_flag"><code>Const</code> TIMELY_HEAD_FLAG<a class="headerlink" href="#const-timely_head_flag" title="Permanent link">¶</a></h3>
-<p>• <strong>TIMELY_HEAD_FLAG</strong>: <em><a href="../phase0/#validatorflag">ValidatorFlag</a></em> = 1</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/beacon-state-transition/src/altair/constants.ts#L3">packages/beacon-state-transition/src/altair/constants.ts:3</a></em></p>
+<h3 id="const-sync_reward_weight"><code>Const</code> SYNC_REWARD_WEIGHT<a class="headerlink" href="#const-sync_reward_weight" title="Permanent link">¶</a></h3>
+<p>• <strong>SYNC_REWARD_WEIGHT</strong>: <em>bigint</em> = BigInt(8)</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/constants.ts#L8">packages/beacon-state-transition/src/altair/constants.ts:8</a></em></p>
 <hr/>
-<h3 id="const-timely_head_numerator"><code>Const</code> TIMELY_HEAD_NUMERATOR<a class="headerlink" href="#const-timely_head_numerator" title="Permanent link">¶</a></h3>
-<p>• <strong>TIMELY_HEAD_NUMERATOR</strong>: <em>12</em> = 12</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/beacon-state-transition/src/altair/constants.ts#L7">packages/beacon-state-transition/src/altair/constants.ts:7</a></em></p>
+<h3 id="const-timely_head_flag_index"><code>Const</code> TIMELY_HEAD_FLAG_INDEX<a class="headerlink" href="#const-timely_head_flag_index" title="Permanent link">¶</a></h3>
+<p>• <strong>TIMELY_HEAD_FLAG_INDEX</strong>: <em>0</em> = 0</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/constants.ts#L1">packages/beacon-state-transition/src/altair/constants.ts:1</a></em></p>
 <hr/>
-<h3 id="const-timely_source_flag"><code>Const</code> TIMELY_SOURCE_FLAG<a class="headerlink" href="#const-timely_source_flag" title="Permanent link">¶</a></h3>
-<p>• <strong>TIMELY_SOURCE_FLAG</strong>: <em><a href="../phase0/#validatorflag">ValidatorFlag</a></em> = 2</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/beacon-state-transition/src/altair/constants.ts#L4">packages/beacon-state-transition/src/altair/constants.ts:4</a></em></p>
+<h3 id="const-timely_head_weight"><code>Const</code> TIMELY_HEAD_WEIGHT<a class="headerlink" href="#const-timely_head_weight" title="Permanent link">¶</a></h3>
+<p>• <strong>TIMELY_HEAD_WEIGHT</strong>: <em>bigint</em> = BigInt(12)</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/constants.ts#L5">packages/beacon-state-transition/src/altair/constants.ts:5</a></em></p>
 <hr/>
-<h3 id="const-timely_source_numerator"><code>Const</code> TIMELY_SOURCE_NUMERATOR<a class="headerlink" href="#const-timely_source_numerator" title="Permanent link">¶</a></h3>
-<p>• <strong>TIMELY_SOURCE_NUMERATOR</strong>: <em>12</em> = 12</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/beacon-state-transition/src/altair/constants.ts#L8">packages/beacon-state-transition/src/altair/constants.ts:8</a></em></p>
+<h3 id="const-timely_source_flag_index"><code>Const</code> TIMELY_SOURCE_FLAG_INDEX<a class="headerlink" href="#const-timely_source_flag_index" title="Permanent link">¶</a></h3>
+<p>• <strong>TIMELY_SOURCE_FLAG_INDEX</strong>: <em>1</em> = 1</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/constants.ts#L2">packages/beacon-state-transition/src/altair/constants.ts:2</a></em></p>
 <hr/>
-<h3 id="const-timely_target_flag"><code>Const</code> TIMELY_TARGET_FLAG<a class="headerlink" href="#const-timely_target_flag" title="Permanent link">¶</a></h3>
-<p>• <strong>TIMELY_TARGET_FLAG</strong>: <em><a href="../phase0/#validatorflag">ValidatorFlag</a></em> = 4</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/beacon-state-transition/src/altair/constants.ts#L5">packages/beacon-state-transition/src/altair/constants.ts:5</a></em></p>
+<h3 id="const-timely_source_weight"><code>Const</code> TIMELY_SOURCE_WEIGHT<a class="headerlink" href="#const-timely_source_weight" title="Permanent link">¶</a></h3>
+<p>• <strong>TIMELY_SOURCE_WEIGHT</strong>: <em>bigint</em> = BigInt(12)</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/constants.ts#L6">packages/beacon-state-transition/src/altair/constants.ts:6</a></em></p>
 <hr/>
-<h3 id="const-timely_target_numerator"><code>Const</code> TIMELY_TARGET_NUMERATOR<a class="headerlink" href="#const-timely_target_numerator" title="Permanent link">¶</a></h3>
-<p>• <strong>TIMELY_TARGET_NUMERATOR</strong>: <em>32</em> = 32</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/beacon-state-transition/src/altair/constants.ts#L9">packages/beacon-state-transition/src/altair/constants.ts:9</a></em></p>
+<h3 id="const-timely_target_flag_index"><code>Const</code> TIMELY_TARGET_FLAG_INDEX<a class="headerlink" href="#const-timely_target_flag_index" title="Permanent link">¶</a></h3>
+<p>• <strong>TIMELY_TARGET_FLAG_INDEX</strong>: <em>2</em> = 2</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/constants.ts#L3">packages/beacon-state-transition/src/altair/constants.ts:3</a></em></p>
+<hr/>
+<h3 id="const-timely_target_weight"><code>Const</code> TIMELY_TARGET_WEIGHT<a class="headerlink" href="#const-timely_target_weight" title="Permanent link">¶</a></h3>
+<p>• <strong>TIMELY_TARGET_WEIGHT</strong>: <em>bigint</em> = BigInt(24)</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/constants.ts#L7">packages/beacon-state-transition/src/altair/constants.ts:7</a></em></p>
+<hr/>
+<h3 id="const-weight_denominator"><code>Const</code> WEIGHT_DENOMINATOR<a class="headerlink" href="#const-weight_denominator" title="Permanent link">¶</a></h3>
+<p>• <strong>WEIGHT_DENOMINATOR</strong>: <em>bigint</em> = BigInt(64)</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/constants.ts#L10">packages/beacon-state-transition/src/altair/constants.ts:10</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
-<h3 id="addvalidatorflags">addValidatorFlags<a class="headerlink" href="#addvalidatorflags" title="Permanent link">¶</a></h3>
-<p>▸ <strong>addValidatorFlags</strong>(<code>flags</code>: <a href="../phase0/#validatorflag">ValidatorFlag</a>, <code>add</code>: <a href="../phase0/#validatorflag">ValidatorFlag</a>): <em><a href="../phase0/#validatorflag">ValidatorFlag</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/beacon-state-transition/src/altair/misc.ts#L11">packages/beacon-state-transition/src/altair/misc.ts:11</a></em></p>
+<h3 id="addflag">addFlag<a class="headerlink" href="#addflag" title="Permanent link">¶</a></h3>
+<p>▸ <strong>addFlag</strong>(<code>flags</code>: <a href="../phase0/#participationflags">ParticipationFlags</a>, <code>flagIndex</code>: number): <em><a href="../phase0/#participationflags">ParticipationFlags</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/misc.ts#L18">packages/beacon-state-transition/src/altair/misc.ts:18</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -583,24 +639,24 @@
 <tbody>
 <tr>
 <td><code>flags</code></td>
-<td><a href="../phase0/#validatorflag">ValidatorFlag</a></td>
+<td><a href="../phase0/#participationflags">ParticipationFlags</a></td>
 </tr>
 <tr>
-<td><code>add</code></td>
-<td><a href="../phase0/#validatorflag">ValidatorFlag</a></td>
+<td><code>flagIndex</code></td>
+<td>number</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em><a href="../phase0/#validatorflag">ValidatorFlag</a></em></p>
+<p><strong>Returns:</strong> <em><a href="../phase0/#participationflags">ParticipationFlags</a></em></p>
 <hr/>
-<h3 id="getflagsandnumerators">getFlagsAndNumerators<a class="headerlink" href="#getflagsandnumerators" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getFlagsAndNumerators</strong>(): <em>[<a href="../phase0/#validatorflag">ValidatorFlag</a>, number][]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/beacon-state-transition/src/altair/misc.ts#L19">packages/beacon-state-transition/src/altair/misc.ts:19</a></em></p>
-<p><strong>Returns:</strong> <em>[<a href="../phase0/#validatorflag">ValidatorFlag</a>, number][]</em></p>
+<h3 id="getflagindicesandweights">getFlagIndicesAndWeights<a class="headerlink" href="#getflagindicesandweights" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getFlagIndicesAndWeights</strong>(): <em>[number, bigint][]</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/misc.ts#L11">packages/beacon-state-transition/src/altair/misc.ts:11</a></em></p>
+<p><strong>Returns:</strong> <em>[number, bigint][]</em></p>
 <hr/>
-<h3 id="hasvalidatorflags">hasValidatorFlags<a class="headerlink" href="#hasvalidatorflags" title="Permanent link">¶</a></h3>
-<p>▸ <strong>hasValidatorFlags</strong>(<code>flags</code>: <a href="../phase0/#validatorflag">ValidatorFlag</a>, <code>has</code>: <a href="../phase0/#validatorflag">ValidatorFlag</a>): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4b74856/packages/beacon-state-transition/src/altair/misc.ts#L15">packages/beacon-state-transition/src/altair/misc.ts:15</a></em></p>
+<h3 id="hasflag">hasFlag<a class="headerlink" href="#hasflag" title="Permanent link">¶</a></h3>
+<p>▸ <strong>hasFlag</strong>(<code>flags</code>: <a href="../phase0/#participationflags">ParticipationFlags</a>, <code>flagIndex</code>: number): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e481a84/packages/beacon-state-transition/src/altair/misc.ts#L23">packages/beacon-state-transition/src/altair/misc.ts:23</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -612,11 +668,11 @@
 <tbody>
 <tr>
 <td><code>flags</code></td>
-<td><a href="../phase0/#validatorflag">ValidatorFlag</a></td>
+<td><a href="../phase0/#participationflags">ParticipationFlags</a></td>
 </tr>
 <tr>
-<td><code>has</code></td>
-<td><a href="../phase0/#validatorflag">ValidatorFlag</a></td>
+<td><code>flagIndex</code></td>
+<td>number</td>
 </tr>
 </tbody>
 </table>
