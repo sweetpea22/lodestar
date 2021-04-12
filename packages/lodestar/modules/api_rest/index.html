@@ -243,6 +243,11 @@
 <nav aria-label="Index" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#enumerations">
+    Enumerations
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#classes">
     Classes
   </a>
@@ -255,6 +260,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#type-aliases">
     Type aliases
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables">
+    Variables
   </a>
 </li>
 <li class="md-nav__item">
@@ -299,14 +309,53 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#variables_1">
+    Variables
+  </a>
+<nav aria-label="Variables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-routesgroups">
+    Const routesGroups
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#functions_1">
     Functions
   </a>
 <nav aria-label="Functions" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#errorhandler">
+    errorHandler
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mapvalidatorindices">
+    mapValidatorIndices
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#registerroutes">
+    registerRoutes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#registerroutestoserver">
+    registerRoutesToServer
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#setupserver">
     setupServer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#torestvalidationerror">
+    toRestValidationError
   </a>
 </li>
 </ul>
@@ -369,12 +418,18 @@
 <p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="./">api/rest</a></p>
 <h1 id="module-apirest">Module: api/rest<a class="headerlink" href="#module-apirest" title="Permanent link">¶</a></h1>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
+<h3 id="enumerations">Enumerations<a class="headerlink" href="#enumerations" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="../../enums/api_rest.httpheader/">HttpHeader</a></li>
+</ul>
 <h3 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="../../classes/api_rest.fastifylogger/">FastifyLogger</a></li>
 <li><a href="../../classes/api_rest.restapi/">RestApi</a></li>
 </ul>
 <h3 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="../../interfaces/api_rest.apicontroller/">ApiController</a></li>
 <li><a href="../../interfaces/api_rest.ilodestarapiopts/">ILodestarApiOpts</a></li>
 <li><a href="../../interfaces/api_rest.irestapimodules/">IRestApiModules</a></li>
 <li><a href="../../interfaces/api_rest.irestapioptions/">IRestApiOptions</a></li>
@@ -384,9 +439,18 @@
 <li><a href="./#lodestarapiplugin">LodestarApiPlugin</a></li>
 <li><a href="./#lodestarrestapiendpoint">LodestarRestApiEndpoint</a></li>
 </ul>
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#const-routesgroups">routesGroups</a></li>
+</ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#errorhandler">errorHandler</a></li>
+<li><a href="./#mapvalidatorindices">mapValidatorIndices</a></li>
+<li><a href="./#registerroutes">registerRoutes</a></li>
+<li><a href="./#registerroutestoserver">registerRoutesToServer</a></li>
 <li><a href="./#setupserver">setupServer</a></li>
+<li><a href="./#torestvalidationerror">toRestValidationError</a></li>
 </ul>
 <h3 id="object-literals">Object literals<a class="headerlink" href="#object-literals" title="Permanent link">¶</a></h3>
 <ul>
@@ -395,11 +459,11 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="lodestarapiplugin">LodestarApiPlugin<a class="headerlink" href="#lodestarapiplugin" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>LodestarApiPlugin</strong>: <em>Plugin‹Server, IncomingMessage, ServerResponse, <a href="../../interfaces/api_rest.ilodestarapiopts/">ILodestarApiOpts</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b9a114f/packages/lodestar/src/api/rest/interface.ts#L18">packages/lodestar/src/api/rest/interface.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/interface.ts#L18">packages/lodestar/src/api/rest/interface.ts:18</a></em></p>
 <hr/>
 <h3 id="lodestarrestapiendpoint">LodestarRestApiEndpoint<a class="headerlink" href="#lodestarrestapiendpoint" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>LodestarRestApiEndpoint</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b9a114f/packages/lodestar/src/api/rest/interface.ts#L19">packages/lodestar/src/api/rest/interface.ts:19</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/interface.ts#L19">packages/lodestar/src/api/rest/interface.ts:19</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <p>▸ (<code>server</code>: FastifyInstance, <code>opts</code>: <a href="../../interfaces/api_rest.ilodestarapiopts/">ILodestarApiOpts</a>): <em>void</em></p>
 <p><strong>Parameters:</strong></p>
@@ -421,10 +485,126 @@
 </tr>
 </tbody>
 </table>
+<h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
+<h3 id="const-routesgroups"><code>Const</code> routesGroups<a class="headerlink" href="#const-routesgroups" title="Permanent link">¶</a></h3>
+<p>• <strong>routesGroups</strong>: <em>(object | object | object | object)[]</em> = [
+  {prefix: "/v1/beacon", namespace: ApiNamespace.BEACON, routes: beaconRoutes},
+  {prefix: "/v1/config", namespace: ApiNamespace.CONFIG, routes: configRoutes},
+  {prefix: "/v1/debug", namespace: ApiNamespace.DEBUG, routes: debugRoutes},
+  {prefix: "/v1/events", namespace: ApiNamespace.EVENTS, routes: eventsRoutes},
+  {prefix: "/v1/lodestar", namespace: ApiNamespace.LODESTAR, routes: lodestarRoutes},
+  {prefix: "/v1/node", namespace: ApiNamespace.NODE, routes: nodeRoutes},
+  {prefix: "/v1/validator", namespace: ApiNamespace.VALIDATOR, routes: validatorRoutes},
+]</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/routes.ts#L12">packages/lodestar/src/api/rest/routes.ts:12</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
+<h3 id="errorhandler">errorHandler<a class="headerlink" href="#errorhandler" title="Permanent link">¶</a></h3>
+<p>▸ <strong>errorHandler</strong>(<code>e</code>: <a href="../../classes/chain_regen.regenerror/#static-error">Error</a>, <code>req</code>: FastifyRequest, <code>resp</code>: FastifyReply‹ServerResponse›): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/errorHandler.ts#L5">packages/lodestar/src/api/rest/errorHandler.ts:5</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>e</code></td>
+<td><a href="../../classes/chain_regen.regenerror/#static-error">Error</a></td>
+</tr>
+<tr>
+<td><code>req</code></td>
+<td>FastifyRequest</td>
+</tr>
+<tr>
+<td><code>resp</code></td>
+<td>FastifyReply‹ServerResponse›</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="mapvalidatorindices">mapValidatorIndices<a class="headerlink" href="#mapvalidatorindices" title="Permanent link">¶</a></h3>
+<p>▸ <strong>mapValidatorIndices</strong>(<code>config</code>: IBeaconConfig, <code>data</code>: string[]): <em>(ValidatorIndex | BLSPubkey)[]</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/utils.ts#L20">packages/lodestar/src/api/rest/utils.ts:20</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>string[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>(ValidatorIndex | BLSPubkey)[]</em></p>
+<hr/>
+<h3 id="registerroutes">registerRoutes<a class="headerlink" href="#registerroutes" title="Permanent link">¶</a></h3>
+<p>▸ <strong>registerRoutes</strong>(<code>server</code>: FastifyInstance, <code>enabledNamespaces</code>: <a href="../../enums/api_impl.apinamespace/">ApiNamespace</a>[]): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/routes.ts#L22">packages/lodestar/src/api/rest/routes.ts:22</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>server</code></td>
+<td>FastifyInstance</td>
+</tr>
+<tr>
+<td><code>enabledNamespaces</code></td>
+<td><a href="../../enums/api_impl.apinamespace/">ApiNamespace</a>[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="registerroutestoserver">registerRoutesToServer<a class="headerlink" href="#registerroutestoserver" title="Permanent link">¶</a></h3>
+<p>▸ <strong>registerRoutesToServer</strong>(<code>server</code>: FastifyInstance, <code>routes</code>: <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹any, any›[], <code>prefix</code>: string): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/routes.ts#L35">packages/lodestar/src/api/rest/routes.ts:35</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>server</code></td>
+<td>FastifyInstance</td>
+</tr>
+<tr>
+<td><code>routes</code></td>
+<td><a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹any, any›[]</td>
+</tr>
+<tr>
+<td><code>prefix</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
 <h3 id="setupserver">setupServer<a class="headerlink" href="#setupserver" title="Permanent link">¶</a></h3>
 <p>▸ <strong>setupServer</strong>(<code>opts</code>: <a href="../../interfaces/api_rest.irestapioptions/">IRestApiOptions</a>, <code>modules</code>: <a href="../../interfaces/api_rest.irestapimodules/">IRestApiModules</a>): <em>FastifyInstance</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b9a114f/packages/lodestar/src/api/rest/index.ts#L49">packages/lodestar/src/api/rest/index.ts:49</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/index.ts#L49">packages/lodestar/src/api/rest/index.ts:49</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -445,25 +625,50 @@
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>FastifyInstance</em></p>
+<hr/>
+<h3 id="torestvalidationerror">toRestValidationError<a class="headerlink" href="#torestvalidationerror" title="Permanent link">¶</a></h3>
+<p>▸ <strong>toRestValidationError</strong>(<code>field</code>: string, <code>message</code>: string): <em>FastifyError</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/utils.ts#L8">packages/lodestar/src/api/rest/utils.ts:8</a></em></p>
+<p>The error handler will decide status code 400</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>field</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>FastifyError</em></p>
 <h2 id="object-literals_1">Object literals<a class="headerlink" href="#object-literals_1" title="Permanent link">¶</a></h2>
 <h3 id="const-defaultapirestoptions"><code>Const</code> defaultApiRestOptions<a class="headerlink" href="#const-defaultapirestoptions" title="Permanent link">¶</a></h3>
 <h3 id="defaultapirestoptions-object">▪ <strong>defaultApiRestOptions</strong>: <em>object</em><a class="headerlink" href="#defaultapirestoptions-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b9a114f/packages/lodestar/src/api/rest/options.ts#L11">packages/lodestar/src/api/rest/options.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/options.ts#L11">packages/lodestar/src/api/rest/options.ts:11</a></em></p>
 <h3 id="api">api<a class="headerlink" href="#api" title="Permanent link">¶</a></h3>
 <p>• <strong>api</strong>: <em>(<a href="../../enums/api_impl.apinamespace/#beacon">BEACON</a> | <a href="../../enums/api_impl.apinamespace/#validator">VALIDATOR</a> | <a href="../../enums/api_impl.apinamespace/#node">NODE</a> | <a href="../../enums/api_impl.apinamespace/#events">EVENTS</a> | <a href="../../enums/api_impl.apinamespace/#config">CONFIG</a>)[]</em> = [ApiNamespace.BEACON, ApiNamespace.CONFIG, ApiNamespace.NODE, ApiNamespace.VALIDATOR, ApiNamespace.EVENTS]</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b9a114f/packages/lodestar/src/api/rest/options.ts#L14">packages/lodestar/src/api/rest/options.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/options.ts#L14">packages/lodestar/src/api/rest/options.ts:14</a></em></p>
 <h3 id="cors">cors<a class="headerlink" href="#cors" title="Permanent link">¶</a></h3>
 <p>• <strong>cors</strong>: <em>string</em> = "*"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b9a114f/packages/lodestar/src/api/rest/options.ts#L17">packages/lodestar/src/api/rest/options.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/options.ts#L17">packages/lodestar/src/api/rest/options.ts:17</a></em></p>
 <h3 id="enabled">enabled<a class="headerlink" href="#enabled" title="Permanent link">¶</a></h3>
 <p>• <strong>enabled</strong>: <em>false</em> = false</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b9a114f/packages/lodestar/src/api/rest/options.ts#L12">packages/lodestar/src/api/rest/options.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/options.ts#L12">packages/lodestar/src/api/rest/options.ts:12</a></em></p>
 <h3 id="host">host<a class="headerlink" href="#host" title="Permanent link">¶</a></h3>
 <p>• <strong>host</strong>: <em>string</em> = "127.0.0.1"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b9a114f/packages/lodestar/src/api/rest/options.ts#L15">packages/lodestar/src/api/rest/options.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/options.ts#L15">packages/lodestar/src/api/rest/options.ts:15</a></em></p>
 <h3 id="port">port<a class="headerlink" href="#port" title="Permanent link">¶</a></h3>
 <p>• <strong>port</strong>: <em>number</em> = 9596</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b9a114f/packages/lodestar/src/api/rest/options.ts#L16">packages/lodestar/src/api/rest/options.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d79ddd2/packages/lodestar/src/api/rest/options.ts#L16">packages/lodestar/src/api/rest/options.ts:16</a></em></p>
 </article>
 </div>
 </div>
