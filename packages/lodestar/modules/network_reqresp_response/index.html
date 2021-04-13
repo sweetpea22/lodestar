@@ -355,7 +355,7 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="performrequesthandler">PerformRequestHandler<a class="headerlink" href="#performrequesthandler" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>PerformRequestHandler</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/520c6ff/packages/lodestar/src/network/reqresp/response/index.ts#L17">packages/lodestar/src/network/reqresp/response/index.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3515d02/packages/lodestar/src/network/reqresp/response/index.ts#L17">packages/lodestar/src/network/reqresp/response/index.ts:17</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <p>▸ (<code>method</code>: <a href="../../enums/constants.method/">Method</a>, <code>requestBody</code>: phase0.RequestBody, <code>peerId</code>: PeerId): <em>AsyncIterable‹phase0.ResponseBody›</em></p>
 <p><strong>Parameters:</strong></p>
@@ -384,7 +384,7 @@
 <hr/>
 <h3 id="requesterrortype">RequestErrorType<a class="headerlink" href="#requesterrortype" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>RequestErrorType</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/520c6ff/packages/lodestar/src/network/reqresp/response/errors.ts#L10">packages/lodestar/src/network/reqresp/response/errors.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3515d02/packages/lodestar/src/network/reqresp/response/errors.ts#L10">packages/lodestar/src/network/reqresp/response/errors.ts:10</a></em></p>
 <h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
 <ul>
 <li>
@@ -400,11 +400,11 @@
 <hr/>
 <h3 id="rpcresponsestatusnotsuccess">RpcResponseStatusNotSuccess<a class="headerlink" href="#rpcresponsestatusnotsuccess" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>RpcResponseStatusNotSuccess</strong>: <em>Exclude‹<a href="../../enums/constants.rpcresponsestatus/">RpcResponseStatus</a>, <a href="../../enums/constants.rpcresponsestatus/#success">SUCCESS</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/520c6ff/packages/lodestar/src/network/reqresp/response/errors.ts#L4">packages/lodestar/src/network/reqresp/response/errors.ts:4</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3515d02/packages/lodestar/src/network/reqresp/response/errors.ts#L4">packages/lodestar/src/network/reqresp/response/errors.ts:4</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="handlerequest">handleRequest<a class="headerlink" href="#handlerequest" title="Permanent link">¶</a></h3>
 <p>▸ <strong>handleRequest</strong>(<code>__namedParameters</code>: object, <code>performRequestHandler</code>: <a href="./#performrequesthandler">PerformRequestHandler</a>, <code>stream</code>: <a href="../../interfaces/network_reqresp.ilibp2pstream/">ILibP2pStream</a>, <code>peerId</code>: PeerId, <code>method</code>: <a href="../../enums/constants.method/">Method</a>, <code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>, <code>requestId</code>: number): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/520c6ff/packages/lodestar/src/network/reqresp/response/index.ts#L33">packages/lodestar/src/network/reqresp/response/index.ts:33</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/3515d02/packages/lodestar/src/network/reqresp/response/index.ts#L33">packages/lodestar/src/network/reqresp/response/index.ts:33</a></em></p>
 <p>Handles a ReqResp request from a peer. Throws on error. Logs each step of the response lifecycle.</p>
 <ol>
 <li>A duplex <code>stream</code> with the peer is already available</li>
