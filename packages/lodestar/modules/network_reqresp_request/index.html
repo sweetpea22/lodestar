@@ -296,6 +296,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#maxtotalresponsetimeout">
+    maxTotalResponseTimeout
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#rendererrormessage">
     renderErrorMessage
   </a>
@@ -351,6 +356,7 @@
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#collectresponses">collectResponses</a></li>
+<li><a href="./#maxtotalresponsetimeout">maxTotalResponseTimeout</a></li>
 <li><a href="./#rendererrormessage">renderErrorMessage</a></li>
 <li><a href="./#responsestatuserrortorequesterror">responseStatusErrorToRequestError</a></li>
 <li><a href="./#responsetimeoutshandler">responseTimeoutsHandler</a></li>
@@ -358,12 +364,12 @@
 </ul>
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="requesterrortype">RequestErrorType<a class="headerlink" href="#requesterrortype" title="Permanent link">¶</a></h3>
-<p>Ƭ <strong>RequestErrorType</strong>: <em>object | object | object | object | object | object | object | object | object | object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f4dc56f/packages/lodestar/src/network/reqresp/request/errors.ts#L29">packages/lodestar/src/network/reqresp/request/errors.ts:29</a></em></p>
+<p>Ƭ <strong>RequestErrorType</strong>: <em>object | object | object | object | object | object | object | object | object | object | object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e669010/packages/lodestar/src/network/reqresp/request/errors.ts#L31">packages/lodestar/src/network/reqresp/request/errors.ts:31</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="collectresponses">collectResponses<a class="headerlink" href="#collectresponses" title="Permanent link">¶</a></h3>
 <p>▸ <strong>collectResponses</strong>‹<strong>T</strong>›(<code>method</code>: <a href="../../enums/constants.method/">Method</a>, <code>maxResponses?</code>: undefined | number): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f4dc56f/packages/lodestar/src/network/reqresp/request/collectResponses.ts#L13">packages/lodestar/src/network/reqresp/request/collectResponses.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e669010/packages/lodestar/src/network/reqresp/request/collectResponses.ts#L13">packages/lodestar/src/network/reqresp/request/collectResponses.ts:13</a></em></p>
 <p>Sink for <code>&lt;response_chunk&gt;*</code>, from
 <div class="highlight"><pre><span></span><code>response <span class="o">::=</span> <span class="p">&lt;</span><span class="nc">response_chunk</span><span class="p">&gt;</span>*
 </code></pre></div>
@@ -407,9 +413,37 @@ Note: <code>response</code> has zero or more chunks for SSZ-list responses or ex
 </tbody>
 </table>
 <hr/>
+<h3 id="maxtotalresponsetimeout">maxTotalResponseTimeout<a class="headerlink" href="#maxtotalresponsetimeout" title="Permanent link">¶</a></h3>
+<p>▸ <strong>maxTotalResponseTimeout</strong>(<code>maxResponses</code>: number, <code>options?</code>: Partial‹typeof timeoutOptions›): <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e669010/packages/lodestar/src/network/reqresp/request/responseTimeoutsHandler.ts#L9">packages/lodestar/src/network/reqresp/request/responseTimeoutsHandler.ts:9</a></em></p>
+<p>Returns the maximum total timeout possible for a response. See @responseTimeoutsHandler</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>maxResponses</code></td>
+<td>number</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>options?</code></td>
+<td>Partial‹typeof timeoutOptions›</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
 <h3 id="rendererrormessage">renderErrorMessage<a class="headerlink" href="#rendererrormessage" title="Permanent link">¶</a></h3>
 <p>▸ <strong>renderErrorMessage</strong>(<code>type</code>: <a href="./#requesterrortype">RequestErrorType</a>): <em>string | undefined</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f4dc56f/packages/lodestar/src/network/reqresp/request/errors.ts#L82">packages/lodestar/src/network/reqresp/request/errors.ts:82</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e669010/packages/lodestar/src/network/reqresp/request/errors.ts#L85">packages/lodestar/src/network/reqresp/request/errors.ts:85</a></em></p>
 <p>Render responder's errorMessage directly in main's error.message for easier debugging</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -430,7 +464,7 @@ Note: <code>response</code> has zero or more chunks for SSZ-list responses or ex
 <hr/>
 <h3 id="responsestatuserrortorequesterror">responseStatusErrorToRequestError<a class="headerlink" href="#responsestatuserrortorequesterror" title="Permanent link">¶</a></h3>
 <p>▸ <strong>responseStatusErrorToRequestError</strong>(<code>e</code>: <a href="../../classes/network_reqresp_response.responseerror/">ResponseError</a>): <em><a href="./#requesterrortype">RequestErrorType</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f4dc56f/packages/lodestar/src/network/reqresp/request/errors.ts#L67">packages/lodestar/src/network/reqresp/request/errors.ts:67</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e669010/packages/lodestar/src/network/reqresp/request/errors.ts#L70">packages/lodestar/src/network/reqresp/request/errors.ts:70</a></em></p>
 <p>Parse response status errors into detailed request errors for each status code for easier debugging</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -451,7 +485,7 @@ Note: <code>response</code> has zero or more chunks for SSZ-list responses or ex
 <hr/>
 <h3 id="responsetimeoutshandler">responseTimeoutsHandler<a class="headerlink" href="#responsetimeoutshandler" title="Permanent link">¶</a></h3>
 <p>▸ <strong>responseTimeoutsHandler</strong>‹<strong>T</strong>›(<code>responseDecoder</code>: function, <code>options?</code>: Partial‹typeof timeoutOptions›): <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f4dc56f/packages/lodestar/src/network/reqresp/request/responseTimeoutsHandler.ts#L13">packages/lodestar/src/network/reqresp/request/responseTimeoutsHandler.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e669010/packages/lodestar/src/network/reqresp/request/responseTimeoutsHandler.ts#L19">packages/lodestar/src/network/reqresp/request/responseTimeoutsHandler.ts:19</a></em></p>
 <p>Wraps responseDecoder to isolate the logic that handles response timeouts.
 - TTFB_TIMEOUT: The requester MUST wait a maximum of TTFB_TIMEOUT for the first response byte to arrive
 - RESP_TIMEOUT: Requester allows a further RESP_TIMEOUT for each subsequent response_chunk</p>
@@ -495,8 +529,8 @@ Note: <code>response</code> has zero or more chunks for SSZ-list responses or ex
 </table>
 <hr/>
 <h3 id="sendrequest">sendRequest<a class="headerlink" href="#sendrequest" title="Permanent link">¶</a></h3>
-<p>▸ <strong>sendRequest</strong>‹<strong>T</strong>›(<code>__namedParameters</code>: object, <code>peerId</code>: PeerId, <code>method</code>: <a href="../../enums/constants.method/">Method</a>, <code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>, <code>requestBody</code>: phase0.RequestBody, <code>maxResponses?</code>: undefined | number, <code>signal?</code>: AbortSignal, <code>options?</code>: Partial‹typeof timeoutOptions›, <code>requestId</code>: number): <em>Promise‹T›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f4dc56f/packages/lodestar/src/network/reqresp/request/index.ts#L37">packages/lodestar/src/network/reqresp/request/index.ts:37</a></em></p>
+<p>▸ <strong>sendRequest</strong>‹<strong>T</strong>›(<code>__namedParameters</code>: object, <code>peerId</code>: PeerId, <code>method</code>: <a href="../../enums/constants.method/">Method</a>, <code>encoding</code>: <a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a>, <code>requestBody</code>: phase0.RequestBody, <code>maxResponses</code>: number, <code>signal?</code>: AbortSignal, <code>options?</code>: Partial‹typeof timeoutOptions›, <code>requestId</code>: number): <em>Promise‹T›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e669010/packages/lodestar/src/network/reqresp/request/index.ts#L37">packages/lodestar/src/network/reqresp/request/index.ts:37</a></em></p>
 <p>Sends ReqResp request to a peer. Throws on error. Logs each step of the request lifecycle.</p>
 <ol>
 <li>Dial peer, establish duplex stream</li>
@@ -537,7 +571,7 @@ Note: <code>response</code> has zero or more chunks for SSZ-list responses or ex
 <p>▪ <strong>method</strong>: <em><a href="../../enums/constants.method/">Method</a></em></p>
 <p>▪ <strong>encoding</strong>: <em><a href="../../enums/constants.reqrespencoding/">ReqRespEncoding</a></em></p>
 <p>▪ <strong>requestBody</strong>: <em>phase0.RequestBody</em></p>
-<p>▪<code>Optional</code> <strong>maxResponses</strong>: <em>undefined | number</em></p>
+<p>▪ <strong>maxResponses</strong>: <em>number</em></p>
 <p>▪<code>Optional</code> <strong>signal</strong>: <em>AbortSignal</em></p>
 <p>▪<code>Optional</code> <strong>options</strong>: <em>Partial‹typeof timeoutOptions›</em></p>
 <p>▪<code>Default value</code> <strong>requestId</strong>: <em>number</em>= 0</p>
