@@ -286,6 +286,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#id">
+    id
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#method">
     method
   </a>
@@ -326,27 +331,30 @@
 </ul>
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
 <h3 id="const-beaconroutes"><code>Const</code> beaconRoutes<a class="headerlink" href="#const-beaconroutes" title="Permanent link">¶</a></h3>
-<p>• <strong>beaconRoutes</strong>: <em>(<a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹object, DefaultParams, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹null, object, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹Query, object, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹null, object, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹<a href="../api_rest_beacon_state/#validatorsquery">ValidatorsQuery</a>, object, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹<a href="../api_rest_beacon_state/#validatorbalancesquery">ValidatorBalancesQuery</a>, object, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹object, DefaultParams, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹null, null, Json[], DefaultHeaders›)[]</em> = [
+<p>• <strong>beaconRoutes</strong>: <em>(<a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹null, object, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹object, DefaultParams, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹Query, object, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹null, object, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹<a href="../api_rest_beacon_state/#validatorsquery">ValidatorsQuery</a>, object, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹<a href="../api_rest_beacon_state/#validatorbalancesquery">ValidatorBalancesQuery</a>, object, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹object, DefaultParams, any, DefaultHeaders› | <a href="../../interfaces/api_rest.apicontroller/">ApiController</a>‹null, null, Json[], DefaultHeaders›)[]</em> = [
   //
   ...beaconBlocksRoutes,
   ...beaconStateRoutes,
   ...beaconPoolRoutes,
   getGenesis,
 ]</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/6ea2559/packages/lodestar/src/api/rest/beacon/index.ts#L6">packages/lodestar/src/api/rest/beacon/index.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f3ec38/packages/lodestar/src/api/rest/beacon/index.ts#L6">packages/lodestar/src/api/rest/beacon/index.ts:6</a></em></p>
 <h2 id="object-literals_1">Object literals<a class="headerlink" href="#object-literals_1" title="Permanent link">¶</a></h2>
 <h3 id="const-getgenesis"><code>Const</code> getGenesis<a class="headerlink" href="#const-getgenesis" title="Permanent link">¶</a></h3>
 <h3 id="getgenesis-object">▪ <strong>getGenesis</strong>: <em>object</em><a class="headerlink" href="#getgenesis-object" title="Permanent link">¶</a></h3>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/6ea2559/packages/lodestar/src/api/rest/beacon/getGenesis.ts#L3">packages/lodestar/src/api/rest/beacon/getGenesis.ts:3</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f3ec38/packages/lodestar/src/api/rest/beacon/getGenesis.ts#L3">packages/lodestar/src/api/rest/beacon/getGenesis.ts:3</a></em></p>
+<h3 id="id">id<a class="headerlink" href="#id" title="Permanent link">¶</a></h3>
+<p>• <strong>id</strong>: <em>string</em> = "getGenesis"</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f3ec38/packages/lodestar/src/api/rest/beacon/getGenesis.ts#L6">packages/lodestar/src/api/rest/beacon/getGenesis.ts:6</a></em></p>
 <h3 id="method">method<a class="headerlink" href="#method" title="Permanent link">¶</a></h3>
 <p>• <strong>method</strong>: <em>"GET"</em> = "GET"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/6ea2559/packages/lodestar/src/api/rest/beacon/getGenesis.ts#L5">packages/lodestar/src/api/rest/beacon/getGenesis.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f3ec38/packages/lodestar/src/api/rest/beacon/getGenesis.ts#L5">packages/lodestar/src/api/rest/beacon/getGenesis.ts:5</a></em></p>
 <h3 id="url">url<a class="headerlink" href="#url" title="Permanent link">¶</a></h3>
 <p>• <strong>url</strong>: <em>string</em> = "/genesis"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/6ea2559/packages/lodestar/src/api/rest/beacon/getGenesis.ts#L4">packages/lodestar/src/api/rest/beacon/getGenesis.ts:4</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f3ec38/packages/lodestar/src/api/rest/beacon/getGenesis.ts#L4">packages/lodestar/src/api/rest/beacon/getGenesis.ts:4</a></em></p>
 <h3 id="handler">handler<a class="headerlink" href="#handler" title="Permanent link">¶</a></h3>
 <p>▸ <strong>handler</strong>(): <em>Promise‹object›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/6ea2559/packages/lodestar/src/api/rest/beacon/getGenesis.ts#L7">packages/lodestar/src/api/rest/beacon/getGenesis.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f3ec38/packages/lodestar/src/api/rest/beacon/getGenesis.ts#L8">packages/lodestar/src/api/rest/beacon/getGenesis.ts:8</a></em></p>
 <p><strong>Returns:</strong> <em>Promise‹object›</em></p>
 </article>
 </div>
