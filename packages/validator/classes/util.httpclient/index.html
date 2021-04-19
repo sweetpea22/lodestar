@@ -8,9 +8,9 @@
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
 <link href="https://chainsafe.github.io/lodestar/packages/validator/classes/util.httpclient/" rel="canonical"/>
 <link href="../../../../images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-7.1.1" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.1.2" name="generator"/>
 <title>Util.httpclient - Lodestar documentation</title>
-<link href="../../../../assets/stylesheets/main.9299cb39.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.6f955dcd.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.ef6f36e2.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
@@ -286,13 +286,18 @@
 <nav aria-label="Properties" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#private-client">
-    Private client
+<a class="md-nav__link" href="#readonly-baseurl">
+    Readonly baseUrl
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#private-logger">
-    Private logger
+<a class="md-nav__link" href="#private-optional-canceltoken">
+    Private Optional cancelToken
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-client">
+    Private client
   </a>
 </li>
 </ul>
@@ -317,6 +322,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#post">
     post
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#registerabortsignal">
+    registerAbortSignal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#request">
+    request
   </a>
 </li>
 </ul>
@@ -345,22 +360,23 @@
 </ul>
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#readonly-baseurl">baseUrl</a></li>
+<li><a href="./#private-optional-canceltoken">cancelToken</a></li>
 <li><a href="./#private-client">client</a></li>
-<li><a href="./#private-logger">logger</a></li>
 </ul>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#get">get</a></li>
 <li><a href="./#private-handleerror">handleError</a></li>
 <li><a href="./#post">post</a></li>
+<li><a href="./#registerabortsignal">registerAbortSignal</a></li>
+<li><a href="./#request">request</a></li>
 </ul>
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
-<p>+ <strong>new HttpClient</strong>(<code>opt</code>: Partial‹<a href="../../interfaces/util.ihttpclientoptions/">IHttpClientOptions</a>›, <code>__namedParameters</code>: object): <em><a href="./">HttpClient</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a095b99/packages/validator/src/util/httpClient.ts#L24">packages/validator/src/util/httpClient.ts:24</a></em></p>
+<p>+ <strong>new HttpClient</strong>(<code>opt</code>: <a href="../../interfaces/util.ihttpclientoptions/">IHttpClientOptions</a>): <em><a href="./">HttpClient</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/util/httpClient.ts#L27">packages/validator/src/util/httpClient.ts:27</a></em></p>
 <p><strong>Parameters:</strong></p>
-<p>▪ <strong>opt</strong>: <em>Partial‹<a href="../../interfaces/util.ihttpclientoptions/">IHttpClientOptions</a>›</em></p>
-<p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
 <thead>
 <tr>
@@ -370,24 +386,28 @@
 </thead>
 <tbody>
 <tr>
-<td><code>logger</code></td>
-<td>ILogger</td>
+<td><code>opt</code></td>
+<td><a href="../../interfaces/util.ihttpclientoptions/">IHttpClientOptions</a></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em><a href="./">HttpClient</a></em></p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
+<h3 id="readonly-baseurl"><code>Readonly</code> baseUrl<a class="headerlink" href="#readonly-baseurl" title="Permanent link">¶</a></h3>
+<p>• <strong>baseUrl</strong>: <em>string</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/util/httpClient.ts#L25">packages/validator/src/util/httpClient.ts:25</a></em></p>
+<hr/>
+<h3 id="private-optional-canceltoken"><code>Private</code> <code>Optional</code> cancelToken<a class="headerlink" href="#private-optional-canceltoken" title="Permanent link">¶</a></h3>
+<p>• <strong>cancelToken</strong>? : <em>CancelToken</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/util/httpClient.ts#L27">packages/validator/src/util/httpClient.ts:27</a></em></p>
+<hr/>
 <h3 id="private-client"><code>Private</code> client<a class="headerlink" href="#private-client" title="Permanent link">¶</a></h3>
 <p>• <strong>client</strong>: <em>AxiosInstance</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a095b99/packages/validator/src/util/httpClient.ts#L23">packages/validator/src/util/httpClient.ts:23</a></em></p>
-<hr/>
-<h3 id="private-logger"><code>Private</code> logger<a class="headerlink" href="#private-logger" title="Permanent link">¶</a></h3>
-<p>• <strong>logger</strong>: <em>ILogger</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a095b99/packages/validator/src/util/httpClient.ts#L24">packages/validator/src/util/httpClient.ts:24</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/util/httpClient.ts#L26">packages/validator/src/util/httpClient.ts:26</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="get">get<a class="headerlink" href="#get" title="Permanent link">¶</a></h3>
-<p>▸ <strong>get</strong>‹<strong>T</strong>›(<code>url</code>: string, <code>query?</code>: <a href="../../modules/util/#ihttpquery">IHttpQuery</a>, <code>opts?</code>: AxiosRequestConfig): <em>Promise‹T›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a095b99/packages/validator/src/util/httpClient.ts#L34">packages/validator/src/util/httpClient.ts:34</a></em></p>
+<p>▸ <strong>get</strong>‹<strong>T</strong>›(<code>url</code>: string, <code>query?</code>: <a href="../../modules/util/#ihttpquery">IHttpQuery</a>): <em>Promise‹T›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/util/httpClient.ts#L43">packages/validator/src/util/httpClient.ts:43</a></em></p>
 <p><strong>Type parameters:</strong></p>
 <p>▪ <strong>T</strong></p>
 <p><strong>Parameters:</strong></p>
@@ -407,17 +427,13 @@
 <td><code>query?</code></td>
 <td><a href="../../modules/util/#ihttpquery">IHttpQuery</a></td>
 </tr>
-<tr>
-<td><code>opts?</code></td>
-<td>AxiosRequestConfig</td>
-</tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise‹T›</em></p>
 <hr/>
 <h3 id="private-handleerror"><code>Private</code> handleError<a class="headerlink" href="#private-handleerror" title="Permanent link">¶</a></h3>
 <p>▸ <strong>handleError</strong>(<code>error</code>: AxiosError &amp; ErrnoException): <em>Error</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a095b99/packages/validator/src/util/httpClient.ts#L58">packages/validator/src/util/httpClient.ts:58</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/util/httpClient.ts#L72">packages/validator/src/util/httpClient.ts:72</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -437,7 +453,7 @@
 <hr/>
 <h3 id="post">post<a class="headerlink" href="#post" title="Permanent link">¶</a></h3>
 <p>▸ <strong>post</strong>‹<strong>T</strong>, <strong>T2</strong>›(<code>url</code>: string, <code>data</code>: T, <code>query?</code>: <a href="../../modules/util/#ihttpquery">IHttpQuery</a>): <em>Promise‹T2›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a095b99/packages/validator/src/util/httpClient.ts#L46">packages/validator/src/util/httpClient.ts:46</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/util/httpClient.ts#L47">packages/validator/src/util/httpClient.ts:47</a></em></p>
 <p><strong>Type parameters:</strong></p>
 <p>▪ <strong>T</strong></p>
 <p>▪ <strong>T2</strong></p>
@@ -461,6 +477,61 @@
 <tr>
 <td><code>query?</code></td>
 <td><a href="../../modules/util/#ihttpquery">IHttpQuery</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹T2›</em></p>
+<hr/>
+<h3 id="registerabortsignal">registerAbortSignal<a class="headerlink" href="#registerabortsignal" title="Permanent link">¶</a></h3>
+<p>▸ <strong>registerAbortSignal</strong>(<code>signal</code>: AbortSignal): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/util/httpClient.ts#L37">packages/validator/src/util/httpClient.ts:37</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>signal</code></td>
+<td>AbortSignal</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="request">request<a class="headerlink" href="#request" title="Permanent link">¶</a></h3>
+<p>▸ <strong>request</strong>‹<strong>T</strong>, <strong>T2</strong>›(<code>url</code>: string, <code>method</code>: Method, <code>query?</code>: <a href="../../modules/util/#ihttpquery">IHttpQuery</a>, <code>data?</code>: T): <em>Promise‹T2›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/util/httpClient.ts#L51">packages/validator/src/util/httpClient.ts:51</a></em></p>
+<p><strong>Type parameters:</strong></p>
+<p>▪ <strong>T</strong></p>
+<p>▪ <strong>T2</strong></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>method</code></td>
+<td>Method</td>
+</tr>
+<tr>
+<td><code>query?</code></td>
+<td><a href="../../modules/util/#ihttpquery">IHttpQuery</a></td>
+</tr>
+<tr>
+<td><code>data?</code></td>
+<td>T</td>
 </tr>
 </tbody>
 </table>
@@ -501,6 +572,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
-<script src="../../../../assets/javascripts/bundle.7353b375.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.4ea5477f.min.js"></script>
 </body>
 </html>

@@ -8,9 +8,9 @@
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
 <link href="https://chainsafe.github.io/lodestar/packages/validator/modules/api/" rel="canonical"/>
 <link href="../../../../images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-7.1.1" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.1.2" name="generator"/>
 <title>Api - Lodestar documentation</title>
-<link href="../../../../assets/stylesheets/main.9299cb39.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/main.6f955dcd.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.ef6f36e2.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
@@ -248,6 +248,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#enumerations">
+    Enumerations
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#classes">
     Classes
   </a>
@@ -260,6 +265,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#type-aliases">
     Type aliases
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions">
+    Functions
   </a>
 </li>
 </ul>
@@ -277,13 +287,43 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#apiclientoverinstance">
-    ApiClientOverInstance
+<a class="md-nav__link" href="#beaconblockevent">
+    BeaconBlockEvent
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#apiclientoverrest">
-    ApiClientOverRest
+<a class="md-nav__link" href="#beaconchainreorgevent">
+    BeaconChainReorgEvent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beaconevent">
+    BeaconEvent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beaconeventtype">
+    BeaconEventType
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clockepochevent">
+    ClockEpochEvent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clockeventtype">
+    ClockEventType
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clockslotevent">
+    ClockSlotEvent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#headevent">
+    HeadEvent
   </a>
 </li>
 <li class="md-nav__item">
@@ -297,8 +337,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#iapiclientoverinstanceopts">
-    IApiClientOverInstanceOpts
+<a class="md-nav__link" href="#iapiclientprovider">
+    IApiClientProvider
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iapiclientvalidator">
+    IApiClientValidator
   </a>
 </li>
 <li class="md-nav__item">
@@ -307,18 +352,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#restbeaconapi">
-    RestBeaconApi
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#restconfigapi">
-    RestConfigApi
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#restvalidatorapi">
-    RestValidatorApi
+<a class="md-nav__link" href="#stateid">
+    StateId
   </a>
 </li>
 </ul>
@@ -333,6 +368,100 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#apiclienteventemitter_1">
     ApiClientEventEmitter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beaconblockevent_1">
+    BeaconBlockEvent
+  </a>
+<nav aria-label="BeaconBlockEvent" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beaconchainreorgevent_1">
+    BeaconChainReorgEvent
+  </a>
+<nav aria-label="BeaconChainReorgEvent" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration_1">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#beaconevent_1">
+    BeaconEvent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clockepochevent_1">
+    ClockEpochEvent
+  </a>
+<nav aria-label="ClockEpochEvent" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration_2">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clockslotevent_1">
+    ClockSlotEvent
+  </a>
+<nav aria-label="ClockSlotEvent" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration_3">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#headevent_1">
+    HeadEvent
+  </a>
+<nav aria-label="HeadEvent" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration_4">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stateid_1">
+    StateId
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions_1">
+    Functions
+  </a>
+<nav aria-label="Functions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipetoemitter">
+    pipeToEmitter
   </a>
 </li>
 </ul>
@@ -354,40 +483,81 @@
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#apiclienteventemitter">ApiClientEventEmitter</a></li>
-<li><a href="./#apiclientoverinstance">ApiClientOverInstance</a></li>
-<li><a href="./#apiclientoverrest">ApiClientOverRest</a></li>
+<li><a href="./#beaconblockevent">BeaconBlockEvent</a></li>
+<li><a href="./#beaconchainreorgevent">BeaconChainReorgEvent</a></li>
+<li><a href="./#beaconevent">BeaconEvent</a></li>
+<li><a href="./#beaconeventtype">BeaconEventType</a></li>
+<li><a href="./#clockepochevent">ClockEpochEvent</a></li>
+<li><a href="./#clockeventtype">ClockEventType</a></li>
+<li><a href="./#clockslotevent">ClockSlotEvent</a></li>
+<li><a href="./#headevent">HeadEvent</a></li>
 <li><a href="./#iapiclient">IApiClient</a></li>
 <li><a href="./#iapiclientevents">IApiClientEvents</a></li>
-<li><a href="./#iapiclientoverinstanceopts">IApiClientOverInstanceOpts</a></li>
+<li><a href="./#iapiclientprovider">IApiClientProvider</a></li>
+<li><a href="./#iapiclientvalidator">IApiClientValidator</a></li>
 <li><a href="./#ibeaconclock">IBeaconClock</a></li>
-<li><a href="./#restbeaconapi">RestBeaconApi</a></li>
-<li><a href="./#restconfigapi">RestConfigApi</a></li>
-<li><a href="./#restvalidatorapi">RestValidatorApi</a></li>
+<li><a href="./#stateid">StateId</a></li>
+</ul>
+<h3 id="enumerations">Enumerations<a class="headerlink" href="#enumerations" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="../../enums/api.beaconeventtype/">BeaconEventType</a></li>
+<li><a href="../../enums/api.clockeventtype/">ClockEventType</a></li>
 </ul>
 <h3 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="../../classes/api.abstractapiclient/">AbstractApiClient</a></li>
+<li><a href="../../classes/api.apiclientprovider/">ApiClientProvider</a></li>
 <li><a href="../../classes/api.localclock/">LocalClock</a></li>
 </ul>
 <h3 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="../../interfaces/api.iapiclient/">IApiClient</a></li>
 <li><a href="../../interfaces/api.iapiclientevents/">IApiClientEvents</a></li>
+<li><a href="../../interfaces/api.iapiclientprovider/">IApiClientProvider</a></li>
+<li><a href="../../interfaces/api.iapiclientvalidator/">IApiClientValidator</a></li>
 <li><a href="../../interfaces/api.ibeaconclock/">IBeaconClock</a></li>
 </ul>
 <h3 id="type-aliases">Type aliases<a class="headerlink" href="#type-aliases" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#apiclienteventemitter">ApiClientEventEmitter</a></li>
+<li><a href="./#beaconblockevent">BeaconBlockEvent</a></li>
+<li><a href="./#beaconchainreorgevent">BeaconChainReorgEvent</a></li>
+<li><a href="./#beaconevent">BeaconEvent</a></li>
+<li><a href="./#clockepochevent">ClockEpochEvent</a></li>
+<li><a href="./#clockslotevent">ClockSlotEvent</a></li>
+<li><a href="./#headevent">HeadEvent</a></li>
+<li><a href="./#stateid">StateId</a></li>
+</ul>
+<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#pipetoemitter">pipeToEmitter</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <h3 id="apiclienteventemitter">ApiClientEventEmitter<a class="headerlink" href="#apiclienteventemitter" title="Permanent link">¶</a></h3>
 <p>• <strong>ApiClientEventEmitter</strong>:</p>
 <hr/>
-<h3 id="apiclientoverinstance">ApiClientOverInstance<a class="headerlink" href="#apiclientoverinstance" title="Permanent link">¶</a></h3>
-<p>• <strong>ApiClientOverInstance</strong>:</p>
+<h3 id="beaconblockevent">BeaconBlockEvent<a class="headerlink" href="#beaconblockevent" title="Permanent link">¶</a></h3>
+<p>• <strong>BeaconBlockEvent</strong>:</p>
 <hr/>
-<h3 id="apiclientoverrest">ApiClientOverRest<a class="headerlink" href="#apiclientoverrest" title="Permanent link">¶</a></h3>
-<p>• <strong>ApiClientOverRest</strong>:</p>
+<h3 id="beaconchainreorgevent">BeaconChainReorgEvent<a class="headerlink" href="#beaconchainreorgevent" title="Permanent link">¶</a></h3>
+<p>• <strong>BeaconChainReorgEvent</strong>:</p>
+<hr/>
+<h3 id="beaconevent">BeaconEvent<a class="headerlink" href="#beaconevent" title="Permanent link">¶</a></h3>
+<p>• <strong>BeaconEvent</strong>:</p>
+<hr/>
+<h3 id="beaconeventtype">BeaconEventType<a class="headerlink" href="#beaconeventtype" title="Permanent link">¶</a></h3>
+<p>• <strong>BeaconEventType</strong>:</p>
+<hr/>
+<h3 id="clockepochevent">ClockEpochEvent<a class="headerlink" href="#clockepochevent" title="Permanent link">¶</a></h3>
+<p>• <strong>ClockEpochEvent</strong>:</p>
+<hr/>
+<h3 id="clockeventtype">ClockEventType<a class="headerlink" href="#clockeventtype" title="Permanent link">¶</a></h3>
+<p>• <strong>ClockEventType</strong>:</p>
+<hr/>
+<h3 id="clockslotevent">ClockSlotEvent<a class="headerlink" href="#clockslotevent" title="Permanent link">¶</a></h3>
+<p>• <strong>ClockSlotEvent</strong>:</p>
+<hr/>
+<h3 id="headevent">HeadEvent<a class="headerlink" href="#headevent" title="Permanent link">¶</a></h3>
+<p>• <strong>HeadEvent</strong>:</p>
 <hr/>
 <h3 id="iapiclient">IApiClient<a class="headerlink" href="#iapiclient" title="Permanent link">¶</a></h3>
 <p>• <strong>IApiClient</strong>:</p>
@@ -395,24 +565,126 @@
 <h3 id="iapiclientevents">IApiClientEvents<a class="headerlink" href="#iapiclientevents" title="Permanent link">¶</a></h3>
 <p>• <strong>IApiClientEvents</strong>:</p>
 <hr/>
-<h3 id="iapiclientoverinstanceopts">IApiClientOverInstanceOpts<a class="headerlink" href="#iapiclientoverinstanceopts" title="Permanent link">¶</a></h3>
-<p>• <strong>IApiClientOverInstanceOpts</strong>:</p>
+<h3 id="iapiclientprovider">IApiClientProvider<a class="headerlink" href="#iapiclientprovider" title="Permanent link">¶</a></h3>
+<p>• <strong>IApiClientProvider</strong>:</p>
+<hr/>
+<h3 id="iapiclientvalidator">IApiClientValidator<a class="headerlink" href="#iapiclientvalidator" title="Permanent link">¶</a></h3>
+<p>• <strong>IApiClientValidator</strong>:</p>
 <hr/>
 <h3 id="ibeaconclock">IBeaconClock<a class="headerlink" href="#ibeaconclock" title="Permanent link">¶</a></h3>
 <p>• <strong>IBeaconClock</strong>:</p>
 <hr/>
-<h3 id="restbeaconapi">RestBeaconApi<a class="headerlink" href="#restbeaconapi" title="Permanent link">¶</a></h3>
-<p>• <strong>RestBeaconApi</strong>:</p>
-<hr/>
-<h3 id="restconfigapi">RestConfigApi<a class="headerlink" href="#restconfigapi" title="Permanent link">¶</a></h3>
-<p>• <strong>RestConfigApi</strong>:</p>
-<hr/>
-<h3 id="restvalidatorapi">RestValidatorApi<a class="headerlink" href="#restvalidatorapi" title="Permanent link">¶</a></h3>
-<p>• <strong>RestValidatorApi</strong>:</p>
+<h3 id="stateid">StateId<a class="headerlink" href="#stateid" title="Permanent link">¶</a></h3>
+<p>• <strong>StateId</strong>:</p>
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="apiclienteventemitter_1">ApiClientEventEmitter<a class="headerlink" href="#apiclienteventemitter_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ApiClientEventEmitter</strong>: <em>StrictEventEmitter‹EventEmitter, <a href="../../interfaces/api.iapiclientevents/">IApiClientEvents</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a095b99/packages/validator/src/api/interface.ts#L20">packages/validator/src/api/interface.ts:20</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/api/interface.ts#L37">packages/validator/src/api/interface.ts:37</a></em></p>
+<hr/>
+<h3 id="beaconblockevent_1">BeaconBlockEvent<a class="headerlink" href="#beaconblockevent_1" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>BeaconBlockEvent</strong>: <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/api/interface.ts#L15">packages/validator/src/api/interface.ts:15</a></em></p>
+<h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>message</strong>: <em>BlockEventPayload</em></p>
+</li>
+<li>
+<p><strong>type</strong>: <em>typeof BLOCK</em></p>
+</li>
+</ul>
+<hr/>
+<h3 id="beaconchainreorgevent_1">BeaconChainReorgEvent<a class="headerlink" href="#beaconchainreorgevent_1" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>BeaconChainReorgEvent</strong>: <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/api/interface.ts#L16">packages/validator/src/api/interface.ts:16</a></em></p>
+<h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>message</strong>: <em>ChainReorg</em></p>
+</li>
+<li>
+<p><strong>type</strong>: <em>typeof CHAIN_REORG</em></p>
+</li>
+</ul>
+<hr/>
+<h3 id="beaconevent_1">BeaconEvent<a class="headerlink" href="#beaconevent_1" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>BeaconEvent</strong>: <em><a href="./#beaconblockevent">BeaconBlockEvent</a> | <a href="./#beaconchainreorgevent">BeaconChainReorgEvent</a> | <a href="./#headevent">HeadEvent</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/api/interface.ts#L18">packages/validator/src/api/interface.ts:18</a></em></p>
+<hr/>
+<h3 id="clockepochevent_1">ClockEpochEvent<a class="headerlink" href="#clockepochevent_1" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>ClockEpochEvent</strong>: <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/api/interface.ts#L26">packages/validator/src/api/interface.ts:26</a></em></p>
+<h4 id="type-declaration_2">Type declaration:<a class="headerlink" href="#type-declaration_2" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>message</strong>(): <em>object</em></p>
+</li>
+<li>
+<p><strong>epoch</strong>: <em>number</em></p>
+</li>
+<li>
+<p><strong>type</strong>: <em>typeof CLOCK_EPOCH</em></p>
+</li>
+</ul>
+<hr/>
+<h3 id="clockslotevent_1">ClockSlotEvent<a class="headerlink" href="#clockslotevent_1" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>ClockSlotEvent</strong>: <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/api/interface.ts#L25">packages/validator/src/api/interface.ts:25</a></em></p>
+<h4 id="type-declaration_3">Type declaration:<a class="headerlink" href="#type-declaration_3" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>message</strong>(): <em>object</em></p>
+</li>
+<li>
+<p><strong>slot</strong>: <em>number</em></p>
+</li>
+<li>
+<p><strong>type</strong>: <em>typeof CLOCK_SLOT</em></p>
+</li>
+</ul>
+<hr/>
+<h3 id="headevent_1">HeadEvent<a class="headerlink" href="#headevent_1" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>HeadEvent</strong>: <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/api/interface.ts#L17">packages/validator/src/api/interface.ts:17</a></em></p>
+<h4 id="type-declaration_4">Type declaration:<a class="headerlink" href="#type-declaration_4" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>message</strong>: <em>ChainHead</em></p>
+</li>
+<li>
+<p><strong>type</strong>: <em>typeof HEAD</em></p>
+</li>
+</ul>
+<hr/>
+<h3 id="stateid_1">StateId<a class="headerlink" href="#stateid_1" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>StateId</strong>: <em>"head"</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/api/interface.ts#L7">packages/validator/src/api/interface.ts:7</a></em></p>
+<h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
+<h3 id="pipetoemitter">pipeToEmitter<a class="headerlink" href="#pipetoemitter" title="Permanent link">¶</a></h3>
+<p>▸ <strong>pipeToEmitter</strong>‹<strong>T</strong>›(<code>stream</code>: IStoppableEventIterable‹<a href="./#beaconevent">BeaconEvent</a>›, <code>emitter</code>: <a href="./#apiclienteventemitter">ApiClientEventEmitter</a>): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/783445e/packages/validator/src/api/index.ts#L120">packages/validator/src/api/index.ts:120</a></em></p>
+<p><strong>Type parameters:</strong></p>
+<p>▪ <strong>T</strong>: <em>BeaconEvent["type"]</em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stream</code></td>
+<td>IStoppableEventIterable‹<a href="./#beaconevent">BeaconEvent</a>›</td>
+</tr>
+<tr>
+<td><code>emitter</code></td>
+<td><a href="./#apiclienteventemitter">ApiClientEventEmitter</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
 </article>
 </div>
 </div>
@@ -449,6 +721,6 @@
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
-<script src="../../../../assets/javascripts/bundle.7353b375.min.js"></script>
+<script src="../../../../assets/javascripts/bundle.4ea5477f.min.js"></script>
 </body>
 </html>
