@@ -319,15 +319,15 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="ibeaconmetrics">IBeaconMetrics<a class="headerlink" href="#ibeaconmetrics" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>IBeaconMetrics</strong>: <em>ReturnType‹typeof createBeaconMetrics›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f3ec38/packages/lodestar/src/metrics/metrics/beacon.ts#L3">packages/lodestar/src/metrics/metrics/beacon.ts:3</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/6de6240/packages/lodestar/src/metrics/metrics/beacon.ts#L3">packages/lodestar/src/metrics/metrics/beacon.ts:3</a></em></p>
 <hr/>
 <h3 id="ilodestarmetrics">ILodestarMetrics<a class="headerlink" href="#ilodestarmetrics" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ILodestarMetrics</strong>: <em>ReturnType‹typeof createLodestarMetrics›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f3ec38/packages/lodestar/src/metrics/metrics/lodestar.ts#L4">packages/lodestar/src/metrics/metrics/lodestar.ts:4</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/6de6240/packages/lodestar/src/metrics/metrics/lodestar.ts#L4">packages/lodestar/src/metrics/metrics/lodestar.ts:4</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="createbeaconmetrics">createBeaconMetrics<a class="headerlink" href="#createbeaconmetrics" title="Permanent link">¶</a></h3>
 <p>▸ <strong>createBeaconMetrics</strong>(<code>register</code>: <a href="../../classes/metrics_utils.registrymetriccreator/">RegistryMetricCreator</a>): <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f3ec38/packages/lodestar/src/metrics/metrics/beacon.ts#L11">packages/lodestar/src/metrics/metrics/beacon.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/6de6240/packages/lodestar/src/metrics/metrics/beacon.ts#L11">packages/lodestar/src/metrics/metrics/beacon.ts:11</a></em></p>
 <p>Metrics from:
 https://github.com/ethereum/eth2.0-metrics/ and
 https://hackmd.io/D5FmoeFZScim_squBFl8oA</p>
@@ -516,7 +516,7 @@ https://hackmd.io/D5FmoeFZScim_squBFl8oA</p>
 <hr/>
 <h3 id="createlodestarmetrics">createLodestarMetrics<a class="headerlink" href="#createlodestarmetrics" title="Permanent link">¶</a></h3>
 <p>▸ <strong>createLodestarMetrics</strong>(<code>register</code>: <a href="../../classes/metrics_utils.registrymetriccreator/">RegistryMetricCreator</a>, <code>metadata</code>: IMetricsOptions["metadata"]): <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f3ec38/packages/lodestar/src/metrics/metrics/lodestar.ts#L10">packages/lodestar/src/metrics/metrics/lodestar.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/6de6240/packages/lodestar/src/metrics/metrics/lodestar.ts#L10">packages/lodestar/src/metrics/metrics/lodestar.ts:10</a></em></p>
 <p>Extra Lodestar custom metrics</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -549,24 +549,28 @@ https://hackmd.io/D5FmoeFZScim_squBFl8oA</p>
     })</p>
 </li>
 <li>
-<p><strong>blockProcessorQueueDroppedJobs</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"topic"›</em> = register.gauge&lt;"topic"&gt;({
+<p><strong>blockProcessorQueueDroppedJobs</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹string›</em> = register.gauge({
       name: "lodestar_block_processor_queue_dropped_jobs_total",
       help: "Count of total block processor queue dropped jobs",
-      labelNames: ["topic"],
     })</p>
 </li>
 <li>
-<p><strong>blockProcessorQueueJobTime</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹"topic"›</em> = register.histogram&lt;"topic"&gt;({
+<p><strong>blockProcessorQueueJobTime</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹string›</em> = register.histogram({
       name: "lodestar_block_processor_queue_job_time_seconds",
       help: "Time to process block processor queue job in seconds",
-      labelNames: ["topic"],
     })</p>
 </li>
 <li>
-<p><strong>blockProcessorQueueLength</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"topic"›</em> = register.gauge&lt;"topic"&gt;({
+<p><strong>blockProcessorQueueJobWaitTime</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹string›</em> = register.histogram({
+      name: "lodestar_block_processor_queue_job_wait_time_seconds",
+      help: "Time from job added to the queue to starting the job in seconds",
+      buckets: [0.1, 1, 10, 100],
+    })</p>
+</li>
+<li>
+<p><strong>blockProcessorQueueLength</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹string›</em> = register.gauge({
       name: "lodestar_block_processor_queue_length",
       help: "Count of total block processor queue length",
-      labelNames: ["topic"],
     })</p>
 </li>
 <li>
@@ -595,6 +599,14 @@ https://hackmd.io/D5FmoeFZScim_squBFl8oA</p>
       name: "lodestar_gossip_validation_queue_job_time_seconds",
       help: "Time to process gossip validation queue job in seconds",
       labelNames: ["topic"],
+    })</p>
+</li>
+<li>
+<p><strong>gossipValidationQueueJobWaitTime</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹"topic"›</em> = register.histogram&lt;"topic"&gt;({
+      name: "lodestar_gossip_validation_queue_job_wait_time_seconds",
+      help: "Time from job added to the queue to starting the job in seconds",
+      labelNames: ["topic"],
+      buckets: [0.1, 1, 10, 100],
     })</p>
 </li>
 <li>
