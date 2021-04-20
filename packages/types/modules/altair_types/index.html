@@ -267,21 +267,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#altairsnapshot">
-    AltairSnapshot
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#altairstore">
-    AltairStore
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#altairupdate">
-    AltairUpdate
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#attestation">
     Attestation
   </a>
@@ -552,6 +537,21 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#lightclientsnapshot">
+    LightClientSnapshot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lightclientstore">
+    LightClientStore
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lightclientupdate">
+    LightClientUpdate
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#metadata">
     Metadata
   </a>
@@ -810,9 +810,6 @@
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#aggregateandproof">AggregateAndProof</a></li>
-<li><a href="./#altairsnapshot">AltairSnapshot</a></li>
-<li><a href="./#altairstore">AltairStore</a></li>
-<li><a href="./#altairupdate">AltairUpdate</a></li>
 <li><a href="./#attestation">Attestation</a></li>
 <li><a href="./#attestationdata">AttestationData</a></li>
 <li><a href="./#attestationroothex">AttestationRootHex</a></li>
@@ -867,6 +864,9 @@
 <li><a href="./#gwei">Gwei</a></li>
 <li><a href="./#historicalbatch">HistoricalBatch</a></li>
 <li><a href="./#indexedattestation">IndexedAttestation</a></li>
+<li><a href="./#lightclientsnapshot">LightClientSnapshot</a></li>
+<li><a href="./#lightclientstore">LightClientStore</a></li>
+<li><a href="./#lightclientupdate">LightClientUpdate</a></li>
 <li><a href="./#metadata">Metadata</a></li>
 <li><a href="./#number64">Number64</a></li>
 <li><a href="./#p2perrormessage">P2pErrorMessage</a></li>
@@ -918,13 +918,13 @@
 </ul>
 <h3 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="../../interfaces/altair_types.altairsnapshot/">AltairSnapshot</a></li>
-<li><a href="../../interfaces/altair_types.altairstore/">AltairStore</a></li>
-<li><a href="../../interfaces/altair_types.altairupdate/">AltairUpdate</a></li>
 <li><a href="../../interfaces/altair_types.beaconblock/">BeaconBlock</a></li>
 <li><a href="../../interfaces/altair_types.beaconblockbody/">BeaconBlockBody</a></li>
 <li><a href="../../interfaces/altair_types.beaconstate/">BeaconState</a></li>
 <li><a href="../../interfaces/altair_types.contributionandproof/">ContributionAndProof</a></li>
+<li><a href="../../interfaces/altair_types.lightclientsnapshot/">LightClientSnapshot</a></li>
+<li><a href="../../interfaces/altair_types.lightclientstore/">LightClientStore</a></li>
+<li><a href="../../interfaces/altair_types.lightclientupdate/">LightClientUpdate</a></li>
 <li><a href="../../interfaces/altair_types.signedbeaconblock/">SignedBeaconBlock</a></li>
 <li><a href="../../interfaces/altair_types.signedcontributionandproof/">SignedContributionAndProof</a></li>
 <li><a href="../../interfaces/altair_types.syncaggregate/">SyncAggregate</a></li>
@@ -936,15 +936,6 @@
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <h3 id="aggregateandproof">AggregateAndProof<a class="headerlink" href="#aggregateandproof" title="Permanent link">¶</a></h3>
 <p>• <strong>AggregateAndProof</strong>:</p>
-<hr/>
-<h3 id="altairsnapshot">AltairSnapshot<a class="headerlink" href="#altairsnapshot" title="Permanent link">¶</a></h3>
-<p>• <strong>AltairSnapshot</strong>:</p>
-<hr/>
-<h3 id="altairstore">AltairStore<a class="headerlink" href="#altairstore" title="Permanent link">¶</a></h3>
-<p>• <strong>AltairStore</strong>:</p>
-<hr/>
-<h3 id="altairupdate">AltairUpdate<a class="headerlink" href="#altairupdate" title="Permanent link">¶</a></h3>
-<p>• <strong>AltairUpdate</strong>:</p>
 <hr/>
 <h3 id="attestation">Attestation<a class="headerlink" href="#attestation" title="Permanent link">¶</a></h3>
 <p>• <strong>Attestation</strong>:</p>
@@ -1107,6 +1098,15 @@
 <hr/>
 <h3 id="indexedattestation">IndexedAttestation<a class="headerlink" href="#indexedattestation" title="Permanent link">¶</a></h3>
 <p>• <strong>IndexedAttestation</strong>:</p>
+<hr/>
+<h3 id="lightclientsnapshot">LightClientSnapshot<a class="headerlink" href="#lightclientsnapshot" title="Permanent link">¶</a></h3>
+<p>• <strong>LightClientSnapshot</strong>:</p>
+<hr/>
+<h3 id="lightclientstore">LightClientStore<a class="headerlink" href="#lightclientstore" title="Permanent link">¶</a></h3>
+<p>• <strong>LightClientStore</strong>:</p>
+<hr/>
+<h3 id="lightclientupdate">LightClientUpdate<a class="headerlink" href="#lightclientupdate" title="Permanent link">¶</a></h3>
+<p>• <strong>LightClientUpdate</strong>:</p>
 <hr/>
 <h3 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">¶</a></h3>
 <p>• <strong>Metadata</strong>:</p>
