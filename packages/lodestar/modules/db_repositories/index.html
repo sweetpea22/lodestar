@@ -252,6 +252,11 @@
     Classes
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions">
+    Functions
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -334,6 +339,25 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions_1">
+    Functions
+  </a>
+<nav aria-label="Functions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computeattestationvaluescore">
+    computeAttestationValueScore
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sumbits">
+    sumBits
+  </a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -378,6 +402,11 @@
 <li><a href="../../classes/db_repositories.synccommitteesignaturerepository/">SyncCommitteeSignatureRepository</a></li>
 <li><a href="../../classes/db_repositories.voluntaryexitrepository/">VoluntaryExitRepository</a></li>
 </ul>
+<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#computeattestationvaluescore">computeAttestationValueScore</a></li>
+<li><a href="./#sumbits">sumBits</a></li>
+</ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <h3 id="aggregateandproofrepository">AggregateAndProofRepository<a class="headerlink" href="#aggregateandproofrepository" title="Permanent link">¶</a></h3>
 <p>• <strong>AggregateAndProofRepository</strong>:</p>
@@ -420,6 +449,50 @@
 <hr/>
 <h3 id="voluntaryexitrepository">VoluntaryExitRepository<a class="headerlink" href="#voluntaryexitrepository" title="Permanent link">¶</a></h3>
 <p>• <strong>VoluntaryExitRepository</strong>:</p>
+<h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
+<h3 id="computeattestationvaluescore">computeAttestationValueScore<a class="headerlink" href="#computeattestationvaluescore" title="Permanent link">¶</a></h3>
+<p>▸ <strong>computeAttestationValueScore</strong>(<code>attestation</code>: Attestation, <code>toBeIncludedSlot</code>: Slot): <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L65">packages/lodestar/src/db/repositories/aggregateAndProof.ts:65</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>attestation</code></td>
+<td>Attestation</td>
+</tr>
+<tr>
+<td><code>toBeIncludedSlot</code></td>
+<td>Slot</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
+<hr/>
+<h3 id="sumbits">sumBits<a class="headerlink" href="#sumbits" title="Permanent link">¶</a></h3>
+<p>▸ <strong>sumBits</strong>(<code>aggregationBits</code>: BitList): <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L71">packages/lodestar/src/db/repositories/aggregateAndProof.ts:71</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aggregationBits</code></td>
+<td>BitList</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>number</em></p>
 </article>
 </div>
 </div>

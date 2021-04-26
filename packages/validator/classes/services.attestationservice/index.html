@@ -286,13 +286,23 @@
 <nav aria-label="Properties" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#private-readonly-apiclient">
+    Private Readonly apiClient
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-readonly-clock">
+    Private Readonly clock
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#private-readonly-config">
     Private Readonly config
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#private-controller">
-    Private controller
+<a class="md-nav__link" href="#private-readonly-dutiesservice">
+    Private Readonly dutiesService
   </a>
 </li>
 <li class="md-nav__item">
@@ -301,23 +311,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#private-nextattesterduties">
-    Private nextAttesterDuties
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#private-readonly-provider">
-    Private Readonly provider
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#private-readonly-slashingprotection">
-    Private Readonly slashingProtection
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#private-readonly-validators">
-    Private Readonly validators
+<a class="md-nav__link" href="#private-readonly-validatorstore">
+    Private Readonly validatorStore
   </a>
 </li>
 </ul>
@@ -330,68 +325,23 @@
 <nav aria-label="Methods" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#private-aggregateattestations">
-    Private aggregateAttestations
+<a class="md-nav__link" href="#private-produceandpublishaggregates">
+    Private produceAndPublishAggregates
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#private-createattestation">
-    Private createAttestation
+<a class="md-nav__link" href="#private-produceandpublishattestations">
+    Private produceAndPublishAttestations
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#private-getaggregateandproofsignature">
-    Private getAggregateAndProofSignature
+<a class="md-nav__link" href="#private-publishattestationsandaggregates">
+    Private publishAttestationsAndAggregates
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#private-getslotsignature">
-    Private getSlotSignature
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#private-handleduty">
-    Private handleDuty
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onclockepoch">
-    onClockEpoch
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onclockslot">
-    onClockSlot
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onhead">
-    onHead
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#start">
-    start
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#stop">
-    stop
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#updateduties">
-    updateDuties
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#private-updatevalidators">
-    Private updateValidators
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#private-waitforattestationblock">
-    Private waitForAttestationBlock
+<a class="md-nav__link" href="#private-runattestationtasks">
+    Private runAttestationTasks
   </a>
 </li>
 </ul>
@@ -421,34 +371,24 @@
 </ul>
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#private-readonly-apiclient">apiClient</a></li>
+<li><a href="./#private-readonly-clock">clock</a></li>
 <li><a href="./#private-readonly-config">config</a></li>
-<li><a href="./#private-controller">controller</a></li>
+<li><a href="./#private-readonly-dutiesservice">dutiesService</a></li>
 <li><a href="./#private-readonly-logger">logger</a></li>
-<li><a href="./#private-nextattesterduties">nextAttesterDuties</a></li>
-<li><a href="./#private-readonly-provider">provider</a></li>
-<li><a href="./#private-readonly-slashingprotection">slashingProtection</a></li>
-<li><a href="./#private-readonly-validators">validators</a></li>
+<li><a href="./#private-readonly-validatorstore">validatorStore</a></li>
 </ul>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#private-aggregateattestations">aggregateAttestations</a></li>
-<li><a href="./#private-createattestation">createAttestation</a></li>
-<li><a href="./#private-getaggregateandproofsignature">getAggregateAndProofSignature</a></li>
-<li><a href="./#private-getslotsignature">getSlotSignature</a></li>
-<li><a href="./#private-handleduty">handleDuty</a></li>
-<li><a href="./#onclockepoch">onClockEpoch</a></li>
-<li><a href="./#onclockslot">onClockSlot</a></li>
-<li><a href="./#onhead">onHead</a></li>
-<li><a href="./#start">start</a></li>
-<li><a href="./#stop">stop</a></li>
-<li><a href="./#updateduties">updateDuties</a></li>
-<li><a href="./#private-updatevalidators">updateValidators</a></li>
-<li><a href="./#private-waitforattestationblock">waitForAttestationBlock</a></li>
+<li><a href="./#private-produceandpublishaggregates">produceAndPublishAggregates</a></li>
+<li><a href="./#private-produceandpublishattestations">produceAndPublishAttestations</a></li>
+<li><a href="./#private-publishattestationsandaggregates">publishAttestationsAndAggregates</a></li>
+<li><a href="./#private-runattestationtasks">runAttestationTasks</a></li>
 </ul>
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
-<p>+ <strong>new AttestationService</strong>(<code>config</code>: IBeaconConfig, <code>validators</code>: Map‹<a href="../../modules/reflection-1305.reflection-1306/#publickeyhex">PublicKeyHex</a>, <a href="../../modules/reflection-1305.reflection-1306/#validatorandsecret">ValidatorAndSecret</a>›, <code>provider</code>: <a href="../../interfaces/api.iapiclientprovider/">IApiClientProvider</a>, <code>slashingProtection</code>: <a href="../../interfaces/slashingprotection.islashingprotection/">ISlashingProtection</a>, <code>logger</code>: ILogger): <em><a href="./">AttestationService</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L32">packages/validator/src/services/attestation.ts:32</a></em></p>
+<p>+ <strong>new AttestationService</strong>(<code>config</code>: IBeaconConfig, <code>logger</code>: ILogger, <code>apiClient</code>: <a href="../../interfaces/api.iapiclient/">IApiClient</a>, <code>clock</code>: <a href="../../interfaces/util.iclock/">IClock</a>, <code>validatorStore</code>: <a href="../services.validatorstore/">ValidatorStore</a>): <em><a href="./">AttestationService</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/validator/src/services/attestation.ts#L21">packages/validator/src/services/attestation.ts:21</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -463,62 +403,58 @@
 <td>IBeaconConfig</td>
 </tr>
 <tr>
-<td><code>validators</code></td>
-<td>Map‹<a href="../../modules/reflection-1305.reflection-1306/#publickeyhex">PublicKeyHex</a>, <a href="../../modules/reflection-1305.reflection-1306/#validatorandsecret">ValidatorAndSecret</a>›</td>
-</tr>
-<tr>
-<td><code>provider</code></td>
-<td><a href="../../interfaces/api.iapiclientprovider/">IApiClientProvider</a></td>
-</tr>
-<tr>
-<td><code>slashingProtection</code></td>
-<td><a href="../../interfaces/slashingprotection.islashingprotection/">ISlashingProtection</a></td>
-</tr>
-<tr>
 <td><code>logger</code></td>
 <td>ILogger</td>
+</tr>
+<tr>
+<td><code>apiClient</code></td>
+<td><a href="../../interfaces/api.iapiclient/">IApiClient</a></td>
+</tr>
+<tr>
+<td><code>clock</code></td>
+<td><a href="../../interfaces/util.iclock/">IClock</a></td>
+</tr>
+<tr>
+<td><code>validatorStore</code></td>
+<td><a href="../services.validatorstore/">ValidatorStore</a></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em><a href="./">AttestationService</a></em></p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
+<h3 id="private-readonly-apiclient"><code>Private</code> <code>Readonly</code> apiClient<a class="headerlink" href="#private-readonly-apiclient" title="Permanent link">¶</a></h3>
+<p>• <strong>apiClient</strong>: <em><a href="../../interfaces/api.iapiclient/">IApiClient</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/validator/src/services/attestation.ts#L18">packages/validator/src/services/attestation.ts:18</a></em></p>
+<hr/>
+<h3 id="private-readonly-clock"><code>Private</code> <code>Readonly</code> clock<a class="headerlink" href="#private-readonly-clock" title="Permanent link">¶</a></h3>
+<p>• <strong>clock</strong>: <em><a href="../../interfaces/util.iclock/">IClock</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/validator/src/services/attestation.ts#L19">packages/validator/src/services/attestation.ts:19</a></em></p>
+<hr/>
 <h3 id="private-readonly-config"><code>Private</code> <code>Readonly</code> config<a class="headerlink" href="#private-readonly-config" title="Permanent link">¶</a></h3>
 <p>• <strong>config</strong>: <em>IBeaconConfig</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L22">packages/validator/src/services/attestation.ts:22</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/validator/src/services/attestation.ts#L16">packages/validator/src/services/attestation.ts:16</a></em></p>
 <hr/>
-<h3 id="private-controller"><code>Private</code> controller<a class="headerlink" href="#private-controller" title="Permanent link">¶</a></h3>
-<p>• <strong>controller</strong>: <em>AbortController | undefined</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L32">packages/validator/src/services/attestation.ts:32</a></em></p>
+<h3 id="private-readonly-dutiesservice"><code>Private</code> <code>Readonly</code> dutiesService<a class="headerlink" href="#private-readonly-dutiesservice" title="Permanent link">¶</a></h3>
+<p>• <strong>dutiesService</strong>: <em><a href="../services.attestationdutiesservice/">AttestationDutiesService</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/validator/src/services/attestation.ts#L21">packages/validator/src/services/attestation.ts:21</a></em></p>
 <hr/>
 <h3 id="private-readonly-logger"><code>Private</code> <code>Readonly</code> logger<a class="headerlink" href="#private-readonly-logger" title="Permanent link">¶</a></h3>
 <p>• <strong>logger</strong>: <em>ILogger</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L26">packages/validator/src/services/attestation.ts:26</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/validator/src/services/attestation.ts#L17">packages/validator/src/services/attestation.ts:17</a></em></p>
 <hr/>
-<h3 id="private-nextattesterduties"><code>Private</code> nextAttesterDuties<a class="headerlink" href="#private-nextattesterduties" title="Permanent link">¶</a></h3>
-<p>• <strong>nextAttesterDuties</strong>: <em>Map‹Slot, Map‹<a href="../../modules/reflection-1305.reflection-1306/#publickeyhex">PublicKeyHex</a>, <a href="../../interfaces/reflection-1305.reflection-1306.iattesterduty/">IAttesterDuty</a>››</em> = new Map&lt;
-    Slot,
-    Map<publickeyhex, iattesterduty=""></publickeyhex,></p>
-<blockquote>
-<p>()</p>
-</blockquote>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L28">packages/validator/src/services/attestation.ts:28</a></em></p>
-<hr/>
-<h3 id="private-readonly-provider"><code>Private</code> <code>Readonly</code> provider<a class="headerlink" href="#private-readonly-provider" title="Permanent link">¶</a></h3>
-<p>• <strong>provider</strong>: <em><a href="../../interfaces/api.iapiclientprovider/">IApiClientProvider</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L23">packages/validator/src/services/attestation.ts:23</a></em></p>
-<hr/>
-<h3 id="private-readonly-slashingprotection"><code>Private</code> <code>Readonly</code> slashingProtection<a class="headerlink" href="#private-readonly-slashingprotection" title="Permanent link">¶</a></h3>
-<p>• <strong>slashingProtection</strong>: <em><a href="../../interfaces/slashingprotection.islashingprotection/">ISlashingProtection</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L25">packages/validator/src/services/attestation.ts:25</a></em></p>
-<hr/>
-<h3 id="private-readonly-validators"><code>Private</code> <code>Readonly</code> validators<a class="headerlink" href="#private-readonly-validators" title="Permanent link">¶</a></h3>
-<p>• <strong>validators</strong>: <em>Map‹<a href="../../modules/reflection-1305.reflection-1306/#publickeyhex">PublicKeyHex</a>, <a href="../../modules/reflection-1305.reflection-1306/#validatorandsecret">ValidatorAndSecret</a>›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L24">packages/validator/src/services/attestation.ts:24</a></em></p>
+<h3 id="private-readonly-validatorstore"><code>Private</code> <code>Readonly</code> validatorStore<a class="headerlink" href="#private-readonly-validatorstore" title="Permanent link">¶</a></h3>
+<p>• <strong>validatorStore</strong>: <em><a href="../services.validatorstore/">ValidatorStore</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/validator/src/services/attestation.ts#L20">packages/validator/src/services/attestation.ts:20</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
-<h3 id="private-aggregateattestations"><code>Private</code> aggregateAttestations<a class="headerlink" href="#private-aggregateattestations" title="Permanent link">¶</a></h3>
-<p>▸ <strong>aggregateAttestations</strong>(<code>duty</code>: <a href="../../interfaces/reflection-1305.reflection-1306.iattesterduty/">IAttesterDuty</a>, <code>attestation</code>: Attestation, <code>fork</code>: Fork, <code>genesisValidatorsRoot</code>: Root, <code>validator</code>: <a href="../../modules/reflection-1305.reflection-1306/#validatorandsecret">ValidatorAndSecret</a>): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L263">packages/validator/src/services/attestation.ts:263</a></em></p>
-<p>Aggregate attestations publish the aggregate.</p>
+<h3 id="private-produceandpublishaggregates"><code>Private</code> produceAndPublishAggregates<a class="headerlink" href="#private-produceandpublishaggregates" title="Permanent link">¶</a></h3>
+<p>▸ <strong>produceAndPublishAggregates</strong>(<code>attestation</code>: AttestationData, <code>validatorDuties</code>: <a href="../../modules/services/#dutyandproof">DutyAndProof</a>[]): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/validator/src/services/attestation.ts#L137">packages/validator/src/services/attestation.ts:137</a></em></p>
+<p>Performs the second step of the attesting process: downloading an aggregated <code>Attestation</code>,
+converting it into a <code>SignedAggregateAndProof</code> and returning it to the BN.</p>
+<p>https://github.com/ethereum/eth2.0-specs/blob/v0.12.1/specs/phase0/validator.md#broadcast-aggregate</p>
+<p>Only one aggregated <code>Attestation</code> is downloaded from the BN. It is then signed
+by each validator and the list of individually-signed <code>SignedAggregateAndProof</code> objects is
+returned to the BN.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -528,177 +464,27 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>duty</code></td>
-<td><a href="../../interfaces/reflection-1305.reflection-1306.iattesterduty/">IAttesterDuty</a></td>
-</tr>
 <tr>
 <td><code>attestation</code></td>
-<td>Attestation</td>
+<td>AttestationData</td>
 </tr>
 <tr>
-<td><code>fork</code></td>
-<td>Fork</td>
-</tr>
-<tr>
-<td><code>genesisValidatorsRoot</code></td>
-<td>Root</td>
-</tr>
-<tr>
-<td><code>validator</code></td>
-<td><a href="../../modules/reflection-1305.reflection-1306/#validatorandsecret">ValidatorAndSecret</a></td>
+<td><code>validatorDuties</code></td>
+<td><a href="../../modules/services/#dutyandproof">DutyAndProof</a>[]</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise‹void›</em></p>
 <hr/>
-<h3 id="private-createattestation"><code>Private</code> createAttestation<a class="headerlink" href="#private-createattestation" title="Permanent link">¶</a></h3>
-<p>▸ <strong>createAttestation</strong>(<code>duty</code>: <a href="../../interfaces/reflection-1305.reflection-1306.iattesterduty/">IAttesterDuty</a>, <code>fork</code>: Fork, <code>genesisValidatorsRoot</code>: Root, <code>validator</code>: <a href="../../modules/reflection-1305.reflection-1306/#validatorandsecret">ValidatorAndSecret</a>): <em>Promise‹Attestation›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L341">packages/validator/src/services/attestation.ts:341</a></em></p>
+<h3 id="private-produceandpublishattestations"><code>Private</code> produceAndPublishAttestations<a class="headerlink" href="#private-produceandpublishattestations" title="Permanent link">¶</a></h3>
+<p>▸ <strong>produceAndPublishAttestations</strong>(<code>slot</code>: <a href="../../enums/util.timeitem/#slot">Slot</a>, <code>committeeIndex</code>: CommitteeIndex, <code>validatorDuties</code>: <a href="../../modules/services/#dutyandproof">DutyAndProof</a>[]): <em>Promise‹AttestationData›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/validator/src/services/attestation.ts#L90">packages/validator/src/services/attestation.ts:90</a></em></p>
+<p>Performs the first step of the attesting process: downloading <code>Attestation</code> objects,
+signing them and returning them to the validator.</p>
+<p>https://github.com/ethereum/eth2.0-specs/blob/v0.12.1/specs/phase0/validator.md#attesting</p>
+<p>Only one <code>Attestation</code> is downloaded from the BN. It is then signed by each
+validator and the list of individually-signed <code>Attestation</code> objects is returned to the BN.</p>
 <p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>duty</code></td>
-<td><a href="../../interfaces/reflection-1305.reflection-1306.iattesterduty/">IAttesterDuty</a></td>
-</tr>
-<tr>
-<td><code>fork</code></td>
-<td>Fork</td>
-</tr>
-<tr>
-<td><code>genesisValidatorsRoot</code></td>
-<td>Root</td>
-</tr>
-<tr>
-<td><code>validator</code></td>
-<td><a href="../../modules/reflection-1305.reflection-1306/#validatorandsecret">ValidatorAndSecret</a></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>Promise‹Attestation›</em></p>
-<hr/>
-<h3 id="private-getaggregateandproofsignature"><code>Private</code> getAggregateAndProofSignature<a class="headerlink" href="#private-getaggregateandproofsignature" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getAggregateAndProofSignature</strong>(<code>validator</code>: <a href="../../modules/reflection-1305.reflection-1306/#validatorandsecret">ValidatorAndSecret</a>, <code>fork</code>: Fork, <code>genesisValidatorsRoot</code>: Root, <code>aggregateAndProof</code>: AggregateAndProof): <em>BLSSignature</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L303">packages/validator/src/services/attestation.ts:303</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>validator</code></td>
-<td><a href="../../modules/reflection-1305.reflection-1306/#validatorandsecret">ValidatorAndSecret</a></td>
-</tr>
-<tr>
-<td><code>fork</code></td>
-<td>Fork</td>
-</tr>
-<tr>
-<td><code>genesisValidatorsRoot</code></td>
-<td>Root</td>
-</tr>
-<tr>
-<td><code>aggregateAndProof</code></td>
-<td>AggregateAndProof</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>BLSSignature</em></p>
-<hr/>
-<h3 id="private-getslotsignature"><code>Private</code> getSlotSignature<a class="headerlink" href="#private-getslotsignature" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getSlotSignature</strong>(<code>validator</code>: <a href="../../modules/reflection-1305.reflection-1306/#validatorandsecret">ValidatorAndSecret</a>, <code>slot</code>: Slot, <code>fork</code>: Fork, <code>genesisValidatorsRoot</code>: Root): <em>BLSSignature</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L325">packages/validator/src/services/attestation.ts:325</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>validator</code></td>
-<td><a href="../../modules/reflection-1305.reflection-1306/#validatorandsecret">ValidatorAndSecret</a></td>
-</tr>
-<tr>
-<td><code>slot</code></td>
-<td>Slot</td>
-</tr>
-<tr>
-<td><code>fork</code></td>
-<td>Fork</td>
-</tr>
-<tr>
-<td><code>genesisValidatorsRoot</code></td>
-<td>Root</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>BLSSignature</em></p>
-<hr/>
-<h3 id="private-handleduty"><code>Private</code> handleDuty<a class="headerlink" href="#private-handleduty" title="Permanent link">¶</a></h3>
-<p>▸ <strong>handleDuty</strong>(<code>duty</code>: <a href="../../interfaces/reflection-1305.reflection-1306.iattesterduty/">IAttesterDuty</a>): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L168">packages/validator/src/services/attestation.ts:168</a></em></p>
-<p>Perform attestation/aggregation duties.
-IFF a validator is an attester, create and submit an attestation.
-IFF a validator is an aggregator, aggregate the attestations and submit the aggregated data.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>duty</code></td>
-<td><a href="../../interfaces/reflection-1305.reflection-1306.iattesterduty/">IAttesterDuty</a></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
-<hr/>
-<h3 id="onclockepoch">onClockEpoch<a class="headerlink" href="#onclockepoch" title="Permanent link">¶</a></h3>
-<p>▸ <strong>onClockEpoch</strong>(<code>__namedParameters</code>: object): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L78">packages/validator/src/services/attestation.ts:78</a></em></p>
-<p>Update validator attester duties on each clock epoch.</p>
-<p><strong>Parameters:</strong></p>
-<p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>epoch</code></td>
-<td>number</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
-<hr/>
-<h3 id="onclockslot">onClockSlot<a class="headerlink" href="#onclockslot" title="Permanent link">¶</a></h3>
-<p>▸ <strong>onClockSlot</strong>(<code>__namedParameters</code>: object): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L86">packages/validator/src/services/attestation.ts:86</a></em></p>
-<p>Perform attestation duties if the validator is an attester for a given clock slot.</p>
-<p><strong>Parameters:</strong></p>
-<p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
 <thead>
 <tr>
@@ -709,18 +495,24 @@ IFF a validator is an aggregator, aggregate the attestations and submit the aggr
 <tbody>
 <tr>
 <td><code>slot</code></td>
-<td>number</td>
+<td><a href="../../enums/util.timeitem/#slot">Slot</a></td>
+</tr>
+<tr>
+<td><code>committeeIndex</code></td>
+<td>CommitteeIndex</td>
+</tr>
+<tr>
+<td><code>validatorDuties</code></td>
+<td><a href="../../modules/services/#dutyandproof">DutyAndProof</a>[]</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<p><strong>Returns:</strong> <em>Promise‹AttestationData›</em></p>
 <hr/>
-<h3 id="onhead">onHead<a class="headerlink" href="#onhead" title="Permanent link">¶</a></h3>
-<p>▸ <strong>onHead</strong>(<code>__namedParameters</code>: object): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L97">packages/validator/src/services/attestation.ts:97</a></em></p>
-<p>Update list of attester duties on head upate.</p>
+<h3 id="private-publishattestationsandaggregates"><code>Private</code> publishAttestationsAndAggregates<a class="headerlink" href="#private-publishattestationsandaggregates" title="Permanent link">¶</a></h3>
+<p>▸ <strong>publishAttestationsAndAggregates</strong>(<code>slot</code>: <a href="../../enums/util.timeitem/#slot">Slot</a>, <code>committeeIndex</code>: CommitteeIndex, <code>validatorDuties</code>: <a href="../../modules/services/#dutyandproof">DutyAndProof</a>[], <code>signal</code>: AbortSignal): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/validator/src/services/attestation.ts#L62">packages/validator/src/services/attestation.ts:62</a></em></p>
 <p><strong>Parameters:</strong></p>
-<p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
 <table>
 <thead>
 <tr>
@@ -729,34 +521,29 @@ IFF a validator is an aggregator, aggregate the attestations and submit the aggr
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>epochTransition</code></td>
-<td>boolean</td>
-</tr>
 <tr>
 <td><code>slot</code></td>
-<td>number</td>
+<td><a href="../../enums/util.timeitem/#slot">Slot</a></td>
+</tr>
+<tr>
+<td><code>committeeIndex</code></td>
+<td>CommitteeIndex</td>
+</tr>
+<tr>
+<td><code>validatorDuties</code></td>
+<td><a href="../../modules/services/#dutyandproof">DutyAndProof</a>[]</td>
+</tr>
+<tr>
+<td><code>signal</code></td>
+<td>AbortSignal</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise‹void›</em></p>
 <hr/>
-<h3 id="start">start<a class="headerlink" href="#start" title="Permanent link">¶</a></h3>
-<p>▸ <strong>start</strong>(): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L51">packages/validator/src/services/attestation.ts:51</a></em></p>
-<p>Starts the AttestationService by updating the validator attester duties and turning on the relevant listeners for clock events.</p>
-<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
-<hr/>
-<h3 id="stop">stop<a class="headerlink" href="#stop" title="Permanent link">¶</a></h3>
-<p>▸ <strong>stop</strong>(): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L66">packages/validator/src/services/attestation.ts:66</a></em></p>
-<p>Stops the AttestationService by turning off the relevant listeners for clock events.</p>
-<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
-<hr/>
-<h3 id="updateduties">updateDuties<a class="headerlink" href="#updateduties" title="Permanent link">¶</a></h3>
-<p>▸ <strong>updateDuties</strong>(<code>epoch</code>: Epoch): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L107">packages/validator/src/services/attestation.ts:107</a></em></p>
-<p>Fetch validator attester duties from the validator api and update local list of attester duties accordingly.</p>
+<h3 id="private-runattestationtasks"><code>Private</code> runAttestationTasks<a class="headerlink" href="#private-runattestationtasks" title="Permanent link">¶</a></h3>
+<p>▸ <strong>runAttestationTasks</strong>(<code>slot</code>: <a href="../../enums/util.timeitem/#slot">Slot</a>, <code>signal</code>: AbortSignal): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/84a03e0/packages/validator/src/services/attestation.ts#L41">packages/validator/src/services/attestation.ts:41</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -767,35 +554,8 @@ IFF a validator is an aggregator, aggregate the attestations and submit the aggr
 </thead>
 <tbody>
 <tr>
-<td><code>epoch</code></td>
-<td>Epoch</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
-<hr/>
-<h3 id="private-updatevalidators"><code>Private</code> updateValidators<a class="headerlink" href="#private-updatevalidators" title="Permanent link">¶</a></h3>
-<p>▸ <strong>updateValidators</strong>(): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L393">packages/validator/src/services/attestation.ts:393</a></em></p>
-<p>Update the local list of validators based on the current head state.</p>
-<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
-<hr/>
-<h3 id="private-waitforattestationblock"><code>Private</code> waitForAttestationBlock<a class="headerlink" href="#private-waitforattestationblock" title="Permanent link">¶</a></h3>
-<p>▸ <strong>waitForAttestationBlock</strong>(<code>blockSlot</code>: Slot, <code>signal</code>: AbortSignal): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/36cafc1/packages/validator/src/services/attestation.ts#L230">packages/validator/src/services/attestation.ts:230</a></em></p>
-<p>Makes sure that the block we are trying to attest to is available.</p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>blockSlot</code></td>
-<td>Slot</td>
+<td><code>slot</code></td>
+<td><a href="../../enums/util.timeitem/#slot">Slot</a></td>
 </tr>
 <tr>
 <td><code>signal</code></td>
