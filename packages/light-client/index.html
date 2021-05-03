@@ -255,7 +255,7 @@ works in browser and Node.js environments.</p>
 <h2 id="basic-examples">Basic examples<a class="headerlink" href="#basic-examples" title="Permanent link">¶</a></h2>
 <p>For client-side browser events:</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="s2">"core-js/es7/symbol"</span> <span class="cm">/* If necessary */</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">subscribe</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">subscribe</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"event-iterator"</span>
 <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"a.example"</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="k">await</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">click</span> <span class="k">of</span> <span class="nx">subscribe</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="s2">"click"</span><span class="p">))</span> <span class="p">{</span>
@@ -264,7 +264,7 @@ works in browser and Node.js environments.</p>
 </code></pre></div>
 <p>For server-side Node.js events:</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="s2">"core-js/es7/symbol"</span> <span class="cm">/* If necessary */</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">stream</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">stream</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"event-iterator"</span>
 <span class="kd">const</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"fs"</span><span class="p">).</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s2">"example-file"</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="k">await</span> <span class="p">(</span><span class="kd">const</span> <span class="nx">chunk</span> <span class="k">of</span> <span class="nx">stream</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">file</span><span class="p">))</span> <span class="p">{</span>
@@ -275,7 +275,7 @@ works in browser and Node.js environments.</p>
 <p>Let's look at how <code>subscribe()</code> and <code>stream()</code> are implemented.</p>
 <p>For client-side browser events:</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="s2">"core-js/es7/symbol"</span> <span class="cm">/* If necessary */</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"event-iterator"</span>
 
 <span class="k">export</span> <span class="kd">function</span> <span class="nx">subscribe</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
   <span class="cm">/* "this" refers to a DOM event target. */</span>
@@ -289,7 +289,7 @@ works in browser and Node.js environments.</p>
 </code></pre></div>
 <p>For server-side Node.js events:</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="s2">"core-js/es7/symbol"</span> <span class="cm">/* If necessary */</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"event-iterator"</span>
 
 <span class="k">export</span> <span class="kd">function</span> <span class="nx">stream</span><span class="p">()</span> <span class="p">{</span>
   <span class="cm">/* "this" refers to a Node.js readable stream. */</span>
@@ -322,7 +322,7 @@ by default).</p>
 <p>When these events are emitted can be changed or disabled by setting
 <code>highWaterMark</code> and <code>lowWaterMark</code> in the options of the <code>EventIterator</code>
 constructor.</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"event-iterator"</span>
 
 <span class="kd">const</span> <span class="nx">eventIterator</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">EventIterator</span><span class="p">(</span>
   <span class="p">({</span><span class="nx">push</span><span class="p">,</span> <span class="nx">on</span><span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -478,7 +478,7 @@ Conceptually they are very similar; they both:</p>
 </ul>
 <p>So how do you transform a readble stream into an async iterator? With an <code>EventIterator</code>.</p>
 <p>We can define the <code>stream</code> function above as:</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"event-iterator"</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">EventIterator</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"event-iterator"</span>
 
 <span class="kd">function</span> <span class="nx">stream</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nx">EventIterator</span><span class="p">(</span>

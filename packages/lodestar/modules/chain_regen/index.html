@@ -267,6 +267,11 @@
     Type aliases
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables">
+    Variables
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -316,8 +321,36 @@
 <nav aria-label="Type aliases" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#queuedstateregeneratormodules">
+    QueuedStateRegeneratorModules
+  </a>
+<nav aria-label="QueuedStateRegeneratorModules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#regenerrortype_1">
     RegenErrorType
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables_1">
+    Variables
+  </a>
+<nav aria-label="Variables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-regen_queue_max_len">
+    Const REGEN_QUEUE_MAX_LEN
   </a>
 </li>
 </ul>
@@ -361,7 +394,12 @@
 </ul>
 <h3 id="type-aliases">Type aliases<a class="headerlink" href="#type-aliases" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#queuedstateregeneratormodules">QueuedStateRegeneratorModules</a></li>
 <li><a href="./#regenerrortype">RegenErrorType</a></li>
+</ul>
+<h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#const-regen_queue_max_len">REGEN_QUEUE_MAX_LEN</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <h3 id="istateregenerator">IStateRegenerator<a class="headerlink" href="#istateregenerator" title="Permanent link">¶</a></h3>
@@ -382,9 +420,44 @@
 <h3 id="stateregenerator">StateRegenerator<a class="headerlink" href="#stateregenerator" title="Permanent link">¶</a></h3>
 <p>• <strong>StateRegenerator</strong>:</p>
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
+<h3 id="queuedstateregeneratormodules">QueuedStateRegeneratorModules<a class="headerlink" href="#queuedstateregeneratormodules" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>QueuedStateRegeneratorModules</strong>: <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5fec601/packages/lodestar/src/chain/regen/queued.ts#L17">packages/lodestar/src/chain/regen/queued.ts:17</a></em></p>
+<h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>checkpointStateCache</strong>: <em><a href="../../classes/chain_statecache.checkpointstatecache/">CheckpointStateCache</a></em></p>
+</li>
+<li>
+<p><strong>config</strong>: <em>IBeaconConfig</em></p>
+</li>
+<li>
+<p><strong>db</strong>: <em><a href="../../interfaces/db.ibeacondb/">IBeaconDb</a></em></p>
+</li>
+<li>
+<p><strong>emitter</strong>: <em><a href="../../classes/chain.chaineventemitter/">ChainEventEmitter</a></em></p>
+</li>
+<li>
+<p><strong>forkChoice</strong>: <em>IForkChoice</em></p>
+</li>
+<li>
+<p><strong>metrics</strong>: <em><a href="../metrics/#imetrics">IMetrics</a> | null</em></p>
+</li>
+<li>
+<p><strong>signal</strong>: <em>AbortSignal</em></p>
+</li>
+<li>
+<p><strong>stateCache</strong>: <em><a href="../../classes/chain_statecache.statecontextcache/">StateContextCache</a></em></p>
+</li>
+</ul>
+<hr/>
 <h3 id="regenerrortype_1">RegenErrorType<a class="headerlink" href="#regenerrortype_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>RegenErrorType</strong>: <em>object | object | object | object | object | object | object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8ab5df0/packages/lodestar/src/chain/regen/errors.ts#L13">packages/lodestar/src/chain/regen/errors.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5fec601/packages/lodestar/src/chain/regen/errors.ts#L13">packages/lodestar/src/chain/regen/errors.ts:13</a></em></p>
+<h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
+<h3 id="const-regen_queue_max_len"><code>Const</code> REGEN_QUEUE_MAX_LEN<a class="headerlink" href="#const-regen_queue_max_len" title="Permanent link">¶</a></h3>
+<p>• <strong>REGEN_QUEUE_MAX_LEN</strong>: <em>256</em> = 256</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5fec601/packages/lodestar/src/chain/regen/queued.ts#L15">packages/lodestar/src/chain/regen/queued.ts:15</a></em></p>
 </article>
 </div>
 </div>

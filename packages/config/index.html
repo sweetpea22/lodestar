@@ -254,9 +254,9 @@
 <p>Configuration variables for an Eth2 network -- consists of params and ssz types (from <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/params">lodestar-params</a> and <a href="https://github.com/ChainSafe/lodestar/tree/master/packages/types">lodestar-types</a> respectively).</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1">// mainet and minimal presets are available under non-default exports</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">config</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"@chainsafe/lodestar-config/mainnet"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">config</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-config/mainnet"</span><span class="p">;</span>
 <span class="c1">// or</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">config</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"@chainsafe/lodestar-config/minimal"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">config</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-config/minimal"</span><span class="p">;</span>
 
 <span class="c1">// params available under `params`</span>
 <span class="kd">const</span> <span class="nx">shardCount</span> <span class="o">=</span> <span class="nx">mainnetConfig</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">SHARD_COUNT</span><span class="p">;</span>

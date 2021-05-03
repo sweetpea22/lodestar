@@ -254,7 +254,7 @@
 <p>Typescript and SSZ types for Eth2 datastructures</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h2>
 <h4 id="using-the-typescript-types">Using the typescript types<a class="headerlink" href="#using-the-typescript-types" title="Permanent link">¶</a></h4>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">BeaconState</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"@chainsafe/lodestar-types"</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="p">{</span><span class="nx">BeaconState</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-types"</span><span class="p">;</span>
 
 <span class="kd">const</span> <span class="nx">b</span>: <span class="kt">BeaconState</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">slot</span>: <span class="kt">5</span><span class="p">,</span>
@@ -263,8 +263,8 @@
 </code></pre></div>
 <h4 id="using-the-ssz-types">Using the ssz types<a class="headerlink" href="#using-the-ssz-types" title="Permanent link">¶</a></h4>
 <div class="highlight"><pre><span></span><code><span class="c1">// mainnet and minimal types pre-generated under non-default export</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">types</span> <span class="kr">as</span> <span class="nx">mainnetTypes</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"@chainsafe/lodestar-types/lib/presets/mainnet"</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">types</span> <span class="kr">as</span> <span class="nx">minimalTypes</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"@chainsafe/lodestar-types/lib/presets/mainnet"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">types</span> <span class="kr">as</span> <span class="nx">mainnetTypes</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-types/lib/presets/mainnet"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">types</span> <span class="kr">as</span> <span class="nx">minimalTypes</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-types/lib/presets/mainnet"</span><span class="p">;</span>
 
 <span class="nx">mainnetTypes</span><span class="p">.</span><span class="nx">phase0</span><span class="p">.</span><span class="nx">BeaconState</span><span class="p">.</span><span class="nx">defaultValue</span><span class="p">();</span>
 <span class="nx">minimalTypes</span><span class="p">.</span><span class="nx">phase0</span><span class="p">.</span><span class="nx">BeaconState</span><span class="p">.</span><span class="nx">defaultValue</span><span class="p">();</span>
@@ -272,8 +272,8 @@
 <span class="p">...</span>
 
 <span class="c1">// create your own IBeaconSSZTypes object from an IBeaconParams</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">createIBeaconSSZTypes</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"@chainsafe/lodestar-types"</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">IBeaconParams</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">"@chainsafe/lodestar-params"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">createIBeaconSSZTypes</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-types"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">IBeaconParams</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-params"</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">testnetParams</span>: <span class="kt">IBeaconParams</span> <span class="o">=</span> <span class="p">{</span>
   <span class="p">...</span>
 <span class="p">};</span>
