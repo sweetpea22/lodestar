@@ -262,18 +262,8 @@
 <nav aria-label="Properties" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#optional-blockperchunk">
-    Optional blockPerChunk
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#optional-maxslotimport">
-    Optional maxSlotImport
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#optional-minpeers">
-    Optional minPeers
+<a class="md-nav__link" href="#optional-issinglenode">
+    Optional isSingleNode
   </a>
 </li>
 </ul>
@@ -298,24 +288,14 @@
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#optional-blockperchunk">blockPerChunk</a></li>
-<li><a href="./#optional-maxslotimport">maxSlotImport</a></li>
-<li><a href="./#optional-minpeers">minPeers</a></li>
+<li><a href="./#optional-issinglenode">isSingleNode</a></li>
 </ul>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
-<h3 id="optional-blockperchunk"><code>Optional</code> blockPerChunk<a class="headerlink" href="#optional-blockperchunk" title="Permanent link">¶</a></h3>
-<p>• <strong>blockPerChunk</strong>? : <em>undefined | number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5aad95b/packages/lodestar/src/sync/options.ts#L2">packages/lodestar/src/sync/options.ts:2</a></em></p>
-<hr/>
-<h3 id="optional-maxslotimport"><code>Optional</code> maxSlotImport<a class="headerlink" href="#optional-maxslotimport" title="Permanent link">¶</a></h3>
-<p>• <strong>maxSlotImport</strong>? : <em>undefined | number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5aad95b/packages/lodestar/src/sync/options.ts#L7">packages/lodestar/src/sync/options.ts:7</a></em></p>
-<p>max slots to import before waiting for
-chain to process them</p>
-<hr/>
-<h3 id="optional-minpeers"><code>Optional</code> minPeers<a class="headerlink" href="#optional-minpeers" title="Permanent link">¶</a></h3>
-<p>• <strong>minPeers</strong>? : <em>undefined | number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5aad95b/packages/lodestar/src/sync/options.ts#L8">packages/lodestar/src/sync/options.ts:8</a></em></p>
+<h3 id="optional-issinglenode"><code>Optional</code> isSingleNode<a class="headerlink" href="#optional-issinglenode" title="Permanent link">¶</a></h3>
+<p>• <strong>isSingleNode</strong>? : <em>undefined | false | true</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c2123fa/packages/lodestar/src/sync/options.ts#L6">packages/lodestar/src/sync/options.ts:6</a></em></p>
+<p>Allow node to consider itself synced without being connected to a peer.
+Use only for local networks with a single node, can be dangerous in regular networks.</p>
 </article>
 </div>
 </div>
