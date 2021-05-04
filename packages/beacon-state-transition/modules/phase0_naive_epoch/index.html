@@ -583,7 +583,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getattestingbalance">getAttestingBalance<a class="headerlink" href="#getattestingbalance" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttestingBalance</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>attestations</code>: PendingAttestation[]): <em><a href="../phase0/#gwei">Gwei</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/util.ts#L95">packages/beacon-state-transition/src/phase0/naive/epoch/util.ts:95</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/util.ts#L95">packages/beacon-state-transition/src/phase0/naive/epoch/util.ts:95</a></em></p>
 <p>Return the combined effective balance of the set of unslashed validators participating in <code>attestations</code>.
 Note: <code>getTotalBalance</code> returns <code>EFFECTIVE_BALANCE_INCREMENT</code> Gwei minimum to avoid divisions by zero.</p>
 <p><strong>Parameters:</strong></p>
@@ -613,7 +613,7 @@ Note: <code>getTotalBalance</code> returns <code>EFFECTIVE_BALANCE_INCREMENT</co
 <hr/>
 <h3 id="getmatchingheadattestations">getMatchingHeadAttestations<a class="headerlink" href="#getmatchingheadattestations" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getMatchingHeadAttestations</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>epoch</code>: <a href="../phase0/#epoch">Epoch</a>): <em>PendingAttestation[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/util.ts#L56">packages/beacon-state-transition/src/phase0/naive/epoch/util.ts:56</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/util.ts#L56">packages/beacon-state-transition/src/phase0/naive/epoch/util.ts:56</a></em></p>
 <p>Returns the subset of PendingAttestations that have the correct head (ie. they voted for a head
 that ended up being the head of the chain).</p>
 <p><strong>Parameters:</strong></p>
@@ -643,7 +643,7 @@ that ended up being the head of the chain).</p>
 <hr/>
 <h3 id="getmatchingsourceattestations">getMatchingSourceAttestations<a class="headerlink" href="#getmatchingsourceattestations" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getMatchingSourceAttestations</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>epoch</code>: <a href="../phase0/#epoch">Epoch</a>): <em>PendingAttestation[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/util.ts#L24">packages/beacon-state-transition/src/phase0/naive/epoch/util.ts:24</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/util.ts#L24">packages/beacon-state-transition/src/phase0/naive/epoch/util.ts:24</a></em></p>
 <p>When processing attestations, we already only accept attestations that have the correct Casper FFG
 source checkpoint (specifically, the most recent justified checkpoint that the chain knows about).
 The goal of this function is to get all attestations that have a correct Casper FFG source. Hence,
@@ -675,7 +675,7 @@ it can safely just return all the PendingAttestations for the desired epoch (cur
 <hr/>
 <h3 id="getmatchingtargetattestations">getMatchingTargetAttestations<a class="headerlink" href="#getmatchingtargetattestations" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getMatchingTargetAttestations</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>epoch</code>: <a href="../phase0/#epoch">Epoch</a>): <em>PendingAttestation[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/util.ts#L41">packages/beacon-state-transition/src/phase0/naive/epoch/util.ts:41</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/util.ts#L41">packages/beacon-state-transition/src/phase0/naive/epoch/util.ts:41</a></em></p>
 <p>Returns the subset of PendingAttestations that have the correct Casper FFG target (ie. the
 checkpoint that is part of the current chain).</p>
 <p><strong>Parameters:</strong></p>
@@ -705,7 +705,7 @@ checkpoint that is part of the current chain).</p>
 <hr/>
 <h3 id="getunslashedattestingindices">getUnslashedAttestingIndices<a class="headerlink" href="#getunslashedattestingindices" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getUnslashedAttestingIndices</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState, <code>attestations</code>: PendingAttestation[]): <em><a href="../phase0/#validatorindex">ValidatorIndex</a>[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/util.ts#L73">packages/beacon-state-transition/src/phase0/naive/epoch/util.ts:73</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/util.ts#L73">packages/beacon-state-transition/src/phase0/naive/epoch/util.ts:73</a></em></p>
 <p>Gets the list of attesting indices from a set of attestations, filtering out the indices that have
 been slashed. The idea here is that if you get slashed, you are still "technically" part of the
 validator set (see the note on the validator life cycle (https://github.com/ethereum/annotated-spec/
@@ -738,7 +738,7 @@ do not get counted.</p>
 <hr/>
 <h3 id="processeffectivebalanceupdates_1">processEffectiveBalanceUpdates<a class="headerlink" href="#processeffectivebalanceupdates_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processEffectiveBalanceUpdates</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/effective_balance.ts#L5">packages/beacon-state-transition/src/phase0/naive/epoch/effective_balance.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/effective_balance.ts#L5">packages/beacon-state-transition/src/phase0/naive/epoch/effective_balance.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -762,7 +762,7 @@ do not get counted.</p>
 <hr/>
 <h3 id="processepoch">processEpoch<a class="headerlink" href="#processepoch" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processEpoch</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>BeaconState</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/index.ts#L27">packages/beacon-state-transition/src/phase0/naive/epoch/index.ts:27</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/index.ts#L27">packages/beacon-state-transition/src/phase0/naive/epoch/index.ts:27</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -786,7 +786,7 @@ do not get counted.</p>
 <hr/>
 <h3 id="processeth1datareset_1">processEth1DataReset<a class="headerlink" href="#processeth1datareset_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processEth1DataReset</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/eth1.ts#L6">packages/beacon-state-transition/src/phase0/naive/epoch/eth1.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/eth1.ts#L6">packages/beacon-state-transition/src/phase0/naive/epoch/eth1.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -810,7 +810,7 @@ do not get counted.</p>
 <hr/>
 <h3 id="processhistoricalrootsupdate_1">processHistoricalRootsUpdate<a class="headerlink" href="#processhistoricalrootsupdate_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processHistoricalRootsUpdate</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/historical_roots.ts#L6">packages/beacon-state-transition/src/phase0/naive/epoch/historical_roots.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/historical_roots.ts#L6">packages/beacon-state-transition/src/phase0/naive/epoch/historical_roots.ts:6</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -834,7 +834,7 @@ do not get counted.</p>
 <hr/>
 <h3 id="processjustificationandfinalization_1">processJustificationAndFinalization<a class="headerlink" href="#processjustificationandfinalization_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processJustificationAndFinalization</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/justification.ts#L13">packages/beacon-state-transition/src/phase0/naive/epoch/justification.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/justification.ts#L13">packages/beacon-state-transition/src/phase0/naive/epoch/justification.ts:13</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -858,7 +858,7 @@ do not get counted.</p>
 <hr/>
 <h3 id="processparticipationrecordupdates_1">processParticipationRecordUpdates<a class="headerlink" href="#processparticipationrecordupdates_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processParticipationRecordUpdates</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/participation_records.ts#L5">packages/beacon-state-transition/src/phase0/naive/epoch/participation_records.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/participation_records.ts#L5">packages/beacon-state-transition/src/phase0/naive/epoch/participation_records.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -882,7 +882,7 @@ do not get counted.</p>
 <hr/>
 <h3 id="processrandaomixesreset_1">processRandaoMixesReset<a class="headerlink" href="#processrandaomixesreset_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processRandaoMixesReset</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/randao.ts#L5">packages/beacon-state-transition/src/phase0/naive/epoch/randao.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/randao.ts#L5">packages/beacon-state-transition/src/phase0/naive/epoch/randao.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -906,7 +906,7 @@ do not get counted.</p>
 <hr/>
 <h3 id="processregistryupdates_1">processRegistryUpdates<a class="headerlink" href="#processregistryupdates_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processRegistryUpdates</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>BeaconState</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/registryUpdates.ts#L22">packages/beacon-state-transition/src/phase0/naive/epoch/registryUpdates.ts:22</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/registryUpdates.ts#L22">packages/beacon-state-transition/src/phase0/naive/epoch/registryUpdates.ts:22</a></em></p>
 <p>Processes (i) the validator activation queue, and (ii) the rule that validators with &lt;=
 <code>EJECTION_BALANCE</code> ETH get ejected.</p>
 <p><strong>Parameters:</strong></p>
@@ -932,7 +932,7 @@ do not get counted.</p>
 <hr/>
 <h3 id="processslashings_1">processSlashings<a class="headerlink" href="#processslashings_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processSlashings</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/slashings.ts#L15">packages/beacon-state-transition/src/phase0/naive/epoch/slashings.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/slashings.ts#L15">packages/beacon-state-transition/src/phase0/naive/epoch/slashings.ts:15</a></em></p>
 <p>Process the slashings.</p>
 <p>Note that this function mutates <code>state</code>.</p>
 <p><strong>Parameters:</strong></p>
@@ -958,7 +958,7 @@ do not get counted.</p>
 <hr/>
 <h3 id="processslashingsreset_1">processSlashingsReset<a class="headerlink" href="#processslashingsreset_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processSlashingsReset</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: BeaconState): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/fff4c44/packages/beacon-state-transition/src/phase0/naive/epoch/slashings.ts#L37">packages/beacon-state-transition/src/phase0/naive/epoch/slashings.ts:37</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/29b4714/packages/beacon-state-transition/src/phase0/naive/epoch/slashings.ts#L37">packages/beacon-state-transition/src/phase0/naive/epoch/slashings.ts:37</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
