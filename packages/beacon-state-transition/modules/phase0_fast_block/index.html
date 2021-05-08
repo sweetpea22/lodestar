@@ -402,11 +402,11 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="operation">Operation<a class="headerlink" href="#operation" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>Operation</strong>: <em>ProposerSlashing | AttesterSlashing | Attestation | Deposit | VoluntaryExit</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts#L11">packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts#L11">packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts:11</a></em></p>
 <hr/>
 <h3 id="operationfunction">OperationFunction<a class="headerlink" href="#operationfunction" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>OperationFunction</strong>: <em>function</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts#L17">packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts#L17">packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts:17</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <p>▸ (<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>op</code>: <a href="./#operation">Operation</a>, <code>verify</code>: boolean): <em>void</em></p>
 <p><strong>Parameters:</strong></p>
@@ -435,7 +435,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="initiatevalidatorexit">initiateValidatorExit<a class="headerlink" href="#initiatevalidatorexit" title="Permanent link">¶</a></h3>
 <p>▸ <strong>initiateValidatorExit</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>index</code>: <a href="../phase0/#validatorindex">ValidatorIndex</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/initiateValidatorExit.ts#L10">packages/beacon-state-transition/src/phase0/fast/block/initiateValidatorExit.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/initiateValidatorExit.ts#L10">packages/beacon-state-transition/src/phase0/fast/block/initiateValidatorExit.ts:10</a></em></p>
 <p>Initiate the exit of the validator with index <code>index</code>.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -460,7 +460,7 @@
 <hr/>
 <h3 id="isvalidindexedattestation_1">isValidIndexedAttestation<a class="headerlink" href="#isvalidindexedattestation_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isValidIndexedAttestation</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>indexedAttestation</code>: IndexedAttestation, <code>verifySignature</code>: boolean): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/isValidIndexedAttestation.ts#L8">packages/beacon-state-transition/src/phase0/fast/block/isValidIndexedAttestation.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/isValidIndexedAttestation.ts#L8">packages/beacon-state-transition/src/phase0/fast/block/isValidIndexedAttestation.ts:8</a></em></p>
 <p>Check if <code>indexedAttestation</code> has sorted and unique indices and a valid aggregate signature.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -493,7 +493,7 @@
 <hr/>
 <h3 id="processattestation">processAttestation<a class="headerlink" href="#processattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processAttestation</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>attestation</code>: Attestation, <code>verifySignature</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/processAttestation.ts#L7">packages/beacon-state-transition/src/phase0/fast/block/processAttestation.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/processAttestation.ts#L7">packages/beacon-state-transition/src/phase0/fast/block/processAttestation.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -525,7 +525,7 @@
 <hr/>
 <h3 id="processattesterslashing">processAttesterSlashing<a class="headerlink" href="#processattesterslashing" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processAttesterSlashing</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>attesterSlashing</code>: AttesterSlashing, <code>verifySignatures</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/processAttesterSlashing.ts#L8">packages/beacon-state-transition/src/phase0/fast/block/processAttesterSlashing.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/processAttesterSlashing.ts#L8">packages/beacon-state-transition/src/phase0/fast/block/processAttesterSlashing.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -557,7 +557,7 @@
 <hr/>
 <h3 id="processblock">processBlock<a class="headerlink" href="#processblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processBlock</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>block</code>: BeaconBlock, <code>verifySignatures</code>: boolean, <code>metrics?</code>: <a href="../../interfaces/reflection-2239.reflection-2240.ibeaconstatetransitionmetrics/">IBeaconStateTransitionMetrics</a> | null): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/index.ts#L23">packages/beacon-state-transition/src/phase0/fast/block/index.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/index.ts#L23">packages/beacon-state-transition/src/phase0/fast/block/index.ts:23</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -594,7 +594,7 @@
 <hr/>
 <h3 id="processdeposit">processDeposit<a class="headerlink" href="#processdeposit" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processDeposit</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>deposit</code>: Deposit): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/processDeposit.ts#L9">packages/beacon-state-transition/src/phase0/fast/block/processDeposit.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/processDeposit.ts#L9">packages/beacon-state-transition/src/phase0/fast/block/processDeposit.ts:9</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -618,7 +618,7 @@
 <hr/>
 <h3 id="processoperations">processOperations<a class="headerlink" href="#processoperations" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processOperations</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>body</code>: BeaconBlockBody, <code>verifySignatures</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts#L19">packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts:19</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts#L19">packages/beacon-state-transition/src/phase0/fast/block/processOperations.ts:19</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -650,7 +650,7 @@
 <hr/>
 <h3 id="processproposerslashing">processProposerSlashing<a class="headerlink" href="#processproposerslashing" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processProposerSlashing</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>proposerSlashing</code>: ProposerSlashing, <code>verifySignatures</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/processProposerSlashing.ts#L7">packages/beacon-state-transition/src/phase0/fast/block/processProposerSlashing.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/processProposerSlashing.ts#L7">packages/beacon-state-transition/src/phase0/fast/block/processProposerSlashing.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -682,7 +682,7 @@
 <hr/>
 <h3 id="processvoluntaryexit">processVoluntaryExit<a class="headerlink" href="#processvoluntaryexit" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processVoluntaryExit</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>signedVoluntaryExit</code>: SignedVoluntaryExit, <code>verifySignature</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/processVoluntaryExit.ts#L7">packages/beacon-state-transition/src/phase0/fast/block/processVoluntaryExit.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/processVoluntaryExit.ts#L7">packages/beacon-state-transition/src/phase0/fast/block/processVoluntaryExit.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -714,7 +714,7 @@
 <hr/>
 <h3 id="slashvalidator">slashValidator<a class="headerlink" href="#slashvalidator" title="Permanent link">¶</a></h3>
 <p>▸ <strong>slashValidator</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>slashedIndex</code>: <a href="../phase0/#validatorindex">ValidatorIndex</a>, <code>whistleblowerIndex?</code>: <a href="../phase0/#validatorindex">ValidatorIndex</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58e60e2/packages/beacon-state-transition/src/phase0/fast/block/slashValidator.ts#L7">packages/beacon-state-transition/src/phase0/fast/block/slashValidator.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/58d4add/packages/beacon-state-transition/src/phase0/fast/block/slashValidator.ts#L7">packages/beacon-state-transition/src/phase0/fast/block/slashValidator.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
