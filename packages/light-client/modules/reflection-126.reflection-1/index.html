@@ -399,23 +399,23 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="path">Path<a class="headerlink" href="#path" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>Path</strong>: <em>(string | number)[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/getState.ts#L13">packages/light-client/src/getState.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/getState.ts#L13">packages/light-client/src/getState.ts:13</a></em></p>
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
 <h3 id="const-beacon_url"><code>Const</code> BEACON_URL<a class="headerlink" href="#const-beacon_url" title="Permanent link">¶</a></h3>
 <p>• <strong>BEACON_URL</strong>: <em>"http://localhost:9596"</em> = "http://localhost:9596"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/getState.ts#L8">packages/light-client/src/getState.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/getState.ts#L8">packages/light-client/src/getState.ts:8</a></em></p>
 <hr/>
 <h3 id="const-state_proof_url"><code>Const</code> STATE_PROOF_URL<a class="headerlink" href="#const-state_proof_url" title="Permanent link">¶</a></h3>
 <p>• <strong>STATE_PROOF_URL</strong>: <em>string</em> = <code>${BEACON_URL}/eth/v1/lodestar/proof</code></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/getState.ts#L9">packages/light-client/src/getState.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/getState.ts#L9">packages/light-client/src/getState.ts:9</a></em></p>
 <hr/>
 <h3 id="const-client"><code>Const</code> client<a class="headerlink" href="#const-client" title="Permanent link">¶</a></h3>
 <p>• <strong>client</strong>: <em>AxiosInstance</em> = axios.create()</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/getState.ts#L11">packages/light-client/src/getState.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/getState.ts#L11">packages/light-client/src/getState.ts:11</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="applylightclientupdate">applyLightClientUpdate<a class="headerlink" href="#applylightclientupdate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>applyLightClientUpdate</strong>(<code>config</code>: IBeaconConfig, <code>snapshot</code>: LightClientSnapshot, <code>update</code>: LightClientUpdate): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/update.ts#L49">packages/light-client/src/update.ts:49</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/update.ts#L49">packages/light-client/src/update.ts:49</a></em></p>
 <p>Spec v1.0.1</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -444,7 +444,7 @@
 <hr/>
 <h3 id="assertzerohashes">assertZeroHashes<a class="headerlink" href="#assertzerohashes" title="Permanent link">¶</a></h3>
 <p>▸ <strong>assertZeroHashes</strong>(<code>rootArray</code>: ArrayLike‹Root›, <code>expectedLength</code>: number, <code>errorMessage</code>: string): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/utils.ts#L23">packages/light-client/src/utils.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/utils.ts#L23">packages/light-client/src/utils.ts:23</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -472,7 +472,7 @@
 <hr/>
 <h3 id="getbestupdate">getBestUpdate<a class="headerlink" href="#getbestupdate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBestUpdate</strong>(<code>updates</code>: LightClientUpdate[]): <em>LightClientUpdate | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/update.ts#L72">packages/light-client/src/update.ts:72</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/update.ts#L72">packages/light-client/src/update.ts:72</a></em></p>
 <p>Return the <code>altair.LightClientUpdate</code> with the most true syncCommitteeBits</p>
 <p>Spec v1.0.1
 <div class="highlight"><pre><span></span><code><span class="nb">max</span><span class="p">(</span><span class="n">store</span><span class="o">.</span><span class="n">valid_updates</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">update</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">update</span><span class="o">.</span><span class="n">sync_committee_bits</span><span class="p">)))</span>
@@ -496,7 +496,7 @@
 <hr/>
 <h3 id="getparticipantpubkeys">getParticipantPubkeys<a class="headerlink" href="#getparticipantpubkeys" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getParticipantPubkeys</strong>(<code>pubkeys</code>: ArrayLike‹BLSPubkey›, <code>bits</code>: BitVector): <em>BLSPubkey[]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/utils.ts#L38">packages/light-client/src/utils.ts:38</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/utils.ts#L38">packages/light-client/src/utils.ts:38</a></em></p>
 <p>Util to guarantee that all bits have a corresponding pubkey</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -521,7 +521,7 @@
 <hr/>
 <h3 id="getstate">getState<a class="headerlink" href="#getstate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getState</strong>(<code>id</code>: string, <code>paths</code>: <a href="./#path">Path</a>[]): <em>Promise‹TreeBacked‹BeaconState››</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/getState.ts#L15">packages/light-client/src/getState.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/getState.ts#L15">packages/light-client/src/getState.ts:15</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -545,7 +545,7 @@
 <hr/>
 <h3 id="iszerohash">isZeroHash<a class="headerlink" href="#iszerohash" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isZeroHash</strong>(<code>root</code>: Root): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/utils.ts#L14">packages/light-client/src/utils.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/utils.ts#L14">packages/light-client/src/utils.ts:14</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -565,7 +565,7 @@
 <hr/>
 <h3 id="processlightclientupdate">processLightClientUpdate<a class="headerlink" href="#processlightclientupdate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processLightClientUpdate</strong>(<code>config</code>: IBeaconConfig, <code>store</code>: LightClientStore, <code>update</code>: LightClientUpdate, <code>currentSlot</code>: Slot, <code>genesisValidatorsRoot</code>: altair.Root): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/update.ts#L15">packages/light-client/src/update.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/update.ts#L15">packages/light-client/src/update.ts:15</a></em></p>
 <p>A light client maintains its state in a store object of type LightClientStore and receives update objects of type LightClientUpdate.
 Every update triggers process_light_client_update(store, update, current_slot) where current_slot is the current slot based on some local clock.
 Spec v1.0.1</p>
@@ -604,7 +604,7 @@ Spec v1.0.1</p>
 <hr/>
 <h3 id="sumbits">sumBits<a class="headerlink" href="#sumbits" title="Permanent link">¶</a></h3>
 <p>▸ <strong>sumBits</strong>(<code>bits</code>: ArrayLike‹boolean›): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/utils.ts#L4">packages/light-client/src/utils.ts:4</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/utils.ts#L4">packages/light-client/src/utils.ts:4</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -624,7 +624,7 @@ Spec v1.0.1</p>
 <hr/>
 <h3 id="validatelightclientupdate">validateLightClientUpdate<a class="headerlink" href="#validatelightclientupdate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateLightClientUpdate</strong>(<code>config</code>: IBeaconConfig, <code>snapshot</code>: LightClientSnapshot, <code>update</code>: LightClientUpdate, <code>genesisValidatorsRoot</code>: altair.Root): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/e886a23/packages/light-client/src/validation.ts#L18">packages/light-client/src/validation.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5f8a344/packages/light-client/src/validation.ts#L18">packages/light-client/src/validation.ts:18</a></em></p>
 <p>Spec v1.0.1</p>
 <p><strong>Parameters:</strong></p>
 <table>
