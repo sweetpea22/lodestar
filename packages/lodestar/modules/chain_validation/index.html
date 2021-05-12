@@ -248,6 +248,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#type-aliases">
+    Type aliases
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#functions">
     Functions
   </a>
@@ -330,6 +335,25 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#type-aliases_1">
+    Type aliases
+  </a>
+<nav aria-label="Type aliases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#indexinsubcommittee">
+    IndexInSubCommittee
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#synccommitteesignatureindexed">
+    SyncCommitteeSignatureIndexed
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#functions_1">
     Functions
   </a>
@@ -396,8 +420,23 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#validategossipsynccommittee">
+    validateGossipSyncCommittee
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validategossipsynccommitteeexceptsig">
+    validateGossipSyncCommitteeExceptSig
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#validategossipvoluntaryexit_1">
     validateGossipVoluntaryExit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validatesynccommitteegossipcontributionandproof">
+    validateSyncCommitteeGossipContributionAndProof
   </a>
 </li>
 </ul>
@@ -432,6 +471,11 @@
 <li><a href="./#validategossipproposerslashing">validateGossipProposerSlashing</a></li>
 <li><a href="./#validategossipvoluntaryexit">validateGossipVoluntaryExit</a></li>
 </ul>
+<h3 id="type-aliases">Type aliases<a class="headerlink" href="#type-aliases" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#indexinsubcommittee">IndexInSubCommittee</a></li>
+<li><a href="./#synccommitteesignatureindexed">SyncCommitteeSignatureIndexed</a></li>
+</ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#doaggregationbitsmatchcommitteesize">doAggregationBitsMatchCommitteeSize</a></li>
@@ -446,7 +490,10 @@
 <li><a href="./#validategossipattesterslashing">validateGossipAttesterSlashing</a></li>
 <li><a href="./#validategossipblock">validateGossipBlock</a></li>
 <li><a href="./#validategossipproposerslashing">validateGossipProposerSlashing</a></li>
+<li><a href="./#validategossipsynccommittee">validateGossipSyncCommittee</a></li>
+<li><a href="./#validategossipsynccommitteeexceptsig">validateGossipSyncCommitteeExceptSig</a></li>
 <li><a href="./#validategossipvoluntaryexit">validateGossipVoluntaryExit</a></li>
+<li><a href="./#validatesynccommitteegossipcontributionandproof">validateSyncCommitteeGossipContributionAndProof</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <h3 id="doaggregationbitsmatchcommitteesize">doAggregationBitsMatchCommitteeSize<a class="headerlink" href="#doaggregationbitsmatchcommitteesize" title="Permanent link">¶</a></h3>
@@ -487,10 +534,19 @@
 <hr/>
 <h3 id="validategossipvoluntaryexit">validateGossipVoluntaryExit<a class="headerlink" href="#validategossipvoluntaryexit" title="Permanent link">¶</a></h3>
 <p>• <strong>validateGossipVoluntaryExit</strong>:</p>
+<h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
+<h3 id="indexinsubcommittee">IndexInSubCommittee<a class="headerlink" href="#indexinsubcommittee" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>IndexInSubCommittee</strong>: <em>number</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/syncCommittee.ts#L13">packages/lodestar/src/chain/validation/syncCommittee.ts:13</a></em></p>
+<hr/>
+<h3 id="synccommitteesignatureindexed">SyncCommitteeSignatureIndexed<a class="headerlink" href="#synccommitteesignatureindexed" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>SyncCommitteeSignatureIndexed</strong>: <em>SyncCommitteeSignature &amp; object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/syncCommittee.ts#L11">packages/lodestar/src/chain/validation/syncCommittee.ts:11</a></em></p>
+<p>TODO: Do this much better to be able to access this property in the handler</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="doaggregationbitsmatchcommitteesize_1">doAggregationBitsMatchCommitteeSize<a class="headerlink" href="#doaggregationbitsmatchcommitteesize_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>doAggregationBitsMatchCommitteeSize</strong>(<code>epochCtx</code>: EpochContext, <code>attestation</code>: Attestation): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/attestation.ts#L182">packages/lodestar/src/chain/validation/attestation.ts:182</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/attestation.ts#L182">packages/lodestar/src/chain/validation/attestation.ts:182</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -514,7 +570,7 @@
 <hr/>
 <h3 id="getattestationattestercount_1">getAttestationAttesterCount<a class="headerlink" href="#getattestationattestercount_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttestationAttesterCount</strong>(<code>attestation</code>: Attestation): <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/attestation.ts#L171">packages/lodestar/src/chain/validation/attestation.ts:171</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/attestation.ts#L171">packages/lodestar/src/chain/validation/attestation.ts:171</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -534,7 +590,7 @@
 <hr/>
 <h3 id="hasattestationparticipants_1">hasAttestationParticipants<a class="headerlink" href="#hasattestationparticipants_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>hasAttestationParticipants</strong>(<code>attestation</code>: Attestation): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/aggregateAndProof.ts#L74">packages/lodestar/src/chain/validation/aggregateAndProof.ts:74</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/aggregateAndProof.ts#L74">packages/lodestar/src/chain/validation/aggregateAndProof.ts:74</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -554,7 +610,7 @@
 <hr/>
 <h3 id="isattestingtoinvalidblock_1">isAttestingToInValidBlock<a class="headerlink" href="#isattestingtoinvalidblock_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isAttestingToInValidBlock</strong>(<code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>, <code>attestation</code>: Attestation): <em>Promise‹boolean›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/attestation.ts#L165">packages/lodestar/src/chain/validation/attestation.ts:165</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/attestation.ts#L165">packages/lodestar/src/chain/validation/attestation.ts:165</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -578,7 +634,7 @@
 <hr/>
 <h3 id="iscommitteeindexwithinrange_1">isCommitteeIndexWithinRange<a class="headerlink" href="#iscommitteeindexwithinrange_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isCommitteeIndexWithinRange</strong>(<code>epochCtx</code>: EpochContext, <code>attestationData</code>: AttestationData): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/attestation.ts#L175">packages/lodestar/src/chain/validation/attestation.ts:175</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/attestation.ts#L175">packages/lodestar/src/chain/validation/attestation.ts:175</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -602,7 +658,7 @@
 <hr/>
 <h3 id="isexpectedproposer_1">isExpectedProposer<a class="headerlink" href="#isexpectedproposer_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isExpectedProposer</strong>(<code>epochCtx</code>: EpochContext, <code>block</code>: BeaconBlock): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/block.ts#L93">packages/lodestar/src/chain/validation/block.ts:93</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/block.ts#L93">packages/lodestar/src/chain/validation/block.ts:93</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -626,7 +682,7 @@
 <hr/>
 <h3 id="validateaggregateattestation_1">validateAggregateAttestation<a class="headerlink" href="#validateaggregateattestation_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateAggregateAttestation</strong>(<code>config</code>: IBeaconConfig, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>aggregateAndProof</code>: SignedAggregateAndProof, <code>attestationJob</code>: <a href="../../interfaces/chain.iattestationjob/">IAttestationJob</a>): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/aggregateAndProof.ts#L78">packages/lodestar/src/chain/validation/aggregateAndProof.ts:78</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/aggregateAndProof.ts#L78">packages/lodestar/src/chain/validation/aggregateAndProof.ts:78</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -658,7 +714,7 @@
 <hr/>
 <h3 id="validategossipaggregateandproof_1">validateGossipAggregateAndProof<a class="headerlink" href="#validategossipaggregateandproof_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateGossipAggregateAndProof</strong>(<code>config</code>: IBeaconConfig, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>, <code>signedAggregateAndProof</code>: SignedAggregateAndProof, <code>attestationJob</code>: <a href="../../interfaces/chain.iattestationjob/">IAttestationJob</a>): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/aggregateAndProof.ts#L17">packages/lodestar/src/chain/validation/aggregateAndProof.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/aggregateAndProof.ts#L17">packages/lodestar/src/chain/validation/aggregateAndProof.ts:17</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -694,7 +750,7 @@
 <hr/>
 <h3 id="validategossipattestation_1">validateGossipAttestation<a class="headerlink" href="#validategossipattestation_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateGossipAttestation</strong>(<code>config</code>: IBeaconConfig, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>, <code>attestationJob</code>: <a href="../../interfaces/chain.iattestationjob/">IAttestationJob</a>, <code>subnet</code>: number): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/attestation.ts#L10">packages/lodestar/src/chain/validation/attestation.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/attestation.ts#L10">packages/lodestar/src/chain/validation/attestation.ts:10</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -730,7 +786,7 @@
 <hr/>
 <h3 id="validategossipattesterslashing_1">validateGossipAttesterSlashing<a class="headerlink" href="#validategossipattesterslashing_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateGossipAttesterSlashing</strong>(<code>config</code>: IBeaconConfig, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>, <code>attesterSlashing</code>: AttesterSlashing): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/attesterSlashing.ts#L9">packages/lodestar/src/chain/validation/attesterSlashing.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/attesterSlashing.ts#L9">packages/lodestar/src/chain/validation/attesterSlashing.ts:9</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -762,7 +818,7 @@
 <hr/>
 <h3 id="validategossipblock_1">validateGossipBlock<a class="headerlink" href="#validategossipblock_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateGossipBlock</strong>(<code>config</code>: IBeaconConfig, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>, <code>blockJob</code>: <a href="../../interfaces/chain.iblockjob/">IBlockJob</a>): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/block.ts#L8">packages/lodestar/src/chain/validation/block.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/block.ts#L8">packages/lodestar/src/chain/validation/block.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -794,7 +850,7 @@
 <hr/>
 <h3 id="validategossipproposerslashing_1">validateGossipProposerSlashing<a class="headerlink" href="#validategossipproposerslashing_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateGossipProposerSlashing</strong>(<code>config</code>: IBeaconConfig, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>, <code>proposerSlashing</code>: ProposerSlashing): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/proposerSlashing.ts#L8">packages/lodestar/src/chain/validation/proposerSlashing.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/proposerSlashing.ts#L8">packages/lodestar/src/chain/validation/proposerSlashing.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -824,9 +880,75 @@
 </table>
 <p><strong>Returns:</strong> <em>Promise‹void›</em></p>
 <hr/>
+<h3 id="validategossipsynccommittee">validateGossipSyncCommittee<a class="headerlink" href="#validategossipsynccommittee" title="Permanent link">¶</a></h3>
+<p>▸ <strong>validateGossipSyncCommittee</strong>(<code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>, <code>job</code>: <a href="../../interfaces/chain_errors.isynccommitteejob/">ISyncCommitteeJob</a>, <code>subnet</code>: number): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/syncCommittee.ts#L18">packages/lodestar/src/chain/validation/syncCommittee.ts:18</a></em></p>
+<p>Spec v1.1.0-alpha.3</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>chain</code></td>
+<td><a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a></td>
+</tr>
+<tr>
+<td><code>db</code></td>
+<td><a href="../../interfaces/db.ibeacondb/">IBeaconDb</a></td>
+</tr>
+<tr>
+<td><code>job</code></td>
+<td><a href="../../interfaces/chain_errors.isynccommitteejob/">ISyncCommitteeJob</a></td>
+</tr>
+<tr>
+<td><code>subnet</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="validategossipsynccommitteeexceptsig">validateGossipSyncCommitteeExceptSig<a class="headerlink" href="#validategossipsynccommitteeexceptsig" title="Permanent link">¶</a></h3>
+<p>▸ <strong>validateGossipSyncCommitteeExceptSig</strong>(<code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>headState</code>: CachedBeaconState‹BeaconState›, <code>subnet</code>: number, <code>data</code>: Pick‹SyncCommitteeSignature, "slot" | "beaconBlockRoot" | "validatorIndex"›): <em><a href="./#indexinsubcommittee">IndexInSubCommittee</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/syncCommittee.ts#L67">packages/lodestar/src/chain/validation/syncCommittee.ts:67</a></em></p>
+<p>Spec v1.1.0-alpha.3</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>chain</code></td>
+<td><a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a></td>
+</tr>
+<tr>
+<td><code>headState</code></td>
+<td>CachedBeaconState‹BeaconState›</td>
+</tr>
+<tr>
+<td><code>subnet</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>data</code></td>
+<td>Pick‹SyncCommitteeSignature, "slot" | "beaconBlockRoot" | "validatorIndex"›</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em><a href="./#indexinsubcommittee">IndexInSubCommittee</a></em></p>
+<hr/>
 <h3 id="validategossipvoluntaryexit_1">validateGossipVoluntaryExit<a class="headerlink" href="#validategossipvoluntaryexit_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>validateGossipVoluntaryExit</strong>(<code>config</code>: IBeaconConfig, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>, <code>voluntaryExit</code>: SignedVoluntaryExit): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/chain/validation/voluntaryExit.ts#L8">packages/lodestar/src/chain/validation/voluntaryExit.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/voluntaryExit.ts#L8">packages/lodestar/src/chain/validation/voluntaryExit.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -851,6 +973,39 @@
 <tr>
 <td><code>voluntaryExit</code></td>
 <td>SignedVoluntaryExit</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="validatesynccommitteegossipcontributionandproof">validateSyncCommitteeGossipContributionAndProof<a class="headerlink" href="#validatesynccommitteegossipcontributionandproof" title="Permanent link">¶</a></h3>
+<p>▸ <strong>validateSyncCommitteeGossipContributionAndProof</strong>(<code>config</code>: IBeaconConfig, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>, <code>job</code>: <a href="../../interfaces/chain_errors.icontributionandproofjob/">IContributionAndProofJob</a>): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/chain/validation/syncCommitteeContributionAndProof.ts#L17">packages/lodestar/src/chain/validation/syncCommitteeContributionAndProof.ts:17</a></em></p>
+<p>Spec v1.1.0-alpha.3</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>chain</code></td>
+<td><a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a></td>
+</tr>
+<tr>
+<td><code>db</code></td>
+<td><a href="../../interfaces/db.ibeacondb/">IBeaconDb</a></td>
+</tr>
+<tr>
+<td><code>job</code></td>
+<td><a href="../../interfaces/chain_errors.icontributionandproofjob/">IContributionAndProofJob</a></td>
 </tr>
 </tbody>
 </table>

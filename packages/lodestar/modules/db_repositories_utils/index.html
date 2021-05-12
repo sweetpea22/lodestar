@@ -378,15 +378,15 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="blocktype">BlockType<a class="headerlink" href="#blocktype" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>BlockType</strong>: <em>ContainerType‹SignedBeaconBlock›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/db/repositories/utils/multifork.ts#L38">packages/lodestar/src/db/repositories/utils/multifork.ts:38</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/db/repositories/utils/multifork.ts#L38">packages/lodestar/src/db/repositories/utils/multifork.ts:38</a></em></p>
 <hr/>
 <h3 id="statetype">StateType<a class="headerlink" href="#statetype" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>StateType</strong>: <em>ContainerType‹allForks.BeaconState›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/db/repositories/utils/multifork.ts#L39">packages/lodestar/src/db/repositories/utils/multifork.ts:39</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/db/repositories/utils/multifork.ts#L39">packages/lodestar/src/db/repositories/utils/multifork.ts:39</a></em></p>
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
 <h3 id="const-slot_bytes_position_in_block"><code>Const</code> SLOT_BYTES_POSITION_IN_BLOCK<a class="headerlink" href="#const-slot_bytes_position_in_block" title="Permanent link">¶</a></h3>
 <p>• <strong>SLOT_BYTES_POSITION_IN_BLOCK</strong>: <em>100</em> = 100</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/db/repositories/utils/multifork.ts#L25">packages/lodestar/src/db/repositories/utils/multifork.ts:25</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/db/repositories/utils/multifork.ts#L25">packages/lodestar/src/db/repositories/utils/multifork.ts:25</a></em></p>
 <p>4 + 96 = 100
 <div class="highlight"><pre><span></span><code>class SignedBeaconBlock(Container):
   message: BeaconBlock [offset - 4 bytes]
@@ -402,7 +402,7 @@ class BeaconBlock(Container):
 <hr/>
 <h3 id="const-slot_bytes_position_in_state"><code>Const</code> SLOT_BYTES_POSITION_IN_STATE<a class="headerlink" href="#const-slot_bytes_position_in_state" title="Permanent link">¶</a></h3>
 <p>• <strong>SLOT_BYTES_POSITION_IN_STATE</strong>: <em>40</em> = 40</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/db/repositories/utils/multifork.ts#L36">packages/lodestar/src/db/repositories/utils/multifork.ts:36</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/db/repositories/utils/multifork.ts#L36">packages/lodestar/src/db/repositories/utils/multifork.ts:36</a></em></p>
 <p>8 + 32 = 40
 <div class="highlight"><pre><span></span><code>class BeaconState(Container):
   genesis_time: uint64 [fixed - 8 bytes]
@@ -413,12 +413,12 @@ class BeaconBlock(Container):
 <hr/>
 <h3 id="const-slot_byte_count"><code>Const</code> SLOT_BYTE_COUNT<a class="headerlink" href="#const-slot_byte_count" title="Permanent link">¶</a></h3>
 <p>• <strong>SLOT_BYTE_COUNT</strong>: <em>8</em> = 8</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/db/repositories/utils/multifork.ts#L9">packages/lodestar/src/db/repositories/utils/multifork.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/db/repositories/utils/multifork.ts#L9">packages/lodestar/src/db/repositories/utils/multifork.ts:9</a></em></p>
 <p>Slot    uint64</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getblocktypefromblock">getBlockTypeFromBlock<a class="headerlink" href="#getblocktypefromblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBlockTypeFromBlock</strong>(<code>config</code>: IBeaconConfig, <code>block</code>: allForks.SignedBeaconBlock): <em><a href="./#blocktype">BlockType</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/db/repositories/utils/multifork.ts#L43">packages/lodestar/src/db/repositories/utils/multifork.ts:43</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/db/repositories/utils/multifork.ts#L43">packages/lodestar/src/db/repositories/utils/multifork.ts:43</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -442,7 +442,7 @@ class BeaconBlock(Container):
 <hr/>
 <h3 id="getblocktypefrombytes">getBlockTypeFromBytes<a class="headerlink" href="#getblocktypefrombytes" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBlockTypeFromBytes</strong>(<code>config</code>: IBeaconConfig, <code>bytes</code>: Buffer): <em><a href="./#blocktype">BlockType</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/db/repositories/utils/multifork.ts#L47">packages/lodestar/src/db/repositories/utils/multifork.ts:47</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/db/repositories/utils/multifork.ts#L47">packages/lodestar/src/db/repositories/utils/multifork.ts:47</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -466,7 +466,7 @@ class BeaconBlock(Container):
 <hr/>
 <h3 id="getblocktypefromslot">getBlockTypeFromSlot<a class="headerlink" href="#getblocktypefromslot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBlockTypeFromSlot</strong>(<code>config</code>: IBeaconConfig, <code>slot</code>: Slot): <em><a href="./#blocktype">BlockType</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/db/repositories/utils/multifork.ts#L52">packages/lodestar/src/db/repositories/utils/multifork.ts:52</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/db/repositories/utils/multifork.ts#L52">packages/lodestar/src/db/repositories/utils/multifork.ts:52</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -490,7 +490,7 @@ class BeaconBlock(Container):
 <hr/>
 <h3 id="getstatetypefrombytes">getStateTypeFromBytes<a class="headerlink" href="#getstatetypefrombytes" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getStateTypeFromBytes</strong>(<code>config</code>: IBeaconConfig, <code>bytes</code>: Buffer): <em><a href="./#statetype">StateType</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/db/repositories/utils/multifork.ts#L67">packages/lodestar/src/db/repositories/utils/multifork.ts:67</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/db/repositories/utils/multifork.ts#L67">packages/lodestar/src/db/repositories/utils/multifork.ts:67</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -514,7 +514,7 @@ class BeaconBlock(Container):
 <hr/>
 <h3 id="getstatetypefromslot">getStateTypeFromSlot<a class="headerlink" href="#getstatetypefromslot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getStateTypeFromSlot</strong>(<code>config</code>: IBeaconConfig, <code>slot</code>: Slot): <em><a href="./#statetype">StateType</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/db/repositories/utils/multifork.ts#L72">packages/lodestar/src/db/repositories/utils/multifork.ts:72</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/db/repositories/utils/multifork.ts#L72">packages/lodestar/src/db/repositories/utils/multifork.ts:72</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -538,7 +538,7 @@ class BeaconBlock(Container):
 <hr/>
 <h3 id="getstatetypefromstate">getStateTypeFromState<a class="headerlink" href="#getstatetypefromstate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getStateTypeFromState</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: allForks.BeaconState): <em><a href="./#statetype">StateType</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/lodestar/src/db/repositories/utils/multifork.ts#L63">packages/lodestar/src/db/repositories/utils/multifork.ts:63</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d9bb4e5/packages/lodestar/src/db/repositories/utils/multifork.ts#L63">packages/lodestar/src/db/repositories/utils/multifork.ts:63</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
