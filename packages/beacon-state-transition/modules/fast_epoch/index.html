@@ -277,8 +277,18 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#processjustificationandfinalization">
+    processJustificationAndFinalization
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#processrandaomixesreset">
     processRandaoMixesReset
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#processregistryupdates">
+    processRegistryUpdates
   </a>
 </li>
 <li class="md-nav__item">
@@ -311,8 +321,18 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#processjustificationandfinalization_1">
+    processJustificationAndFinalization
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#processrandaomixesreset_1">
     processRandaoMixesReset
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#processregistryupdates_1">
+    processRegistryUpdates
   </a>
 </li>
 <li class="md-nav__item">
@@ -341,7 +361,9 @@
 <li><a href="./#processeffectivebalanceupdates">processEffectiveBalanceUpdates</a></li>
 <li><a href="./#processeth1datareset">processEth1DataReset</a></li>
 <li><a href="./#processhistoricalrootsupdate">processHistoricalRootsUpdate</a></li>
+<li><a href="./#processjustificationandfinalization">processJustificationAndFinalization</a></li>
 <li><a href="./#processrandaomixesreset">processRandaoMixesReset</a></li>
+<li><a href="./#processregistryupdates">processRegistryUpdates</a></li>
 <li><a href="./#processslashingsreset">processSlashingsReset</a></li>
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
@@ -349,7 +371,9 @@
 <li><a href="./#processeffectivebalanceupdates">processEffectiveBalanceUpdates</a></li>
 <li><a href="./#processeth1datareset">processEth1DataReset</a></li>
 <li><a href="./#processhistoricalrootsupdate">processHistoricalRootsUpdate</a></li>
+<li><a href="./#processjustificationandfinalization">processJustificationAndFinalization</a></li>
 <li><a href="./#processrandaomixesreset">processRandaoMixesReset</a></li>
+<li><a href="./#processregistryupdates">processRegistryUpdates</a></li>
 <li><a href="./#processslashingsreset">processSlashingsReset</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
@@ -362,15 +386,21 @@
 <h3 id="processhistoricalrootsupdate">processHistoricalRootsUpdate<a class="headerlink" href="#processhistoricalrootsupdate" title="Permanent link">¶</a></h3>
 <p>• <strong>processHistoricalRootsUpdate</strong>:</p>
 <hr/>
+<h3 id="processjustificationandfinalization">processJustificationAndFinalization<a class="headerlink" href="#processjustificationandfinalization" title="Permanent link">¶</a></h3>
+<p>• <strong>processJustificationAndFinalization</strong>:</p>
+<hr/>
 <h3 id="processrandaomixesreset">processRandaoMixesReset<a class="headerlink" href="#processrandaomixesreset" title="Permanent link">¶</a></h3>
 <p>• <strong>processRandaoMixesReset</strong>:</p>
+<hr/>
+<h3 id="processregistryupdates">processRegistryUpdates<a class="headerlink" href="#processregistryupdates" title="Permanent link">¶</a></h3>
+<p>• <strong>processRegistryUpdates</strong>:</p>
 <hr/>
 <h3 id="processslashingsreset">processSlashingsReset<a class="headerlink" href="#processslashingsreset" title="Permanent link">¶</a></h3>
 <p>• <strong>processSlashingsReset</strong>:</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="processeffectivebalanceupdates_1">processEffectiveBalanceUpdates<a class="headerlink" href="#processeffectivebalanceupdates_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processEffectiveBalanceUpdates</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/88e1280/packages/beacon-state-transition/src/fast/epoch/processEffectiveBalanceUpdates.ts#L5">packages/beacon-state-transition/src/fast/epoch/processEffectiveBalanceUpdates.ts:5</a></em></p>
+<p>▸ <strong>processEffectiveBalanceUpdates</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/epoch/processEffectiveBalanceUpdates.ts#L5">packages/beacon-state-transition/src/fast/epoch/processEffectiveBalanceUpdates.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -382,7 +412,7 @@
 <tbody>
 <tr>
 <td><code>state</code></td>
-<td><a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
 </tr>
 <tr>
 <td><code>process</code></td>
@@ -393,8 +423,8 @@
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="processeth1datareset_1">processEth1DataReset<a class="headerlink" href="#processeth1datareset_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processEth1DataReset</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/88e1280/packages/beacon-state-transition/src/fast/epoch/processEth1DataReset.ts#L5">packages/beacon-state-transition/src/fast/epoch/processEth1DataReset.ts:5</a></em></p>
+<p>▸ <strong>processEth1DataReset</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/epoch/processEth1DataReset.ts#L5">packages/beacon-state-transition/src/fast/epoch/processEth1DataReset.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -406,7 +436,7 @@
 <tbody>
 <tr>
 <td><code>state</code></td>
-<td><a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
 </tr>
 <tr>
 <td><code>process</code></td>
@@ -417,8 +447,8 @@
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="processhistoricalrootsupdate_1">processHistoricalRootsUpdate<a class="headerlink" href="#processhistoricalrootsupdate_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processHistoricalRootsUpdate</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/88e1280/packages/beacon-state-transition/src/fast/epoch/processHistoricalRootsUpdate.ts#L5">packages/beacon-state-transition/src/fast/epoch/processHistoricalRootsUpdate.ts:5</a></em></p>
+<p>▸ <strong>processHistoricalRootsUpdate</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/epoch/processHistoricalRootsUpdate.ts#L5">packages/beacon-state-transition/src/fast/epoch/processHistoricalRootsUpdate.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -430,7 +460,31 @@
 <tbody>
 <tr>
 <td><code>state</code></td>
-<td><a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+</tr>
+<tr>
+<td><code>process</code></td>
+<td><a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="processjustificationandfinalization_1">processJustificationAndFinalization<a class="headerlink" href="#processjustificationandfinalization_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>processJustificationAndFinalization</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/epoch/processJustificationAndFinalization.ts#L7">packages/beacon-state-transition/src/fast/epoch/processJustificationAndFinalization.ts:7</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
 </tr>
 <tr>
 <td><code>process</code></td>
@@ -441,8 +495,8 @@
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="processrandaomixesreset_1">processRandaoMixesReset<a class="headerlink" href="#processrandaomixesreset_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processRandaoMixesReset</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/88e1280/packages/beacon-state-transition/src/fast/epoch/processRandaoMixesReset.ts#L5">packages/beacon-state-transition/src/fast/epoch/processRandaoMixesReset.ts:5</a></em></p>
+<p>▸ <strong>processRandaoMixesReset</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/epoch/processRandaoMixesReset.ts#L5">packages/beacon-state-transition/src/fast/epoch/processRandaoMixesReset.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -454,7 +508,31 @@
 <tbody>
 <tr>
 <td><code>state</code></td>
-<td><a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+</tr>
+<tr>
+<td><code>process</code></td>
+<td><a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="processregistryupdates_1">processRegistryUpdates<a class="headerlink" href="#processregistryupdates_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>processRegistryUpdates</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/epoch/processRegistryUpdates.ts#L5">packages/beacon-state-transition/src/fast/epoch/processRegistryUpdates.ts:5</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
 </tr>
 <tr>
 <td><code>process</code></td>
@@ -465,8 +543,8 @@
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
 <h3 id="processslashingsreset_1">processSlashingsReset<a class="headerlink" href="#processslashingsreset_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processSlashingsReset</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/88e1280/packages/beacon-state-transition/src/fast/epoch/processSlashingsReset.ts#L4">packages/beacon-state-transition/src/fast/epoch/processSlashingsReset.ts:4</a></em></p>
+<p>▸ <strong>processSlashingsReset</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>process</code>: <a href="../../interfaces/fast_util.iepochprocess/">IEpochProcess</a>): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/epoch/processSlashingsReset.ts#L4">packages/beacon-state-transition/src/fast/epoch/processSlashingsReset.ts:4</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -478,7 +556,7 @@
 <tbody>
 <tr>
 <td><code>state</code></td>
-<td><a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
 </tr>
 <tr>
 <td><code>process</code></td>

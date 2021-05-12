@@ -267,6 +267,16 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#initiatevalidatorexit">
+    initiateValidatorExit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidindexedattestation">
+    isValidIndexedAttestation
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#processblockheader">
     processBlockHeader
   </a>
@@ -293,6 +303,16 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#getneweth1data_1">
     getNewEth1Data
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initiatevalidatorexit_1">
+    initiateValidatorExit
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#isvalidindexedattestation_1">
+    isValidIndexedAttestation
   </a>
 </li>
 <li class="md-nav__item">
@@ -329,6 +349,8 @@
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#getneweth1data">getNewEth1Data</a></li>
+<li><a href="./#initiatevalidatorexit">initiateValidatorExit</a></li>
+<li><a href="./#isvalidindexedattestation">isValidIndexedAttestation</a></li>
 <li><a href="./#processblockheader">processBlockHeader</a></li>
 <li><a href="./#processeth1data">processEth1Data</a></li>
 <li><a href="./#processrandao">processRandao</a></li>
@@ -336,6 +358,8 @@
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#getneweth1data">getNewEth1Data</a></li>
+<li><a href="./#initiatevalidatorexit">initiateValidatorExit</a></li>
+<li><a href="./#isvalidindexedattestation">isValidIndexedAttestation</a></li>
 <li><a href="./#processblockheader">processBlockHeader</a></li>
 <li><a href="./#processeth1data">processEth1Data</a></li>
 <li><a href="./#processrandao">processRandao</a></li>
@@ -343,6 +367,12 @@
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <h3 id="getneweth1data">getNewEth1Data<a class="headerlink" href="#getneweth1data" title="Permanent link">¶</a></h3>
 <p>• <strong>getNewEth1Data</strong>:</p>
+<hr/>
+<h3 id="initiatevalidatorexit">initiateValidatorExit<a class="headerlink" href="#initiatevalidatorexit" title="Permanent link">¶</a></h3>
+<p>• <strong>initiateValidatorExit</strong>:</p>
+<hr/>
+<h3 id="isvalidindexedattestation">isValidIndexedAttestation<a class="headerlink" href="#isvalidindexedattestation" title="Permanent link">¶</a></h3>
+<p>• <strong>isValidIndexedAttestation</strong>:</p>
 <hr/>
 <h3 id="processblockheader">processBlockHeader<a class="headerlink" href="#processblockheader" title="Permanent link">¶</a></h3>
 <p>• <strong>processBlockHeader</strong>:</p>
@@ -354,8 +384,8 @@
 <p>• <strong>processRandao</strong>:</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getneweth1data_1">getNewEth1Data<a class="headerlink" href="#getneweth1data_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getNewEth1Data</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>newEth1Data</code>: Eth1Data): <em>Eth1Data | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/88e1280/packages/beacon-state-transition/src/fast/block/processEth1Data.ts#L19">packages/beacon-state-transition/src/fast/block/processEth1Data.ts:19</a></em></p>
+<p>▸ <strong>getNewEth1Data</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>newEth1Data</code>: Eth1Data): <em>Eth1Data | null</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/block/processEth1Data.ts#L19">packages/beacon-state-transition/src/fast/block/processEth1Data.ts:19</a></em></p>
 <p>Returns <code>newEth1Data</code> if adding the given <code>eth1Data</code> to <code>state.eth1DataVotes</code> would
 result in a change to <code>state.eth1Data</code>.</p>
 <p><strong>Parameters:</strong></p>
@@ -369,7 +399,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <tbody>
 <tr>
 <td><code>state</code></td>
-<td><a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
 </tr>
 <tr>
 <td><code>newEth1Data</code></td>
@@ -379,9 +409,10 @@ result in a change to <code>state.eth1Data</code>.</p>
 </table>
 <p><strong>Returns:</strong> <em>Eth1Data | null</em></p>
 <hr/>
-<h3 id="processblockheader_1">processBlockHeader<a class="headerlink" href="#processblockheader_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processBlockHeader</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>block</code>: allForks.BeaconBlock): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/88e1280/packages/beacon-state-transition/src/fast/block/processBlockHeader.ts#L4">packages/beacon-state-transition/src/fast/block/processBlockHeader.ts:4</a></em></p>
+<h3 id="initiatevalidatorexit_1">initiateValidatorExit<a class="headerlink" href="#initiatevalidatorexit_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>initiateValidatorExit</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>index</code>: <a href="../phase0/#validatorindex">ValidatorIndex</a>): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/block/initiateValidatorExit.ts#L10">packages/beacon-state-transition/src/fast/block/initiateValidatorExit.ts:10</a></em></p>
+<p>Initiate the exit of the validator with index <code>index</code>.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -393,43 +424,20 @@ result in a change to <code>state.eth1Data</code>.</p>
 <tbody>
 <tr>
 <td><code>state</code></td>
-<td><a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
 </tr>
 <tr>
-<td><code>block</code></td>
-<td>allForks.BeaconBlock</td>
+<td><code>index</code></td>
+<td><a href="../phase0/#validatorindex">ValidatorIndex</a></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
-<h3 id="processeth1data_1">processEth1Data<a class="headerlink" href="#processeth1data_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processEth1Data</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>body</code>: allForks.BeaconBlockBody): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/88e1280/packages/beacon-state-transition/src/fast/block/processEth1Data.ts#L6">packages/beacon-state-transition/src/fast/block/processEth1Data.ts:6</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>state</code></td>
-<td><a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
-</tr>
-<tr>
-<td><code>body</code></td>
-<td>allForks.BeaconBlockBody</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em>void</em></p>
-<hr/>
-<h3 id="processrandao_1">processRandao<a class="headerlink" href="#processrandao_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processRandao</strong>(<code>state</code>: <a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>block</code>: allForks.BeaconBlock, <code>verifySignature</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/88e1280/packages/beacon-state-transition/src/fast/block/processRandao.ts#L8">packages/beacon-state-transition/src/fast/block/processRandao.ts:8</a></em></p>
+<h3 id="isvalidindexedattestation_1">isValidIndexedAttestation<a class="headerlink" href="#isvalidindexedattestation_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>isValidIndexedAttestation</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>indexedAttestation</code>: IndexedAttestation, <code>verifySignature</code>: boolean): <em>boolean</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts#L9">packages/beacon-state-transition/src/fast/block/isValidIndexedAttestation.ts:9</a></em></p>
+<p>Check if <code>indexedAttestation</code> has sorted and unique indices and a valid aggregate signature.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -442,7 +450,87 @@ result in a change to <code>state.eth1Data</code>.</p>
 <tbody>
 <tr>
 <td><code>state</code></td>
-<td><a href="../fast_util/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>indexedAttestation</code></td>
+<td>IndexedAttestation</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>verifySignature</code></td>
+<td>boolean</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>boolean</em></p>
+<hr/>
+<h3 id="processblockheader_1">processBlockHeader<a class="headerlink" href="#processblockheader_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>processBlockHeader</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>block</code>: allForks.BeaconBlock): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/block/processBlockHeader.ts#L4">packages/beacon-state-transition/src/fast/block/processBlockHeader.ts:4</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+</tr>
+<tr>
+<td><code>block</code></td>
+<td>allForks.BeaconBlock</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="processeth1data_1">processEth1Data<a class="headerlink" href="#processeth1data_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>processEth1Data</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>body</code>: allForks.BeaconBlockBody): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/block/processEth1Data.ts#L6">packages/beacon-state-transition/src/fast/block/processEth1Data.ts:6</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
+</tr>
+<tr>
+<td><code>body</code></td>
+<td>allForks.BeaconBlockBody</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="processrandao_1">processRandao<a class="headerlink" href="#processrandao_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>processRandao</strong>(<code>state</code>: <a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›, <code>block</code>: allForks.BeaconBlock, <code>verifySignature</code>: boolean): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/dc1e87e/packages/beacon-state-transition/src/fast/block/processRandao.ts#L8">packages/beacon-state-transition/src/fast/block/processRandao.ts:8</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td><a href="../fast/#cachedbeaconstate">CachedBeaconState</a>‹allForks.BeaconState›</td>
 <td>-</td>
 </tr>
 <tr>
