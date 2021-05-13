@@ -282,8 +282,18 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#getsynccommitteeduties">
+    getSyncCommitteeDuties
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#preparebeaconcommitteesubnet">
     prepareBeaconCommitteeSubnet
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparesynccommitteesubnets">
+    prepareSyncCommitteeSubnets
   </a>
 </li>
 <li class="md-nav__item">
@@ -297,8 +307,18 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#producesynccommitteecontribution">
+    produceSyncCommitteeContribution
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#publishaggregateandproofs">
     publishAggregateAndProofs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#publishcontributionandproofs">
+    publishContributionAndProofs
   </a>
 </li>
 </ul>
@@ -331,15 +351,19 @@
 <li><a href="./#getaggregatedattestation">getAggregatedAttestation</a></li>
 <li><a href="./#getattesterduties">getAttesterDuties</a></li>
 <li><a href="./#getproposerduties">getProposerDuties</a></li>
+<li><a href="./#getsynccommitteeduties">getSyncCommitteeDuties</a></li>
 <li><a href="./#preparebeaconcommitteesubnet">prepareBeaconCommitteeSubnet</a></li>
+<li><a href="./#preparesynccommitteesubnets">prepareSyncCommitteeSubnets</a></li>
 <li><a href="./#produceattestationdata">produceAttestationData</a></li>
 <li><a href="./#produceblock">produceBlock</a></li>
+<li><a href="./#producesynccommitteecontribution">produceSyncCommitteeContribution</a></li>
 <li><a href="./#publishaggregateandproofs">publishAggregateAndProofs</a></li>
+<li><a href="./#publishcontributionandproofs">publishContributionAndProofs</a></li>
 </ul>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="getaggregatedattestation">getAggregatedAttestation<a class="headerlink" href="#getaggregatedattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAggregatedAttestation</strong>(<code>attestationDataRoot</code>: Root, <code>slot</code>: Slot): <em>Promise‹Attestation›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/42dde2a/packages/lodestar/src/api/impl/validator/interface.ts#L19">packages/lodestar/src/api/impl/validator/interface.ts:19</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/lodestar/src/api/impl/validator/interface.ts#L29">packages/lodestar/src/api/impl/validator/interface.ts:29</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -363,7 +387,7 @@
 <hr/>
 <h3 id="getattesterduties">getAttesterDuties<a class="headerlink" href="#getattesterduties" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAttesterDuties</strong>(<code>epoch</code>: Epoch, <code>validatorIndices</code>: ValidatorIndex[]): <em>Promise‹AttesterDutiesApi›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/42dde2a/packages/lodestar/src/api/impl/validator/interface.ts#L11">packages/lodestar/src/api/impl/validator/interface.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/lodestar/src/api/impl/validator/interface.ts#L20">packages/lodestar/src/api/impl/validator/interface.ts:20</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -387,7 +411,7 @@
 <hr/>
 <h3 id="getproposerduties">getProposerDuties<a class="headerlink" href="#getproposerduties" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getProposerDuties</strong>(<code>epoch</code>: Epoch): <em>Promise‹ProposerDutiesApi›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/42dde2a/packages/lodestar/src/api/impl/validator/interface.ts#L10">packages/lodestar/src/api/impl/validator/interface.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/lodestar/src/api/impl/validator/interface.ts#L19">packages/lodestar/src/api/impl/validator/interface.ts:19</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -405,9 +429,33 @@
 </table>
 <p><strong>Returns:</strong> <em>Promise‹ProposerDutiesApi›</em></p>
 <hr/>
+<h3 id="getsynccommitteeduties">getSyncCommitteeDuties<a class="headerlink" href="#getsynccommitteeduties" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getSyncCommitteeDuties</strong>(<code>epoch</code>: number, <code>validatorIndices</code>: ValidatorIndex[]): <em>Promise‹SyncDutiesApi›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/lodestar/src/api/impl/validator/interface.ts#L21">packages/lodestar/src/api/impl/validator/interface.ts:21</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>epoch</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>validatorIndices</code></td>
+<td>ValidatorIndex[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹SyncDutiesApi›</em></p>
+<hr/>
 <h3 id="preparebeaconcommitteesubnet">prepareBeaconCommitteeSubnet<a class="headerlink" href="#preparebeaconcommitteesubnet" title="Permanent link">¶</a></h3>
 <p>▸ <strong>prepareBeaconCommitteeSubnet</strong>(<code>subscriptions</code>: BeaconCommitteeSubscription[]): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/42dde2a/packages/lodestar/src/api/impl/validator/interface.ts#L21">packages/lodestar/src/api/impl/validator/interface.ts:21</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/lodestar/src/api/impl/validator/interface.ts#L32">packages/lodestar/src/api/impl/validator/interface.ts:32</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -425,9 +473,29 @@
 </table>
 <p><strong>Returns:</strong> <em>Promise‹void›</em></p>
 <hr/>
+<h3 id="preparesynccommitteesubnets">prepareSyncCommitteeSubnets<a class="headerlink" href="#preparesynccommitteesubnets" title="Permanent link">¶</a></h3>
+<p>▸ <strong>prepareSyncCommitteeSubnets</strong>(<code>subscriptions</code>: SyncCommitteeSubscription[]): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/lodestar/src/api/impl/validator/interface.ts#L33">packages/lodestar/src/api/impl/validator/interface.ts:33</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>subscriptions</code></td>
+<td>SyncCommitteeSubscription[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
 <h3 id="produceattestationdata">produceAttestationData<a class="headerlink" href="#produceattestationdata" title="Permanent link">¶</a></h3>
 <p>▸ <strong>produceAttestationData</strong>(<code>index</code>: CommitteeIndex, <code>slot</code>: Slot): <em>Promise‹AttestationData›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/42dde2a/packages/lodestar/src/api/impl/validator/interface.ts#L18">packages/lodestar/src/api/impl/validator/interface.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/lodestar/src/api/impl/validator/interface.ts#L23">packages/lodestar/src/api/impl/validator/interface.ts:23</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -451,9 +519,7 @@
 <hr/>
 <h3 id="produceblock">produceBlock<a class="headerlink" href="#produceblock" title="Permanent link">¶</a></h3>
 <p>▸ <strong>produceBlock</strong>(<code>slot</code>: Slot, <code>randaoReveal</code>: BLSSignature, <code>graffiti</code>: string): <em>Promise‹BeaconBlock›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/42dde2a/packages/lodestar/src/api/impl/validator/interface.ts#L17">packages/lodestar/src/api/impl/validator/interface.ts:17</a></em></p>
-<p>Requests a BeaconNode to produce a valid block,
-which can then be signed by a ValidatorClient.</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/lodestar/src/api/impl/validator/interface.ts#L22">packages/lodestar/src/api/impl/validator/interface.ts:22</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -478,11 +544,38 @@ which can then be signed by a ValidatorClient.</p>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise‹BeaconBlock›</em></p>
-<p>A proposed BeaconBlock object</p>
+<hr/>
+<h3 id="producesynccommitteecontribution">produceSyncCommitteeContribution<a class="headerlink" href="#producesynccommitteecontribution" title="Permanent link">¶</a></h3>
+<p>▸ <strong>produceSyncCommitteeContribution</strong>(<code>slot</code>: Slot, <code>subcommitteeIndex</code>: number, <code>beaconBlockRoot</code>: Root): <em>Promise‹SyncCommitteeContribution›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/lodestar/src/api/impl/validator/interface.ts#L24">packages/lodestar/src/api/impl/validator/interface.ts:24</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slot</code></td>
+<td>Slot</td>
+</tr>
+<tr>
+<td><code>subcommitteeIndex</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>beaconBlockRoot</code></td>
+<td>Root</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹SyncCommitteeContribution›</em></p>
 <hr/>
 <h3 id="publishaggregateandproofs">publishAggregateAndProofs<a class="headerlink" href="#publishaggregateandproofs" title="Permanent link">¶</a></h3>
 <p>▸ <strong>publishAggregateAndProofs</strong>(<code>signedAggregateAndProofs</code>: SignedAggregateAndProof[]): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/42dde2a/packages/lodestar/src/api/impl/validator/interface.ts#L20">packages/lodestar/src/api/impl/validator/interface.ts:20</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/lodestar/src/api/impl/validator/interface.ts#L30">packages/lodestar/src/api/impl/validator/interface.ts:30</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -495,6 +588,26 @@ which can then be signed by a ValidatorClient.</p>
 <tr>
 <td><code>signedAggregateAndProofs</code></td>
 <td>SignedAggregateAndProof[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹void›</em></p>
+<hr/>
+<h3 id="publishcontributionandproofs">publishContributionAndProofs<a class="headerlink" href="#publishcontributionandproofs" title="Permanent link">¶</a></h3>
+<p>▸ <strong>publishContributionAndProofs</strong>(<code>contributionAndProofs</code>: SignedContributionAndProof[]): <em>Promise‹void›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/lodestar/src/api/impl/validator/interface.ts#L31">packages/lodestar/src/api/impl/validator/interface.ts:31</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>contributionAndProofs</code></td>
+<td>SignedContributionAndProof[]</td>
 </tr>
 </tbody>
 </table>
