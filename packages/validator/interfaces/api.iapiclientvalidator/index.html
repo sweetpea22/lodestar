@@ -393,20 +393,26 @@
 <h3 id="beacon">beacon<a class="headerlink" href="#beacon" title="Permanent link">¶</a></h3>
 <p>• <strong>beacon</strong>: <em>object</em></p>
 <p><em>Inherited from <a href="../api.iapiclient/">IApiClient</a>.<a href="../api.iapiclient/#beacon">beacon</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/validator/src/api/interface.ts#L29">packages/validator/src/api/interface.ts:29</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/validator/src/api/interface.ts#L40">packages/validator/src/api/interface.ts:40</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <ul>
 <li>
 <p><strong>blocks</strong>(): <em>object</em></p>
 </li>
 <li>
-<p><strong>publishBlock</strong>(<code>block</code>: SignedBeaconBlock): <em>Promise‹void›</em></p>
+<p><strong>getBlockRoot</strong>(<code>blockId</code>: <a href="../../modules/api/#blockid">BlockId</a>): <em>Promise‹Root›</em></p>
+</li>
+<li>
+<p><strong>publishBlock</strong>(<code>block</code>: allForks.SignedBeaconBlock): <em>Promise‹void›</em></p>
 </li>
 <li>
 <p><strong>pool</strong>(): <em>object</em></p>
 </li>
 <li>
 <p><strong>submitAttestations</strong>(<code>attestation</code>: Attestation[]): <em>Promise‹void›</em></p>
+</li>
+<li>
+<p><strong>submitSyncCommitteeSignatures</strong>(<code>signatures</code>: SyncCommitteeSignature[]): <em>Promise‹void›</em></p>
 </li>
 <li>
 <p><strong>submitVoluntaryExit</strong>(<code>signedVoluntaryExit</code>: SignedVoluntaryExit): <em>Promise‹void›</em></p>
@@ -428,7 +434,7 @@
 <h3 id="config">config<a class="headerlink" href="#config" title="Permanent link">¶</a></h3>
 <p>• <strong>config</strong>: <em>object</em></p>
 <p><em>Inherited from <a href="../api.iapiclient/">IApiClient</a>.<a href="../api.iapiclient/#config">config</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/validator/src/api/interface.ts#L44">packages/validator/src/api/interface.ts:44</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/validator/src/api/interface.ts#L57">packages/validator/src/api/interface.ts:57</a></em></p>
 <h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>getForkSchedule</strong>(): <em>Promise‹Fork[]›</em></li>
@@ -437,7 +443,7 @@
 <h3 id="events">events<a class="headerlink" href="#events" title="Permanent link">¶</a></h3>
 <p>• <strong>events</strong>: <em>object</em></p>
 <p><em>Inherited from <a href="../api.iapiclient/">IApiClient</a>.<a href="../api.iapiclient/#events">events</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/validator/src/api/interface.ts#L53">packages/validator/src/api/interface.ts:53</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/validator/src/api/interface.ts#L66">packages/validator/src/api/interface.ts:66</a></em></p>
 <h4 id="type-declaration_2">Type declaration:<a class="headerlink" href="#type-declaration_2" title="Permanent link">¶</a></h4>
 <ul>
 <li><strong>getEventStream</strong>(<code>topics</code>: <a href="../../modules/api/#beaconeventtype">BeaconEventType</a>[]): <em>IStoppableEventIterable‹<a href="../../modules/api/#beaconevent">BeaconEvent</a>›</em></li>
@@ -446,7 +452,7 @@
 <h3 id="node">node<a class="headerlink" href="#node" title="Permanent link">¶</a></h3>
 <p>• <strong>node</strong>: <em>object</em></p>
 <p><em>Inherited from <a href="../api.iapiclient/">IApiClient</a>.<a href="../api.iapiclient/#node">node</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/validator/src/api/interface.ts#L48">packages/validator/src/api/interface.ts:48</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/validator/src/api/interface.ts#L61">packages/validator/src/api/interface.ts:61</a></em></p>
 <h4 id="type-declaration_3">Type declaration:<a class="headerlink" href="#type-declaration_3" title="Permanent link">¶</a></h4>
 <ul>
 <li>
@@ -459,12 +465,12 @@
 <hr/>
 <h3 id="url">url<a class="headerlink" href="#url" title="Permanent link">¶</a></h3>
 <p>• <strong>url</strong>: <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/validator/src/api/interface.ts#L69">packages/validator/src/api/interface.ts:69</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/validator/src/api/interface.ts#L90">packages/validator/src/api/interface.ts:90</a></em></p>
 <hr/>
 <h3 id="validator">validator<a class="headerlink" href="#validator" title="Permanent link">¶</a></h3>
 <p>• <strong>validator</strong>: <em>object</em></p>
 <p><em>Inherited from <a href="../api.iapiclient/">IApiClient</a>.<a href="../api.iapiclient/#validator">validator</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/validator/src/api/interface.ts#L57">packages/validator/src/api/interface.ts:57</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/validator/src/api/interface.ts#L70">packages/validator/src/api/interface.ts:70</a></em></p>
 <h4 id="type-declaration_4">Type declaration:<a class="headerlink" href="#type-declaration_4" title="Permanent link">¶</a></h4>
 <ul>
 <li>
@@ -477,22 +483,34 @@
 <p><strong>getProposerDuties</strong>(<code>epoch</code>: <a href="../../enums/util.timeitem/#epoch">Epoch</a>): <em>Promise‹ProposerDutiesApi›</em></p>
 </li>
 <li>
+<p><strong>getSyncCommitteeDuties</strong>(<code>epoch</code>: number, <code>validatorIndices</code>: ValidatorIndex[]): <em>Promise‹SyncDutiesApi›</em></p>
+</li>
+<li>
 <p><strong>prepareBeaconCommitteeSubnet</strong>(<code>subscriptions</code>: BeaconCommitteeSubscription[]): <em>Promise‹void›</em></p>
+</li>
+<li>
+<p><strong>prepareSyncCommitteeSubnets</strong>(<code>subscriptions</code>: SyncCommitteeSubscription[]): <em>Promise‹void›</em></p>
 </li>
 <li>
 <p><strong>produceAttestationData</strong>(<code>index</code>: CommitteeIndex, <code>slot</code>: <a href="../../enums/util.timeitem/#slot">Slot</a>): <em>Promise‹AttestationData›</em></p>
 </li>
 <li>
-<p><strong>produceBlock</strong>(<code>slot</code>: <a href="../../enums/util.timeitem/#slot">Slot</a>, <code>randaoReveal</code>: BLSSignature, <code>graffiti</code>: string): <em>Promise‹BeaconBlock›</em></p>
+<p><strong>produceBlock</strong>(<code>slot</code>: <a href="../../enums/util.timeitem/#slot">Slot</a>, <code>randaoReveal</code>: BLSSignature, <code>graffiti</code>: string): <em>Promise‹allForks.BeaconBlock›</em></p>
+</li>
+<li>
+<p><strong>produceSyncCommitteeContribution</strong>(<code>slot</code>: <a href="../../enums/util.timeitem/#slot">Slot</a>, <code>subcommitteeIndex</code>: number, <code>beaconBlockRoot</code>: Root): <em>Promise‹SyncCommitteeContribution›</em></p>
 </li>
 <li>
 <p><strong>publishAggregateAndProofs</strong>(<code>signedAggregateAndProofs</code>: SignedAggregateAndProof[]): <em>Promise‹void›</em></p>
+</li>
+<li>
+<p><strong>publishContributionAndProofs</strong>(<code>contributionAndProofs</code>: SignedContributionAndProof[]): <em>Promise‹void›</em></p>
 </li>
 </ul>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="registerabortsignal">registerAbortSignal<a class="headerlink" href="#registerabortsignal" title="Permanent link">¶</a></h3>
 <p>▸ <strong>registerAbortSignal</strong>(<code>signal</code>: AbortSignal): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/validator/src/api/interface.ts#L70">packages/validator/src/api/interface.ts:70</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/validator/src/api/interface.ts#L91">packages/validator/src/api/interface.ts:91</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

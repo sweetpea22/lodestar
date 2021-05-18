@@ -887,11 +887,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#processslots">
-    processSlots
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#processsynccommitteeupdates">
     processSyncCommitteeUpdates
   </a>
@@ -904,6 +899,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#slashvalidator">
     slashValidator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#upgradestate">
+    upgradeState
   </a>
 </li>
 </ul>
@@ -985,13 +985,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#processslot">
-    processSlot
+<a class="md-nav__link" href="#translateparticipation">
+    translateParticipation
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#processslots_1">
-    processSlots
+<a class="md-nav__link" href="#upgradestate_1">
+    upgradeState
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#upgradetreebackedstate">
+    upgradeTreeBackedState
   </a>
 </li>
 </ul>
@@ -1136,10 +1141,10 @@
 <li><a href="./#processregistryupdates">processRegistryUpdates</a></li>
 <li><a href="./#processrewardsandpenalties">processRewardsAndPenalties</a></li>
 <li><a href="./#processslashings">processSlashings</a></li>
-<li><a href="./#processslots">processSlots</a></li>
 <li><a href="./#processsynccommitteeupdates">processSyncCommitteeUpdates</a></li>
 <li><a href="./#processvoluntaryexit">processVoluntaryExit</a></li>
 <li><a href="./#slashvalidator">slashValidator</a></li>
+<li><a href="./#upgradestate">upgradeState</a></li>
 </ul>
 <h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
 <ul>
@@ -1158,8 +1163,9 @@
 <li><a href="./#addflag">addFlag</a></li>
 <li><a href="./#getflagindicesandweights">getFlagIndicesAndWeights</a></li>
 <li><a href="./#hasflag">hasFlag</a></li>
-<li><a href="./#processslot">processSlot</a></li>
-<li><a href="./#processslots">processSlots</a></li>
+<li><a href="./#translateparticipation">translateParticipation</a></li>
+<li><a href="./#upgradestate">upgradeState</a></li>
+<li><a href="./#upgradetreebackedstate">upgradeTreeBackedState</a></li>
 </ul>
 <h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
 <h3 id="aggregateandproof">AggregateAndProof<a class="headerlink" href="#aggregateandproof" title="Permanent link">¶</a></h3>
@@ -1534,9 +1540,6 @@
 <h3 id="processslashings">processSlashings<a class="headerlink" href="#processslashings" title="Permanent link">¶</a></h3>
 <p>• <strong>processSlashings</strong>:</p>
 <hr/>
-<h3 id="processslots">processSlots<a class="headerlink" href="#processslots" title="Permanent link">¶</a></h3>
-<p>• <strong>processSlots</strong>:</p>
-<hr/>
 <h3 id="processsynccommitteeupdates">processSyncCommitteeUpdates<a class="headerlink" href="#processsynccommitteeupdates" title="Permanent link">¶</a></h3>
 <p>• <strong>processSyncCommitteeUpdates</strong>:</p>
 <hr/>
@@ -1545,46 +1548,49 @@
 <hr/>
 <h3 id="slashvalidator">slashValidator<a class="headerlink" href="#slashvalidator" title="Permanent link">¶</a></h3>
 <p>• <strong>slashValidator</strong>:</p>
+<hr/>
+<h3 id="upgradestate">upgradeState<a class="headerlink" href="#upgradestate" title="Permanent link">¶</a></h3>
+<p>• <strong>upgradeState</strong>:</p>
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
 <h3 id="const-proposer_weight"><code>Const</code> PROPOSER_WEIGHT<a class="headerlink" href="#const-proposer_weight" title="Permanent link">¶</a></h3>
 <p>• <strong>PROPOSER_WEIGHT</strong>: <em>bigint</em> = BigInt(8)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/constants.ts#L9">packages/beacon-state-transition/src/altair/constants.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/constants.ts#L9">packages/beacon-state-transition/src/altair/constants.ts:9</a></em></p>
 <hr/>
 <h3 id="const-sync_reward_weight"><code>Const</code> SYNC_REWARD_WEIGHT<a class="headerlink" href="#const-sync_reward_weight" title="Permanent link">¶</a></h3>
 <p>• <strong>SYNC_REWARD_WEIGHT</strong>: <em>bigint</em> = BigInt(8)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/constants.ts#L8">packages/beacon-state-transition/src/altair/constants.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/constants.ts#L8">packages/beacon-state-transition/src/altair/constants.ts:8</a></em></p>
 <hr/>
 <h3 id="const-timely_head_flag_index"><code>Const</code> TIMELY_HEAD_FLAG_INDEX<a class="headerlink" href="#const-timely_head_flag_index" title="Permanent link">¶</a></h3>
 <p>• <strong>TIMELY_HEAD_FLAG_INDEX</strong>: <em>0</em> = 0</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/constants.ts#L1">packages/beacon-state-transition/src/altair/constants.ts:1</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/constants.ts#L1">packages/beacon-state-transition/src/altair/constants.ts:1</a></em></p>
 <hr/>
 <h3 id="const-timely_head_weight"><code>Const</code> TIMELY_HEAD_WEIGHT<a class="headerlink" href="#const-timely_head_weight" title="Permanent link">¶</a></h3>
 <p>• <strong>TIMELY_HEAD_WEIGHT</strong>: <em>bigint</em> = BigInt(12)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/constants.ts#L5">packages/beacon-state-transition/src/altair/constants.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/constants.ts#L5">packages/beacon-state-transition/src/altair/constants.ts:5</a></em></p>
 <hr/>
 <h3 id="const-timely_source_flag_index"><code>Const</code> TIMELY_SOURCE_FLAG_INDEX<a class="headerlink" href="#const-timely_source_flag_index" title="Permanent link">¶</a></h3>
 <p>• <strong>TIMELY_SOURCE_FLAG_INDEX</strong>: <em>1</em> = 1</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/constants.ts#L2">packages/beacon-state-transition/src/altair/constants.ts:2</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/constants.ts#L2">packages/beacon-state-transition/src/altair/constants.ts:2</a></em></p>
 <hr/>
 <h3 id="const-timely_source_weight"><code>Const</code> TIMELY_SOURCE_WEIGHT<a class="headerlink" href="#const-timely_source_weight" title="Permanent link">¶</a></h3>
 <p>• <strong>TIMELY_SOURCE_WEIGHT</strong>: <em>bigint</em> = BigInt(12)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/constants.ts#L6">packages/beacon-state-transition/src/altair/constants.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/constants.ts#L6">packages/beacon-state-transition/src/altair/constants.ts:6</a></em></p>
 <hr/>
 <h3 id="const-timely_target_flag_index"><code>Const</code> TIMELY_TARGET_FLAG_INDEX<a class="headerlink" href="#const-timely_target_flag_index" title="Permanent link">¶</a></h3>
 <p>• <strong>TIMELY_TARGET_FLAG_INDEX</strong>: <em>2</em> = 2</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/constants.ts#L3">packages/beacon-state-transition/src/altair/constants.ts:3</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/constants.ts#L3">packages/beacon-state-transition/src/altair/constants.ts:3</a></em></p>
 <hr/>
 <h3 id="const-timely_target_weight"><code>Const</code> TIMELY_TARGET_WEIGHT<a class="headerlink" href="#const-timely_target_weight" title="Permanent link">¶</a></h3>
 <p>• <strong>TIMELY_TARGET_WEIGHT</strong>: <em>bigint</em> = BigInt(24)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/constants.ts#L7">packages/beacon-state-transition/src/altair/constants.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/constants.ts#L7">packages/beacon-state-transition/src/altair/constants.ts:7</a></em></p>
 <hr/>
 <h3 id="const-weight_denominator"><code>Const</code> WEIGHT_DENOMINATOR<a class="headerlink" href="#const-weight_denominator" title="Permanent link">¶</a></h3>
 <p>• <strong>WEIGHT_DENOMINATOR</strong>: <em>bigint</em> = BigInt(64)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/constants.ts#L10">packages/beacon-state-transition/src/altair/constants.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/constants.ts#L10">packages/beacon-state-transition/src/altair/constants.ts:10</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="addflag">addFlag<a class="headerlink" href="#addflag" title="Permanent link">¶</a></h3>
 <p>▸ <strong>addFlag</strong>(<code>flags</code>: <a href="./#participationflags">ParticipationFlags</a>, <code>flagIndex</code>: number): <em><a href="./#participationflags">ParticipationFlags</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/misc.ts#L18">packages/beacon-state-transition/src/altair/misc.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/misc.ts#L18">packages/beacon-state-transition/src/altair/misc.ts:18</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1608,12 +1614,12 @@
 <hr/>
 <h3 id="getflagindicesandweights">getFlagIndicesAndWeights<a class="headerlink" href="#getflagindicesandweights" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getFlagIndicesAndWeights</strong>(): <em>[number, bigint][]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/misc.ts#L11">packages/beacon-state-transition/src/altair/misc.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/misc.ts#L11">packages/beacon-state-transition/src/altair/misc.ts:11</a></em></p>
 <p><strong>Returns:</strong> <em>[number, bigint][]</em></p>
 <hr/>
 <h3 id="hasflag">hasFlag<a class="headerlink" href="#hasflag" title="Permanent link">¶</a></h3>
 <p>▸ <strong>hasFlag</strong>(<code>flags</code>: <a href="./#participationflags">ParticipationFlags</a>, <code>flagIndex</code>: number): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/misc.ts#L23">packages/beacon-state-transition/src/altair/misc.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/misc.ts#L23">packages/beacon-state-transition/src/altair/misc.ts:23</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1635,9 +1641,10 @@
 </table>
 <p><strong>Returns:</strong> <em>boolean</em></p>
 <hr/>
-<h3 id="processslot">processSlot<a class="headerlink" href="#processslot" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processSlot</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/slot.ts#L24">packages/beacon-state-transition/src/altair/slot.ts:24</a></em></p>
+<h3 id="translateparticipation">translateParticipation<a class="headerlink" href="#translateparticipation" title="Permanent link">¶</a></h3>
+<p>▸ <strong>translateParticipation</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>pendingAttesations</code>: PendingAttestation[]): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/upgradeState.ts#L48">packages/beacon-state-transition/src/altair/upgradeState.ts:48</a></em></p>
+<p>Translate_participation in https://github.com/ethereum/eth2.0-specs/blob/dev/specs/altair/fork.md</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1650,14 +1657,19 @@
 <tr>
 <td><code>state</code></td>
 <td><a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›</td>
+</tr>
+<tr>
+<td><code>pendingAttesations</code></td>
+<td>PendingAttestation[]</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>void</em></p>
 <hr/>
-<h3 id="processslots_1">processSlots<a class="headerlink" href="#processslots_1" title="Permanent link">¶</a></h3>
-<p>▸ <strong>processSlots</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>slot</code>: <a href="./#slot">Slot</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7650671/packages/beacon-state-transition/src/altair/slot.ts#L7">packages/beacon-state-transition/src/altair/slot.ts:7</a></em></p>
+<h3 id="upgradestate_1">upgradeState<a class="headerlink" href="#upgradestate_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>upgradeState</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›): <em><a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/upgradeState.ts#L12">packages/beacon-state-transition/src/altair/upgradeState.ts:12</a></em></p>
+<p>Upgrade a state from phase0 to altair.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1671,13 +1683,33 @@
 <td><code>state</code></td>
 <td><a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›</td>
 </tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em><a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›</em></p>
+<hr/>
+<h3 id="upgradetreebackedstate">upgradeTreeBackedState<a class="headerlink" href="#upgradetreebackedstate" title="Permanent link">¶</a></h3>
+<p>▸ <strong>upgradeTreeBackedState</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: TreeBacked‹BeaconState›): <em>TreeBacked‹BeaconState›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/7b70ab6/packages/beacon-state-transition/src/altair/upgradeState.ts#L24">packages/beacon-state-transition/src/altair/upgradeState.ts:24</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
 <tr>
-<td><code>slot</code></td>
-<td><a href="./#slot">Slot</a></td>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>TreeBacked‹BeaconState›</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>void</em></p>
+<p><strong>Returns:</strong> <em>TreeBacked‹BeaconState›</em></p>
 </article>
 </div>
 </div>
