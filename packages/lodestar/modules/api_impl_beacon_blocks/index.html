@@ -8,7 +8,7 @@
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
 <link href="https://chainsafe.github.io/lodestar/packages/lodestar/modules/api_impl_beacon_blocks/" rel="canonical"/>
 <link href="../../../../images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-7.1.4" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.1.5" name="generator"/>
 <title>Api impl beacon blocks - Lodestar documentation</title>
 <link href="../../../../assets/stylesheets/main.bde7dde4.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.ef6f36e2.min.css" rel="stylesheet"/>
@@ -372,11 +372,11 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="blockid_1">BlockId<a class="headerlink" href="#blockid_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>BlockId</strong>: <em>string | "head" | "genesis" | "finalized"</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/lodestar/src/api/impl/beacon/blocks/interface.ts#L11">packages/lodestar/src/api/impl/beacon/blocks/interface.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/lodestar/src/api/impl/beacon/blocks/interface.ts#L11">packages/lodestar/src/api/impl/beacon/blocks/interface.ts:11</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="resolveblockid">resolveBlockId<a class="headerlink" href="#resolveblockid" title="Permanent link">¶</a></h3>
 <p>▸ <strong>resolveBlockId</strong>(<code>forkChoice</code>: IForkChoice, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>, <code>blockId</code>: <a href="./#blockid">BlockId</a>): <em>Promise‹allForks.SignedBeaconBlock›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/lodestar/src/api/impl/beacon/blocks/utils.ts#L26">packages/lodestar/src/api/impl/beacon/blocks/utils.ts:26</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/lodestar/src/api/impl/beacon/blocks/utils.ts#L26">packages/lodestar/src/api/impl/beacon/blocks/utils.ts:26</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -404,7 +404,7 @@
 <hr/>
 <h3 id="resolveblockidornull">resolveBlockIdOrNull<a class="headerlink" href="#resolveblockidornull" title="Permanent link">¶</a></h3>
 <p>▸ <strong>resolveBlockIdOrNull</strong>(<code>forkChoice</code>: IForkChoice, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>, <code>blockId</code>: <a href="./#blockid">BlockId</a>): <em>Promise‹allForks.SignedBeaconBlock | null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/lodestar/src/api/impl/beacon/blocks/utils.ts#L39">packages/lodestar/src/api/impl/beacon/blocks/utils.ts:39</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/lodestar/src/api/impl/beacon/blocks/utils.ts#L39">packages/lodestar/src/api/impl/beacon/blocks/utils.ts:39</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -431,8 +431,8 @@
 <p><strong>Returns:</strong> <em>Promise‹allForks.SignedBeaconBlock | null›</em></p>
 <hr/>
 <h3 id="tobeaconheaderresponse">toBeaconHeaderResponse<a class="headerlink" href="#tobeaconheaderresponse" title="Permanent link">¶</a></h3>
-<p>▸ <strong>toBeaconHeaderResponse</strong>(<code>config</code>: IBeaconConfig, <code>block</code>: SignedBeaconBlock, <code>canonical</code>: boolean): <em>SignedBeaconHeaderResponse</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/lodestar/src/api/impl/beacon/blocks/utils.ts#L11">packages/lodestar/src/api/impl/beacon/blocks/utils.ts:11</a></em></p>
+<p>▸ <strong>toBeaconHeaderResponse</strong>(<code>config</code>: IBeaconConfig, <code>block</code>: allForks.SignedBeaconBlock, <code>canonical</code>: boolean): <em>SignedBeaconHeaderResponse</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/lodestar/src/api/impl/beacon/blocks/utils.ts#L11">packages/lodestar/src/api/impl/beacon/blocks/utils.ts:11</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -450,7 +450,7 @@
 </tr>
 <tr>
 <td><code>block</code></td>
-<td>SignedBeaconBlock</td>
+<td>allForks.SignedBeaconBlock</td>
 <td>-</td>
 </tr>
 <tr>
@@ -496,7 +496,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
-<script src="../../../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.a1609d9a.min.js"></script>
 </body>
 </html>

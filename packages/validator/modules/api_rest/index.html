@@ -8,7 +8,7 @@
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
 <link href="https://chainsafe.github.io/lodestar/packages/validator/modules/api_rest/" rel="canonical"/>
 <link href="../../../../images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-7.1.4" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.1.5" name="generator"/>
 <title>Api rest - Lodestar documentation</title>
 <link href="../../../../assets/stylesheets/main.bde7dde4.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.ef6f36e2.min.css" rel="stylesheet"/>
@@ -243,27 +243,8 @@
 <nav aria-label="Index" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#type-aliases">
-    Type aliases
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#functions">
     Functions
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#type-aliases_1">
-    Type aliases
-  </a>
-<nav aria-label="Type aliases" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#signedblocktype">
-    SignedBlockType
   </a>
 </li>
 </ul>
@@ -321,16 +302,6 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#getsignedblocktype">
-    getSignedBlockType
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#getsignedblocktypefromslot">
-    getSignedBlockTypeFromSlot
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#pipetoemitter">
     pipeToEmitter
   </a>
@@ -351,10 +322,6 @@
 <p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="./">api/rest</a></p>
 <h1 id="module-apirest">Module: api/rest<a class="headerlink" href="#module-apirest" title="Permanent link">¶</a></h1>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
-<h3 id="type-aliases">Type aliases<a class="headerlink" href="#type-aliases" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="./#signedblocktype">SignedBlockType</a></li>
-</ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#apiclientoverrest">ApiClientOverRest</a></li>
@@ -366,18 +333,12 @@
 <li><a href="./#deserializebeaconeventmessage">deserializeBeaconEventMessage</a></li>
 <li><a href="./#deserializeeventdata">deserializeEventData</a></li>
 <li><a href="./#formatindex">formatIndex</a></li>
-<li><a href="./#getsignedblocktype">getSignedBlockType</a></li>
-<li><a href="./#getsignedblocktypefromslot">getSignedBlockTypeFromSlot</a></li>
 <li><a href="./#pipetoemitter">pipeToEmitter</a></li>
 </ul>
-<h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
-<h3 id="signedblocktype">SignedBlockType<a class="headerlink" href="#signedblocktype" title="Permanent link">¶</a></h3>
-<p>Ƭ <strong>SignedBlockType</strong>: <em>ContainerType‹allForks.SignedBeaconBlock›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/beacon.ts#L80">packages/validator/src/api/rest/beacon.ts:80</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="apiclientoverrest">ApiClientOverRest<a class="headerlink" href="#apiclientoverrest" title="Permanent link">¶</a></h3>
 <p>▸ <strong>ApiClientOverRest</strong>(<code>config</code>: IBeaconConfig, <code>baseUrl</code>: string): <em><a href="../../interfaces/api.iapiclientvalidator/">IApiClientValidator</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/index.ts#L12">packages/validator/src/api/rest/index.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/validator/src/api/rest/index.ts#L12">packages/validator/src/api/rest/index.ts:12</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -401,7 +362,7 @@
 <hr/>
 <h3 id="beaconapi">BeaconApi<a class="headerlink" href="#beaconapi" title="Permanent link">¶</a></h3>
 <p>▸ <strong>BeaconApi</strong>(<code>config</code>: IBeaconConfig, <code>client</code>: <a href="../../classes/util.httpclient/">HttpClient</a>): <em>IApiClient["beacon"]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/beacon.ts#L8">packages/validator/src/api/rest/beacon.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/validator/src/api/rest/beacon.ts#L8">packages/validator/src/api/rest/beacon.ts:8</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -425,7 +386,7 @@
 <hr/>
 <h3 id="configapi">ConfigApi<a class="headerlink" href="#configapi" title="Permanent link">¶</a></h3>
 <p>▸ <strong>ConfigApi</strong>(<code>types</code>: IBeaconSSZTypes, <code>client</code>: <a href="../../classes/util.httpclient/">HttpClient</a>): <em>IApiClient["config"]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/config.ts#L7">packages/validator/src/api/rest/config.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/validator/src/api/rest/config.ts#L7">packages/validator/src/api/rest/config.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -449,7 +410,7 @@
 <hr/>
 <h3 id="eventsapi">EventsApi<a class="headerlink" href="#eventsapi" title="Permanent link">¶</a></h3>
 <p>▸ <strong>EventsApi</strong>(<code>types</code>: IBeaconSSZTypes, <code>client</code>: <a href="../../classes/util.httpclient/">HttpClient</a>): <em>IApiClient["events"]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/events.ts#L10">packages/validator/src/api/rest/events.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/validator/src/api/rest/events.ts#L10">packages/validator/src/api/rest/events.ts:10</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -473,7 +434,7 @@
 <hr/>
 <h3 id="nodeapi">NodeApi<a class="headerlink" href="#nodeapi" title="Permanent link">¶</a></h3>
 <p>▸ <strong>NodeApi</strong>(<code>types</code>: IBeaconSSZTypes, <code>client</code>: <a href="../../classes/util.httpclient/">HttpClient</a>): <em>IApiClient["node"]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/node.ts#L7">packages/validator/src/api/rest/node.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/validator/src/api/rest/node.ts#L7">packages/validator/src/api/rest/node.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -496,8 +457,8 @@
 <p><strong>Returns:</strong> <em>IApiClient["node"]</em></p>
 <hr/>
 <h3 id="validatorapi">ValidatorApi<a class="headerlink" href="#validatorapi" title="Permanent link">¶</a></h3>
-<p>▸ <strong>ValidatorApi</strong>(<code>types</code>: IBeaconSSZTypes, <code>client</code>: <a href="../../classes/util.httpclient/">HttpClient</a>): <em>IApiClient["validator"]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/validator.ts#L17">packages/validator/src/api/rest/validator.ts:17</a></em></p>
+<p>▸ <strong>ValidatorApi</strong>(<code>config</code>: IBeaconConfig, <code>client</code>: <a href="../../classes/util.httpclient/">HttpClient</a>): <em>IApiClient["validator"]</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/validator/src/api/rest/validator.ts#L9">packages/validator/src/api/rest/validator.ts:9</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -508,8 +469,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>types</code></td>
-<td>IBeaconSSZTypes</td>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
 </tr>
 <tr>
 <td><code>client</code></td>
@@ -521,7 +482,7 @@
 <hr/>
 <h3 id="deserializebeaconeventmessage">deserializeBeaconEventMessage<a class="headerlink" href="#deserializebeaconeventmessage" title="Permanent link">¶</a></h3>
 <p>▸ <strong>deserializeBeaconEventMessage</strong>(<code>types</code>: IBeaconSSZTypes, <code>msg</code>: MessageEvent): <em><a href="../api/#beaconevent">BeaconEvent</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/events.ts#L33">packages/validator/src/api/rest/events.ts:33</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/validator/src/api/rest/events.ts#L33">packages/validator/src/api/rest/events.ts:33</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -545,7 +506,7 @@
 <hr/>
 <h3 id="deserializeeventdata">deserializeEventData<a class="headerlink" href="#deserializeeventdata" title="Permanent link">¶</a></h3>
 <p>▸ <strong>deserializeEventData</strong>‹<strong>T</strong>›(<code>type</code>: ContainerType‹T›, <code>data</code>: string): <em>T</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/events.ts#L55">packages/validator/src/api/rest/events.ts:55</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/validator/src/api/rest/events.ts#L55">packages/validator/src/api/rest/events.ts:55</a></em></p>
 <p><strong>Type parameters:</strong></p>
 <p>▪ <strong>T</strong>: <em>BeaconEvent["message"]</em></p>
 <p><strong>Parameters:</strong></p>
@@ -571,7 +532,7 @@
 <hr/>
 <h3 id="formatindex">formatIndex<a class="headerlink" href="#formatindex" title="Permanent link">¶</a></h3>
 <p>▸ <strong>formatIndex</strong>(<code>validatorId</code>: ValidatorIndex | BLSPubkey): <em>string</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/beacon.ts#L68">packages/validator/src/api/rest/beacon.ts:68</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/validator/src/api/rest/beacon.ts#L71">packages/validator/src/api/rest/beacon.ts:71</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -589,57 +550,9 @@
 </table>
 <p><strong>Returns:</strong> <em>string</em></p>
 <hr/>
-<h3 id="getsignedblocktype">getSignedBlockType<a class="headerlink" href="#getsignedblocktype" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getSignedBlockType</strong>(<code>config</code>: IBeaconConfig, <code>block</code>: allForks.SignedBeaconBlock): <em><a href="./#signedblocktype">SignedBlockType</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/beacon.ts#L82">packages/validator/src/api/rest/beacon.ts:82</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>config</code></td>
-<td>IBeaconConfig</td>
-</tr>
-<tr>
-<td><code>block</code></td>
-<td>allForks.SignedBeaconBlock</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em><a href="./#signedblocktype">SignedBlockType</a></em></p>
-<hr/>
-<h3 id="getsignedblocktypefromslot">getSignedBlockTypeFromSlot<a class="headerlink" href="#getsignedblocktypefromslot" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getSignedBlockTypeFromSlot</strong>(<code>config</code>: IBeaconConfig, <code>slot</code>: <a href="../../enums/util.timeitem/#slot">Slot</a>): <em><a href="./#signedblocktype">SignedBlockType</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/beacon.ts#L86">packages/validator/src/api/rest/beacon.ts:86</a></em></p>
-<p><strong>Parameters:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>config</code></td>
-<td>IBeaconConfig</td>
-</tr>
-<tr>
-<td><code>slot</code></td>
-<td><a href="../../enums/util.timeitem/#slot">Slot</a></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Returns:</strong> <em><a href="./#signedblocktype">SignedBlockType</a></em></p>
-<hr/>
 <h3 id="pipetoemitter">pipeToEmitter<a class="headerlink" href="#pipetoemitter" title="Permanent link">¶</a></h3>
 <p>▸ <strong>pipeToEmitter</strong>‹<strong>T</strong>›(<code>stream</code>: IStoppableEventIterable‹<a href="../api/#beaconevent">BeaconEvent</a>›, <code>emitter</code>: <a href="../api/#apiclienteventemitter">ApiClientEventEmitter</a>): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/validator/src/api/rest/events.ts#L59">packages/validator/src/api/rest/events.ts:59</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/validator/src/api/rest/events.ts#L59">packages/validator/src/api/rest/events.ts:59</a></em></p>
 <p><strong>Type parameters:</strong></p>
 <p>▪ <strong>T</strong>: <em>BeaconEvent["type"]</em></p>
 <p><strong>Parameters:</strong></p>
@@ -697,7 +610,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
-<script src="../../../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.a1609d9a.min.js"></script>
 </body>
 </html>

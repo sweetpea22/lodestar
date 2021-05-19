@@ -8,7 +8,7 @@
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
 <link href="https://chainsafe.github.io/lodestar/packages/lodestar/modules/network_reqresp_handlers/" rel="canonical"/>
 <link href="../../../../images/favicon.ico" rel="icon"/>
-<meta content="mkdocs-1.1.2, mkdocs-material-7.1.4" name="generator"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-7.1.5" name="generator"/>
 <title>Network reqresp handlers - Lodestar documentation</title>
 <link href="../../../../assets/stylesheets/main.bde7dde4.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.ef6f36e2.min.css" rel="stylesheet"/>
@@ -313,8 +313,8 @@
 </ul>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="injectrecentblocks">injectRecentBlocks<a class="headerlink" href="#injectrecentblocks" title="Permanent link">¶</a></h3>
-<p>▸ <strong>injectRecentBlocks</strong>(<code>archiveStream</code>: AsyncIterable‹SignedBeaconBlock›, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>request</code>: BeaconBlocksByRangeRequest): <em>AsyncGenerator‹SignedBeaconBlock›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRange.ts#L39">packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRange.ts:39</a></em></p>
+<p>▸ <strong>injectRecentBlocks</strong>(<code>archiveStream</code>: AsyncIterable‹allForks.SignedBeaconBlock›, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>request</code>: BeaconBlocksByRangeRequest): <em>AsyncGenerator‹allForks.SignedBeaconBlock›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRange.ts#L39">packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRange.ts:39</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -326,7 +326,7 @@
 <tbody>
 <tr>
 <td><code>archiveStream</code></td>
-<td>AsyncIterable‹SignedBeaconBlock›</td>
+<td>AsyncIterable‹allForks.SignedBeaconBlock›</td>
 </tr>
 <tr>
 <td><code>chain</code></td>
@@ -338,11 +338,11 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>AsyncGenerator‹SignedBeaconBlock›</em></p>
+<p><strong>Returns:</strong> <em>AsyncGenerator‹allForks.SignedBeaconBlock›</em></p>
 <hr/>
 <h3 id="onbeaconblocksbyrange">onBeaconBlocksByRange<a class="headerlink" href="#onbeaconblocksbyrange" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onBeaconBlocksByRange</strong>(<code>requestBody</code>: BeaconBlocksByRangeRequest, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>): <em>AsyncIterable‹allForks.SignedBeaconBlock›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRange.ts#L12">packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRange.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRange.ts#L12">packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRange.ts:12</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -370,7 +370,7 @@
 <hr/>
 <h3 id="onbeaconblocksbyroot">onBeaconBlocksByRoot<a class="headerlink" href="#onbeaconblocksbyroot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onBeaconBlocksByRoot</strong>(<code>requestBody</code>: phase0.BeaconBlocksByRootRequest, <code>chain</code>: <a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a>, <code>db</code>: <a href="../../interfaces/db.ibeacondb/">IBeaconDb</a>): <em>AsyncIterable‹allForks.SignedBeaconBlock›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1229e29/packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRoot.ts#L5">packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRoot.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/a4c8df8/packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRoot.ts#L5">packages/lodestar/src/network/reqresp/handlers/beaconBlocksByRoot.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -430,7 +430,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
-<script src="../../../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.a1609d9a.min.js"></script>
 </body>
 </html>
