@@ -390,7 +390,7 @@
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new LightclientApi</strong>(<code>opts</code>: Partial‹<a href="../../interfaces/api.iapioptions/">IApiOptions</a>›, <code>modules</code>: Pick‹<a href="../../interfaces/api_impl.iapimodules/">IApiModules</a>, "config" | "db" | "chain"›): <em><a href="./">LightclientApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/df626ea/packages/lodestar/src/api/impl/lightclient/index.ts#L31">packages/lodestar/src/api/impl/lightclient/index.ts:31</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/af52fb2/packages/lodestar/src/api/impl/lightclient/index.ts#L31">packages/lodestar/src/api/impl/lightclient/index.ts:31</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -414,28 +414,28 @@
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="private-readonly-chain"><code>Private</code> <code>Readonly</code> chain<a class="headerlink" href="#private-readonly-chain" title="Permanent link">¶</a></h3>
 <p>• <strong>chain</strong>: <em><a href="../../interfaces/chain.ibeaconchain/">IBeaconChain</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/df626ea/packages/lodestar/src/api/impl/lightclient/index.ts#L30">packages/lodestar/src/api/impl/lightclient/index.ts:30</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/af52fb2/packages/lodestar/src/api/impl/lightclient/index.ts#L30">packages/lodestar/src/api/impl/lightclient/index.ts:30</a></em></p>
 <hr/>
 <h3 id="private-readonly-config"><code>Private</code> <code>Readonly</code> config<a class="headerlink" href="#private-readonly-config" title="Permanent link">¶</a></h3>
 <p>• <strong>config</strong>: <em>IBeaconConfig</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/df626ea/packages/lodestar/src/api/impl/lightclient/index.ts#L28">packages/lodestar/src/api/impl/lightclient/index.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/af52fb2/packages/lodestar/src/api/impl/lightclient/index.ts#L28">packages/lodestar/src/api/impl/lightclient/index.ts:28</a></em></p>
 <hr/>
 <h3 id="private-readonly-db"><code>Private</code> <code>Readonly</code> db<a class="headerlink" href="#private-readonly-db" title="Permanent link">¶</a></h3>
 <p>• <strong>db</strong>: <em><a href="../../interfaces/db.ibeacondb/">IBeaconDb</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/df626ea/packages/lodestar/src/api/impl/lightclient/index.ts#L29">packages/lodestar/src/api/impl/lightclient/index.ts:29</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/af52fb2/packages/lodestar/src/api/impl/lightclient/index.ts#L29">packages/lodestar/src/api/impl/lightclient/index.ts:29</a></em></p>
 <hr/>
 <h3 id="private-readonly-lightclientupdater"><code>Private</code> <code>Readonly</code> lightClientUpdater<a class="headerlink" href="#private-readonly-lightclientupdater" title="Permanent link">¶</a></h3>
 <p>• <strong>lightClientUpdater</strong>: <em><a href="../../interfaces/api_impl_lightclient.ilightclientupdater/">ILightClientUpdater</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/df626ea/packages/lodestar/src/api/impl/lightclient/index.ts#L31">packages/lodestar/src/api/impl/lightclient/index.ts:31</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/af52fb2/packages/lodestar/src/api/impl/lightclient/index.ts#L31">packages/lodestar/src/api/impl/lightclient/index.ts:31</a></em></p>
 <hr/>
 <h3 id="namespace">namespace<a class="headerlink" href="#namespace" title="Permanent link">¶</a></h3>
 <p>• <strong>namespace</strong>: <em><a href="../../enums/api_impl.apinamespace/">ApiNamespace</a></em> = ApiNamespace.LIGHTCLIENT</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/df626ea/packages/lodestar/src/api/impl/lightclient/index.ts#L26">packages/lodestar/src/api/impl/lightclient/index.ts:26</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/af52fb2/packages/lodestar/src/api/impl/lightclient/index.ts#L26">packages/lodestar/src/api/impl/lightclient/index.ts:26</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="createstateproof">createStateProof<a class="headerlink" href="#createstateproof" title="Permanent link">¶</a></h3>
 <p>▸ <strong>createStateProof</strong>(<code>stateId</code>: string, <code>paths</code>: Path[]): <em>Promise‹Proof›</em></p>
 <p><em>Implementation of <a href="../../interfaces/api_impl_lightclient.ilightclientapi/">ILightclientApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/df626ea/packages/lodestar/src/api/impl/lightclient/index.ts#L55">packages/lodestar/src/api/impl/lightclient/index.ts:55</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/af52fb2/packages/lodestar/src/api/impl/lightclient/index.ts#L55">packages/lodestar/src/api/impl/lightclient/index.ts:55</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -460,7 +460,7 @@
 <h3 id="getbestupdates">getBestUpdates<a class="headerlink" href="#getbestupdates" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBestUpdates</strong>(<code>from</code>: SyncPeriod, <code>to</code>: SyncPeriod): <em>Promise‹LightClientUpdate[]›</em></p>
 <p><em>Implementation of <a href="../../interfaces/api_impl_lightclient.ilightclientapi/">ILightclientApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/df626ea/packages/lodestar/src/api/impl/lightclient/index.ts#L41">packages/lodestar/src/api/impl/lightclient/index.ts:41</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/af52fb2/packages/lodestar/src/api/impl/lightclient/index.ts#L41">packages/lodestar/src/api/impl/lightclient/index.ts:41</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -485,13 +485,13 @@
 <h3 id="getlatestupdatefinalized">getLatestUpdateFinalized<a class="headerlink" href="#getlatestupdatefinalized" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getLatestUpdateFinalized</strong>(): <em>Promise‹LightClientUpdate | null›</em></p>
 <p><em>Implementation of <a href="../../interfaces/api_impl_lightclient.ilightclientapi/">ILightclientApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/df626ea/packages/lodestar/src/api/impl/lightclient/index.ts#L45">packages/lodestar/src/api/impl/lightclient/index.ts:45</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/af52fb2/packages/lodestar/src/api/impl/lightclient/index.ts#L45">packages/lodestar/src/api/impl/lightclient/index.ts:45</a></em></p>
 <p><strong>Returns:</strong> <em>Promise‹LightClientUpdate | null›</em></p>
 <hr/>
 <h3 id="getlatestupdatenonfinalized">getLatestUpdateNonFinalized<a class="headerlink" href="#getlatestupdatenonfinalized" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getLatestUpdateNonFinalized</strong>(): <em>Promise‹LightClientUpdate | null›</em></p>
 <p><em>Implementation of <a href="../../interfaces/api_impl_lightclient.ilightclientapi/">ILightclientApi</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/df626ea/packages/lodestar/src/api/impl/lightclient/index.ts#L49">packages/lodestar/src/api/impl/lightclient/index.ts:49</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/af52fb2/packages/lodestar/src/api/impl/lightclient/index.ts#L49">packages/lodestar/src/api/impl/lightclient/index.ts:49</a></em></p>
 <p><strong>Returns:</strong> <em>Promise‹LightClientUpdate | null›</em></p>
 </article>
 </div>
