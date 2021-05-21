@@ -282,6 +282,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#metadata">
+    Metadata
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#signedbeaconblock">
     SignedBeaconBlock
   </a>
@@ -309,32 +314,37 @@
 <li><a href="./#beaconblock">BeaconBlock</a></li>
 <li><a href="./#beaconblockbody">BeaconBlockBody</a></li>
 <li><a href="./#beaconstate">BeaconState</a></li>
+<li><a href="./#metadata">Metadata</a></li>
 <li><a href="./#signedbeaconblock">SignedBeaconBlock</a></li>
 </ul>
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="allforksssztypes">AllForksSSZTypes<a class="headerlink" href="#allforksssztypes" title="Permanent link">¶</a></h3>
-<p>Ƭ <strong>AllForksSSZTypes</strong>: <em>Omit‹<a href="./#allssztypes">AllSSZTypes</a>, "BeaconBlockBody" | "BeaconBlock" | "SignedBeaconBlock" | "BeaconState"› &amp; object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4a3787c/packages/types/src/allForks/index.ts#L22">packages/types/src/allForks/index.ts:22</a></em></p>
+<p>Ƭ <strong>AllForksSSZTypes</strong>: <em>Omit‹<a href="./#allssztypes">AllSSZTypes</a>, "BeaconBlockBody" | "BeaconBlock" | "SignedBeaconBlock" | "BeaconState" | "Metadata"› &amp; object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/934d060/packages/types/src/allForks/index.ts#L23">packages/types/src/allForks/index.ts:23</a></em></p>
 <hr/>
 <h3 id="allssztypes">AllSSZTypes<a class="headerlink" href="#allssztypes" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>AllSSZTypes</strong>: <em><a href="../primitive/#primitivessztypes">PrimitiveSSZTypes</a> &amp; <a href="../phase0/#phase0ssztypes">Phase0SSZTypes</a> | <a href="../primitive/#primitivessztypes">PrimitiveSSZTypes</a> &amp; <a href="../phase0/#phase0ssztypes">Phase0SSZTypes</a> &amp; <a href="../altair/#altairssztypes">AltairSSZTypes</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4a3787c/packages/types/src/allForks/index.ts#L18">packages/types/src/allForks/index.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/934d060/packages/types/src/allForks/index.ts#L19">packages/types/src/allForks/index.ts:19</a></em></p>
 <hr/>
 <h3 id="beaconblock">BeaconBlock<a class="headerlink" href="#beaconblock" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>BeaconBlock</strong>: <em><a href="../../interfaces/phase0_types.beaconblock/">BeaconBlock</a> | <a href="../../interfaces/altair_types.beaconblock/">BeaconBlock</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4a3787c/packages/types/src/allForks/index.ts#L10">packages/types/src/allForks/index.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/934d060/packages/types/src/allForks/index.ts#L10">packages/types/src/allForks/index.ts:10</a></em></p>
 <hr/>
 <h3 id="beaconblockbody">BeaconBlockBody<a class="headerlink" href="#beaconblockbody" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>BeaconBlockBody</strong>: <em><a href="../../interfaces/phase0_types.beaconblockbody/">BeaconBlockBody</a> | <a href="../../interfaces/altair_types.beaconblockbody/">BeaconBlockBody</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4a3787c/packages/types/src/allForks/index.ts#L9">packages/types/src/allForks/index.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/934d060/packages/types/src/allForks/index.ts#L9">packages/types/src/allForks/index.ts:9</a></em></p>
 <hr/>
 <h3 id="beaconstate">BeaconState<a class="headerlink" href="#beaconstate" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>BeaconState</strong>: <em><a href="../../interfaces/phase0_types.beaconstate/">BeaconState</a> | <a href="../../interfaces/altair_types.beaconstate/">BeaconState</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4a3787c/packages/types/src/allForks/index.ts#L12">packages/types/src/allForks/index.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/934d060/packages/types/src/allForks/index.ts#L12">packages/types/src/allForks/index.ts:12</a></em></p>
+<hr/>
+<h3 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>Metadata</strong>: <em><a href="../../interfaces/phase0_types.metadata/">Metadata</a> | <a href="../../interfaces/altair_types.metadata/">Metadata</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/934d060/packages/types/src/allForks/index.ts#L13">packages/types/src/allForks/index.ts:13</a></em></p>
 <hr/>
 <h3 id="signedbeaconblock">SignedBeaconBlock<a class="headerlink" href="#signedbeaconblock" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>SignedBeaconBlock</strong>: <em><a href="../../interfaces/phase0_types.signedbeaconblock/">SignedBeaconBlock</a> | <a href="../../interfaces/altair_types.signedbeaconblock/">SignedBeaconBlock</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/4a3787c/packages/types/src/allForks/index.ts#L11">packages/types/src/allForks/index.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/934d060/packages/types/src/allForks/index.ts#L11">packages/types/src/allForks/index.ts:11</a></em></p>
 </article>
 </div>
 </div>
