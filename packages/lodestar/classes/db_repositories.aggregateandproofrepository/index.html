@@ -502,7 +502,7 @@
 <a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/lodestar/classes/db_repositories.aggregateandproofrepository.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/db_repositories/">db/repositories</a> › <a href="./">AggregateAndProofRepository</a></p>
+<p><a href="../../">@chainsafe/lodestar</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/db_repositories/">db/repositories</a> › <a href="./">AggregateAndProofRepository</a></p>
 <h1 id="class-aggregateandproofrepository">Class: AggregateAndProofRepository<a class="headerlink" href="#class-aggregateandproofrepository" title="Permanent link">¶</a></h1>
 <p>AggregateAndProof indexed by root</p>
 <p>Added via gossip or api
@@ -566,7 +566,7 @@ Removed when included on chain or old</p>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new AggregateAndProofRepository</strong>(<code>config</code>: IBeaconConfig, <code>db</code>: IDatabaseController‹Buffer, Buffer›): <em><a href="./">AggregateAndProofRepository</a></em></p>
 <p><em>Overrides void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L15">packages/lodestar/src/db/repositories/aggregateAndProof.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L15">packages/lodestar/src/db/repositories/aggregateAndProof.ts:15</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -965,7 +965,7 @@ Removed when included on chain or old</p>
 <hr/>
 <h3 id="getblockattestations">getBlockAttestations<a class="headerlink" href="#getblockattestations" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBlockAttestations</strong>(<code>state</code>: allForks.BeaconState): <em>Promise‹Attestation[]›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L27">packages/lodestar/src/db/repositories/aggregateAndProof.ts:27</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L27">packages/lodestar/src/db/repositories/aggregateAndProof.ts:27</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -986,7 +986,7 @@ Removed when included on chain or old</p>
 <h3 id="getid">getId<a class="headerlink" href="#getid" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getId</strong>(<code>value</code>: AggregateAndProof): <em>Uint8Array</em></p>
 <p><em>Overrides <a href="../db_repositories.attestationrepository/">AttestationRepository</a>.<a href="../db_repositories.attestationrepository/#getid">getId</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L23">packages/lodestar/src/db/repositories/aggregateAndProof.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L23">packages/lodestar/src/db/repositories/aggregateAndProof.ts:23</a></em></p>
 <p>Id is hashTreeRoot of aggregated attestation</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1007,7 +1007,7 @@ Removed when included on chain or old</p>
 <hr/>
 <h3 id="private-getidfromattestation"><code>Private</code> getIdFromAttestation<a class="headerlink" href="#private-getidfromattestation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getIdFromAttestation</strong>(<code>attestation</code>: Attestation): <em>Uint8Array</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L60">packages/lodestar/src/db/repositories/aggregateAndProof.ts:60</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L60">packages/lodestar/src/db/repositories/aggregateAndProof.ts:60</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1108,7 +1108,7 @@ Removed when included on chain or old</p>
 <hr/>
 <h3 id="prunefinalized">pruneFinalized<a class="headerlink" href="#prunefinalized" title="Permanent link">¶</a></h3>
 <p>▸ <strong>pruneFinalized</strong>(<code>finalizedEpoch</code>: Epoch): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L53">packages/lodestar/src/db/repositories/aggregateAndProof.ts:53</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L53">packages/lodestar/src/db/repositories/aggregateAndProof.ts:53</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1199,7 +1199,7 @@ Removed when included on chain or old</p>
 <hr/>
 <h3 id="removeincluded">removeIncluded<a class="headerlink" href="#removeincluded" title="Permanent link">¶</a></h3>
 <p>▸ <strong>removeIncluded</strong>(<code>attestations</code>: ArrayLike‹Attestation›): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L44">packages/lodestar/src/db/repositories/aggregateAndProof.ts:44</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/db/repositories/aggregateAndProof.ts#L44">packages/lodestar/src/db/repositories/aggregateAndProof.ts:44</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

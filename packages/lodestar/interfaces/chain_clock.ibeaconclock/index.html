@@ -313,7 +313,7 @@
 <a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/lodestar/interfaces/chain_clock.ibeaconclock.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/chain_clock/">chain/clock</a> › <a href="./">IBeaconClock</a></p>
+<p><a href="../../">@chainsafe/lodestar</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/chain_clock/">chain/clock</a> › <a href="./">IBeaconClock</a></p>
 <h1 id="interface-ibeaconclock">Interface: IBeaconClock<a class="headerlink" href="#interface-ibeaconclock" title="Permanent link">¶</a></h1>
 <p>Tracks the current chain time, measured in <code>Slot</code>s and <code>Epoch</code>s</p>
 <p>The time is dependant on:
@@ -342,20 +342,20 @@
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="readonly-currentepoch"><code>Readonly</code> currentEpoch<a class="headerlink" href="#readonly-currentepoch" title="Permanent link">¶</a></h3>
 <p>• <strong>currentEpoch</strong>: <em>Epoch</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/chain/clock/interface.ts#L17">packages/lodestar/src/chain/clock/interface.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/chain/clock/interface.ts#L17">packages/lodestar/src/chain/clock/interface.ts:17</a></em></p>
 <hr/>
 <h3 id="readonly-currentslot"><code>Readonly</code> currentSlot<a class="headerlink" href="#readonly-currentslot" title="Permanent link">¶</a></h3>
 <p>• <strong>currentSlot</strong>: <em>Slot</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/chain/clock/interface.ts#L12">packages/lodestar/src/chain/clock/interface.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/chain/clock/interface.ts#L12">packages/lodestar/src/chain/clock/interface.ts:12</a></em></p>
 <hr/>
 <h3 id="readonly-currentslotwithgossipdisparity"><code>Readonly</code> currentSlotWithGossipDisparity<a class="headerlink" href="#readonly-currentslotwithgossipdisparity" title="Permanent link">¶</a></h3>
 <p>• <strong>currentSlotWithGossipDisparity</strong>: <em>Slot</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/chain/clock/interface.ts#L16">packages/lodestar/src/chain/clock/interface.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/chain/clock/interface.ts#L16">packages/lodestar/src/chain/clock/interface.ts:16</a></em></p>
 <p>If it's too close to next slot, maxCurrentSlot = currentSlot + 1</p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="waitforslot">waitForSlot<a class="headerlink" href="#waitforslot" title="Permanent link">¶</a></h3>
 <p>▸ <strong>waitForSlot</strong>(<code>slot</code>: Slot): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/chain/clock/interface.ts#L23">packages/lodestar/src/chain/clock/interface.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/chain/clock/interface.ts#L23">packages/lodestar/src/chain/clock/interface.ts:23</a></em></p>
 <p>Returns a promise that waits until at least <code>slot</code> is reached
 Resolves when the current slot &gt;= <code>slot</code>
 Rejects if the clock is aborted</p>

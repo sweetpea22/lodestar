@@ -352,7 +352,7 @@
 <a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/validator/classes/slashingprotection_attestation.attestationbytargetrepository.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/slashingprotection_attestation/">slashingProtection/attestation</a> › <a href="./">AttestationByTargetRepository</a></p>
+<p><a href="../../">@chainsafe/lodestar-validator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/slashingprotection_attestation/">slashingProtection/attestation</a> › <a href="./">AttestationByTargetRepository</a></p>
 <h1 id="class-attestationbytargetrepository">Class: AttestationByTargetRepository<a class="headerlink" href="#class-attestationbytargetrepository" title="Permanent link">¶</a></h1>
 <p>Manages validator db storage of attestations.
 Entries in the db are indexed by an encoded key which combines the validator's public key and the
@@ -384,7 +384,7 @@ attestation's target epoch.</p>
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new AttestationByTargetRepository</strong>(<code>opts</code>: IDatabaseApiOptions): <em><a href="./">AttestationByTargetRepository</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L16">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L16">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:16</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -404,19 +404,19 @@ attestation's target epoch.</p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="protected-bucket"><code>Protected</code> bucket<a class="headerlink" href="#protected-bucket" title="Permanent link">¶</a></h3>
 <p>• <strong>bucket</strong>: <em>Bucket</em> = Bucket.phase0_slashingProtectionAttestationByTarget</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L16">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L16">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:16</a></em></p>
 <hr/>
 <h3 id="protected-db"><code>Protected</code> db<a class="headerlink" href="#protected-db" title="Permanent link">¶</a></h3>
-<p>• <strong>db</strong>: <em><a href="../../modules/reflection-1489.reflection-1490/#lodestarvalidatordatabasecontroller">LodestarValidatorDatabaseController</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L15">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:15</a></em></p>
+<p>• <strong>db</strong>: <em><a href="../../modules/reflection-1082.reflection-1/#lodestarvalidatordatabasecontroller">LodestarValidatorDatabaseController</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L15">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:15</a></em></p>
 <hr/>
 <h3 id="protected-type"><code>Protected</code> type<a class="headerlink" href="#protected-type" title="Permanent link">¶</a></h3>
 <p>• <strong>type</strong>: <em>Type‹SlashingProtectionAttestation›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L14">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:14</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L14">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:14</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="private-decodekey"><code>Private</code> decodeKey<a class="headerlink" href="#private-decodekey" title="Permanent link">¶</a></h3>
 <p>▸ <strong>decodeKey</strong>(<code>key</code>: Buffer): <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L58">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:58</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L58">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:58</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -444,7 +444,7 @@ attestation's target epoch.</p>
 <hr/>
 <h3 id="private-encodekey"><code>Private</code> encodeKey<a class="headerlink" href="#private-encodekey" title="Permanent link">¶</a></h3>
 <p>▸ <strong>encodeKey</strong>(<code>pubkey</code>: BLSPubkey, <code>targetEpoch</code>: <a href="../../enums/util.timeitem/#epoch">Epoch</a>): <em>Buffer</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L51">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:51</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L51">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:51</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -468,7 +468,7 @@ attestation's target epoch.</p>
 <hr/>
 <h3 id="get">get<a class="headerlink" href="#get" title="Permanent link">¶</a></h3>
 <p>▸ <strong>get</strong>(<code>pubkey</code>: BLSPubkey, <code>targetEpoch</code>: <a href="../../enums/util.timeitem/#epoch">Epoch</a>): <em>Promise‹SlashingProtectionAttestation | null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L32">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:32</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L32">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:32</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -492,7 +492,7 @@ attestation's target epoch.</p>
 <hr/>
 <h3 id="getall">getAll<a class="headerlink" href="#getall" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getAll</strong>(<code>pubkey</code>: BLSPubkey, <code>limit?</code>: undefined | number): <em>Promise‹SlashingProtectionAttestation[]›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L23">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L23">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:23</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -516,12 +516,12 @@ attestation's target epoch.</p>
 <hr/>
 <h3 id="listpubkeys">listPubkeys<a class="headerlink" href="#listpubkeys" title="Permanent link">¶</a></h3>
 <p>▸ <strong>listPubkeys</strong>(): <em>Promise‹BLSPubkey[]›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L46">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:46</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L46">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:46</a></em></p>
 <p><strong>Returns:</strong> <em>Promise‹BLSPubkey[]›</em></p>
 <hr/>
 <h3 id="set">set<a class="headerlink" href="#set" title="Permanent link">¶</a></h3>
 <p>▸ <strong>set</strong>(<code>pubkey</code>: BLSPubkey, <code>atts</code>: SlashingProtectionAttestation[]): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L37">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:37</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts#L37">packages/validator/src/slashingProtection/attestation/attestationByTargetRepository.ts:37</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

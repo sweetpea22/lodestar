@@ -380,7 +380,7 @@
 <a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/lodestar/modules/network_subnets.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="./">network/subnets</a></p>
+<p><a href="../../">@chainsafe/lodestar</a> › <a href="../../globals/">Globals</a> › <a href="./">network/subnets</a></p>
 <h1 id="module-networksubnets">Module: network/subnets<a class="headerlink" href="#module-networksubnets" title="Permanent link">¶</a></h1>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
@@ -433,7 +433,7 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="committeesubscription_1">CommitteeSubscription<a class="headerlink" href="#committeesubscription_1" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>CommitteeSubscription</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/network/subnets/interface.ts#L4">packages/lodestar/src/network/subnets/interface.ts:4</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/network/subnets/interface.ts#L4">packages/lodestar/src/network/subnets/interface.ts:4</a></em></p>
 <p>Generic CommitteeSubscription for both beacon attnets subs and syncnets subs</p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <ul>
@@ -453,21 +453,21 @@
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
 <h3 id="const-last_seen_validator_timeout"><code>Const</code> LAST_SEEN_VALIDATOR_TIMEOUT<a class="headerlink" href="#const-last_seen_validator_timeout" title="Permanent link">¶</a></h3>
 <p>• <strong>LAST_SEEN_VALIDATOR_TIMEOUT</strong>: <em>150</em> = 150</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/network/subnets/attnetsService.ts#L18">packages/lodestar/src/network/subnets/attnetsService.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/network/subnets/attnetsService.ts#L18">packages/lodestar/src/network/subnets/attnetsService.ts:18</a></em></p>
 <p>The time (in slots) before a last seen validator is considered absent and we unsubscribe from the random
 gossip topics that we subscribed to due to the validator connection.</p>
 <hr/>
 <h3 id="const-gossiptype"><code>Const</code> gossipType<a class="headerlink" href="#const-gossiptype" title="Permanent link">¶</a></h3>
 <p>• <strong>gossipType</strong>: <em><a href="../../enums/network_gossip.gossiptype/#beacon_attestation">beacon_attestation</a></em> = GossipType.beacon_attestation</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/network/subnets/attnetsService.ts#L20">packages/lodestar/src/network/subnets/attnetsService.ts:20</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/network/subnets/attnetsService.ts#L20">packages/lodestar/src/network/subnets/attnetsService.ts:20</a></em></p>
 <hr/>
 <h3 id="const-gossiptype_1"><code>Const</code> gossipType<a class="headerlink" href="#const-gossiptype_1" title="Permanent link">¶</a></h3>
 <p>• <strong>gossipType</strong>: <em><a href="../../enums/network_gossip.gossiptype/#sync_committee">sync_committee</a></em> = GossipType.sync_committee</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/network/subnets/syncnetsService.ts#L13">packages/lodestar/src/network/subnets/syncnetsService.ts:13</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/network/subnets/syncnetsService.ts#L13">packages/lodestar/src/network/subnets/syncnetsService.ts:13</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="randomsubscriptionslotlen">randomSubscriptionSlotLen<a class="headerlink" href="#randomsubscriptionslotlen" title="Permanent link">¶</a></h3>
 <p>▸ <strong>randomSubscriptionSlotLen</strong>(<code>config</code>: IBeaconConfig): <em>Slot</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/network/subnets/attnetsService.ts#L283">packages/lodestar/src/network/subnets/attnetsService.ts:283</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/network/subnets/attnetsService.ts#L283">packages/lodestar/src/network/subnets/attnetsService.ts:283</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

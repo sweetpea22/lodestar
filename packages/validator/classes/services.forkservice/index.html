@@ -291,6 +291,11 @@
 <nav aria-label="Properties" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#private-readonly-api">
+    Private Readonly api
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#private-fork">
     Private fork
   </a>
@@ -308,11 +313,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#private-readonly-logger">
     Private Readonly logger
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#private-readonly-provider">
-    Private Readonly provider
   </a>
 </li>
 </ul>
@@ -347,7 +347,7 @@
 <a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/validator/classes/services.forkservice.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/services/">services</a> › <a href="./">ForkService</a></p>
+<p><a href="../../">@chainsafe/lodestar-validator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/services/">services</a> › <a href="./">ForkService</a></p>
 <h1 id="class-forkservice">Class: ForkService<a class="headerlink" href="#class-forkservice" title="Permanent link">¶</a></h1>
 <p>Fork fetching strategy
 - Fetch fork once per epoch only, at the begining of the epoch
@@ -369,11 +369,11 @@
 </ul>
 <h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#private-readonly-api">api</a></li>
 <li><a href="./#private-fork">fork</a></li>
 <li><a href="./#private-forkpromise">forkPromise</a></li>
 <li><a href="./#private-forkpromisepending">forkPromisePending</a></li>
 <li><a href="./#private-readonly-logger">logger</a></li>
-<li><a href="./#private-readonly-provider">provider</a></li>
 </ul>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">¶</a></h3>
 <ul>
@@ -382,8 +382,8 @@
 </ul>
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
-<p>+ <strong>new ForkService</strong>(<code>provider</code>: <a href="../../interfaces/api.iapiclient/">IApiClient</a>, <code>logger</code>: ILogger, <code>clock</code>: <a href="../../interfaces/util.iclock/">IClock</a>): <em><a href="./">ForkService</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/services/fork.ts#L23">packages/validator/src/services/fork.ts:23</a></em></p>
+<p>+ <strong>new ForkService</strong>(<code>api</code>: Api, <code>logger</code>: ILogger, <code>clock</code>: <a href="../../interfaces/util.iclock/">IClock</a>): <em><a href="./">ForkService</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/services/fork.ts#L23">packages/validator/src/services/fork.ts:23</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -394,8 +394,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>provider</code></td>
-<td><a href="../../interfaces/api.iapiclient/">IApiClient</a></td>
+<td><code>api</code></td>
+<td>Api</td>
 </tr>
 <tr>
 <td><code>logger</code></td>
@@ -409,37 +409,37 @@
 </table>
 <p><strong>Returns:</strong> <em><a href="./">ForkService</a></em></p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
+<h3 id="private-readonly-api"><code>Private</code> <code>Readonly</code> api<a class="headerlink" href="#private-readonly-api" title="Permanent link">¶</a></h3>
+<p>• <strong>api</strong>: <em>Api</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/services/fork.ts#L25">packages/validator/src/services/fork.ts:25</a></em></p>
+<hr/>
 <h3 id="private-fork"><code>Private</code> fork<a class="headerlink" href="#private-fork" title="Permanent link">¶</a></h3>
 <p>• <strong>fork</strong>: <em>Fork | null</em> = null</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/services/fork.ts#L19">packages/validator/src/services/fork.ts:19</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/services/fork.ts#L19">packages/validator/src/services/fork.ts:19</a></em></p>
 <hr/>
 <h3 id="private-forkpromise"><code>Private</code> forkPromise<a class="headerlink" href="#private-forkpromise" title="Permanent link">¶</a></h3>
 <p>• <strong>forkPromise</strong>: <em>Promise‹Fork› | null</em> = null</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/services/fork.ts#L21">packages/validator/src/services/fork.ts:21</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/services/fork.ts#L21">packages/validator/src/services/fork.ts:21</a></em></p>
 <p>Store the promise and return it in getFork() for a potential race condition on start</p>
 <hr/>
 <h3 id="private-forkpromisepending"><code>Private</code> forkPromisePending<a class="headerlink" href="#private-forkpromisepending" title="Permanent link">¶</a></h3>
 <p>• <strong>forkPromisePending</strong>: <em>boolean</em> = false</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/services/fork.ts#L23">packages/validator/src/services/fork.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/services/fork.ts#L23">packages/validator/src/services/fork.ts:23</a></em></p>
 <p>Prevent calling updateFork() more than once at the same time</p>
 <hr/>
 <h3 id="private-readonly-logger"><code>Private</code> <code>Readonly</code> logger<a class="headerlink" href="#private-readonly-logger" title="Permanent link">¶</a></h3>
 <p>• <strong>logger</strong>: <em>ILogger</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/services/fork.ts#L25">packages/validator/src/services/fork.ts:25</a></em></p>
-<hr/>
-<h3 id="private-readonly-provider"><code>Private</code> <code>Readonly</code> provider<a class="headerlink" href="#private-readonly-provider" title="Permanent link">¶</a></h3>
-<p>• <strong>provider</strong>: <em><a href="../../interfaces/api.iapiclient/">IApiClient</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/services/fork.ts#L25">packages/validator/src/services/fork.ts:25</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/services/fork.ts#L25">packages/validator/src/services/fork.ts:25</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="getfork">getFork<a class="headerlink" href="#getfork" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getFork</strong>(): <em>Promise‹Fork›</em></p>
 <p><em>Implementation of <a href="../../interfaces/services.iforkservice/">IForkService</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/services/fork.ts#L29">packages/validator/src/services/fork.ts:29</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/services/fork.ts#L29">packages/validator/src/services/fork.ts:29</a></em></p>
 <p><strong>Returns:</strong> <em>Promise‹Fork›</em></p>
 <hr/>
 <h3 id="private-updatefork"><code>Private</code> updateFork<a class="headerlink" href="#private-updatefork" title="Permanent link">¶</a></h3>
 <p>▸ <strong>updateFork</strong>(<code>epoch</code>: <a href="../../enums/util.timeitem/#epoch">Epoch</a>): <em>Promise‹void›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/validator/src/services/fork.ts#L36">packages/validator/src/services/fork.ts:36</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/validator/src/services/fork.ts#L36">packages/validator/src/services/fork.ts:36</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

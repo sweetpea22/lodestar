@@ -332,7 +332,7 @@
 <a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/lodestar/classes/util.forkdigestcontext.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">event-iterator</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/util/">util</a> › <a href="./">ForkDigestContext</a></p>
+<p><a href="../../">@chainsafe/lodestar</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/util/">util</a> › <a href="./">ForkDigestContext</a></p>
 <h1 id="class-forkdigestcontext">Class: ForkDigestContext<a class="headerlink" href="#class-forkdigestcontext" title="Permanent link">¶</a></h1>
 <p>Compute ForkDigest once for all known forks and cache them in memory</p>
 <h2 id="hierarchy">Hierarchy<a class="headerlink" href="#hierarchy" title="Permanent link">¶</a></h2>
@@ -361,7 +361,7 @@
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new ForkDigestContext</strong>(<code>config</code>: IBeaconConfig, <code>genesisValidatorsRoot</code>: Root): <em><a href="./">ForkDigestContext</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/util/forkDigestContext.ts#L18">packages/lodestar/src/util/forkDigestContext.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/util/forkDigestContext.ts#L18">packages/lodestar/src/util/forkDigestContext.ts:18</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -385,15 +385,15 @@
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="private-forkdigestbyforkname"><code>Private</code> forkDigestByForkName<a class="headerlink" href="#private-forkdigestbyforkname" title="Permanent link">¶</a></h3>
 <p>• <strong>forkDigestByForkName</strong>: <em>Map‹ForkName, ByteVector›</em> = new Map<forkname, forkdigest="">()</forkname,></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/util/forkDigestContext.ts#L17">packages/lodestar/src/util/forkDigestContext.ts:17</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/util/forkDigestContext.ts#L17">packages/lodestar/src/util/forkDigestContext.ts:17</a></em></p>
 <hr/>
 <h3 id="private-forknamebyforkdigest"><code>Private</code> forkNameByForkDigest<a class="headerlink" href="#private-forknamebyforkdigest" title="Permanent link">¶</a></h3>
 <p>• <strong>forkNameByForkDigest</strong>: <em>Map‹string, ForkName›</em> = new Map<forkdigesthex, forkname="">()</forkdigesthex,></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/util/forkDigestContext.ts#L18">packages/lodestar/src/util/forkDigestContext.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/util/forkDigestContext.ts#L18">packages/lodestar/src/util/forkDigestContext.ts:18</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="forkdigest2forkname">forkDigest2ForkName<a class="headerlink" href="#forkdigest2forkname" title="Permanent link">¶</a></h3>
 <p>▸ <strong>forkDigest2ForkName</strong>(<code>forkDigest</code>: <a href="../../enums/network_reqresp.contextbytestype/#forkdigest">ForkDigest</a> | <a href="../../modules/util/#forkdigesthex">ForkDigestHex</a>): <em>ForkName</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/util/forkDigestContext.ts#L28">packages/lodestar/src/util/forkDigestContext.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/util/forkDigestContext.ts#L28">packages/lodestar/src/util/forkDigestContext.ts:28</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -413,7 +413,7 @@
 <hr/>
 <h3 id="forkname2forkdigest">forkName2ForkDigest<a class="headerlink" href="#forkname2forkdigest" title="Permanent link">¶</a></h3>
 <p>▸ <strong>forkName2ForkDigest</strong>(<code>forkName</code>: ForkName): <em><a href="../../enums/network_reqresp.contextbytestype/#forkdigest">ForkDigest</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f677874/packages/lodestar/src/util/forkDigestContext.ts#L37">packages/lodestar/src/util/forkDigestContext.ts:37</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/de1e121/packages/lodestar/src/util/forkDigestContext.ts#L37">packages/lodestar/src/util/forkDigestContext.ts:37</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
