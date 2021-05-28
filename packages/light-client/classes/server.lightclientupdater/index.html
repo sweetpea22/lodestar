@@ -395,7 +395,7 @@
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new LightClientUpdater</strong>(<code>config</code>: IBeaconConfig, <code>db</code>: <a href="../../modules/server/#lightclientupdaterdb">LightClientUpdaterDb</a>): <em><a href="./">LightClientUpdater</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L65">server/LightClientUpdater.ts:65</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L65">server/LightClientUpdater.ts:65</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -419,23 +419,23 @@
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="private-readonly-config"><code>Private</code> <code>Readonly</code> config<a class="headerlink" href="#private-readonly-config" title="Permanent link">¶</a></h3>
 <p>• <strong>config</strong>: <em>IBeaconConfig</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L67">server/LightClientUpdater.ts:67</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L67">server/LightClientUpdater.ts:67</a></em></p>
 <hr/>
 <h3 id="private-readonly-db"><code>Private</code> <code>Readonly</code> db<a class="headerlink" href="#private-readonly-db" title="Permanent link">¶</a></h3>
 <p>• <strong>db</strong>: <em><a href="../../modules/server/#lightclientupdaterdb">LightClientUpdaterDb</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L67">server/LightClientUpdater.ts:67</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L67">server/LightClientUpdater.ts:67</a></em></p>
 <hr/>
 <h3 id="private-readonly-prevheaddata"><code>Private</code> <code>Readonly</code> prevHeadData<a class="headerlink" href="#private-readonly-prevheaddata" title="Permanent link">¶</a></h3>
 <p>• <strong>prevHeadData</strong>: <em>Map‹string, <a href="../../modules/server/#syncattesteddata">SyncAttestedData</a>›</em> = new Map<string, syncattesteddata="">()</string,></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L61">server/LightClientUpdater.ts:61</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L61">server/LightClientUpdater.ts:61</a></em></p>
 <hr/>
 <h3 id="private-readonly-zero"><code>Private</code> <code>Readonly</code> zero<a class="headerlink" href="#private-readonly-zero" title="Permanent link">¶</a></h3>
 <p>• <strong>zero</strong>: <em>Pick‹LightClientUpdate, "nextSyncCommittee" | "nextSyncCommitteeBranch" | "finalityBranch" | "finalityHeader"›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L62">server/LightClientUpdater.ts:62</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L62">server/LightClientUpdater.ts:62</a></em></p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="getbestupdates">getBestUpdates<a class="headerlink" href="#getbestupdates" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBestUpdates</strong>(<code>periods</code>: <a href="../../modules/server/#committeeperiod">CommitteePeriod</a>[]): <em>Promise‹LightClientUpdate[]›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L84">server/LightClientUpdater.ts:84</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L84">server/LightClientUpdater.ts:84</a></em></p>
 <p>To be called in API route GET /eth/v1/lightclient/best_update/:periods</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -456,19 +456,19 @@
 <hr/>
 <h3 id="getlatestupdatefinalized">getLatestUpdateFinalized<a class="headerlink" href="#getlatestupdatefinalized" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getLatestUpdateFinalized</strong>(): <em>Promise‹LightClientUpdate | null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L96">server/LightClientUpdater.ts:96</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L96">server/LightClientUpdater.ts:96</a></em></p>
 <p>To be called in API route GET /eth/v1/lightclient/latest_update_finalized/</p>
 <p><strong>Returns:</strong> <em>Promise‹LightClientUpdate | null›</em></p>
 <hr/>
 <h3 id="getlatestupdatenonfinalized">getLatestUpdateNonFinalized<a class="headerlink" href="#getlatestupdatenonfinalized" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getLatestUpdateNonFinalized</strong>(): <em>Promise‹LightClientUpdate | null›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L103">server/LightClientUpdater.ts:103</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L103">server/LightClientUpdater.ts:103</a></em></p>
 <p>To be called in API route GET /eth/v1/lightclient/latest_update_nonfinalized/</p>
 <p><strong>Returns:</strong> <em>Promise‹LightClientUpdate | null›</em></p>
 <hr/>
 <h3 id="onfinalized">onFinalized<a class="headerlink" href="#onfinalized" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onFinalized</strong>(<code>checkpoint</code>: Checkpoint, <code>block</code>: BeaconBlock, <code>postState</code>: TreeBacked‹BeaconState›): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L166">server/LightClientUpdater.ts:166</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L166">server/LightClientUpdater.ts:166</a></em></p>
 <p>Must subcribe to BeaconChain event <code>finalizedCheckpoint</code>.
 Expects the block from <code>checkpoint.root</code> and the post state of the block, <code>block.stateRoot</code></p>
 <p>NOTE: Must be called also on start with the current finalized checkpoint (may be genesis)</p>
@@ -499,7 +499,7 @@ Expects the block from <code>checkpoint.root</code> and the post state of the bl
 <hr/>
 <h3 id="onhead">onHead<a class="headerlink" href="#onhead" title="Permanent link">¶</a></h3>
 <p>▸ <strong>onHead</strong>(<code>block</code>: BeaconBlock, <code>postState</code>: TreeBacked‹BeaconState›): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L116">server/LightClientUpdater.ts:116</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L116">server/LightClientUpdater.ts:116</a></em></p>
 <p>Must subscribe to BeaconChain event <code>head</code></p>
 <p>On head store the syncAggregate and:
 - Keep the best syncAggregate from the latest finalized checkpoint
@@ -529,7 +529,7 @@ Expects the block from <code>checkpoint.root</code> and the post state of the bl
 <hr/>
 <h3 id="private-persistbestfinalizedupdate"><code>Private</code> persistBestFinalizedUpdate<a class="headerlink" href="#private-persistbestfinalizedupdate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>persistBestFinalizedUpdate</strong>(<code>syncAttestedData</code>: <a href="../../modules/server/#syncattesteddata">SyncAttestedData</a>, <code>signatureData</code>: <a href="../../modules/server/#committeesignaturedata">CommitteeSignatureData</a>): <em><a href="../../modules/server/#committeeperiod">CommitteePeriod</a> | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L182">server/LightClientUpdater.ts:182</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L182">server/LightClientUpdater.ts:182</a></em></p>
 <p>Store the best syncAggregate per finalizedEpoch</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -554,7 +554,7 @@ Expects the block from <code>checkpoint.root</code> and the post state of the bl
 <hr/>
 <h3 id="private-persistbestnonfinalizedupdate"><code>Private</code> persistBestNonFinalizedUpdate<a class="headerlink" href="#private-persistbestnonfinalizedupdate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>persistBestNonFinalizedUpdate</strong>(<code>syncAttestedData</code>: <a href="../../modules/server/#syncattesteddata">SyncAttestedData</a>, <code>signatureData</code>: <a href="../../modules/server/#committeesignaturedata">CommitteeSignatureData</a>, <code>committeePeriodWithFinalized</code>: <a href="../../modules/server/#committeeperiod">CommitteePeriod</a> | null): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/light-client/src/server/LightClientUpdater.ts#L234">server/LightClientUpdater.ts:234</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9678be9/packages/light-client/src/server/LightClientUpdater.ts#L234">server/LightClientUpdater.ts:234</a></em></p>
 <p>Store the best syncAggregate per committeePeriod in case finality is not reached</p>
 <p><strong>Parameters:</strong></p>
 <table>
