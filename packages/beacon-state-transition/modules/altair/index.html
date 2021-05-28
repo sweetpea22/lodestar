@@ -587,6 +587,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#syncaggregatorselectiondata">
+    SyncAggregatorSelectionData
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#synccommittee">
     SyncCommittee
   </a>
@@ -599,11 +604,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#synccommitteesignature">
     SyncCommitteeSignature
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#synccommitteesigningdata">
-    SyncCommitteeSigningData
   </a>
 </li>
 <li class="md-nav__item">
@@ -692,13 +692,13 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#getsynccommittee">
-    getSyncCommittee
+<a class="md-nav__link" href="#getnextsynccommittee">
+    getNextSyncCommittee
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#getsynccommitteeindices">
-    getSyncCommitteeIndices
+<a class="md-nav__link" href="#getnextsynccommitteeindices">
+    getNextSyncCommitteeIndices
   </a>
 </li>
 <li class="md-nav__item">
@@ -772,6 +772,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#processsynccommittee">
+    processSyncCommittee
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#processsynccommitteeupdates">
     processSyncCommitteeUpdates
   </a>
@@ -800,6 +805,11 @@
   </a>
 <nav aria-label="Variables" class="md-nav">
 <ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-participation_flag_weights">
+    Const PARTICIPATION_FLAG_WEIGHTS
+  </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#const-proposer_weight">
     Const PROPOSER_WEIGHT
@@ -857,11 +867,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#addflag">
     addFlag
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#getflagindicesandweights">
-    getFlagIndicesAndWeights
   </a>
 </li>
 <li class="md-nav__item">
@@ -966,10 +971,10 @@
 <li><a href="./#slot">Slot</a></li>
 <li><a href="./#subcommitteeindex">SubCommitteeIndex</a></li>
 <li><a href="./#syncaggregate">SyncAggregate</a></li>
+<li><a href="./#syncaggregatorselectiondata">SyncAggregatorSelectionData</a></li>
 <li><a href="./#synccommittee">SyncCommittee</a></li>
 <li><a href="./#synccommitteecontribution">SyncCommitteeContribution</a></li>
 <li><a href="./#synccommitteesignature">SyncCommitteeSignature</a></li>
-<li><a href="./#synccommitteesigningdata">SyncCommitteeSigningData</a></li>
 <li><a href="./#syncperiod">SyncPeriod</a></li>
 <li><a href="./#syncsubnets">SyncSubnets</a></li>
 <li><a href="./#uint128">Uint128</a></li>
@@ -987,8 +992,8 @@
 <li><a href="./#getbaserewardperincrement">getBaseRewardPerIncrement</a></li>
 <li><a href="./#getflagindexdeltas">getFlagIndexDeltas</a></li>
 <li><a href="./#getinactivitypenaltydeltas">getInactivityPenaltyDeltas</a></li>
-<li><a href="./#getsynccommittee">getSyncCommittee</a></li>
-<li><a href="./#getsynccommitteeindices">getSyncCommitteeIndices</a></li>
+<li><a href="./#getnextsynccommittee">getNextSyncCommittee</a></li>
+<li><a href="./#getnextsynccommitteeindices">getNextSyncCommitteeIndices</a></li>
 <li><a href="./#getunslashedparticipatingindices">getUnslashedParticipatingIndices</a></li>
 <li><a href="./#naive">naive</a></li>
 <li><a href="./#processattestation">processAttestation</a></li>
@@ -1003,6 +1008,7 @@
 <li><a href="./#processregistryupdates">processRegistryUpdates</a></li>
 <li><a href="./#processrewardsandpenalties">processRewardsAndPenalties</a></li>
 <li><a href="./#processslashings">processSlashings</a></li>
+<li><a href="./#processsynccommittee">processSyncCommittee</a></li>
 <li><a href="./#processsynccommitteeupdates">processSyncCommitteeUpdates</a></li>
 <li><a href="./#processvoluntaryexit">processVoluntaryExit</a></li>
 <li><a href="./#slashvalidator">slashValidator</a></li>
@@ -1010,6 +1016,7 @@
 </ul>
 <h3 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h3>
 <ul>
+<li><a href="./#const-participation_flag_weights">PARTICIPATION_FLAG_WEIGHTS</a></li>
 <li><a href="./#const-proposer_weight">PROPOSER_WEIGHT</a></li>
 <li><a href="./#const-sync_reward_weight">SYNC_REWARD_WEIGHT</a></li>
 <li><a href="./#const-timely_head_flag_index">TIMELY_HEAD_FLAG_INDEX</a></li>
@@ -1023,7 +1030,6 @@
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#addflag">addFlag</a></li>
-<li><a href="./#getflagindicesandweights">getFlagIndicesAndWeights</a></li>
 <li><a href="./#hasflag">hasFlag</a></li>
 <li><a href="./#translateparticipation">translateParticipation</a></li>
 <li><a href="./#upgradestate">upgradeState</a></li>
@@ -1222,6 +1228,9 @@
 <h3 id="syncaggregate">SyncAggregate<a class="headerlink" href="#syncaggregate" title="Permanent link">¶</a></h3>
 <p>• <strong>SyncAggregate</strong>:</p>
 <hr/>
+<h3 id="syncaggregatorselectiondata">SyncAggregatorSelectionData<a class="headerlink" href="#syncaggregatorselectiondata" title="Permanent link">¶</a></h3>
+<p>• <strong>SyncAggregatorSelectionData</strong>:</p>
+<hr/>
 <h3 id="synccommittee">SyncCommittee<a class="headerlink" href="#synccommittee" title="Permanent link">¶</a></h3>
 <p>• <strong>SyncCommittee</strong>:</p>
 <hr/>
@@ -1230,9 +1239,6 @@
 <hr/>
 <h3 id="synccommitteesignature">SyncCommitteeSignature<a class="headerlink" href="#synccommitteesignature" title="Permanent link">¶</a></h3>
 <p>• <strong>SyncCommitteeSignature</strong>:</p>
-<hr/>
-<h3 id="synccommitteesigningdata">SyncCommitteeSigningData<a class="headerlink" href="#synccommitteesigningdata" title="Permanent link">¶</a></h3>
-<p>• <strong>SyncCommitteeSigningData</strong>:</p>
 <hr/>
 <h3 id="syncperiod">SyncPeriod<a class="headerlink" href="#syncperiod" title="Permanent link">¶</a></h3>
 <p>• <strong>SyncPeriod</strong>:</p>
@@ -1285,11 +1291,11 @@
 <h3 id="getinactivitypenaltydeltas">getInactivityPenaltyDeltas<a class="headerlink" href="#getinactivitypenaltydeltas" title="Permanent link">¶</a></h3>
 <p>• <strong>getInactivityPenaltyDeltas</strong>:</p>
 <hr/>
-<h3 id="getsynccommittee">getSyncCommittee<a class="headerlink" href="#getsynccommittee" title="Permanent link">¶</a></h3>
-<p>• <strong>getSyncCommittee</strong>:</p>
+<h3 id="getnextsynccommittee">getNextSyncCommittee<a class="headerlink" href="#getnextsynccommittee" title="Permanent link">¶</a></h3>
+<p>• <strong>getNextSyncCommittee</strong>:</p>
 <hr/>
-<h3 id="getsynccommitteeindices">getSyncCommitteeIndices<a class="headerlink" href="#getsynccommitteeindices" title="Permanent link">¶</a></h3>
-<p>• <strong>getSyncCommitteeIndices</strong>:</p>
+<h3 id="getnextsynccommitteeindices">getNextSyncCommitteeIndices<a class="headerlink" href="#getnextsynccommitteeindices" title="Permanent link">¶</a></h3>
+<p>• <strong>getNextSyncCommitteeIndices</strong>:</p>
 <hr/>
 <h3 id="getunslashedparticipatingindices">getUnslashedParticipatingIndices<a class="headerlink" href="#getunslashedparticipatingindices" title="Permanent link">¶</a></h3>
 <p>• <strong>getUnslashedParticipatingIndices</strong>:</p>
@@ -1333,6 +1339,9 @@
 <h3 id="processslashings">processSlashings<a class="headerlink" href="#processslashings" title="Permanent link">¶</a></h3>
 <p>• <strong>processSlashings</strong>:</p>
 <hr/>
+<h3 id="processsynccommittee">processSyncCommittee<a class="headerlink" href="#processsynccommittee" title="Permanent link">¶</a></h3>
+<p>• <strong>processSyncCommittee</strong>:</p>
+<hr/>
 <h3 id="processsynccommitteeupdates">processSyncCommitteeUpdates<a class="headerlink" href="#processsynccommitteeupdates" title="Permanent link">¶</a></h3>
 <p>• <strong>processSyncCommitteeUpdates</strong>:</p>
 <hr/>
@@ -1345,45 +1354,49 @@
 <h3 id="upgradestate">upgradeState<a class="headerlink" href="#upgradestate" title="Permanent link">¶</a></h3>
 <p>• <strong>upgradeState</strong>:</p>
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
+<h3 id="const-participation_flag_weights"><code>Const</code> PARTICIPATION_FLAG_WEIGHTS<a class="headerlink" href="#const-participation_flag_weights" title="Permanent link">¶</a></h3>
+<p>• <strong>PARTICIPATION_FLAG_WEIGHTS</strong>: <em>bigint[]</em> = [TIMELY_SOURCE_WEIGHT, TIMELY_TARGET_WEIGHT, TIMELY_HEAD_WEIGHT]</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/misc.ts#L4">altair/misc.ts:4</a></em></p>
+<hr/>
 <h3 id="const-proposer_weight"><code>Const</code> PROPOSER_WEIGHT<a class="headerlink" href="#const-proposer_weight" title="Permanent link">¶</a></h3>
 <p>• <strong>PROPOSER_WEIGHT</strong>: <em>bigint</em> = BigInt(8)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/constants.ts#L9">altair/constants.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/constants.ts#L9">altair/constants.ts:9</a></em></p>
 <hr/>
 <h3 id="const-sync_reward_weight"><code>Const</code> SYNC_REWARD_WEIGHT<a class="headerlink" href="#const-sync_reward_weight" title="Permanent link">¶</a></h3>
 <p>• <strong>SYNC_REWARD_WEIGHT</strong>: <em>bigint</em> = BigInt(8)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/constants.ts#L8">altair/constants.ts:8</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/constants.ts#L8">altair/constants.ts:8</a></em></p>
 <hr/>
 <h3 id="const-timely_head_flag_index"><code>Const</code> TIMELY_HEAD_FLAG_INDEX<a class="headerlink" href="#const-timely_head_flag_index" title="Permanent link">¶</a></h3>
-<p>• <strong>TIMELY_HEAD_FLAG_INDEX</strong>: <em>0</em> = 0</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/constants.ts#L1">altair/constants.ts:1</a></em></p>
+<p>• <strong>TIMELY_HEAD_FLAG_INDEX</strong>: <em>2</em> = 2</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/constants.ts#L3">altair/constants.ts:3</a></em></p>
 <hr/>
 <h3 id="const-timely_head_weight"><code>Const</code> TIMELY_HEAD_WEIGHT<a class="headerlink" href="#const-timely_head_weight" title="Permanent link">¶</a></h3>
 <p>• <strong>TIMELY_HEAD_WEIGHT</strong>: <em>bigint</em> = BigInt(12)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/constants.ts#L5">altair/constants.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/constants.ts#L5">altair/constants.ts:5</a></em></p>
 <hr/>
 <h3 id="const-timely_source_flag_index"><code>Const</code> TIMELY_SOURCE_FLAG_INDEX<a class="headerlink" href="#const-timely_source_flag_index" title="Permanent link">¶</a></h3>
-<p>• <strong>TIMELY_SOURCE_FLAG_INDEX</strong>: <em>1</em> = 1</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/constants.ts#L2">altair/constants.ts:2</a></em></p>
+<p>• <strong>TIMELY_SOURCE_FLAG_INDEX</strong>: <em>0</em> = 0</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/constants.ts#L1">altair/constants.ts:1</a></em></p>
 <hr/>
 <h3 id="const-timely_source_weight"><code>Const</code> TIMELY_SOURCE_WEIGHT<a class="headerlink" href="#const-timely_source_weight" title="Permanent link">¶</a></h3>
 <p>• <strong>TIMELY_SOURCE_WEIGHT</strong>: <em>bigint</em> = BigInt(12)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/constants.ts#L6">altair/constants.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/constants.ts#L6">altair/constants.ts:6</a></em></p>
 <hr/>
 <h3 id="const-timely_target_flag_index"><code>Const</code> TIMELY_TARGET_FLAG_INDEX<a class="headerlink" href="#const-timely_target_flag_index" title="Permanent link">¶</a></h3>
-<p>• <strong>TIMELY_TARGET_FLAG_INDEX</strong>: <em>2</em> = 2</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/constants.ts#L3">altair/constants.ts:3</a></em></p>
+<p>• <strong>TIMELY_TARGET_FLAG_INDEX</strong>: <em>1</em> = 1</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/constants.ts#L2">altair/constants.ts:2</a></em></p>
 <hr/>
 <h3 id="const-timely_target_weight"><code>Const</code> TIMELY_TARGET_WEIGHT<a class="headerlink" href="#const-timely_target_weight" title="Permanent link">¶</a></h3>
 <p>• <strong>TIMELY_TARGET_WEIGHT</strong>: <em>bigint</em> = BigInt(24)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/constants.ts#L7">altair/constants.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/constants.ts#L7">altair/constants.ts:7</a></em></p>
 <hr/>
 <h3 id="const-weight_denominator"><code>Const</code> WEIGHT_DENOMINATOR<a class="headerlink" href="#const-weight_denominator" title="Permanent link">¶</a></h3>
 <p>• <strong>WEIGHT_DENOMINATOR</strong>: <em>bigint</em> = BigInt(64)</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/constants.ts#L10">altair/constants.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/constants.ts#L10">altair/constants.ts:10</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="addflag">addFlag<a class="headerlink" href="#addflag" title="Permanent link">¶</a></h3>
 <p>▸ <strong>addFlag</strong>(<code>flags</code>: <a href="./#participationflags">ParticipationFlags</a>, <code>flagIndex</code>: number): <em><a href="./#participationflags">ParticipationFlags</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/misc.ts#L18">altair/misc.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/misc.ts#L5">altair/misc.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1405,14 +1418,9 @@
 </table>
 <p><strong>Returns:</strong> <em><a href="./#participationflags">ParticipationFlags</a></em></p>
 <hr/>
-<h3 id="getflagindicesandweights">getFlagIndicesAndWeights<a class="headerlink" href="#getflagindicesandweights" title="Permanent link">¶</a></h3>
-<p>▸ <strong>getFlagIndicesAndWeights</strong>(): <em>[number, bigint][]</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/misc.ts#L11">altair/misc.ts:11</a></em></p>
-<p><strong>Returns:</strong> <em>[number, bigint][]</em></p>
-<hr/>
 <h3 id="hasflag">hasFlag<a class="headerlink" href="#hasflag" title="Permanent link">¶</a></h3>
 <p>▸ <strong>hasFlag</strong>(<code>flags</code>: <a href="./#participationflags">ParticipationFlags</a>, <code>flagIndex</code>: number): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/misc.ts#L23">altair/misc.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/misc.ts#L10">altair/misc.ts:10</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -1436,7 +1444,7 @@
 <hr/>
 <h3 id="translateparticipation">translateParticipation<a class="headerlink" href="#translateparticipation" title="Permanent link">¶</a></h3>
 <p>▸ <strong>translateParticipation</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›, <code>pendingAttesations</code>: PendingAttestation[]): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/upgradeState.ts#L48">altair/upgradeState.ts:48</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/upgradeState.ts#L49">altair/upgradeState.ts:49</a></em></p>
 <p>Translate_participation in https://github.com/ethereum/eth2.0-specs/blob/dev/specs/altair/fork.md</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1461,7 +1469,7 @@
 <hr/>
 <h3 id="upgradestate_1">upgradeState<a class="headerlink" href="#upgradestate_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>upgradeState</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›): <em><a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹BeaconState›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/upgradeState.ts#L12">altair/upgradeState.ts:12</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/upgradeState.ts#L13">altair/upgradeState.ts:13</a></em></p>
 <p>Upgrade a state from phase0 to altair.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1482,7 +1490,7 @@
 <hr/>
 <h3 id="upgradetreebackedstate">upgradeTreeBackedState<a class="headerlink" href="#upgradetreebackedstate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>upgradeTreeBackedState</strong>(<code>config</code>: IBeaconConfig, <code>state</code>: TreeBacked‹BeaconState›): <em>TreeBacked‹BeaconState›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/d3985e3/packages/beacon-state-transition/src/altair/upgradeState.ts#L24">altair/upgradeState.ts:24</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/b5d6eaf/packages/beacon-state-transition/src/altair/upgradeState.ts#L25">altair/upgradeState.ts:25</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
