@@ -267,8 +267,18 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#parseinterchangev5">
+    parseInterchangeV5
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#serializeinterchangecompletev4">
     serializeInterchangeCompleteV4
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#serializeinterchangev5">
+    serializeInterchangeV5
   </a>
 </li>
 </ul>
@@ -290,16 +300,19 @@
 <h3 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="../../interfaces/slashingprotection_interchange_formats.iinterchangecompletev4/">IInterchangeCompleteV4</a></li>
+<li><a href="../../interfaces/slashingprotection_interchange_formats.iinterchangev5/">IInterchangeV5</a></li>
 </ul>
 <h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
 <ul>
 <li><a href="./#parseinterchangecompletev4">parseInterchangeCompleteV4</a></li>
+<li><a href="./#parseinterchangev5">parseInterchangeV5</a></li>
 <li><a href="./#serializeinterchangecompletev4">serializeInterchangeCompleteV4</a></li>
+<li><a href="./#serializeinterchangev5">serializeInterchangeV5</a></li>
 </ul>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="parseinterchangecompletev4">parseInterchangeCompleteV4<a class="headerlink" href="#parseinterchangecompletev4" title="Permanent link">¶</a></h3>
 <p>▸ <strong>parseInterchangeCompleteV4</strong>(<code>config</code>: IBeaconConfig, <code>interchange</code>: <a href="../../interfaces/slashingprotection_interchange_formats.iinterchangecompletev4/">IInterchangeCompleteV4</a>): <em><a href="../../interfaces/slashingprotection_interchange.iinterchangelodestar/">IInterchangeLodestar</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f86a7a9/packages/validator/src/slashingProtection/interchange/formats/completeV4.ts#L111">packages/validator/src/slashingProtection/interchange/formats/completeV4.ts:111</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/11a2868/packages/validator/src/slashingProtection/interchange/formats/completeV4.ts#L111">packages/validator/src/slashingProtection/interchange/formats/completeV4.ts:111</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -321,9 +334,33 @@
 </table>
 <p><strong>Returns:</strong> <em><a href="../../interfaces/slashingprotection_interchange.iinterchangelodestar/">IInterchangeLodestar</a></em></p>
 <hr/>
+<h3 id="parseinterchangev5">parseInterchangeV5<a class="headerlink" href="#parseinterchangev5" title="Permanent link">¶</a></h3>
+<p>▸ <strong>parseInterchangeV5</strong>(<code>config</code>: IBeaconConfig, <code>interchange</code>: <a href="../../interfaces/slashingprotection_interchange_formats.iinterchangev5/">IInterchangeV5</a>): <em><a href="../../interfaces/slashingprotection_interchange.iinterchangelodestar/">IInterchangeLodestar</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/11a2868/packages/validator/src/slashingProtection/interchange/formats/v5.ts#L109">packages/validator/src/slashingProtection/interchange/formats/v5.ts:109</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td>IBeaconConfig</td>
+</tr>
+<tr>
+<td><code>interchange</code></td>
+<td><a href="../../interfaces/slashingprotection_interchange_formats.iinterchangev5/">IInterchangeV5</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em><a href="../../interfaces/slashingprotection_interchange.iinterchangelodestar/">IInterchangeLodestar</a></em></p>
+<hr/>
 <h3 id="serializeinterchangecompletev4">serializeInterchangeCompleteV4<a class="headerlink" href="#serializeinterchangecompletev4" title="Permanent link">¶</a></h3>
 <p>▸ <strong>serializeInterchangeCompleteV4</strong>(<code>config</code>: IBeaconConfig, <code>__namedParameters</code>: object): <em><a href="../../interfaces/slashingprotection_interchange_formats.iinterchangecompletev4/">IInterchangeCompleteV4</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/f86a7a9/packages/validator/src/slashingProtection/interchange/formats/completeV4.ts#L86">packages/validator/src/slashingProtection/interchange/formats/completeV4.ts:86</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/11a2868/packages/validator/src/slashingProtection/interchange/formats/completeV4.ts#L86">packages/validator/src/slashingProtection/interchange/formats/completeV4.ts:86</a></em></p>
 <p><strong>Parameters:</strong></p>
 <p>▪ <strong>config</strong>: <em>IBeaconConfig</em></p>
 <p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
@@ -346,6 +383,32 @@
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em><a href="../../interfaces/slashingprotection_interchange_formats.iinterchangecompletev4/">IInterchangeCompleteV4</a></em></p>
+<hr/>
+<h3 id="serializeinterchangev5">serializeInterchangeV5<a class="headerlink" href="#serializeinterchangev5" title="Permanent link">¶</a></h3>
+<p>▸ <strong>serializeInterchangeV5</strong>(<code>config</code>: IBeaconConfig, <code>__namedParameters</code>: object): <em><a href="../../interfaces/slashingprotection_interchange_formats.iinterchangev5/">IInterchangeV5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/11a2868/packages/validator/src/slashingProtection/interchange/formats/v5.ts#L85">packages/validator/src/slashingProtection/interchange/formats/v5.ts:85</a></em></p>
+<p><strong>Parameters:</strong></p>
+<p>▪ <strong>config</strong>: <em>IBeaconConfig</em></p>
+<p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data</code></td>
+<td>object[]</td>
+</tr>
+<tr>
+<td><code>genesisValidatorsRoot</code></td>
+<td>ByteVector</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em><a href="../../interfaces/slashingprotection_interchange_formats.iinterchangev5/">IInterchangeV5</a></em></p>
 </article>
 </div>
 </div>
