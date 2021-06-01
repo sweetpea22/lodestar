@@ -248,6 +248,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#interfaces">
+    Interfaces
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#type-aliases">
     Type aliases
   </a>
@@ -271,11 +276,6 @@
   </a>
 <nav aria-label="Type aliases" class="md-nav">
 <ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#committeeperiod">
-    CommitteePeriod
-  </a>
-</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#committeesignaturedata">
     CommitteeSignatureData
@@ -405,9 +405,12 @@
 <ul>
 <li><a href="../../classes/server.lightclientupdater/">LightClientUpdater</a></li>
 </ul>
+<h3 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="../../interfaces/server.ilightclientupdater/">ILightClientUpdater</a></li>
+</ul>
 <h3 id="type-aliases">Type aliases<a class="headerlink" href="#type-aliases" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#committeeperiod">CommitteePeriod</a></li>
 <li><a href="./#committeesignaturedata">CommitteeSignatureData</a></li>
 <li><a href="./#dbitem">DbItem</a></li>
 <li><a href="./#dbrepo">DbRepo</a></li>
@@ -427,13 +430,9 @@
 <li><a href="./#islatestbestnonfinalizedupdate">isLatestBestNonFinalizedUpdate</a></li>
 </ul>
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
-<h3 id="committeeperiod">CommitteePeriod<a class="headerlink" href="#committeeperiod" title="Permanent link">¶</a></h3>
-<p>Ƭ <strong>CommitteePeriod</strong>: <em>number</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L14">server/LightClientUpdater.ts:14</a></em></p>
-<hr/>
 <h3 id="committeesignaturedata">CommitteeSignatureData<a class="headerlink" href="#committeesignaturedata" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>CommitteeSignatureData</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L28">server/LightClientUpdater.ts:28</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/13bb120/packages/light-client/src/server/LightClientUpdater.ts#L27">server/LightClientUpdater.ts:27</a></em></p>
 <h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
 <ul>
 <li>
@@ -449,41 +448,41 @@
 <hr/>
 <h3 id="dbitem">DbItem<a class="headerlink" href="#dbitem" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>DbItem</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L16">server/LightClientUpdater.ts:16</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/13bb120/packages/light-client/src/server/LightClientUpdater.ts#L15">server/LightClientUpdater.ts:15</a></em></p>
 <h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
 <ul>
 <li>
-<p><strong>get</strong>(): <em>T | null</em></p>
+<p><strong>get</strong>(): <em>Promise‹T | null›</em></p>
 </li>
 <li>
-<p><strong>put</strong>(<code>data</code>: T): <em>void</em></p>
+<p><strong>put</strong>(<code>data</code>: T): <em>Promise‹void›</em></p>
 </li>
 </ul>
 <hr/>
 <h3 id="dbrepo">DbRepo<a class="headerlink" href="#dbrepo" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>DbRepo</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L15">server/LightClientUpdater.ts:15</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/13bb120/packages/light-client/src/server/LightClientUpdater.ts#L14">server/LightClientUpdater.ts:14</a></em></p>
 <h4 id="type-declaration_2">Type declaration:<a class="headerlink" href="#type-declaration_2" title="Permanent link">¶</a></h4>
 <ul>
 <li>
-<p><strong>get</strong>(<code>key</code>: K): <em>T | null</em></p>
+<p><strong>get</strong>(<code>key</code>: K): <em>Promise‹T | null›</em></p>
 </li>
 <li>
-<p><strong>put</strong>(<code>key</code>: K, <code>data</code>: T): <em>void</em></p>
+<p><strong>put</strong>(<code>key</code>: K, <code>data</code>: T): <em>Promise‹void›</em></p>
 </li>
 </ul>
 <hr/>
 <h3 id="finalizedcheckpointdata">FinalizedCheckpointData<a class="headerlink" href="#finalizedcheckpointdata" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>FinalizedCheckpointData</strong>: <em>Pick‹LightClientUpdate, "header" | "nextSyncCommittee" | "nextSyncCommitteeBranch"›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L23">server/LightClientUpdater.ts:23</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/13bb120/packages/light-client/src/server/LightClientUpdater.ts#L22">server/LightClientUpdater.ts:22</a></em></p>
 <hr/>
 <h3 id="lightclientupdaterdb">LightClientUpdaterDb<a class="headerlink" href="#lightclientupdaterdb" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>LightClientUpdaterDb</strong>: <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L34">server/LightClientUpdater.ts:34</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/13bb120/packages/light-client/src/server/LightClientUpdater.ts#L33">server/LightClientUpdater.ts:33</a></em></p>
 <h4 id="type-declaration_3">Type declaration:<a class="headerlink" href="#type-declaration_3" title="Permanent link">¶</a></h4>
 <ul>
 <li>
-<p><strong>bestUpdatePerCommitteePeriod</strong>: <em><a href="./#dbrepo">DbRepo</a>‹<a href="./#committeeperiod">CommitteePeriod</a>, LightClientUpdate›</em></p>
+<p><strong>bestUpdatePerCommitteePeriod</strong>: <em><a href="./#dbrepo">DbRepo</a>‹SyncPeriod, LightClientUpdate›</em></p>
 </li>
 <li>
 <p><strong>latestFinalizedUpdate</strong>: <em><a href="./#dbitem">DbItem</a>‹LightClientUpdate›</em></p>
@@ -498,16 +497,16 @@
 <hr/>
 <h3 id="syncattesteddata">SyncAttestedData<a class="headerlink" href="#syncattesteddata" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>SyncAttestedData</strong>: <em>Pick‹LightClientUpdate, "finalityBranch" | "header" | "nextSyncCommittee" | "nextSyncCommitteeBranch"› &amp; object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L18">server/LightClientUpdater.ts:18</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/13bb120/packages/light-client/src/server/LightClientUpdater.ts#L17">server/LightClientUpdater.ts:17</a></em></p>
 <h2 id="variables_1">Variables<a class="headerlink" href="#variables_1" title="Permanent link">¶</a></h2>
 <h3 id="const-prev_data_max_size"><code>Const</code> PREV_DATA_MAX_SIZE<a class="headerlink" href="#const-prev_data_max_size" title="Permanent link">¶</a></h3>
 <p>• <strong>PREV_DATA_MAX_SIZE</strong>: <em>64</em> = 64</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L53">server/LightClientUpdater.ts:53</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/13bb120/packages/light-client/src/server/LightClientUpdater.ts#L52">server/LightClientUpdater.ts:52</a></em></p>
 <p>In normal conditions a size of 1 would be enough. A high number of items is only necessary in heavy forking</p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="isbetterupdate">isBetterUpdate<a class="headerlink" href="#isbetterupdate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isBetterUpdate</strong>(<code>prevUpdate</code>: LightClientUpdate, <code>newUpdate</code>: LightClientUpdate): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L276">server/LightClientUpdater.ts:276</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/13bb120/packages/light-client/src/server/LightClientUpdater.ts#L285">server/LightClientUpdater.ts:285</a></em></p>
 <p>Returns the update with more bits. On ties, newUpdate is the better</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -532,7 +531,7 @@
 <hr/>
 <h3 id="isfinalizedupdate">isFinalizedUpdate<a class="headerlink" href="#isfinalizedupdate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isFinalizedUpdate</strong>(<code>update</code>: LightClientUpdate): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L300">server/LightClientUpdater.ts:300</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/13bb120/packages/light-client/src/server/LightClientUpdater.ts#L309">server/LightClientUpdater.ts:309</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -552,7 +551,7 @@
 <hr/>
 <h3 id="islatestbestfinalizedupdate">isLatestBestFinalizedUpdate<a class="headerlink" href="#islatestbestfinalizedupdate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isLatestBestFinalizedUpdate</strong>(<code>prevUpdate</code>: LightClientUpdate, <code>newUpdate</code>: LightClientUpdate): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L288">server/LightClientUpdater.ts:288</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/13bb120/packages/light-client/src/server/LightClientUpdater.ts#L297">server/LightClientUpdater.ts:297</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -576,7 +575,7 @@
 <hr/>
 <h3 id="islatestbestnonfinalizedupdate">isLatestBestNonFinalizedUpdate<a class="headerlink" href="#islatestbestnonfinalizedupdate" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isLatestBestNonFinalizedUpdate</strong>(<code>prevUpdate</code>: LightClientUpdate, <code>newUpdate</code>: LightClientUpdate): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f4e720/packages/light-client/src/server/LightClientUpdater.ts#L294">server/LightClientUpdater.ts:294</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/13bb120/packages/light-client/src/server/LightClientUpdater.ts#L303">server/LightClientUpdater.ts:303</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
