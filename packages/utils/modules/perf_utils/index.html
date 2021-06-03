@@ -6,10 +6,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
-<link href="https://chainsafe.github.io/lodestar/packages/utils/classes/reflection-474.reflection-1.assertionerror/" rel="canonical"/>
+<link href="https://chainsafe.github.io/lodestar/packages/utils/modules/perf_utils/" rel="canonical"/>
 <link href="../../../../images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.1.2, mkdocs-material-7.1.6" name="generator"/>
-<title>Reflection 474.reflection 1.assertionerror - Lodestar documentation</title>
+<title>Perf utils - Lodestar documentation</title>
 <link href="../../../../assets/stylesheets/main.875de78c.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-assertionerror">
+<a class="md-skip" href="#module-perfutils">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Reflection 474.reflection 1.assertionerror
+              Perf utils
             
           </span>
 </div>
@@ -237,53 +237,139 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hierarchy">
-    Hierarchy
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#index">
     Index
   </a>
 <nav aria-label="Index" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#properties">
-    Properties
+<a class="md-nav__link" href="#references">
+    References
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classes">
+    Classes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-aliases">
+    Type aliases
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions">
+    Functions
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#properties_1">
-    Properties
+<a class="md-nav__link" href="#references_1">
+    References
   </a>
-<nav aria-label="Properties" class="md-nav">
+<nav aria-label="References" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#message">
-    message
+<a class="md-nav__link" href="#benchmarkopts">
+    BenchmarkOpts
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#name">
-    name
+<a class="md-nav__link" href="#benchmarkresult">
+    BenchmarkResult
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#optional-stack">
-    Optional stack
+<a class="md-nav__link" href="#benchmarkrunner">
+    BenchmarkRunner
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#static-error">
-    Static Error
+<a class="md-nav__link" href="#formattitle">
+    formatTitle
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-aliases_1">
+    Type aliases
+  </a>
+<nav aria-label="Type aliases" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#benchmarkopts_1">
+    BenchmarkOpts
+  </a>
+<nav aria-label="BenchmarkOpts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#benchmarkresult_1">
+    BenchmarkResult
+  </a>
+<nav aria-label="BenchmarkResult" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-declaration_1">
+    Type declaration:
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#promiseoptional">
+    PromiseOptional
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#static-code">
-    Static code
+<a class="md-nav__link" href="#runopts">
+    RunOpts
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functions_1">
+    Functions
+  </a>
+<nav aria-label="Functions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#averagebigint">
+    averageBigint
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dorun">
+    doRun
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formatasbenchmarkjs">
+    formatAsBenchmarkJs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formatresultrow">
+    formatResultRow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formattitle_1">
+    formatTitle
   </a>
 </li>
 </ul>
@@ -296,48 +382,232 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/utils/classes/reflection-474.reflection-1.assertionerror.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/utils/modules/perf_utils.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">@chainsafe/lodestar-utils</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/reflection-474/"></a> › <a href="../../modules/reflection-474.reflection-1/"></a> › <a href="./">AssertionError</a></p>
-<h1 id="class-assertionerror">Class: AssertionError<a class="headerlink" href="#class-assertionerror" title="Permanent link">¶</a></h1>
-<h2 id="hierarchy">Hierarchy<a class="headerlink" href="#hierarchy" title="Permanent link">¶</a></h2>
-<ul>
-<li><a href="./#static-error">Error</a></li>
-</ul>
-<p>↳ <strong>AssertionError</strong></p>
+<p><a href="../../">@chainsafe/lodestar-utils</a> › <a href="../../globals/">Globals</a> › <a href="./">perf/utils</a></p>
+<h1 id="module-perfutils">Module: perf/utils<a class="headerlink" href="#module-perfutils" title="Permanent link">¶</a></h1>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
-<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">¶</a></h3>
 <ul>
-<li><a href="./#message">message</a></li>
-<li><a href="./#name">name</a></li>
-<li><a href="./#optional-stack">stack</a></li>
-<li><a href="./#static-error">Error</a></li>
-<li><a href="./#static-code">code</a></li>
+<li><a href="./#benchmarkopts">BenchmarkOpts</a></li>
+<li><a href="./#benchmarkresult">BenchmarkResult</a></li>
+<li><a href="./#benchmarkrunner">BenchmarkRunner</a></li>
+<li><a href="./#formattitle">formatTitle</a></li>
 </ul>
-<h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
-<h3 id="message">message<a class="headerlink" href="#message" title="Permanent link">¶</a></h3>
-<p>• <strong>message</strong>: <em>string</em></p>
-<p><em>Inherited from <a href="./">AssertionError</a>.<a href="./#message">message</a></em></p>
-<p>Defined in node_modules/typescript/lib/lib.es5.d.ts:974</p>
+<h3 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="../../classes/perf_utils.benchmarkgrouprunner/">BenchmarkGroupRunner</a></li>
+<li><a href="../../classes/perf_utils.benchmarkrunner/">BenchmarkRunner</a></li>
+</ul>
+<h3 id="type-aliases">Type aliases<a class="headerlink" href="#type-aliases" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#benchmarkopts">BenchmarkOpts</a></li>
+<li><a href="./#benchmarkresult">BenchmarkResult</a></li>
+<li><a href="./#promiseoptional">PromiseOptional</a></li>
+<li><a href="./#runopts">RunOpts</a></li>
+</ul>
+<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#averagebigint">averageBigint</a></li>
+<li><a href="./#dorun">doRun</a></li>
+<li><a href="./#formatasbenchmarkjs">formatAsBenchmarkJs</a></li>
+<li><a href="./#formatresultrow">formatResultRow</a></li>
+<li><a href="./#formattitle">formatTitle</a></li>
+</ul>
+<h2 id="references_1">References<a class="headerlink" href="#references_1" title="Permanent link">¶</a></h2>
+<h3 id="benchmarkopts">BenchmarkOpts<a class="headerlink" href="#benchmarkopts" title="Permanent link">¶</a></h3>
+<p>• <strong>BenchmarkOpts</strong>:</p>
 <hr/>
-<h3 id="name">name<a class="headerlink" href="#name" title="Permanent link">¶</a></h3>
-<p>• <strong>name</strong>: <em>string</em></p>
-<p><em>Inherited from <a href="./">AssertionError</a>.<a href="./#name">name</a></em></p>
-<p>Defined in node_modules/typescript/lib/lib.es5.d.ts:973</p>
+<h3 id="benchmarkresult">BenchmarkResult<a class="headerlink" href="#benchmarkresult" title="Permanent link">¶</a></h3>
+<p>• <strong>BenchmarkResult</strong>:</p>
 <hr/>
-<h3 id="optional-stack"><code>Optional</code> stack<a class="headerlink" href="#optional-stack" title="Permanent link">¶</a></h3>
-<p>• <strong>stack</strong>? : <em>undefined | string</em></p>
-<p><em>Inherited from <a href="./">AssertionError</a>.<a href="./#optional-stack">stack</a></em></p>
-<p>Defined in node_modules/typescript/lib/lib.es5.d.ts:975</p>
+<h3 id="benchmarkrunner">BenchmarkRunner<a class="headerlink" href="#benchmarkrunner" title="Permanent link">¶</a></h3>
+<p>• <strong>BenchmarkRunner</strong>:</p>
 <hr/>
-<h3 id="static-error"><code>Static</code> Error<a class="headerlink" href="#static-error" title="Permanent link">¶</a></h3>
-<p>▪ <strong>Error</strong>: <em>ErrorConstructor</em></p>
-<p>Defined in node_modules/typescript/lib/lib.es5.d.ts:984</p>
+<h3 id="formattitle">formatTitle<a class="headerlink" href="#formattitle" title="Permanent link">¶</a></h3>
+<p>• <strong>formatTitle</strong>:</p>
+<h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
+<h3 id="benchmarkopts_1">BenchmarkOpts<a class="headerlink" href="#benchmarkopts_1" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>BenchmarkOpts</strong>: <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/489cbfa/packages/utils/src/perf/utils/runner.ts#L5">packages/utils/src/perf/utils/runner.ts:5</a></em></p>
+<h4 id="type-declaration">Type declaration:<a class="headerlink" href="#type-declaration" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>maxMs</strong>? : <em>undefined | number</em></p>
+</li>
+<li>
+<p><strong>minMs</strong>? : <em>undefined | number</em></p>
+</li>
+<li>
+<p><strong>runs</strong>? : <em>undefined | number</em></p>
+</li>
+</ul>
 <hr/>
-<h3 id="static-code"><code>Static</code> code<a class="headerlink" href="#static-code" title="Permanent link">¶</a></h3>
-<p>▪ <strong>code</strong>: <em>string</em> = "ERR_ASSERTION"</p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/5554cd1/packages/utils/src/assert.ts#L73">packages/utils/src/assert.ts:73</a></em></p>
+<h3 id="benchmarkresult_1">BenchmarkResult<a class="headerlink" href="#benchmarkresult_1" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>BenchmarkResult</strong>: <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/489cbfa/packages/utils/src/perf/utils/runner.ts#L11">packages/utils/src/perf/utils/runner.ts:11</a></em></p>
+<h4 id="type-declaration_1">Type declaration:<a class="headerlink" href="#type-declaration_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>averageNs</strong>: <em>number</em></p>
+</li>
+<li>
+<p><strong>factor</strong>? : <em>undefined | number</em></p>
+</li>
+<li>
+<p><strong>id</strong>: <em>string</em></p>
+</li>
+<li>
+<p><strong>runsDone</strong>: <em>number</em></p>
+</li>
+</ul>
+<hr/>
+<h3 id="promiseoptional">PromiseOptional<a class="headerlink" href="#promiseoptional" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>PromiseOptional</strong>: <em>T | Promise‹T›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/489cbfa/packages/utils/src/perf/utils/runner.ts#L101">packages/utils/src/perf/utils/runner.ts:101</a></em></p>
+<hr/>
+<h3 id="runopts">RunOpts<a class="headerlink" href="#runopts" title="Permanent link">¶</a></h3>
+<p>Ƭ <strong>RunOpts</strong>: <em>object &amp; <a href="./#benchmarkopts">BenchmarkOpts</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/489cbfa/packages/utils/src/perf/utils/runner.ts#L103">packages/utils/src/perf/utils/runner.ts:103</a></em></p>
+<h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
+<h3 id="averagebigint">averageBigint<a class="headerlink" href="#averagebigint" title="Permanent link">¶</a></h3>
+<p>▸ <strong>averageBigint</strong>(<code>arr</code>: bigint[]): <em>bigint</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/489cbfa/packages/utils/src/perf/utils/runner.ts#L111">packages/utils/src/perf/utils/runner.ts:111</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>arr</code></td>
+<td>bigint[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>bigint</em></p>
+<hr/>
+<h3 id="dorun">doRun<a class="headerlink" href="#dorun" title="Permanent link">¶</a></h3>
+<p>▸ <strong>doRun</strong>‹<strong>T1</strong>, <strong>T2</strong>, <strong>R</strong>›(<code>__namedParameters</code>: object, <code>extraOpts</code>: <a href="./#benchmarkopts">BenchmarkOpts</a>): <em>Promise‹object›</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/489cbfa/packages/utils/src/perf/utils/runner.ts#L69">packages/utils/src/perf/utils/runner.ts:69</a></em></p>
+<p><strong>Type parameters:</strong></p>
+<p>▪ <strong>T1</strong></p>
+<p>▪ <strong>T2</strong></p>
+<p>▪ <strong>R</strong></p>
+<p><strong>Parameters:</strong></p>
+<p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>before</code></td>
+<td>undefined | function</td>
+</tr>
+<tr>
+<td><code>beforeEach</code></td>
+<td>undefined | function</td>
+</tr>
+<tr>
+<td><code>check</code></td>
+<td>undefined | function</td>
+</tr>
+<tr>
+<td><code>opts</code></td>
+<td>opts</td>
+</tr>
+<tr>
+<td><code>run</code></td>
+<td>function</td>
+</tr>
+</tbody>
+</table>
+<p>▪ <strong>extraOpts</strong>: <em><a href="./#benchmarkopts">BenchmarkOpts</a></em></p>
+<p><strong>Returns:</strong> <em>Promise‹object›</em></p>
+<hr/>
+<h3 id="formatasbenchmarkjs">formatAsBenchmarkJs<a class="headerlink" href="#formatasbenchmarkjs" title="Permanent link">¶</a></h3>
+<p>▸ <strong>formatAsBenchmarkJs</strong>(<code>results</code>: <a href="./#benchmarkresult">BenchmarkResult</a>[]): <em>string</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/489cbfa/packages/utils/src/perf/utils/runner.ts#L142">packages/utils/src/perf/utils/runner.ts:142</a></em></p>
+<p>Return results in benckmark.js output format
+<div class="highlight"><pre><span></span><code>fib(10) x 1,431,759 ops/sec ±0.74% (93 runs sampled)
+</code></pre></div></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>results</code></td>
+<td><a href="./#benchmarkresult">BenchmarkResult</a>[]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>string</em></p>
+<hr/>
+<h3 id="formatresultrow">formatResultRow<a class="headerlink" href="#formatresultrow" title="Permanent link">¶</a></h3>
+<p>▸ <strong>formatResultRow</strong>(<code>__namedParameters</code>: object): <em>string</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/489cbfa/packages/utils/src/perf/utils/runner.ts#L116">packages/utils/src/perf/utils/runner.ts:116</a></em></p>
+<p><strong>Parameters:</strong></p>
+<p>▪ <strong>__namedParameters</strong>: <em>object</em></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>averageNs</code></td>
+<td>number</td>
+</tr>
+<tr>
+<td><code>factor</code></td>
+<td>undefined | number</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>string</td>
+</tr>
+<tr>
+<td><code>runsDone</code></td>
+<td>number</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>string</em></p>
+<hr/>
+<h3 id="formattitle_1">formatTitle<a class="headerlink" href="#formattitle_1" title="Permanent link">¶</a></h3>
+<p>▸ <strong>formatTitle</strong>(<code>title</code>: string): <em>string</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/489cbfa/packages/utils/src/perf/utils/runner.ts#L148">packages/utils/src/perf/utils/runner.ts:148</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>string</em></p>
 </article>
 </div>
 </div>
