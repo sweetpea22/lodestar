@@ -254,17 +254,17 @@
 <p>Parameters for configuring an Eth2 network</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1">// mainnet and minimal presets are available under non-default exports</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">params</span> <span class="kr">as</span> <span class="nx">mainnetParams</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-params/mainnet"</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">params</span> <span class="kr">as</span> <span class="nx">minimalParams</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-params/mainnet"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">params</span> <span class="kr">as</span> <span class="nx">mainnetPreset</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-params/mainnet"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">params</span> <span class="kr">as</span> <span class="nx">minimalPreset</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-params/mainnet"</span><span class="p">;</span>
 
-<span class="nx">mainnetParams</span><span class="p">.</span><span class="nx">SHARD_COUNT</span><span class="p">;</span>
+<span class="nx">mainnetPreset</span><span class="p">.</span><span class="nx">SHARD_COUNT</span><span class="p">;</span>
 
-<span class="c1">// custom params should follow the IBeaconParams interface</span>
+<span class="c1">// custom params should follow the IBeaconPreset interface</span>
 
-<span class="k">import</span> <span class="p">{</span><span class="nx">IBeaconParams</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-params"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">IBeaconPreset</span><span class="p">}</span> <span class="k">from</span> <span class="s2">"@chainsafe/lodestar-params"</span><span class="p">;</span>
 
-<span class="kd">const</span> <span class="nx">testnetParams</span>: <span class="kt">IBeaconParams</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="p">...</span><span class="nx">mainnetParams</span><span class="p">,</span>
+<span class="kd">const</span> <span class="nx">testnetPreset</span>: <span class="kt">IBeaconPreset</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...</span><span class="nx">mainnetPreset</span><span class="p">,</span>
   <span class="nx">SHARD_COUNT</span>: <span class="kt">4</span><span class="p">,</span>
 <span class="p">};</span>
 </code></pre></div>
