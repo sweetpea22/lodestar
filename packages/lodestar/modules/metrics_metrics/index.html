@@ -300,6 +300,11 @@
     regenQueue: object
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validatormonitor-object">
+    validatorMonitor: object
+  </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -329,15 +334,15 @@
 <h2 id="type-aliases_1">Type aliases<a class="headerlink" href="#type-aliases_1" title="Permanent link">¶</a></h2>
 <h3 id="ibeaconmetrics">IBeaconMetrics<a class="headerlink" href="#ibeaconmetrics" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>IBeaconMetrics</strong>: <em>ReturnType‹typeof createBeaconMetrics›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8e5c09c/packages/lodestar/src/metrics/metrics/beacon.ts#L3">packages/lodestar/src/metrics/metrics/beacon.ts:3</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f0ef4a/packages/lodestar/src/metrics/metrics/beacon.ts#L3">packages/lodestar/src/metrics/metrics/beacon.ts:3</a></em></p>
 <hr/>
 <h3 id="ilodestarmetrics">ILodestarMetrics<a class="headerlink" href="#ilodestarmetrics" title="Permanent link">¶</a></h3>
 <p>Ƭ <strong>ILodestarMetrics</strong>: <em>ReturnType‹typeof createLodestarMetrics›</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8e5c09c/packages/lodestar/src/metrics/metrics/lodestar.ts#L5">packages/lodestar/src/metrics/metrics/lodestar.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f0ef4a/packages/lodestar/src/metrics/metrics/lodestar.ts#L5">packages/lodestar/src/metrics/metrics/lodestar.ts:5</a></em></p>
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="createbeaconmetrics">createBeaconMetrics<a class="headerlink" href="#createbeaconmetrics" title="Permanent link">¶</a></h3>
 <p>▸ <strong>createBeaconMetrics</strong>(<code>register</code>: <a href="../../classes/metrics_utils.registrymetriccreator/">RegistryMetricCreator</a>): <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8e5c09c/packages/lodestar/src/metrics/metrics/beacon.ts#L11">packages/lodestar/src/metrics/metrics/beacon.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f0ef4a/packages/lodestar/src/metrics/metrics/beacon.ts#L11">packages/lodestar/src/metrics/metrics/beacon.ts:11</a></em></p>
 <p>Metrics from:
 https://github.com/ethereum/eth2.0-metrics/ and
 https://hackmd.io/D5FmoeFZScim_squBFl8oA</p>
@@ -526,7 +531,7 @@ https://hackmd.io/D5FmoeFZScim_squBFl8oA</p>
 <hr/>
 <h3 id="createlodestarmetrics">createLodestarMetrics<a class="headerlink" href="#createlodestarmetrics" title="Permanent link">¶</a></h3>
 <p>▸ <strong>createLodestarMetrics</strong>(<code>register</code>: <a href="../../classes/metrics_utils.registrymetriccreator/">RegistryMetricCreator</a>, <code>metadata</code>: IMetricsOptions["metadata"], <code>anchorState?</code>: allForks.BeaconState): <em>object</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8e5c09c/packages/lodestar/src/metrics/metrics/lodestar.ts#L11">packages/lodestar/src/metrics/metrics/lodestar.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/8f0ef4a/packages/lodestar/src/metrics/metrics/lodestar.ts#L11">packages/lodestar/src/metrics/metrics/lodestar.ts:11</a></em></p>
 <p>Extra Lodestar custom metrics</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -778,6 +783,200 @@ https://hackmd.io/D5FmoeFZScim_squBFl8oA</p>
 <p><strong>length</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹string›</em> = register.gauge({
         name: "lodestar_regen_queue_length",
         help: "Count of total regen queue length",
+      })</p>
+</li>
+<li>
+<h3 id="validatormonitor-object"><strong>validatorMonitor</strong>: <em>object</em><a class="headerlink" href="#validatormonitor-object" title="Permanent link">¶</a></h3>
+</li>
+<li>
+<p><strong>aggregatedAttestationDelaySeconds</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹"index" | "src"›</em> = register.histogram&lt;"index" | "src"&gt;({
+        name: "validator_monitor_aggregated_attestation_delay_seconds",
+        help: "The delay between then the validator should send the aggregate and when it was received",
+        labelNames: ["index", "src"],
+      })</p>
+</li>
+<li>
+<p><strong>aggregatedAttestationTotal</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index" | "src"›</em> = register.gauge&lt;"index" | "src"&gt;({
+        name: "validator_monitor_aggregated_attestation_total",
+        help: "Number of aggregated attestations seen",
+        labelNames: ["index", "src"],
+      })</p>
+</li>
+<li>
+<p><strong>attestationInAggregateDelaySeconds</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹"index" | "src"›</em> = register.histogram&lt;"index" | "src"&gt;({
+        name: "validator_monitor_attestation_in_aggregate_delay_seconds",
+        help: "The delay between when the validator should send the aggregate and when it was received",
+        labelNames: ["index", "src"],
+      })</p>
+</li>
+<li>
+<p><strong>attestationInAggregateTotal</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index" | "src"›</em> = register.gauge&lt;"index" | "src"&gt;({
+        name: "validator_monitor_attestation_in_aggregate_total",
+        help: "Number of times an attestation has been seen in an aggregate",
+        labelNames: ["index", "src"],
+      })</p>
+</li>
+<li>
+<p><strong>attestationInBlockDelaySlots</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹"index"›</em> = register.histogram&lt;"index"&gt;({
+        name: "validator_monitor_attestation_in_block_delay_slots",
+        help: "The excess slots (beyond the minimum delay) between the attestation slot and the block slot",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>attestationInBlockTotal</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_attestation_in_block_total",
+        help: "Number of times an attestation has been seen in a block",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>beaconBlockDelaySeconds</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹"index" | "src"›</em> = register.histogram&lt;"index" | "src"&gt;({
+        name: "validator_monitor_beacon_block_delay_seconds",
+        help: "The delay between when the validator should send the block and when it was received",
+        labelNames: ["index", "src"],
+      })</p>
+</li>
+<li>
+<p><strong>beaconBlockTotal</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index" | "src"›</em> = register.gauge&lt;"index" | "src"&gt;({
+        name: "validator_monitor_beacon_block_total",
+        help: "Number of beacon blocks seen",
+        labelNames: ["index", "src"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochAggregatesMinDelaySeconds</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹"index"›</em> = register.histogram&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_aggregates_min_delay_seconds",
+        help: "The min delay between when the validator should send the aggregate and when it was received",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochAggregatesTotal</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_aggregates_total",
+        help: "The number of aggregates seen in the previous epoch",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochAttestationAggregateInclusions</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_attestation_aggregate_inclusions",
+        help: "The count of times an attestation was seen inside an aggregate",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochAttestationBlockInclusions</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_attestation_block_inclusions",
+        help: "The count of times an attestation was seen inside a block",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochAttestationBlockMinInclusionDistance</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_attestation_block_min_inclusion_distance",
+        help: "The minimum inclusion distance observed for the inclusion of an attestation in a block",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochAttestationsMinDelaySeconds</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹"index"›</em> = register.histogram&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_attestations_min_delay_seconds",
+        help: "The min delay between when the validator should send the attestation and when it was received",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochAttestationsTotal</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_attestations_total",
+        help: "The number of unagg. attestations seen in the previous epoch",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochBeaconBlocksMinDelaySeconds</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹"index"›</em> = register.histogram&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_beacon_blocks_min_delay_seconds",
+        help: "The min delay between when the validator should send the block and when it was received",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochBeaconBlocksTotal</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_beacon_blocks_total",
+        help: "The number of beacon_blocks seen in the previous epoch",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochOnChainAttesterHit</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_on_chain_attester_hit",
+        help: "Incremented if the validator is flagged as a previous epoch attester during per epoch processing",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochOnChainAttesterMiss</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_on_chain_attester_miss",
+        help: "Incremented if the validator is not flagged as a previous epoch attester during per epoch processing",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochOnChainHeadAttesterHit</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_on_chain_head_attester_hit",
+        help: "Incremented if the validator is flagged as a previous epoch head attester during per epoch processing",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochOnChainHeadAttesterMiss</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_on_chain_head_attester_miss",
+        help:
+          "Incremented if the validator is not flagged as a previous epoch head attester during per epoch processing",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochOnChainInclusionDistance</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_on_chain_inclusion_distance",
+        help: "The attestation inclusion distance calculated during per epoch processing",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochOnChainTargetAttesterHit</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_on_chain_target_attester_hit",
+        help: "Incremented if the validator is flagged as a previous epoch target attester during per epoch processing",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>prevEpochOnChainTargetAttesterMiss</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge&lt;"index"&gt;({
+        name: "validator_monitor_prev_epoch_on_chain_target_attester_miss",
+        help:
+          "Incremented if the validator is not flagged as a previous epoch target attester during per epoch processing",
+        labelNames: ["index"],
+      })</p>
+</li>
+<li>
+<p><strong>unaggregatedAttestationDelaySeconds</strong>: <em><a href="../../classes/metrics_utils.histogramextra/">HistogramExtra</a>‹"index" | "src"›</em> = register.histogram&lt;"index" | "src"&gt;({
+        name: "validator_monitor_unaggregated_attestation_delay_seconds",
+        help: "The delay between when the validator should send the attestation and when it was received",
+        labelNames: ["index", "src"],
+      })</p>
+</li>
+<li>
+<p><strong>unaggregatedAttestationTotal</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index" | "src"›</em> = register.gauge&lt;"index" | "src"&gt;({
+        name: "validator_monitor_unaggregated_attestation_total",
+        help: "Number of unaggregated attestations seen",
+        labelNames: ["index", "src"],
+      })</p>
+</li>
+<li>
+<p><strong>validatorsTotal</strong>: <em><a href="../../classes/metrics_utils.gaugeextra/">GaugeExtra</a>‹"index"›</em> = register.gauge({
+        name: "validator_monitor_validators_total",
+        help: "Count of validators that are specifically monitored by this beacon node",
+        labelNames: ["index"],
       })</p>
 </li>
 </ul>
