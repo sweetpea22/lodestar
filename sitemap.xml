@@ -2921,32 +2921,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/utils/classes/perf_utils.benchmarkgrouprunner/</loc>
+         <loc>https://chainsafe.github.io/lodestar/packages/utils/classes/reflection-474.reflection-1.assertionerror/</loc>
          <lastmod>2021-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/utils/classes/perf_utils.benchmarkrunner/</loc>
+         <loc>https://chainsafe.github.io/lodestar/packages/utils/classes/reflection-474.reflection-1.erroraborted/</loc>
          <lastmod>2021-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/utils/classes/reflection-594.reflection-1.assertionerror/</loc>
+         <loc>https://chainsafe.github.io/lodestar/packages/utils/classes/reflection-474.reflection-1.lodestarerror/</loc>
          <lastmod>2021-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/utils/classes/reflection-594.reflection-1.erroraborted/</loc>
-         <lastmod>2021-06-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/utils/classes/reflection-594.reflection-1.lodestarerror/</loc>
-         <lastmod>2021-06-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/utils/classes/reflection-594.reflection-1.timeouterror/</loc>
+         <loc>https://chainsafe.github.io/lodestar/packages/utils/classes/reflection-474.reflection-1.timeouterror/</loc>
          <lastmod>2021-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -2986,17 +2976,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/utils/modules/perf_utils/</loc>
+         <loc>https://chainsafe.github.io/lodestar/packages/utils/modules/reflection-474/</loc>
          <lastmod>2021-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/utils/modules/reflection-594/</loc>
-         <lastmod>2021-06-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/utils/modules/reflection-594.reflection-1/</loc>
+         <loc>https://chainsafe.github.io/lodestar/packages/utils/modules/reflection-474.reflection-1/</loc>
          <lastmod>2021-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
