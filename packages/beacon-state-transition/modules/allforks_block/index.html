@@ -385,7 +385,7 @@
 <h2 id="functions_1">Functions<a class="headerlink" href="#functions_1" title="Permanent link">¶</a></h2>
 <h3 id="getneweth1data_1">getNewEth1Data<a class="headerlink" href="#getneweth1data_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getNewEth1Data</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹<a href="../allforks/#beaconstate">BeaconState</a>›, <code>newEth1Data</code>: Eth1Data): <em>Eth1Data | null</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/01d3e30/packages/beacon-state-transition/src/allForks/block/processEth1Data.ts#L20">allForks/block/processEth1Data.ts:20</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/48c3257/packages/beacon-state-transition/src/allForks/block/processEth1Data.ts#L20">allForks/block/processEth1Data.ts:20</a></em></p>
 <p>Returns <code>newEth1Data</code> if adding the given <code>eth1Data</code> to <code>state.eth1DataVotes</code> would
 result in a change to <code>state.eth1Data</code>.</p>
 <p><strong>Parameters:</strong></p>
@@ -411,7 +411,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="initiatevalidatorexit_1">initiateValidatorExit<a class="headerlink" href="#initiatevalidatorexit_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>initiateValidatorExit</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹<a href="../allforks/#beaconstate">BeaconState</a>›, <code>index</code>: <a href="../phase0/#validatorindex">ValidatorIndex</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/01d3e30/packages/beacon-state-transition/src/allForks/block/initiateValidatorExit.ts#L10">allForks/block/initiateValidatorExit.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/48c3257/packages/beacon-state-transition/src/allForks/block/initiateValidatorExit.ts#L10">allForks/block/initiateValidatorExit.ts:10</a></em></p>
 <p>Initiate the exit of the validator with index <code>index</code>.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -436,7 +436,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="isvalidindexedattestation_1">isValidIndexedAttestation<a class="headerlink" href="#isvalidindexedattestation_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>isValidIndexedAttestation</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹<a href="../allforks/#beaconstate">BeaconState</a>›, <code>indexedAttestation</code>: IndexedAttestation, <code>verifySignature</code>: boolean): <em>boolean</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/01d3e30/packages/beacon-state-transition/src/allForks/block/isValidIndexedAttestation.ts#L10">allForks/block/isValidIndexedAttestation.ts:10</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/48c3257/packages/beacon-state-transition/src/allForks/block/isValidIndexedAttestation.ts#L10">allForks/block/isValidIndexedAttestation.ts:10</a></em></p>
 <p>Check if <code>indexedAttestation</code> has sorted and unique indices and a valid aggregate signature.</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -469,7 +469,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processblockheader_1">processBlockHeader<a class="headerlink" href="#processblockheader_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processBlockHeader</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹<a href="../allforks/#beaconstate">BeaconState</a>›, <code>block</code>: <a href="../allforks/#beaconblock">BeaconBlock</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/01d3e30/packages/beacon-state-transition/src/allForks/block/processBlockHeader.ts#L5">allForks/block/processBlockHeader.ts:5</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/48c3257/packages/beacon-state-transition/src/allForks/block/processBlockHeader.ts#L5">allForks/block/processBlockHeader.ts:5</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -493,7 +493,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processeth1data_1">processEth1Data<a class="headerlink" href="#processeth1data_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processEth1Data</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹<a href="../allforks/#beaconstate">BeaconState</a>›, <code>body</code>: <a href="../allforks/#beaconblockbody">BeaconBlockBody</a>): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/01d3e30/packages/beacon-state-transition/src/allForks/block/processEth1Data.ts#L7">allForks/block/processEth1Data.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/48c3257/packages/beacon-state-transition/src/allForks/block/processEth1Data.ts#L7">allForks/block/processEth1Data.ts:7</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -517,7 +517,7 @@ result in a change to <code>state.eth1Data</code>.</p>
 <hr/>
 <h3 id="processrandao_1">processRandao<a class="headerlink" href="#processrandao_1" title="Permanent link">¶</a></h3>
 <p>▸ <strong>processRandao</strong>(<code>state</code>: <a href="../allforks/#cachedbeaconstate">CachedBeaconState</a>‹<a href="../allforks/#beaconstate">BeaconState</a>›, <code>block</code>: <a href="../allforks/#beaconblock">BeaconBlock</a>, <code>verifySignature</code>: boolean): <em>void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/01d3e30/packages/beacon-state-transition/src/allForks/block/processRandao.ts#L9">allForks/block/processRandao.ts:9</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/48c3257/packages/beacon-state-transition/src/allForks/block/processRandao.ts#L9">allForks/block/processRandao.ts:9</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
