@@ -541,7 +541,7 @@
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
 <p>+ <strong>new BlockRepository</strong>(<code>config</code>: IBeaconConfig, <code>db</code>: IDatabaseController‹Buffer, Buffer›): <em><a href="./">BlockRepository</a></em></p>
 <p><em>Overrides void</em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/760e573/packages/lodestar/src/db/repositories/block.ts#L11">packages/lodestar/src/db/repositories/block.ts:11</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1a68e18/packages/lodestar/src/db/repositories/block.ts#L11">packages/lodestar/src/db/repositories/block.ts:11</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -565,27 +565,27 @@
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="protected-bucket"><code>Protected</code> bucket<a class="headerlink" href="#protected-bucket" title="Permanent link">¶</a></h3>
 <p>• <strong>bucket</strong>: <em>Bucket</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#protected-bucket">bucket</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#protected-bucket">bucket</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:18</p>
 <hr/>
 <h3 id="protected-config"><code>Protected</code> config<a class="headerlink" href="#protected-config" title="Permanent link">¶</a></h3>
 <p>• <strong>config</strong>: <em>IBeaconConfig</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#protected-config">config</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#protected-config">config</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:16</p>
 <hr/>
 <h3 id="protected-db"><code>Protected</code> db<a class="headerlink" href="#protected-db" title="Permanent link">¶</a></h3>
 <p>• <strong>db</strong>: <em>IDatabaseController‹Buffer, Buffer›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#protected-db">db</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#protected-db">db</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:17</p>
 <hr/>
 <h3 id="protected-type"><code>Protected</code> type<a class="headerlink" href="#protected-type" title="Permanent link">¶</a></h3>
 <p>• <strong>type</strong>: <em>Type‹allForks.SignedBeaconBlock›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#protected-type">type</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#protected-type">type</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:19</p>
 <h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
 <h3 id="add">add<a class="headerlink" href="#add" title="Permanent link">¶</a></h3>
 <p>▸ <strong>add</strong>(<code>value</code>: allForks.SignedBeaconBlock): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#add">add</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#add">add</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:32</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -606,7 +606,7 @@
 <hr/>
 <h3 id="batchadd">batchAdd<a class="headerlink" href="#batchadd" title="Permanent link">¶</a></h3>
 <p>▸ <strong>batchAdd</strong>(<code>values</code>: ArrayLike‹allForks.SignedBeaconBlock›): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#batchadd">batchAdd</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#batchadd">batchAdd</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:37</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -627,7 +627,7 @@
 <hr/>
 <h3 id="batchdelete">batchDelete<a class="headerlink" href="#batchdelete" title="Permanent link">¶</a></h3>
 <p>▸ <strong>batchDelete</strong>(<code>ids</code>: ArrayLike‹Uint8Array›): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#batchdelete">batchDelete</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#batchdelete">batchDelete</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:36</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -648,7 +648,7 @@
 <hr/>
 <h3 id="batchput">batchPut<a class="headerlink" href="#batchput" title="Permanent link">¶</a></h3>
 <p>▸ <strong>batchPut</strong>(<code>items</code>: ArrayLike‹IKeyValue‹Uint8Array, allForks.SignedBeaconBlock››): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#batchput">batchPut</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#batchput">batchPut</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:34</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -669,7 +669,7 @@
 <hr/>
 <h3 id="batchputbinary">batchPutBinary<a class="headerlink" href="#batchputbinary" title="Permanent link">¶</a></h3>
 <p>▸ <strong>batchPutBinary</strong>(<code>items</code>: ArrayLike‹IKeyValue‹Uint8Array, Buffer››): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#batchputbinary">batchPutBinary</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#batchputbinary">batchPutBinary</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:35</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -690,7 +690,7 @@
 <hr/>
 <h3 id="batchremove">batchRemove<a class="headerlink" href="#batchremove" title="Permanent link">¶</a></h3>
 <p>▸ <strong>batchRemove</strong>(<code>values</code>: ArrayLike‹allForks.SignedBeaconBlock›): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#batchremove">batchRemove</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#batchremove">batchRemove</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:38</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -711,7 +711,7 @@
 <hr/>
 <h3 id="protected-dbfilteroptions"><code>Protected</code> dbFilterOptions<a class="headerlink" href="#protected-dbfilteroptions" title="Permanent link">¶</a></h3>
 <p>▸ <strong>dbFilterOptions</strong>(<code>opts?</code>: IFilterOptions‹Uint8Array›): <em>IFilterOptions‹Buffer›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#protected-dbfilteroptions">dbFilterOptions</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#protected-dbfilteroptions">dbFilterOptions</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:54</p>
 <p>Transforms opts from I to Buffer</p>
 <p><strong>Parameters:</strong></p>
@@ -733,7 +733,7 @@
 <hr/>
 <h3 id="decodekey">decodeKey<a class="headerlink" href="#decodekey" title="Permanent link">¶</a></h3>
 <p>▸ <strong>decodeKey</strong>(<code>key</code>: Buffer): <em>Uint8Array</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#decodekey">decodeKey</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#decodekey">decodeKey</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:24</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -754,8 +754,8 @@
 <hr/>
 <h3 id="decodevalue">decodeValue<a class="headerlink" href="#decodevalue" title="Permanent link">¶</a></h3>
 <p>▸ <strong>decodeValue</strong>(<code>data</code>: Buffer): <em>allForks.SignedBeaconBlock</em></p>
-<p><em>Overrides <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#decodevalue">decodeValue</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/760e573/packages/lodestar/src/db/repositories/block.ts#L28">packages/lodestar/src/db/repositories/block.ts:28</a></em></p>
+<p><em>Overrides <a href="../db_repositories.attestationrepository/">AttestationRepository</a>.<a href="../db_repositories.attestationrepository/#decodevalue">decodeValue</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1a68e18/packages/lodestar/src/db/repositories/block.ts#L28">packages/lodestar/src/db/repositories/block.ts:28</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -775,7 +775,7 @@
 <hr/>
 <h3 id="delete">delete<a class="headerlink" href="#delete" title="Permanent link">¶</a></h3>
 <p>▸ <strong>delete</strong>(<code>id</code>: Uint8Array): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#delete">delete</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#delete">delete</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:30</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -796,7 +796,7 @@
 <hr/>
 <h3 id="encodekey">encodeKey<a class="headerlink" href="#encodekey" title="Permanent link">¶</a></h3>
 <p>▸ <strong>encodeKey</strong>(<code>id</code>: Uint8Array): <em>Buffer</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#encodekey">encodeKey</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#encodekey">encodeKey</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:23</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -817,8 +817,8 @@
 <hr/>
 <h3 id="encodevalue">encodeValue<a class="headerlink" href="#encodevalue" title="Permanent link">¶</a></h3>
 <p>▸ <strong>encodeValue</strong>(<code>value</code>: allForks.SignedBeaconBlock): <em>Buffer</em></p>
-<p><em>Overrides <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#encodevalue">encodeValue</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/760e573/packages/lodestar/src/db/repositories/block.ts#L24">packages/lodestar/src/db/repositories/block.ts:24</a></em></p>
+<p><em>Overrides <a href="../db_repositories.attestationrepository/">AttestationRepository</a>.<a href="../db_repositories.attestationrepository/#encodevalue">encodeValue</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1a68e18/packages/lodestar/src/db/repositories/block.ts#L24">packages/lodestar/src/db/repositories/block.ts:24</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -838,7 +838,7 @@
 <hr/>
 <h3 id="entries">entries<a class="headerlink" href="#entries" title="Permanent link">¶</a></h3>
 <p>▸ <strong>entries</strong>(<code>opts?</code>: IFilterOptions‹Uint8Array›): <em>Promise‹IKeyValue‹Uint8Array, allForks.SignedBeaconBlock›[]›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#entries">entries</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#entries">entries</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:43</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -859,7 +859,7 @@
 <hr/>
 <h3 id="entriesstream">entriesStream<a class="headerlink" href="#entriesstream" title="Permanent link">¶</a></h3>
 <p>▸ <strong>entriesStream</strong>(<code>opts?</code>: IFilterOptions‹Uint8Array›): <em>AsyncIterable‹IKeyValue‹Uint8Array, allForks.SignedBeaconBlock››</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#entriesstream">entriesStream</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#entriesstream">entriesStream</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:44</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -880,25 +880,25 @@
 <hr/>
 <h3 id="firstentry">firstEntry<a class="headerlink" href="#firstentry" title="Permanent link">¶</a></h3>
 <p>▸ <strong>firstEntry</strong>(): <em>Promise‹IKeyValue‹Uint8Array, allForks.SignedBeaconBlock› | null›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#firstentry">firstEntry</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#firstentry">firstEntry</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:49</p>
 <p><strong>Returns:</strong> <em>Promise‹IKeyValue‹Uint8Array, allForks.SignedBeaconBlock› | null›</em></p>
 <hr/>
 <h3 id="firstkey">firstKey<a class="headerlink" href="#firstkey" title="Permanent link">¶</a></h3>
 <p>▸ <strong>firstKey</strong>(): <em>Promise‹Uint8Array | null›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#firstkey">firstKey</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#firstkey">firstKey</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:45</p>
 <p><strong>Returns:</strong> <em>Promise‹Uint8Array | null›</em></p>
 <hr/>
 <h3 id="firstvalue">firstValue<a class="headerlink" href="#firstvalue" title="Permanent link">¶</a></h3>
 <p>▸ <strong>firstValue</strong>(): <em>Promise‹allForks.SignedBeaconBlock | null›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#firstvalue">firstValue</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#firstvalue">firstValue</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:47</p>
 <p><strong>Returns:</strong> <em>Promise‹allForks.SignedBeaconBlock | null›</em></p>
 <hr/>
 <h3 id="get">get<a class="headerlink" href="#get" title="Permanent link">¶</a></h3>
 <p>▸ <strong>get</strong>(<code>id</code>: Uint8Array): <em>Promise‹allForks.SignedBeaconBlock | null›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#get">get</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#get">get</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:25</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -919,7 +919,7 @@
 <hr/>
 <h3 id="getbinary">getBinary<a class="headerlink" href="#getbinary" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getBinary</strong>(<code>id</code>: Uint8Array): <em>Promise‹Buffer | null›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#getbinary">getBinary</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#getbinary">getBinary</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:26</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -941,7 +941,7 @@
 <h3 id="getid">getId<a class="headerlink" href="#getid" title="Permanent link">¶</a></h3>
 <p>▸ <strong>getId</strong>(<code>value</code>: allForks.SignedBeaconBlock): <em>Uint8Array</em></p>
 <p><em>Overrides <a href="../db_repositories.attestationrepository/">AttestationRepository</a>.<a href="../db_repositories.attestationrepository/#getid">getId</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/760e573/packages/lodestar/src/db/repositories/block.ts#L20">packages/lodestar/src/db/repositories/block.ts:20</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/1a68e18/packages/lodestar/src/db/repositories/block.ts#L20">packages/lodestar/src/db/repositories/block.ts:20</a></em></p>
 <p>Id is hashTreeRoot of unsigned BeaconBlock</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -962,7 +962,7 @@
 <hr/>
 <h3 id="has">has<a class="headerlink" href="#has" title="Permanent link">¶</a></h3>
 <p>▸ <strong>has</strong>(<code>id</code>: Uint8Array): <em>Promise‹boolean›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#has">has</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#has">has</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:27</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -983,7 +983,7 @@
 <hr/>
 <h3 id="keys">keys<a class="headerlink" href="#keys" title="Permanent link">¶</a></h3>
 <p>▸ <strong>keys</strong>(<code>opts?</code>: IFilterOptions‹Uint8Array›): <em>Promise‹Uint8Array[]›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#keys">keys</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#keys">keys</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:39</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1004,7 +1004,7 @@
 <hr/>
 <h3 id="keysstream">keysStream<a class="headerlink" href="#keysstream" title="Permanent link">¶</a></h3>
 <p>▸ <strong>keysStream</strong>(<code>opts?</code>: IFilterOptions‹Uint8Array›): <em>AsyncIterable‹Uint8Array›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#keysstream">keysStream</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#keysstream">keysStream</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:40</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1025,19 +1025,19 @@
 <hr/>
 <h3 id="lastentry">lastEntry<a class="headerlink" href="#lastentry" title="Permanent link">¶</a></h3>
 <p>▸ <strong>lastEntry</strong>(): <em>Promise‹IKeyValue‹Uint8Array, allForks.SignedBeaconBlock› | null›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#lastentry">lastEntry</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#lastentry">lastEntry</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:50</p>
 <p><strong>Returns:</strong> <em>Promise‹IKeyValue‹Uint8Array, allForks.SignedBeaconBlock› | null›</em></p>
 <hr/>
 <h3 id="lastkey">lastKey<a class="headerlink" href="#lastkey" title="Permanent link">¶</a></h3>
 <p>▸ <strong>lastKey</strong>(): <em>Promise‹Uint8Array | null›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#lastkey">lastKey</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#lastkey">lastKey</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:46</p>
 <p><strong>Returns:</strong> <em>Promise‹Uint8Array | null›</em></p>
 <hr/>
 <h3 id="lastvalue">lastValue<a class="headerlink" href="#lastvalue" title="Permanent link">¶</a></h3>
 <p>▸ <strong>lastValue</strong>(): <em>Promise‹allForks.SignedBeaconBlock | null›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#lastvalue">lastValue</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#lastvalue">lastValue</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:48</p>
 <p><strong>Returns:</strong> <em>Promise‹allForks.SignedBeaconBlock | null›</em></p>
 <hr/>
@@ -1068,7 +1068,7 @@
 <hr/>
 <h3 id="putbinary">putBinary<a class="headerlink" href="#putbinary" title="Permanent link">¶</a></h3>
 <p>▸ <strong>putBinary</strong>(<code>id</code>: Uint8Array, <code>value</code>: Buffer): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#putbinary">putBinary</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#putbinary">putBinary</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:29</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1093,7 +1093,7 @@
 <hr/>
 <h3 id="remove">remove<a class="headerlink" href="#remove" title="Permanent link">¶</a></h3>
 <p>▸ <strong>remove</strong>(<code>value</code>: allForks.SignedBeaconBlock): <em>Promise‹void›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#remove">remove</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#remove">remove</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:33</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1114,7 +1114,7 @@
 <hr/>
 <h3 id="values">values<a class="headerlink" href="#values" title="Permanent link">¶</a></h3>
 <p>▸ <strong>values</strong>(<code>opts?</code>: IFilterOptions‹Uint8Array›): <em>Promise‹allForks.SignedBeaconBlock[]›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#values">values</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#values">values</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:41</p>
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1135,7 +1135,7 @@
 <hr/>
 <h3 id="valuesstream">valuesStream<a class="headerlink" href="#valuesstream" title="Permanent link">¶</a></h3>
 <p>▸ <strong>valuesStream</strong>(<code>opts?</code>: IFilterOptions‹Uint8Array›): <em>AsyncIterable‹allForks.SignedBeaconBlock›</em></p>
-<p><em>Inherited from <a href="../db_repositories.badblockrepository/">BadBlockRepository</a>.<a href="../db_repositories.badblockrepository/#valuesstream">valuesStream</a></em></p>
+<p><em>Inherited from <a href="./">BlockRepository</a>.<a href="./#valuesstream">valuesStream</a></em></p>
 <p>Defined in packages/db/lib/abstractRepository.d.ts:42</p>
 <p><strong>Parameters:</strong></p>
 <table>
