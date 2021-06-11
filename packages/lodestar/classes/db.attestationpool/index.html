@@ -6,10 +6,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
-<link href="https://chainsafe.github.io/lodestar/packages/beacon-state-transition/modules/reflection-1819/" rel="canonical"/>
+<link href="https://chainsafe.github.io/lodestar/packages/lodestar/classes/db.attestationpool/" rel="canonical"/>
 <link href="../../../../images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.2.1, mkdocs-material-7.1.7" name="generator"/>
-<title>Reflection 1819 - Lodestar documentation</title>
+<title>Db.attestationpool - Lodestar documentation</title>
 <link href="../../../../assets/stylesheets/main.ca7ac06f.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#module">
+<a class="md-skip" href="#class-attestationpool">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Reflection 1819
+              Db.attestationpool
             
           </span>
 </div>
@@ -237,14 +237,77 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#details">
+    Details
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hierarchy">
+    Hierarchy
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#index">
     Index
   </a>
 <nav aria-label="Index" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#modules">
-    Modules
+<a class="md-nav__link" href="#properties">
+    Properties
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#methods">
+    Methods
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties_1">
+    Properties
+  </a>
+<nav aria-label="Properties" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-readonly-aggregatebyrootbyslot">
+    Private Readonly aggregateByRootBySlot
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#private-lowestpermissibleslot">
+    Private lowestPermissibleSlot
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#methods_1">
+    Methods
+  </a>
+<nav aria-label="Methods" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add">
+    add
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getaggregate">
+    getAggregate
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getall">
+    getAll
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prune">
+    prune
   </a>
 </li>
 </ul>
@@ -257,16 +320,153 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/beacon-state-transition/modules/reflection-1819.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/lodestar/classes/db.attestationpool.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">@chainsafe/lodestar-beacon-state-transition</a> › <a href="../../globals/">Globals</a> › <a href="./"></a></p>
-<h1 id="module">Module:<a class="headerlink" href="#module" title="Permanent link">¶</a></h1>
-<h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
-<h3 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">¶</a></h3>
+<p><a href="../../">@chainsafe/lodestar</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/db/">db</a> › <a href="./">AttestationPool</a></p>
+<h1 id="class-attestationpool">Class: AttestationPool<a class="headerlink" href="#class-attestationpool" title="Permanent link">¶</a></h1>
+<p>A pool of <code>Attestation</code> that is specially designed to store "unaggregated" attestations from
+the native aggregation scheme.</p>
+<p><strong>The <code>NaiveAggregationPool</code> does not do any signature or attestation verification. It assumes
+that all <code>Attestation</code> objects provided are valid.</strong></p>
+<h2 id="details">Details<a class="headerlink" href="#details" title="Permanent link">¶</a></h2>
+<p>The pool sorts the <code>Attestation</code> by <code>attestation.data.slot</code>, then by <code>attestation.data</code>.</p>
+<p>As each unaggregated attestation is added it is aggregated with any existing <code>attestation</code> with
+the same <code>AttestationData</code>. Considering that the pool only accepts attestations with a single
+signature, there should only ever be a single aggregated <code>Attestation</code> for any given
+<code>AttestationData</code>.</p>
+<p>The pool has a capacity for <code>SLOTS_RETAINED</code> slots, when a new <code>attestation.data.slot</code> is
+provided, the oldest slot is dropped and replaced with the new slot. The pool can also be
+pruned by supplying a <code>current_slot</code>; all existing attestations with a slot lower than
+<code>current_slot - SLOTS_RETAINED</code> will be removed and any future attestation with a slot lower
+than that will also be refused. Pruning is done automatically based upon the attestations it
+receives and it can be triggered manually.</p>
+<h2 id="hierarchy">Hierarchy<a class="headerlink" href="#hierarchy" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../reflection-1819.reflection-893/"></a></li>
+<li><strong>AttestationPool</strong></li>
 </ul>
+<h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
+<h3 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#private-readonly-aggregatebyrootbyslot">aggregateByRootBySlot</a></li>
+<li><a href="./#private-lowestpermissibleslot">lowestPermissibleSlot</a></li>
+</ul>
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="./#add">add</a></li>
+<li><a href="./#getaggregate">getAggregate</a></li>
+<li><a href="./#getall">getAll</a></li>
+<li><a href="./#prune">prune</a></li>
+</ul>
+<h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
+<h3 id="private-readonly-aggregatebyrootbyslot"><code>Private</code> <code>Readonly</code> aggregateByRootBySlot<a class="headerlink" href="#private-readonly-aggregatebyrootbyslot" title="Permanent link">¶</a></h3>
+<p>• <strong>aggregateByRootBySlot</strong>: <em>Map‹number, Map‹string, <a href="../../modules/db/#aggregatefast">AggregateFast</a>››</em> = new Map<phase0.slot, aggregatefast="" map\<dataroothex,="">&gt;()</phase0.slot,></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/bbd055d/packages/lodestar/src/db/attestationPool.ts#L71">packages/lodestar/src/db/attestationPool.ts:71</a></em></p>
+<hr/>
+<h3 id="private-lowestpermissibleslot"><code>Private</code> lowestPermissibleSlot<a class="headerlink" href="#private-lowestpermissibleslot" title="Permanent link">¶</a></h3>
+<p>• <strong>lowestPermissibleSlot</strong>: <em>number</em> = 0</p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/bbd055d/packages/lodestar/src/db/attestationPool.ts#L72">packages/lodestar/src/db/attestationPool.ts:72</a></em></p>
+<h2 id="methods_1">Methods<a class="headerlink" href="#methods_1" title="Permanent link">¶</a></h2>
+<h3 id="add">add<a class="headerlink" href="#add" title="Permanent link">¶</a></h3>
+<p>▸ <strong>add</strong>(<code>attestation</code>: Attestation): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/bbd055d/packages/lodestar/src/db/attestationPool.ts#L92">packages/lodestar/src/db/attestationPool.ts:92</a></em></p>
+<p>Accepts an <code>VerifiedUnaggregatedAttestation</code> and attempts to apply it to the "naive
+aggregation pool".</p>
+<p>The naive aggregation pool is used by local validators to produce
+<code>SignedAggregateAndProof</code>.</p>
+<p>If the attestation is too old (low slot) to be included in the pool it is simply dropped
+and no error is returned.</p>
+<p>Expects the attestation to be fully validated:
+- Valid signature
+- Consistent bitlength
+- Valid committeeIndex
+- Valid data</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>attestation</code></td>
+<td>Attestation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
+<hr/>
+<h3 id="getaggregate">getAggregate<a class="headerlink" href="#getaggregate" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getAggregate</strong>(<code>slot</code>: phase0.Slot, <code>dataRoot</code>: phase0.Root): <em>Attestation</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/bbd055d/packages/lodestar/src/db/attestationPool.ts#L128">packages/lodestar/src/db/attestationPool.ts:128</a></em></p>
+<p>For validator API to get an aggregate</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slot</code></td>
+<td>phase0.Slot</td>
+</tr>
+<tr>
+<td><code>dataRoot</code></td>
+<td>phase0.Root</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Attestation</em></p>
+<hr/>
+<h3 id="getall">getAll<a class="headerlink" href="#getall" title="Permanent link">¶</a></h3>
+<p>▸ <strong>getAll</strong>(<code>bySlot?</code>: Slot): <em>Attestation[]</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/bbd055d/packages/lodestar/src/db/attestationPool.ts#L165">packages/lodestar/src/db/attestationPool.ts:165</a></em></p>
+<p>Get all attestations optionally filtered by <code>attestation.data.slot</code></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bySlot?</code></td>
+<td>Slot</td>
+<td>slot to filter, <code>bySlot === attestation.data.slot</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Attestation[]</em></p>
+<hr/>
+<h3 id="prune">prune<a class="headerlink" href="#prune" title="Permanent link">¶</a></h3>
+<p>▸ <strong>prune</strong>(<code>currentSlot</code>: Slot): <em>void</em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/bbd055d/packages/lodestar/src/db/attestationPool.ts#L143">packages/lodestar/src/db/attestationPool.ts:143</a></em></p>
+<p>Removes any attestations with a slot lower than <code>current_slot</code> and bars any future
+attestations with a slot lower than <code>current_slot - SLOTS_RETAINED</code>.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>currentSlot</code></td>
+<td>Slot</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>void</em></p>
 </article>
 </div>
 </div>
