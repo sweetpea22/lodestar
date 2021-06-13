@@ -121,3 +121,71 @@ export function bitsToUint8Array<BitArr extends BitList | BitVector>(
   // the last chunk has 32 bytes but we don't use all of them
   return Buffer.concat(chunks).subarray(0, Math.ceil(bits.length / BITS_PER_BYTE));
 }
+
+// Variants to extract a single bit (for un-aggregated attestations)
+
+export function getSingleBitIndex(bits: BitList | TreeBacked<BitList>): number {
+  if (isTreeBacked<BitList>(bits)) {
+    const bytes = bitsToUint8Array(bits, ssz.phase0.CommitteeBits);
+
+    let index: number | null = null;
+
+    // Iterate over each byte of bits
+    for (let iByte = 0, byteLen = bytes.length; iByte < byteLen; iByte++) {
+      const byte = bytes[iByte];
+
+      // If it's exactly zero, there won't be any indexes, continue early
+      if (byte === 0) {
+        continue;
+      }
+
+      if (index !== null) {
+        throw Error("More than one index set");
+      }
+
+      const iBit = byteToBitIndex(byte);
+      index = iByte * BITS_PER_BYTE + iBit;
+    }
+
+    if (index === null) {
+      throw Error("No index set");
+    } else {
+      return index;
+    }
+  }
+
+  //
+  else {
+    let index: number | null = null;
+
+    for (let i = 0, len = bits.length; i < len; i++) {
+      if (bits[i] === true) {
+        if (index !== null) {
+          throw Error("More than one index set");
+        }
+        index = i;
+      }
+    }
+
+    if (index === null) {
+      throw Error("No index set");
+    } else {
+      return index;
+    }
+  }
+}
+
+function byteToBitIndex(byte: number): number {
+  if (byte === 0b00000001) return 0;
+  if (byte === 0b00000010) return 1;
+  if (byte === 0b00000100) return 2;
+  if (byte === 0b00001000) return 3;
+  if (byte === 0b00010000) return 4;
+  if (byte === 0b00100000) return 5;
+  if (byte === 0b01000000) return 6;
+  if (byte === 0b10000000) return 7;
+
+  if (byte > 0xff) throw Error("byte > 0xff");
+  if (byte === 0) throw Error("byte == 0");
+  else throw Error("More than one bit set");
+}
