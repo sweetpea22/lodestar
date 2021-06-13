@@ -19,7 +19,7 @@ import {GENESIS_EPOCH, ZERO_HASH} from "../constants";
 import {IBeaconDb} from "../db";
 import {CheckpointStateCache, StateContextCache} from "./stateCache";
 import {IMetrics} from "../metrics";
-import {AttestationPool, AttestationProcessor} from "./attestation";
+import {AttestationProcessor} from "./attestation";
 import {BlockPool, BlockProcessor} from "./blocks";
 import {IBeaconClock, LocalClock} from "./clock";
 import {ChainEventEmitter} from "./emitter";
@@ -52,7 +52,6 @@ export class BeaconChain implements IBeaconChain {
   stateCache: StateContextCache;
   checkpointStateCache: CheckpointStateCache;
   regen: IStateRegenerator;
-  pendingAttestations: AttestationPool;
   pendingBlocks: BlockPool;
   forkDigestContext: IForkDigestContext;
   lightclientUpdater: LightClientUpdater;
@@ -104,7 +103,6 @@ export class BeaconChain implements IBeaconChain {
       metrics,
       signal,
     });
-    this.pendingAttestations = new AttestationPool({config});
     this.pendingBlocks = new BlockPool(config, logger);
     this.attestationProcessor = new AttestationProcessor({config, forkChoice, emitter, clock, regen});
     this.blockProcessor = new BlockProcessor({

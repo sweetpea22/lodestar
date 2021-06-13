@@ -17,7 +17,6 @@ import {LocalClock} from "../../../../src/chain/clock";
 import {IStateRegenerator, StateRegenerator} from "../../../../src/chain/regen";
 import {StubbedBeaconDb} from "../../stub";
 import {BlockPool} from "../../../../src/chain/blocks";
-import {AttestationPool} from "../../../../src/chain/attestation";
 import {BlsVerifier, IBlsVerifier} from "../../../../src/chain/bls";
 import {ForkDigestContext, IForkDigestContext} from "../../../../src/util/forkDigestContext";
 import {generateEmptyBlockSummary} from "../../block";
@@ -47,7 +46,6 @@ export class MockBeaconChain implements IBeaconChain {
   regen: IStateRegenerator;
   emitter: ChainEventEmitter;
   pendingBlocks: BlockPool;
-  pendingAttestations: AttestationPool;
   forkDigestContext: IForkDigestContext;
   lightclientUpdater: LightClientUpdater;
 
@@ -76,9 +74,6 @@ export class MockBeaconChain implements IBeaconChain {
     this.stateCache = new StateContextCache();
     this.checkpointStateCache = new CheckpointStateCache(this.config);
     this.pendingBlocks = new BlockPool(config, logger);
-    this.pendingAttestations = new AttestationPool({
-      config: this.config,
-    });
     const db = new StubbedBeaconDb(sinon);
     this.regen = new StateRegenerator({
       config: this.config,

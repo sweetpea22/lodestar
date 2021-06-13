@@ -16,10 +16,7 @@ export async function validateAggregatedAttestation(
   const attestation = signedAggregateAndProof.message.aggregate;
 
   try {
-    const indexedAtt = await validateGossipAggregateAndProof(config, chain, signedAggregateAndProof, {
-      attestation: attestation,
-      validSignature: false,
-    });
+    const indexedAtt = await validateGossipAggregateAndProof(config, chain, signedAggregateAndProof);
     logger.debug("gossip - AggregateAndProof - accept");
 
     metrics?.registerAggregatedAttestation(OpSource.gossip, seenTimestampSec, signedAggregateAndProof, indexedAtt);

@@ -55,7 +55,7 @@ export async function processAttestationJob(
     return await processAttestation({...modules, job});
   } catch (e) {
     // above functions ForkChoice attestation error, we have to map it to AttestationError
-    modules.emitter.emit(ChainEvent.errorAttestation, mapAttestationError(e, job) || e);
+    modules.emitter.emit(ChainEvent.errorAttestation, mapAttestationError(e) || e);
     return null;
   }
 }
@@ -64,7 +64,7 @@ export async function processAttestationJob(
  * Map ForkChoice attestation error to lodestar version.
  * Return null if the error is not an attestation error.
  */
-export function mapAttestationError(e: Error, job: IAttestationJob): AttestationError | null {
+export function mapAttestationError(e: Error): AttestationError | null {
   if (e instanceof ForkChoiceError && e.type.code === ForkChoiceErrorCode.INVALID_ATTESTATION) {
     const attError = ((e as ForkChoiceError).type as {err: InvalidAttestation}).err as InvalidAttestation;
     // Map InvalidAttestationCode of forkchoice to lodestar AttestationErrorCode, other properties are the same
@@ -73,7 +73,7 @@ export function mapAttestationError(e: Error, job: IAttestationJob): Attestation
     );
     const code = AttestationErrorCode[codeName as keyof typeof AttestationErrorCode];
     const errType = {...attError, code} as AttestationErrorType;
-    const lodestarErr = new AttestationError({job, ...errType});
+    const lodestarErr = new AttestationError(errType);
     lodestarErr.stack = e.stack;
     return lodestarErr;
   }

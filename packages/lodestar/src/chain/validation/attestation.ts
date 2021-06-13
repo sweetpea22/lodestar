@@ -1,4 +1,4 @@
-import {Slot, ssz} from "@chainsafe/lodestar-types";
+import {Root, Slot, ssz} from "@chainsafe/lodestar-types";
 import {List} from "@chainsafe/ssz";
 import {
   allForks,
@@ -9,7 +9,7 @@ import {
   AggregationBitsErrorCode,
 } from "@chainsafe/lodestar-beacon-state-transition";
 import {IAttestationJob, IBeaconChain} from "..";
-import {AttestationError, AttestationErrorInt, AttestationErrorCode} from "../errors";
+import {AttestationError, AttestationErrorCode} from "../errors";
 import {ATTESTATION_PROPAGATION_SLOT_RANGE} from "../../constants";
 
 const {EpochContextError, EpochContextErrorCode, computeSubnetForSlot, getIndexedAttestationSignatureSet} = allForks;
@@ -17,8 +17,9 @@ const {EpochContextError, EpochContextErrorCode, computeSubnetForSlot, getIndexe
 export async function validateGossipAttestation(
   chain: IBeaconChain,
   attestationJob: IAttestationJob,
-  subnet: number
-): Promise<phase0.IndexedAttestation> {
+  /** Optional, to allow verifying attestations through API with unknown subnet */
+  subnet: number | null
+): Promise<{indexedAttestation: phase0.IndexedAttestation; subnet: number}> {
   // Do checks in this order:
   // - do early checks (w/o indexed attestation)
   // - > obtain indexed attestation and committes per slot
@@ -38,7 +39,6 @@ export async function validateGossipAttestation(
   if (!ssz.Epoch.equals(targetEpoch, attestationEpoch)) {
     throw new AttestationError({
       code: AttestationErrorCode.BAD_TARGET_EPOCH,
-      job: attestationJob,
     });
   }
 
@@ -61,10 +61,7 @@ export async function validateGossipAttestation(
     bitIndex = getSingleBitIndex(aggregationBits);
   } catch (e) {
     if (e instanceof AggregationBitsError && e.type.code === AggregationBitsErrorCode.NOT_EXACTLY_ONE_BIT_SET) {
-      throw new AttestationError({
-        code: AttestationErrorCode.NOT_EXACTLY_ONE_AGGREGATION_BIT_SET,
-        job: attestationJob,
-      });
+      throw new AttestationError({code: AttestationErrorCode.NOT_EXACTLY_ONE_AGGREGATION_BIT_SET});
     } else {
       throw e;
     }
@@ -77,15 +74,7 @@ export async function validateGossipAttestation(
 
   // [IGNORE] The block being voted for (attestation.data.beacon_block_root) has been seen (via both gossip
   // and non-gossip sources) (a client MAY queue attestations for processing once block is retrieved).
-  const beaconBlockRoot = attestationData.beaconBlockRoot;
-  const headBlock = chain.forkChoice.hasBlock(beaconBlockRoot);
-  if (headBlock === null) {
-    throw new AttestationError({
-      code: AttestationErrorCode.UNKNOWN_BEACON_BLOCK_ROOT,
-      beaconBlockRoot: beaconBlockRoot as Uint8Array,
-      job: attestationJob,
-    });
-  }
+  verifyHeadBlockIsKnown(chain, attestationData.beaconBlockRoot);
 
   // [REJECT] The block being voted for (attestation.data.beacon_block_root) passes validation.
   // > Altready check in `chain.forkChoice.hasBlock(attestation.data.beaconBlockRoot)`
@@ -98,26 +87,16 @@ export async function validateGossipAttestation(
   //  --i.e. get_ancestor(store, attestation.data.beacon_block_root, compute_start_slot_at_epoch(attestation.data.target.epoch)) == attestation.data.target.root
   // TODO: Lighthouse has an optimization here with `verify_attestation_target_root()`
   if (!chain.forkChoice.isDescendant(attestation.data.target.root, attestation.data.beaconBlockRoot)) {
-    throw new AttestationError({
-      code: AttestationErrorCode.TARGET_BLOCK_NOT_AN_ANCESTOR_OF_LMD_BLOCK,
-      job: attestationJob,
-    });
+    throw new AttestationError({code: AttestationErrorCode.TARGET_BLOCK_NOT_AN_ANCESTOR_OF_LMD_BLOCK});
   }
 
   // TODO: Is necessary?
   if (!chain.forkChoice.isDescendantOfFinalized(attestation.data.beaconBlockRoot)) {
-    throw new AttestationError({
-      code: AttestationErrorCode.FINALIZED_CHECKPOINT_NOT_AN_ANCESTOR_OF_ROOT,
-      job: attestationJob,
-    });
+    throw new AttestationError({code: AttestationErrorCode.FINALIZED_CHECKPOINT_NOT_AN_ANCESTOR_OF_ROOT});
   }
 
   const attestationTargetState = await chain.regen.getCheckpointState(attestationData.target).catch((e) => {
-    throw new AttestationError({
-      code: AttestationErrorCode.MISSING_ATTESTATION_TARGET_STATE,
-      error: e as Error,
-      job: attestationJob,
-    });
+    throw new AttestationError({code: AttestationErrorCode.MISSING_ATTESTATION_TARGET_STATE, error: e as Error});
   });
 
   // [REJECT] The committee index is within the expected range
@@ -130,10 +109,7 @@ export async function validateGossipAttestation(
   // -- i.e. len(attestation.aggregation_bits) == len(get_beacon_committee(state, data.slot, data.index)).
   // > TODO: Is this necessary? Lighthouse does not do this check
   if (aggregationBits.length !== committeeIndices.length) {
-    throw new AttestationError({
-      code: AttestationErrorCode.WRONG_NUMBER_OF_AGGREGATION_BITS,
-      job: attestationJob,
-    });
+    throw new AttestationError({code: AttestationErrorCode.WRONG_NUMBER_OF_AGGREGATION_BITS});
   }
 
   // LH > verify_middle_checks
@@ -146,19 +122,18 @@ export async function validateGossipAttestation(
   // where committees_per_slot = get_committee_count_per_slot(state, attestation.data.target.epoch),
   // which may be pre-computed along with the committee information for the signature check.
   const expectedSubnet = computeSubnetForSlot(attestationTargetState, attestationSlot, attestationIndex);
-  if (subnet !== expectedSubnet) {
+  if (subnet !== null && subnet !== expectedSubnet) {
     throw new AttestationError({
       code: AttestationErrorCode.INVALID_SUBNET_ID,
       received: subnet,
       expected: expectedSubnet,
-      job: attestationJob,
     });
   }
 
   // [IGNORE] There has been no other valid attestation seen on an attestation subnet that has an
   // identical attestation.data.target.epoch and participating validator index.
   if (chain.seenAttesters.isKnown(targetEpoch, validatorIndex)) {
-    throw new AttestationErrorInt({code: AttestationErrorCode.ATTESTATION_ALREADY_KNOWN, targetEpoch, validatorIndex});
+    throw new AttestationError({code: AttestationErrorCode.ATTESTATION_ALREADY_KNOWN, targetEpoch, validatorIndex});
   }
 
   // [REJECT] The signature of attestation is valid.
@@ -170,10 +145,7 @@ export async function validateGossipAttestation(
   if (!attestationJob.validSignature) {
     const signatureSet = getIndexedAttestationSignatureSet(attestationTargetState, indexedAttestation);
     if (!(await chain.bls.verifySignatureSets([signatureSet]))) {
-      throw new AttestationError({
-        code: AttestationErrorCode.INVALID_SIGNATURE,
-        job: attestationJob,
-      });
+      throw new AttestationError({code: AttestationErrorCode.INVALID_SIGNATURE});
     }
   }
 
@@ -183,12 +155,56 @@ export async function validateGossipAttestation(
   // there can be a race-condition if we receive two attestations at the same time and
   // process them in different threads.
   if (chain.seenAttesters.isKnown(targetEpoch, validatorIndex)) {
-    throw new AttestationErrorInt({code: AttestationErrorCode.ATTESTATION_ALREADY_KNOWN, targetEpoch, validatorIndex});
+    throw new AttestationError({code: AttestationErrorCode.ATTESTATION_ALREADY_KNOWN, targetEpoch, validatorIndex});
   }
 
   chain.seenAttesters.add(targetEpoch, validatorIndex);
 
-  return indexedAttestation;
+  return {indexedAttestation, subnet: expectedSubnet};
+}
+
+/**
+ * Verify that the `attestation` is within the acceptable gossip propagation range, with reference
+ * to the current slot of the `chain`.
+ *
+ * Accounts for `MAXIMUM_GOSSIP_CLOCK_DISPARITY`.
+ */
+export function verifyPropagationSlotRange(chain: IBeaconChain, attestationSlot: Slot): void {
+  // TODO (LH): Do not queue future attestations for later processing. Investigate why LH doesn't do it
+  // TODO: use MAXIMUM_GOSSIP_CLOCK_DISPARITY to compute the clock.currentSlot
+
+  const latestPermissibleSlot = chain.clock.currentSlot;
+  const earliestPermissibleSlot = Math.max(chain.clock.currentSlot - ATTESTATION_PROPAGATION_SLOT_RANGE, 0);
+  if (attestationSlot < earliestPermissibleSlot) {
+    throw new AttestationError({code: AttestationErrorCode.PAST_SLOT, earliestPermissibleSlot, attestationSlot});
+  }
+  if (attestationSlot > latestPermissibleSlot) {
+    throw new AttestationError({code: AttestationErrorCode.FUTURE_SLOT, latestPermissibleSlot, attestationSlot});
+  }
+}
+
+/**
+ * Checks if the `attestation.data.beaconBlockRoot` is known to this chain.
+ *
+ * The block root may not be known for two reasons:
+ *
+ * 1. The block has never been verified by our application.
+ * 2. The block is prior to the latest finalized block.
+ *
+ * Case (1) is the exact thing we're trying to detect. However case (2) is a little different, but
+ * it's still fine to reject here because there's no need for us to handle attestations that are
+ * already finalized.
+ */
+export function verifyHeadBlockIsKnown(chain: IBeaconChain, beaconBlockRoot: Root): void {
+  // TODO (LH): Enforce a maximum skip distance for unaggregated attestations.
+
+  const headBlock = chain.forkChoice.hasBlock(beaconBlockRoot);
+  if (headBlock === null) {
+    throw new AttestationError({
+      code: AttestationErrorCode.UNKNOWN_BEACON_BLOCK_ROOT,
+      root: beaconBlockRoot as Uint8Array,
+    });
+  }
 }
 
 /// Verifies that the `attestation.data.target.root` is indeed the target root of the block at
@@ -214,7 +230,7 @@ export async function validateGossipAttestation(
 //     throw new AttestationError({
 //       code: AttestationErrorCode.INVALID_TARGET_ROOT,
 //       targetRoot,
-//       job: attestationJob,
+//
 //     });
 //   } else {
 //     const expectedTargetRoot =
@@ -237,34 +253,6 @@ export async function validateGossipAttestation(
 //   }
 // }
 
-/**
- * Verify that the `attestation` is within the acceptable gossip propagation range, with reference
- * to the current slot of the `chain`.
- *
- * Accounts for `MAXIMUM_GOSSIP_CLOCK_DISPARITY`.
- */
-export function verifyPropagationSlotRange(chain: IBeaconChain, attestationSlot: Slot): void {
-  // TODO (LH): Do not queue future attestations for later processing. Investigate why LH doesn't do it
-  // TODO: use MAXIMUM_GOSSIP_CLOCK_DISPARITY to compute the clock.currentSlot
-
-  const latestPermissibleSlot = chain.clock.currentSlot;
-  const earliestPermissibleSlot = Math.max(chain.clock.currentSlot - ATTESTATION_PROPAGATION_SLOT_RANGE, 0);
-  if (attestationSlot < earliestPermissibleSlot) {
-    throw new AttestationErrorInt({
-      code: AttestationErrorCode.PAST_SLOT,
-      earliestPermissibleSlot,
-      attestationSlot,
-    });
-  }
-  if (attestationSlot > latestPermissibleSlot) {
-    throw new AttestationErrorInt({
-      code: AttestationErrorCode.FUTURE_SLOT,
-      latestPermissibleSlot,
-      attestationSlot,
-    });
-  }
-}
-
 export function getCommitteeIndices(
   attestationTargetState: allForks.CachedBeaconState<allForks.BeaconState>,
   attestationSlot: Slot,
@@ -274,10 +262,7 @@ export function getCommitteeIndices(
     return attestationTargetState.getBeaconCommittee(attestationSlot, attestationIndex);
   } catch (e) {
     if (e instanceof EpochContextError && e.type.code === EpochContextErrorCode.COMMITTEE_INDEX_OUT_OF_RANGE) {
-      throw new AttestationErrorInt({
-        code: AttestationErrorCode.COMMITTEE_INDEX_OUT_OF_RANGE,
-        index: attestationIndex,
-      });
+      throw new AttestationError({code: AttestationErrorCode.COMMITTEE_INDEX_OUT_OF_RANGE, index: attestationIndex});
     } else {
       throw e;
     }

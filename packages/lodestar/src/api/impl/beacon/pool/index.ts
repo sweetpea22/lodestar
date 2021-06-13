@@ -1,9 +1,7 @@
 import {Api as IBeaconPoolApi} from "@chainsafe/lodestar-api/lib/routes/beacon/pool";
 import {Epoch} from "@chainsafe/lodestar-types";
-import {allForks} from "@chainsafe/lodestar-beacon-state-transition";
 import {SYNC_COMMITTEE_SIZE, SYNC_COMMITTEE_SUBNET_COUNT} from "@chainsafe/lodestar-params";
 import {IAttestationJob} from "../../../../chain";
-import {AttestationError, AttestationErrorCode} from "../../../../chain/errors";
 import {validateGossipAttestation} from "../../../../chain/validation";
 import {validateGossipAttesterSlashing} from "../../../../chain/validation/attesterSlashing";
 import {validateGossipProposerSlashing} from "../../../../chain/validation/proposerSlashing";
@@ -52,19 +50,9 @@ export function getBeaconPoolApi({
         attestations.map(async (attestation, i) => {
           try {
             const attestationJob = {attestation, validSignature: false} as IAttestationJob;
+            const {indexedAttestation, subnet} = await validateGossipAttestation(chain, attestationJob, null);
 
-            const attestationTargetState = await chain.regen.getCheckpointState(attestation.data.target).catch((e) => {
-              throw new AttestationError({
-                code: AttestationErrorCode.MISSING_ATTESTATION_TARGET_STATE,
-                error: e as Error,
-                job: attestationJob,
-              });
-            });
-
-            const subnet = allForks.computeSubnetForAttestation(attestationTargetState.epochCtx, attestation);
-            const indexedAtt = await validateGossipAttestation(chain, attestationJob, subnet);
-
-            metrics?.registerUnaggregatedAttestation(OpSource.api, seenTimestampSec, indexedAtt);
+            metrics?.registerUnaggregatedAttestation(OpSource.api, seenTimestampSec, indexedAttestation);
 
             await Promise.all([
               network.gossip.publishBeaconAttestation(attestation, subnet),

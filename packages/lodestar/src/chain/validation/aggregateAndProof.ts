@@ -8,16 +8,15 @@ import {
   isAggregatorFromCommitteeLength,
   zipIndexesCommitteeBits,
 } from "@chainsafe/lodestar-beacon-state-transition";
-import {IAttestationJob, IBeaconChain} from "..";
+import {IBeaconChain} from "..";
 import {getSelectionProofSignatureSet, getAggregateAndProofSignatureSet} from "./signatureSets";
-import {AttestationError, AttestationErrorInt, AttestationErrorCode} from "../errors";
-import {getCommitteeIndices, verifyPropagationSlotRange} from "./attestation";
+import {AttestationError, AttestationErrorCode} from "../errors";
+import {getCommitteeIndices, verifyHeadBlockIsKnown, verifyPropagationSlotRange} from "./attestation";
 
 export async function validateGossipAggregateAndProof(
   config: IBeaconConfig,
   chain: IBeaconChain,
-  signedAggregateAndProof: phase0.SignedAggregateAndProof,
-  attestationJob: IAttestationJob
+  signedAggregateAndProof: phase0.SignedAggregateAndProof
 ): Promise<phase0.IndexedAttestation> {
   // Do checks in this order:
   // - do early checks (w/o indexed attestation)
@@ -45,10 +44,7 @@ export async function validateGossipAggregateAndProof(
 
   // [REJECT] The attestation's epoch matches its target -- i.e. attestation.data.target.epoch == compute_epoch_at_slot(attestation.data.slot)
   if (!ssz.Epoch.equals(targetEpoch, attEpoch)) {
-    throw new AttestationError({
-      code: AttestationErrorCode.BAD_TARGET_EPOCH,
-      job: attestationJob,
-    });
+    throw new AttestationError({code: AttestationErrorCode.BAD_TARGET_EPOCH});
   }
 
   // [IGNORE] aggregate.data.slot is within the last ATTESTATION_PROPAGATION_SLOT_RANGE slots (with a MAXIMUM_GOSSIP_CLOCK_DISPARITY allowance)
@@ -60,31 +56,19 @@ export async function validateGossipAggregateAndProof(
   // index aggregate_and_proof.aggregator_index for the epoch aggregate.data.target.epoch.
   const aggregatorIndex = aggregateAndProof.aggregatorIndex;
   if (chain.seenAggregators.isKnown(targetEpoch, aggregatorIndex)) {
-    throw new AttestationErrorInt({code: AttestationErrorCode.AGGREGATOR_ALREADY_KNOWN, targetEpoch, aggregatorIndex});
+    throw new AttestationError({code: AttestationErrorCode.AGGREGATOR_ALREADY_KNOWN, targetEpoch, aggregatorIndex});
   }
 
   // [IGNORE] The block being voted for (attestation.data.beacon_block_root) has been seen (via both gossip
   // and non-gossip sources) (a client MAY queue attestations for processing once block is retrieved).
-  const beaconBlockRoot = attData.beaconBlockRoot;
-  const headBlock = chain.forkChoice.hasBlock(beaconBlockRoot);
-  if (headBlock === null) {
-    throw new AttestationError({
-      code: AttestationErrorCode.UNKNOWN_BEACON_BLOCK_ROOT,
-      beaconBlockRoot: beaconBlockRoot as Uint8Array,
-      job: attestationJob,
-    });
-  }
+  verifyHeadBlockIsKnown(chain, attData.beaconBlockRoot);
 
   // [REJECT] The current finalized_checkpoint is an ancestor of the block defined by aggregate.data.beacon_block_root
   // -- i.e. get_ancestor(store, aggregate.data.beacon_block_root, compute_start_slot_at_epoch(store.finalized_checkpoint.epoch)) == store.finalized_checkpoint.root
   // > Altready check in `chain.forkChoice.hasBlock(attestation.data.beaconBlockRoot)`
 
   const attestationTargetState = await chain.regen.getCheckpointState(attData.target).catch((e) => {
-    throw new AttestationError({
-      code: AttestationErrorCode.MISSING_ATTESTATION_TARGET_STATE,
-      error: e as Error,
-      job: attestationJob,
-    });
+    throw new AttestationError({code: AttestationErrorCode.MISSING_ATTESTATION_TARGET_STATE, error: e as Error});
   });
 
   const committeeIndices = getCommitteeIndices(attestationTargetState, attSlot, attData.index);
@@ -100,28 +84,19 @@ export async function validateGossipAggregateAndProof(
   // len(get_attesting_indices(state, aggregate.data, aggregate.aggregation_bits)) >= 1.
   if (attestingIndices.length < 1) {
     // missing attestation participants
-    throw new AttestationError({
-      code: AttestationErrorCode.WRONG_NUMBER_OF_AGGREGATION_BITS,
-      job: attestationJob,
-    });
+    throw new AttestationError({code: AttestationErrorCode.WRONG_NUMBER_OF_AGGREGATION_BITS});
   }
 
   // [REJECT] aggregate_and_proof.selection_proof selects the validator as an aggregator for the slot
   // -- i.e. is_aggregator(state, aggregate.data.slot, aggregate.data.index, aggregate_and_proof.selection_proof) returns True.
   if (!isAggregatorFromCommitteeLength(committeeIndices.length, aggregateAndProof.selectionProof)) {
-    throw new AttestationError({
-      code: AttestationErrorCode.INVALID_AGGREGATOR,
-      job: attestationJob,
-    });
+    throw new AttestationError({code: AttestationErrorCode.INVALID_AGGREGATOR});
   }
 
   // [REJECT] The aggregator's validator index is within the committee
   // -- i.e. aggregate_and_proof.aggregator_index in get_beacon_committee(state, aggregate.data.slot, aggregate.data.index).
   if (!committeeIndices.includes(aggregateAndProof.aggregatorIndex)) {
-    throw new AttestationError({
-      code: AttestationErrorCode.AGGREGATOR_NOT_IN_COMMITTEE,
-      job: attestationJob,
-    });
+    throw new AttestationError({code: AttestationErrorCode.AGGREGATOR_NOT_IN_COMMITTEE});
   }
 
   // [REJECT] The aggregate_and_proof.selection_proof is a valid signature of the aggregate.data.slot
@@ -135,14 +110,11 @@ export async function validateGossipAggregateAndProof(
     allForks.getIndexedAttestationSignatureSet(attestationTargetState, indexedAttestation),
   ];
   if (!(await chain.bls.verifySignatureSets(signatureSets))) {
-    throw new AttestationError({
-      code: AttestationErrorCode.INVALID_SIGNATURE,
-      job: attestationJob,
-    });
+    throw new AttestationError({code: AttestationErrorCode.INVALID_SIGNATURE});
   }
 
   if (chain.seenAggregators.isKnown(targetEpoch, aggregatorIndex)) {
-    throw new AttestationErrorInt({code: AttestationErrorCode.AGGREGATOR_ALREADY_KNOWN, targetEpoch, aggregatorIndex});
+    throw new AttestationError({code: AttestationErrorCode.AGGREGATOR_ALREADY_KNOWN, targetEpoch, aggregatorIndex});
   }
 
   chain.seenAggregators.add(targetEpoch, aggregatorIndex);

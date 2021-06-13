@@ -8,7 +8,6 @@ import {IBeaconClock} from "./clock/interface";
 import {ChainEventEmitter} from "./emitter";
 import {IStateRegenerator} from "./regen";
 import {BlockPool} from "./blocks";
-import {AttestationPool} from "./attestation";
 import {StateContextCache, CheckpointStateCache} from "./stateCache";
 import {IBlsVerifier} from "./bls";
 import {SeenAttesters, SeenAggregators} from "./seenCache";
@@ -66,7 +65,6 @@ export interface IBeaconChain {
   checkpointStateCache: CheckpointStateCache;
   regen: IStateRegenerator;
   pendingBlocks: BlockPool;
-  pendingAttestations: AttestationPool;
   forkDigestContext: IForkDigestContext;
   lightclientUpdater: LightClientUpdater;
 

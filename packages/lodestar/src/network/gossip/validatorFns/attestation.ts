@@ -22,15 +22,27 @@ export async function validateCommitteeAttestation(
       validSignature: false,
     };
 
-    const indexedAtt = await validateGossipAttestation(chain, attestationJob, subnet);
+    const {indexedAttestation} = await validateGossipAttestation(chain, attestationJob, subnet);
     logger.debug("gossip - Attestation - accept", {subnet});
 
-    metrics?.registerUnaggregatedAttestation(OpSource.gossip, seenTimestampSec, indexedAtt);
+    metrics?.registerUnaggregatedAttestation(OpSource.gossip, seenTimestampSec, indexedAttestation);
   } catch (e) {
     if (!(e instanceof AttestationError)) {
       logger.error("Gossip attestation validation threw a non-AttestationError", e);
       throw new GossipValidationError(ERR_TOPIC_VALIDATOR_IGNORE);
     }
+
+    // TODO: Add DoS resistant pending attestation pool
+    // switch (e.type.code) {
+    //   case AttestationErrorCode.FUTURE_SLOT:
+    //     chain.pendingAttestations.putBySlot(e.type.attestationSlot, attestation);
+    //     break;
+    //   case AttestationErrorCode.UNKNOWN_TARGET_ROOT:
+    //   case AttestationErrorCode.UNKNOWN_BEACON_BLOCK_ROOT:
+    //     chain.pendingAttestations.putByBlock(e.type.root, attestation);
+    //     break;
+    // }
+
     switch (e.type.code) {
       case AttestationErrorCode.COMMITTEE_INDEX_OUT_OF_RANGE:
       case AttestationErrorCode.INVALID_SUBNET_ID:
@@ -44,11 +56,6 @@ export async function validateCommitteeAttestation(
         logger.debug("gossip - Attestation - reject", e.type);
         throw new GossipValidationError(ERR_TOPIC_VALIDATOR_REJECT);
 
-      case AttestationErrorCode.UNKNOWN_BEACON_BLOCK_ROOT:
-      case AttestationErrorCode.MISSING_ATTESTATION_TARGET_STATE: // IGNORE
-        // attestation might be valid after we receive block
-        chain.receiveAttestation(attestation);
-      /** eslit-disable-next-line no-fallthrough */
       case AttestationErrorCode.PAST_SLOT:
       case AttestationErrorCode.FUTURE_SLOT:
       case AttestationErrorCode.ATTESTATION_ALREADY_KNOWN:

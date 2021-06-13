@@ -311,12 +311,8 @@ export function getValidatorApi({
       await Promise.all(
         signedAggregateAndProofs.map(async (signedAggregateAndProof, i) => {
           try {
-            const attestation = signedAggregateAndProof.message.aggregate;
             // TODO: Validate in batch
-            const indexedAtt = await validateGossipAggregateAndProof(config, chain, signedAggregateAndProof, {
-              attestation: attestation,
-              validSignature: false,
-            });
+            const indexedAtt = await validateGossipAggregateAndProof(config, chain, signedAggregateAndProof);
 
             metrics?.registerAggregatedAttestation(OpSource.api, seenTimestampSec, signedAggregateAndProof, indexedAtt);
 

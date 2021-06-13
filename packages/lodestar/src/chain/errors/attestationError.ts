@@ -1,8 +1,6 @@
 import {CommitteeIndex, Epoch, Slot, ValidatorIndex} from "@chainsafe/lodestar-types";
 import {LodestarError} from "@chainsafe/lodestar-utils";
 
-import {IAttestationJob} from "../interface";
-
 export enum AttestationErrorCode {
   /**
    * The target state cannot be fetched
@@ -143,7 +141,7 @@ export type AttestationErrorType =
   | {code: AttestationErrorCode.ATTESTATION_ALREADY_KNOWN; targetEpoch: Epoch; validatorIndex: number}
   | {code: AttestationErrorCode.AGGREGATOR_ALREADY_KNOWN; targetEpoch: Epoch; aggregatorIndex: number}
   | {code: AttestationErrorCode.AGGREGATOR_INDEX_TOO_HIGH; aggregatorIndex: ValidatorIndex}
-  | {code: AttestationErrorCode.UNKNOWN_BEACON_BLOCK_ROOT; beaconBlockRoot: Uint8Array}
+  | {code: AttestationErrorCode.UNKNOWN_BEACON_BLOCK_ROOT; root: Uint8Array}
   | {code: AttestationErrorCode.BAD_TARGET_EPOCH}
   | {code: AttestationErrorCode.HEAD_NOT_TARGET_DESCENDANT}
   | {code: AttestationErrorCode.UNKNOWN_TARGET_ROOT; root: Uint8Array}
@@ -166,17 +164,4 @@ export type AttestationErrorType =
   | {code: AttestationErrorCode.INVALID_AGGREGATOR}
   | {code: AttestationErrorCode.INVALID_INDEXED_ATTESTATION};
 
-type IJobObject = {
-  job: IAttestationJob;
-};
-
-export class AttestationError extends LodestarError<AttestationErrorType> {
-  job: IAttestationJob;
-
-  constructor({job, ...type}: AttestationErrorType & IJobObject) {
-    super(type);
-    this.job = job;
-  }
-}
-
-export class AttestationErrorInt extends LodestarError<AttestationErrorType> {}
+export class AttestationError extends LodestarError<AttestationErrorType> {}

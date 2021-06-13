@@ -26,15 +26,9 @@ export async function processAttestation({
   const {attestation} = job;
   const target = attestation.data.target;
 
-  let targetState;
-  try {
-    targetState = await regen.getCheckpointState(target);
-  } catch (e) {
-    throw new AttestationError({
-      code: AttestationErrorCode.TARGET_STATE_MISSING,
-      job,
-    });
-  }
+  const targetState = await regen.getCheckpointState(target).catch(() => {
+    throw new AttestationError({code: AttestationErrorCode.TARGET_STATE_MISSING});
+  });
 
   let indexedAttestation: phase0.IndexedAttestation;
   try {
@@ -44,7 +38,6 @@ export async function processAttestation({
       code: AttestationErrorCode.NO_COMMITTEE_FOR_SLOT_AND_INDEX,
       slot: attestation.data.slot,
       index: attestation.data.index,
-      job,
     });
   }
 
@@ -57,10 +50,7 @@ export async function processAttestation({
       !job.validSignature
     )
   ) {
-    throw new AttestationError({
-      code: AttestationErrorCode.INVALID_SIGNATURE,
-      job,
-    });
+    throw new AttestationError({code: AttestationErrorCode.INVALID_SIGNATURE});
   }
 
   forkChoice.onAttestation(indexedAttestation);
