@@ -11,6 +11,7 @@ import {BlockPool} from "./blocks";
 import {AttestationPool} from "./attestation";
 import {StateContextCache, CheckpointStateCache} from "./stateCache";
 import {IBlsVerifier} from "./bls";
+import {SeenAttesters, SeenAggregators} from "./seenCache";
 import {IForkDigestContext} from "../util/forkDigestContext";
 
 export interface IProcessBlock {
@@ -68,6 +69,9 @@ export interface IBeaconChain {
   pendingAttestations: AttestationPool;
   forkDigestContext: IForkDigestContext;
   lightclientUpdater: LightClientUpdater;
+
+  readonly seenAttesters: SeenAttesters;
+  readonly seenAggregators: SeenAggregators;
 
   /** Stop beacon chain processing */
   close(): void;

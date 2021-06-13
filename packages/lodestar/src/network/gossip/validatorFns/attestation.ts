@@ -9,7 +9,7 @@ import {GossipValidationError} from "../errors";
 import {OpSource} from "../../../metrics/validatorMonitor";
 
 export async function validateCommitteeAttestation(
-  {chain, db, config, logger, metrics}: IObjectValidatorModules,
+  {chain, logger, metrics}: IObjectValidatorModules,
   topic: GossipTopicMap[GossipType.beacon_attestation],
   attestation: phase0.Attestation
 ): Promise<void> {
@@ -22,7 +22,7 @@ export async function validateCommitteeAttestation(
       validSignature: false,
     };
 
-    const indexedAtt = await validateGossipAttestation(config, chain, db, attestationJob, subnet);
+    const indexedAtt = await validateGossipAttestation(chain, attestationJob, subnet);
     logger.debug("gossip - Attestation - accept", {subnet});
 
     metrics?.registerUnaggregatedAttestation(OpSource.gossip, seenTimestampSec, indexedAtt);
@@ -56,7 +56,5 @@ export async function validateCommitteeAttestation(
         logger.debug("gossip - Attestation - ignore", e.type as Json);
         throw new GossipValidationError(ERR_TOPIC_VALIDATOR_IGNORE);
     }
-  } finally {
-    db.seenAttestationCache.addCommitteeAttestation(attestation);
   }
 }

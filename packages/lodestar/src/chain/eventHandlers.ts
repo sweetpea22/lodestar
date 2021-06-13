@@ -1,6 +1,6 @@
 import {AbortSignal} from "abort-controller";
 import {readonlyValues, toHexString, TreeBacked} from "@chainsafe/ssz";
-import {allForks, altair, phase0, Slot, ssz, Version} from "@chainsafe/lodestar-types";
+import {allForks, altair, Epoch, phase0, Slot, ssz, Version} from "@chainsafe/lodestar-types";
 import {ILogger} from "@chainsafe/lodestar-utils";
 import {IBlockSummary} from "@chainsafe/lodestar-fork-choice";
 import {CachedBeaconState, computeEpochAtSlot} from "@chainsafe/lodestar-beacon-state-transition";
@@ -129,8 +129,9 @@ export async function onClockSlot(this: BeaconChain, slot: Slot): Promise<void> 
   });
 }
 
-export function onClockEpoch(): void {
-  //
+export function onClockEpoch(this: BeaconChain, currentEpoch: Epoch): void {
+  this.seenAttesters.prune(currentEpoch);
+  this.seenAggregators.prune(currentEpoch);
 }
 
 export function onForkVersion(this: BeaconChain, version: Version): void {

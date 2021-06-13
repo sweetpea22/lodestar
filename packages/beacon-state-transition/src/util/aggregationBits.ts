@@ -1,5 +1,6 @@
 import {BitList, BitListType, BitVector, isTreeBacked, TreeBacked, Type} from "@chainsafe/ssz";
 import {ssz} from "@chainsafe/lodestar-types";
+import {LodestarError} from "@chainsafe/lodestar-utils";
 
 const BITS_PER_BYTE = 8;
 /** Globally cache this information. @see getUint8ByteToBitBooleanArray */
@@ -122,70 +123,54 @@ export function bitsToUint8Array<BitArr extends BitList | BitVector>(
   return Buffer.concat(chunks).subarray(0, Math.ceil(bits.length / BITS_PER_BYTE));
 }
 
-// Variants to extract a single bit (for un-aggregated attestations)
-
+/**
+ * Variant to extract a single bit (for un-aggregated attestations)
+ */
 export function getSingleBitIndex(bits: BitList | TreeBacked<BitList>): number {
+  let index: number | null = null;
+
   if (isTreeBacked<BitList>(bits)) {
     const bytes = bitsToUint8Array(bits, ssz.phase0.CommitteeBits);
 
-    let index: number | null = null;
-
     // Iterate over each byte of bits
     for (let iByte = 0, byteLen = bytes.length; iByte < byteLen; iByte++) {
-      const byte = bytes[iByte];
-
       // If it's exactly zero, there won't be any indexes, continue early
-      if (byte === 0) {
+      if (bytes[iByte] === 0) {
         continue;
       }
 
-      if (index !== null) {
-        throw Error("More than one index set");
+      // Get the precomputed boolean array for this byte
+      const booleansInByte = getUint8ByteToBitBooleanArray(bytes[iByte]);
+      // For each bit in the byte check participation and add to indexesSelected array
+      for (let iBit = 0; iBit < BITS_PER_BYTE; iBit++) {
+        if (booleansInByte[iBit] === true) {
+          if (index !== null) throw new AggregationBitsError({code: AggregationBitsErrorCode.NOT_EXACTLY_ONE_BIT_SET});
+          index = iByte * BITS_PER_BYTE + iBit;
+        }
       }
-
-      const iBit = byteToBitIndex(byte);
-      index = iByte * BITS_PER_BYTE + iBit;
     }
-
-    if (index === null) {
-      throw Error("No index set");
-    } else {
-      return index;
-    }
-  }
-
-  //
-  else {
-    let index: number | null = null;
-
+  } else {
     for (let i = 0, len = bits.length; i < len; i++) {
       if (bits[i] === true) {
-        if (index !== null) {
-          throw Error("More than one index set");
-        }
+        if (index !== null) throw new AggregationBitsError({code: AggregationBitsErrorCode.NOT_EXACTLY_ONE_BIT_SET});
         index = i;
       }
     }
+  }
 
-    if (index === null) {
-      throw Error("No index set");
-    } else {
-      return index;
-    }
+  if (index === null) {
+    throw new AggregationBitsError({code: AggregationBitsErrorCode.NOT_EXACTLY_ONE_BIT_SET});
+  } else {
+    return index;
   }
 }
 
-function byteToBitIndex(byte: number): number {
-  if (byte === 0b00000001) return 0;
-  if (byte === 0b00000010) return 1;
-  if (byte === 0b00000100) return 2;
-  if (byte === 0b00001000) return 3;
-  if (byte === 0b00010000) return 4;
-  if (byte === 0b00100000) return 5;
-  if (byte === 0b01000000) return 6;
-  if (byte === 0b10000000) return 7;
-
-  if (byte > 0xff) throw Error("byte > 0xff");
-  if (byte === 0) throw Error("byte == 0");
-  else throw Error("More than one bit set");
+export enum AggregationBitsErrorCode {
+  NOT_EXACTLY_ONE_BIT_SET = "AGGREGATION_BITS_ERROR_NOT_EXACTLY_ONE_BIT_SET",
 }
+
+type AggregationBitsErrorType = {
+  code: AggregationBitsErrorCode.NOT_EXACTLY_ONE_BIT_SET;
+};
+
+export class AggregationBitsError extends LodestarError<AggregationBitsErrorType> {}

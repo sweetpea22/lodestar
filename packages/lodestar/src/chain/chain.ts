@@ -30,6 +30,7 @@ import {IStateRegenerator, QueuedStateRegenerator} from "./regen";
 import {LodestarForkChoice} from "./forkChoice";
 import {restoreStateCaches} from "./initState";
 import {BlsVerifier, IBlsVerifier} from "./bls";
+import {SeenAttesters, SeenAggregators} from "./seenCache";
 import {ForkDigestContext, IForkDigestContext} from "../util/forkDigestContext";
 
 export interface IBeaconChainModules {
@@ -55,6 +56,9 @@ export class BeaconChain implements IBeaconChain {
   pendingBlocks: BlockPool;
   forkDigestContext: IForkDigestContext;
   lightclientUpdater: LightClientUpdater;
+
+  readonly seenAttesters = new SeenAttesters();
+  readonly seenAggregators = new SeenAggregators();
 
   protected attestationProcessor: AttestationProcessor;
   protected blockProcessor: BlockProcessor;

@@ -8,7 +8,7 @@ import {GossipValidationError} from "../errors";
 import {OpSource} from "../../../metrics/validatorMonitor";
 
 export async function validateAggregatedAttestation(
-  {chain, db, config, logger, metrics}: IObjectValidatorModules,
+  {chain, config, logger, metrics}: IObjectValidatorModules,
   _topic: GossipTopic,
   signedAggregateAndProof: phase0.SignedAggregateAndProof
 ): Promise<void> {
@@ -16,7 +16,7 @@ export async function validateAggregatedAttestation(
   const attestation = signedAggregateAndProof.message.aggregate;
 
   try {
-    const indexedAtt = await validateGossipAggregateAndProof(config, chain, db, signedAggregateAndProof, {
+    const indexedAtt = await validateGossipAggregateAndProof(config, chain, signedAggregateAndProof, {
       attestation: attestation,
       validSignature: false,
     });
@@ -43,13 +43,11 @@ export async function validateAggregatedAttestation(
         chain.receiveAttestation(attestation);
       /** eslit-disable-next-line no-fallthrough */
       case AttestationErrorCode.PAST_SLOT:
-      case AttestationErrorCode.AGGREGATE_ALREADY_KNOWN:
+      case AttestationErrorCode.AGGREGATOR_ALREADY_KNOWN:
       case AttestationErrorCode.MISSING_ATTESTATION_TARGET_STATE:
       default:
         logger.debug("gossip - AggregateAndProof - ignore", e.type as Json);
         throw new GossipValidationError(ERR_TOPIC_VALIDATOR_IGNORE);
     }
-  } finally {
-    db.seenAttestationCache.addAggregateAndProof(signedAggregateAndProof.message);
   }
 }

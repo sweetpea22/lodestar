@@ -313,7 +313,7 @@ export function getValidatorApi({
           try {
             const attestation = signedAggregateAndProof.message.aggregate;
             // TODO: Validate in batch
-            const indexedAtt = await validateGossipAggregateAndProof(config, chain, db, signedAggregateAndProof, {
+            const indexedAtt = await validateGossipAggregateAndProof(config, chain, signedAggregateAndProof, {
               attestation: attestation,
               validSignature: false,
             });
@@ -322,11 +322,10 @@ export function getValidatorApi({
 
             await Promise.all([
               db.aggregateAndProof.add(signedAggregateAndProof.message),
-              db.seenAttestationCache.addAggregateAndProof(signedAggregateAndProof.message),
               network.gossip.publishBeaconAggregateAndProof(signedAggregateAndProof),
             ]);
           } catch (e) {
-            if (e instanceof AttestationError && e.type.code === AttestationErrorCode.AGGREGATE_ALREADY_KNOWN) {
+            if (e instanceof AttestationError && e.type.code === AttestationErrorCode.AGGREGATOR_ALREADY_KNOWN) {
               logger.debug("Ignoring known signedAggregateAndProof");
               return; // Ok to submit the same aggregate twice
             }

@@ -13,7 +13,8 @@ export function processAttestation(
   const {epochCtx} = state;
   const slot = state.slot;
   const data = attestation.data;
-  const committeeCount = epochCtx.getCommitteeCountAtSlot(data.slot);
+  const computedEpoch = computeEpochAtSlot(data.slot);
+  const committeeCount = epochCtx.getCommitteeCountPerSlot(computedEpoch);
   if (!(data.index < committeeCount)) {
     throw new Error(
       "Attestation committee index not within current committee count: " +
@@ -28,7 +29,6 @@ export function processAttestation(
         `targetEpoch=${data.target.epoch} currentEpoch=${epochCtx.currentShuffling.epoch}`
     );
   }
-  const computedEpoch = computeEpochAtSlot(data.slot);
   if (!(data.target.epoch === computedEpoch)) {
     throw new Error(
       "Attestation target epoch does not match epoch computed from slot: " +

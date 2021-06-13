@@ -16,7 +16,6 @@ import {
   VoluntaryExitRepository,
   PendingBlockRepository,
 } from "../../../src/db/repositories";
-import {SeenAttestationCache} from "../../../src/db/seenAttestationCache";
 import {config as minimalConfig} from "@chainsafe/lodestar-config/default";
 import {SignedBeaconBlock} from "@chainsafe/lodestar-types/phase0";
 import {createStubInstance} from "../types";
@@ -42,7 +41,6 @@ export class StubbedBeaconDb extends BeaconDb {
   depositDataRoot: SinonStubbedInstance<DepositDataRootRepository> & DepositDataRootRepository;
   eth1Data: SinonStubbedInstance<Eth1DataRepository> & Eth1DataRepository;
 
-  seenAttestationCache: SinonStubbedInstance<SeenAttestationCache> & SeenAttestationCache;
   syncCommittee: SinonStubbedInstance<SyncCommitteeCache> & SyncCommitteeCache;
   syncCommitteeContribution: SinonStubbedInstance<SyncCommitteeContributionCache> & SyncCommitteeContributionCache;
 
@@ -67,7 +65,6 @@ export class StubbedBeaconDb extends BeaconDb {
 
     this.depositDataRoot = createStubInstance(DepositDataRootRepository);
     this.eth1Data = createStubInstance(Eth1DataRepository);
-    this.seenAttestationCache = createStubInstance(SeenAttestationCache);
     this.syncCommittee = createStubInstance(SyncCommitteeCache);
     this.syncCommitteeContribution = createStubInstance(SyncCommitteeContributionCache);
     this.processBlockOperations = sinon.stub(this, "processBlockOperations") as (

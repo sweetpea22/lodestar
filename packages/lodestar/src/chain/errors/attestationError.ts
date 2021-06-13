@@ -37,7 +37,7 @@ export enum AttestationErrorCode {
   /**
    * There has already been an aggregation observed for this validator, we refuse to process a second.
    */
-  AGGREGATE_ALREADY_KNOWN = "ATTESTATION_ERROR_AGGREGATE_ALREADY_KNOWN",
+  AGGREGATOR_ALREADY_KNOWN = "ATTESTATION_ERROR_AGGREGATOR_ALREADY_KNOWN",
   /**
    * The aggregator index is higher than the maximum possible validator count.
    */
@@ -140,8 +140,8 @@ export type AttestationErrorType =
   | {code: AttestationErrorCode.EMPTY_AGGREGATION_BITFIELD}
   | {code: AttestationErrorCode.AGGREGATOR_NOT_IN_COMMITTEE}
   | {code: AttestationErrorCode.AGGREGATOR_PUBKEY_UNKNOWN; aggregatorIndex: ValidatorIndex}
-  | {code: AttestationErrorCode.ATTESTATION_ALREADY_KNOWN; root: Uint8Array}
-  | {code: AttestationErrorCode.AGGREGATE_ALREADY_KNOWN}
+  | {code: AttestationErrorCode.ATTESTATION_ALREADY_KNOWN; targetEpoch: Epoch; validatorIndex: number}
+  | {code: AttestationErrorCode.AGGREGATOR_ALREADY_KNOWN; targetEpoch: Epoch; aggregatorIndex: number}
   | {code: AttestationErrorCode.AGGREGATOR_INDEX_TOO_HIGH; aggregatorIndex: ValidatorIndex}
   | {code: AttestationErrorCode.UNKNOWN_BEACON_BLOCK_ROOT; beaconBlockRoot: Uint8Array}
   | {code: AttestationErrorCode.BAD_TARGET_EPOCH}
@@ -149,7 +149,7 @@ export type AttestationErrorType =
   | {code: AttestationErrorCode.UNKNOWN_TARGET_ROOT; root: Uint8Array}
   | {code: AttestationErrorCode.INVALID_SIGNATURE}
   | {code: AttestationErrorCode.NO_COMMITTEE_FOR_SLOT_AND_INDEX; slot: Slot; index: CommitteeIndex}
-  | {code: AttestationErrorCode.NOT_EXACTLY_ONE_AGGREGATION_BIT_SET; numBits: number}
+  | {code: AttestationErrorCode.NOT_EXACTLY_ONE_AGGREGATION_BIT_SET}
   | {code: AttestationErrorCode.PRIOR_ATTESTATION_KNOWN; validatorIndex: ValidatorIndex; epoch: Epoch}
   | {code: AttestationErrorCode.FUTURE_EPOCH; attestationEpoch: Epoch; currentEpoch: Epoch}
   | {code: AttestationErrorCode.PAST_EPOCH; attestationEpoch: Epoch; currentEpoch: Epoch}
@@ -178,3 +178,5 @@ export class AttestationError extends LodestarError<AttestationErrorType> {
     this.job = job;
   }
 }
+
+export class AttestationErrorInt extends LodestarError<AttestationErrorType> {}

@@ -62,7 +62,7 @@ export function getBeaconPoolApi({
             });
 
             const subnet = allForks.computeSubnetForAttestation(attestationTargetState.epochCtx, attestation);
-            const indexedAtt = await validateGossipAttestation(config, chain, db, attestationJob, subnet);
+            const indexedAtt = await validateGossipAttestation(chain, attestationJob, subnet);
 
             metrics?.registerUnaggregatedAttestation(OpSource.api, seenTimestampSec, indexedAtt);
 
