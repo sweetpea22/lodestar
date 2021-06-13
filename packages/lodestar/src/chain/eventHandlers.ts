@@ -236,27 +236,19 @@ export async function onBlock(
     await this.db.block.add(block);
   }
 
+  // Only process attestations in response to an non-prefinalized block
   if (!job.prefinalized) {
     const attestations = Array.from(readonlyValues(block.message.body.attestations));
 
-    // Only process attestations in response to an non-prefinalized block
-    const indexedAttestations = await Promise.all([
-      // process the attestations in the block
-      ...attestations.map((attestation) => {
-        return this.attestationProcessor.processAttestationJob({
-          attestation,
-          // attestation signatures from blocks have already been verified
-          validSignature: true,
-        });
-      }),
-    ]);
+    for (const attestation of attestations) {
+      try {
+        const indexedAttestation = postState.epochCtx.getIndexedAttestation(attestation);
+        this.forkChoice.onAttestation(indexedAttestation);
+        this.emitter.emit(ChainEvent.attestation, attestation);
 
-    if (this.metrics) {
-      // Register attestations in metrics
-      for (const attestation of indexedAttestations) {
-        if (attestation) {
-          this.metrics.registerAttestationInBlock(attestation, block.message);
-        }
+        this.metrics?.registerAttestationInBlock(indexedAttestation, block.message);
+      } catch (e) {
+        this.logger.error("Error processing attestation from block", {slot: block.message.slot}, e);
       }
     }
   }

@@ -91,8 +91,6 @@ export interface IBeaconChain {
   getUnfinalizedBlocksAtSlots(slots: Slot[]): Promise<allForks.SignedBeaconBlock[]>;
   getFinalizedCheckpoint(): phase0.Checkpoint;
 
-  /** Add attestation to the fork-choice rule */
-  receiveAttestation(attestation: phase0.Attestation): void;
   /** Pre-process and run the per slot state transition function */
   receiveBlock(signedBlock: allForks.SignedBeaconBlock, trusted?: boolean): void;
   /** Process a block until complete */

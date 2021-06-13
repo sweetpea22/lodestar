@@ -19,7 +19,6 @@ import {GENESIS_EPOCH, ZERO_HASH} from "../constants";
 import {IBeaconDb} from "../db";
 import {CheckpointStateCache, StateContextCache} from "./stateCache";
 import {IMetrics} from "../metrics";
-import {AttestationProcessor} from "./attestation";
 import {BlockPool, BlockProcessor} from "./blocks";
 import {IBeaconClock, LocalClock} from "./clock";
 import {ChainEventEmitter} from "./emitter";
@@ -59,7 +58,6 @@ export class BeaconChain implements IBeaconChain {
   readonly seenAttesters = new SeenAttesters();
   readonly seenAggregators = new SeenAggregators();
 
-  protected attestationProcessor: AttestationProcessor;
   protected blockProcessor: BlockProcessor;
   protected readonly config: IBeaconConfig;
   protected readonly db: IBeaconDb;
@@ -104,7 +102,6 @@ export class BeaconChain implements IBeaconChain {
       signal,
     });
     this.pendingBlocks = new BlockPool(config, logger);
-    this.attestationProcessor = new AttestationProcessor({config, forkChoice, emitter, clock, regen});
     this.blockProcessor = new BlockProcessor({
       config,
       forkChoice,
@@ -218,12 +215,6 @@ export class BeaconChain implements IBeaconChain {
 
   getFinalizedCheckpoint(): phase0.Checkpoint {
     return this.forkChoice.getFinalizedCheckpoint();
-  }
-
-  receiveAttestation(attestation: phase0.Attestation): void {
-    this.attestationProcessor
-      .processAttestationJob({attestation, validSignature: false})
-      .catch(() => /* unreachable */ ({}));
   }
 
   receiveBlock(signedBlock: allForks.SignedBeaconBlock, trusted = false): void {

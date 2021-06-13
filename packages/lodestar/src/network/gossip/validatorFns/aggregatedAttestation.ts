@@ -13,7 +13,6 @@ export async function validateAggregatedAttestation(
   signedAggregateAndProof: phase0.SignedAggregateAndProof
 ): Promise<void> {
   const seenTimestampSec = Date.now() / 1000;
-  const attestation = signedAggregateAndProof.message.aggregate;
 
   try {
     const indexedAtt = await validateGossipAggregateAndProof(config, chain, signedAggregateAndProof);
@@ -26,6 +25,17 @@ export async function validateAggregatedAttestation(
       throw new GossipValidationError(ERR_TOPIC_VALIDATOR_IGNORE);
     }
 
+    // TODO: Add DoS resistant pending attestation pool
+    // switch (e.type.code) {
+    //   case AttestationErrorCode.FUTURE_SLOT:
+    //     chain.pendingAttestations.putBySlot(e.type.attestationSlot, attestation);
+    //     break;
+    //   case AttestationErrorCode.UNKNOWN_TARGET_ROOT:
+    //   case AttestationErrorCode.UNKNOWN_BEACON_BLOCK_ROOT:
+    //     chain.pendingAttestations.putByBlock(e.type.root, attestation);
+    //     break;
+    // }
+
     switch (e.type.code) {
       case AttestationErrorCode.WRONG_NUMBER_OF_AGGREGATION_BITS:
       case AttestationErrorCode.KNOWN_BAD_BLOCK:
@@ -37,8 +47,6 @@ export async function validateAggregatedAttestation(
         throw new GossipValidationError(ERR_TOPIC_VALIDATOR_REJECT);
 
       case AttestationErrorCode.FUTURE_SLOT: // IGNORE
-        chain.receiveAttestation(attestation);
-      /** eslit-disable-next-line no-fallthrough */
       case AttestationErrorCode.PAST_SLOT:
       case AttestationErrorCode.AGGREGATOR_ALREADY_KNOWN:
       case AttestationErrorCode.MISSING_ATTESTATION_TARGET_STATE:
