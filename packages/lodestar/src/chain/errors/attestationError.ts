@@ -108,7 +108,7 @@ export enum AttestationErrorCode {
   /**
    * The current finalized checkpoint is not an ancestor of the block defined by attestation.data.beacon_block_root.
    */
-  FINALIZED_CHECKPOINT_NOT_AN_ANCESTOR_OF_ROOT = "ATTESTATION_ERROR_FINALIZED_CHECKPOINT_NOT_AN_ANCESTOR_OF_ROOT",
+  INVALID_TARGET_ROOT = "ATTESTATION_ERROR_INVALID_TARGET_ROOT",
   /**
    * The The attestation target block is not an ancestor of the block named in the LMD vote.
    */
@@ -157,7 +157,7 @@ export type AttestationErrorType =
   | {code: AttestationErrorCode.BEACON_CHAIN_ERROR; error: Error}
   | {code: AttestationErrorCode.WRONG_NUMBER_OF_AGGREGATION_BITS}
   | {code: AttestationErrorCode.KNOWN_BAD_BLOCK}
-  | {code: AttestationErrorCode.FINALIZED_CHECKPOINT_NOT_AN_ANCESTOR_OF_ROOT}
+  | {code: AttestationErrorCode.INVALID_TARGET_ROOT; targetRoot: Uint8Array; expected: Uint8Array | null}
   | {code: AttestationErrorCode.TARGET_BLOCK_NOT_AN_ANCESTOR_OF_LMD_BLOCK}
   | {code: AttestationErrorCode.COMMITTEE_INDEX_OUT_OF_RANGE; index: number}
   | {code: AttestationErrorCode.MISSING_ATTESTATION_TARGET_STATE; error: Error}

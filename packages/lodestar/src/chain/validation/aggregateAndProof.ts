@@ -11,7 +11,7 @@ import {
 import {IBeaconChain} from "..";
 import {getSelectionProofSignatureSet, getAggregateAndProofSignatureSet} from "./signatureSets";
 import {AttestationError, AttestationErrorCode} from "../errors";
-import {getCommitteeIndices, verifyHeadBlockIsKnown, verifyPropagationSlotRange} from "./attestation";
+import {getCommitteeIndices, verifyHeadBlockAndTargetRoot, verifyPropagationSlotRange} from "./attestation";
 
 export async function validateGossipAggregateAndProof(
   config: IBeaconConfig,
@@ -40,7 +40,8 @@ export async function validateGossipAggregateAndProof(
   const attData = aggregate.data;
   const attSlot = attData.slot;
   const attEpoch = computeEpochAtSlot(attSlot);
-  const targetEpoch = attData.target.epoch;
+  const attTarget = attData.target;
+  const targetEpoch = attTarget.epoch;
 
   // [REJECT] The attestation's epoch matches its target -- i.e. attestation.data.target.epoch == compute_epoch_at_slot(attestation.data.slot)
   if (!ssz.Epoch.equals(targetEpoch, attEpoch)) {
@@ -61,17 +62,17 @@ export async function validateGossipAggregateAndProof(
 
   // [IGNORE] The block being voted for (attestation.data.beacon_block_root) has been seen (via both gossip
   // and non-gossip sources) (a client MAY queue attestations for processing once block is retrieved).
-  verifyHeadBlockIsKnown(chain, attData.beaconBlockRoot);
+  verifyHeadBlockAndTargetRoot(chain, attData.beaconBlockRoot, attTarget.root, attEpoch);
 
   // [REJECT] The current finalized_checkpoint is an ancestor of the block defined by aggregate.data.beacon_block_root
   // -- i.e. get_ancestor(store, aggregate.data.beacon_block_root, compute_start_slot_at_epoch(store.finalized_checkpoint.epoch)) == store.finalized_checkpoint.root
   // > Altready check in `chain.forkChoice.hasBlock(attestation.data.beaconBlockRoot)`
 
-  const attestationTargetState = await chain.regen.getCheckpointState(attData.target).catch((e) => {
+  const targetState = await chain.regen.getCheckpointState(attTarget).catch((e) => {
     throw new AttestationError({code: AttestationErrorCode.MISSING_ATTESTATION_TARGET_STATE, error: e as Error});
   });
 
-  const committeeIndices = getCommitteeIndices(attestationTargetState, attSlot, attData.index);
+  const committeeIndices = getCommitteeIndices(targetState, attSlot, attData.index);
   const attestingIndices = zipIndexesCommitteeBits(committeeIndices, aggregate.aggregationBits);
   const indexedAttestation: phase0.IndexedAttestation = {
     attestingIndices: attestingIndices as List<number>,
@@ -103,11 +104,11 @@ export async function validateGossipAggregateAndProof(
   // by the validator with index aggregate_and_proof.aggregator_index.
   // [REJECT] The aggregator signature, signed_aggregate_and_proof.signature, is valid.
   // [REJECT] The signature of aggregate is valid.
-  const aggregator = attestationTargetState.index2pubkey[aggregateAndProof.aggregatorIndex];
+  const aggregator = targetState.index2pubkey[aggregateAndProof.aggregatorIndex];
   const signatureSets = [
-    getSelectionProofSignatureSet(config, attestationTargetState, attSlot, aggregator, signedAggregateAndProof),
-    getAggregateAndProofSignatureSet(config, attestationTargetState, attEpoch, aggregator, signedAggregateAndProof),
-    allForks.getIndexedAttestationSignatureSet(attestationTargetState, indexedAttestation),
+    getSelectionProofSignatureSet(config, targetState, attSlot, aggregator, signedAggregateAndProof),
+    getAggregateAndProofSignatureSet(config, targetState, attEpoch, aggregator, signedAggregateAndProof),
+    allForks.getIndexedAttestationSignatureSet(targetState, indexedAttestation),
   ];
   if (!(await chain.bls.verifySignatureSets(signatureSets))) {
     throw new AttestationError({code: AttestationErrorCode.INVALID_SIGNATURE});

@@ -1,4 +1,4 @@
-import {Root, Slot, ssz} from "@chainsafe/lodestar-types";
+import {Epoch, Root, Slot, ssz} from "@chainsafe/lodestar-types";
 import {List} from "@chainsafe/ssz";
 import {
   allForks,
@@ -11,6 +11,7 @@ import {
 import {IAttestationJob, IBeaconChain} from "..";
 import {AttestationError, AttestationErrorCode} from "../errors";
 import {ATTESTATION_PROPAGATION_SLOT_RANGE} from "../../constants";
+import {IBlockSummary} from "@chainsafe/lodestar-fork-choice";
 
 const {EpochContextError, EpochContextErrorCode, computeSubnetForSlot, getIndexedAttestationSignatureSet} = allForks;
 
@@ -30,13 +31,14 @@ export async function validateGossipAttestation(
   // verify_early_checks
   // Run the checks that happen before an indexed attestation is constructed.
   const attestation = attestationJob.attestation;
-  const attestationData = attestation.data;
-  const attestationSlot = attestationData.slot;
-  const attestationEpoch = computeEpochAtSlot(attestationSlot);
-  const targetEpoch = attestationData.target.epoch;
+  const attData = attestation.data;
+  const attSlot = attData.slot;
+  const attEpoch = computeEpochAtSlot(attSlot);
+  const attTarget = attData.target;
+  const targetEpoch = attTarget.epoch;
 
   // [REJECT] The attestation's epoch matches its target -- i.e. attestation.data.target.epoch == compute_epoch_at_slot(attestation.data.slot)
-  if (!ssz.Epoch.equals(targetEpoch, attestationEpoch)) {
+  if (!ssz.Epoch.equals(targetEpoch, attEpoch)) {
     throw new AttestationError({
       code: AttestationErrorCode.BAD_TARGET_EPOCH,
     });
@@ -50,7 +52,7 @@ export async function validateGossipAttestation(
   // [IGNORE] attestation.data.slot is within the last ATTESTATION_PROPAGATION_SLOT_RANGE slots (within a MAXIMUM_GOSSIP_CLOCK_DISPARITY allowance)
   //  -- i.e. attestation.data.slot + ATTESTATION_PROPAGATION_SLOT_RANGE >= current_slot >= attestation.data.slot
   // (a client MAY queue future attestations for processing at the appropriate slot).
-  verifyPropagationSlotRange(chain, attestationSlot);
+  verifyPropagationSlotRange(chain, attSlot);
 
   // [REJECT] The attestation is unaggregated -- that is, it has exactly one participating validator
   // (len([bit for bit in attestation.aggregation_bits if bit]) == 1, i.e. exactly 1 bit is set).
@@ -74,35 +76,27 @@ export async function validateGossipAttestation(
 
   // [IGNORE] The block being voted for (attestation.data.beacon_block_root) has been seen (via both gossip
   // and non-gossip sources) (a client MAY queue attestations for processing once block is retrieved).
-  verifyHeadBlockIsKnown(chain, attestationData.beaconBlockRoot);
+  verifyHeadBlockAndTargetRoot(chain, attData.beaconBlockRoot, attTarget.root, attEpoch);
 
   // [REJECT] The block being voted for (attestation.data.beacon_block_root) passes validation.
-  // > Altready check in `chain.forkChoice.hasBlock(attestation.data.beaconBlockRoot)`
+  // > Altready check in `verifyHeadBlockAndTargetRoot()`
 
   // [REJECT] The current finalized_checkpoint is an ancestor of the block defined by attestation.data.beacon_block_root
   // -- i.e. get_ancestor(store, attestation.data.beacon_block_root, compute_start_slot_at_epoch(store.finalized_checkpoint.epoch)) == store.finalized_checkpoint.root
-  // > Altready check in `chain.forkChoice.hasBlock(attestation.data.beaconBlockRoot)`
+  // > Altready check in `verifyHeadBlockAndTargetRoot()`
 
   // [REJECT] The attestation's target block is an ancestor of the block named in the LMD vote
   //  --i.e. get_ancestor(store, attestation.data.beacon_block_root, compute_start_slot_at_epoch(attestation.data.target.epoch)) == attestation.data.target.root
-  // TODO: Lighthouse has an optimization here with `verify_attestation_target_root()`
-  if (!chain.forkChoice.isDescendant(attestation.data.target.root, attestation.data.beaconBlockRoot)) {
-    throw new AttestationError({code: AttestationErrorCode.TARGET_BLOCK_NOT_AN_ANCESTOR_OF_LMD_BLOCK});
-  }
+  // > Altready check in `verifyHeadBlockAndTargetRoot()`
 
-  // TODO: Is necessary?
-  if (!chain.forkChoice.isDescendantOfFinalized(attestation.data.beaconBlockRoot)) {
-    throw new AttestationError({code: AttestationErrorCode.FINALIZED_CHECKPOINT_NOT_AN_ANCESTOR_OF_ROOT});
-  }
-
-  const attestationTargetState = await chain.regen.getCheckpointState(attestationData.target).catch((e) => {
+  const attestationTargetState = await chain.regen.getCheckpointState(attTarget).catch((e) => {
     throw new AttestationError({code: AttestationErrorCode.MISSING_ATTESTATION_TARGET_STATE, error: e as Error});
   });
 
   // [REJECT] The committee index is within the expected range
   // -- i.e. data.index < get_committee_count_per_slot(state, data.target.epoch)
-  const attestationIndex = attestationData.index;
-  const committeeIndices = getCommitteeIndices(attestationTargetState, attestationSlot, attestationIndex);
+  const attIndex = attData.index;
+  const committeeIndices = getCommitteeIndices(attestationTargetState, attSlot, attIndex);
   const validatorIndex = committeeIndices[bitIndex];
 
   // [REJECT] The number of aggregation bits matches the committee size
@@ -121,7 +115,7 @@ export async function validateGossipAttestation(
   // -- i.e. compute_subnet_for_attestation(committees_per_slot, attestation.data.slot, attestation.data.index) == subnet_id,
   // where committees_per_slot = get_committee_count_per_slot(state, attestation.data.target.epoch),
   // which may be pre-computed along with the committee information for the signature check.
-  const expectedSubnet = computeSubnetForSlot(attestationTargetState, attestationSlot, attestationIndex);
+  const expectedSubnet = computeSubnetForSlot(attestationTargetState, attSlot, attIndex);
   if (subnet !== null && subnet !== expectedSubnet) {
     throw new AttestationError({
       code: AttestationErrorCode.INVALID_SUBNET_ID,
@@ -139,7 +133,7 @@ export async function validateGossipAttestation(
   // [REJECT] The signature of attestation is valid.
   const indexedAttestation: phase0.IndexedAttestation = {
     attestingIndices: [validatorIndex] as List<number>,
-    data: attestationData,
+    data: attData,
     signature: attestation.signature,
   };
   if (!attestationJob.validSignature) {
@@ -184,6 +178,21 @@ export function verifyPropagationSlotRange(chain: IBeaconChain, attestationSlot:
 }
 
 /**
+ * Verify:
+ * 1. head block is known
+ * 2. attestation's target block is an ancestor of the block named in the LMD vote
+ */
+export function verifyHeadBlockAndTargetRoot(
+  chain: IBeaconChain,
+  beaconBlockRoot: Root,
+  targetRoot: Root,
+  attestationEpoch: Epoch
+): void {
+  const headBlock = verifyHeadBlockIsKnown(chain, beaconBlockRoot);
+  verifyAttestationTargetRoot(headBlock, targetRoot, attestationEpoch);
+}
+
+/**
  * Checks if the `attestation.data.beaconBlockRoot` is known to this chain.
  *
  * The block root may not be known for two reasons:
@@ -195,63 +204,66 @@ export function verifyPropagationSlotRange(chain: IBeaconChain, attestationSlot:
  * it's still fine to reject here because there's no need for us to handle attestations that are
  * already finalized.
  */
-export function verifyHeadBlockIsKnown(chain: IBeaconChain, beaconBlockRoot: Root): void {
+function verifyHeadBlockIsKnown(chain: IBeaconChain, beaconBlockRoot: Root): IBlockSummary {
   // TODO (LH): Enforce a maximum skip distance for unaggregated attestations.
 
-  const headBlock = chain.forkChoice.hasBlock(beaconBlockRoot);
+  const headBlock = chain.forkChoice.getBlock(beaconBlockRoot);
   if (headBlock === null) {
     throw new AttestationError({
       code: AttestationErrorCode.UNKNOWN_BEACON_BLOCK_ROOT,
       root: beaconBlockRoot as Uint8Array,
     });
   }
+
+  return headBlock;
 }
 
-/// Verifies that the `attestation.data.target.root` is indeed the target root of the block at
-/// `attestation.data.beacon_block_root`.
-// function verifyAttestationTargetRoot(headBlock: IBlockSummary, attestation: phase0.Attestation): void {
-//   const targetRoot = attestation.data.target.root;
+/**
+ * Verifies that the `attestation.data.target.root` is indeed the target root of the block at
+ * `attestation.data.beacon_block_root`.
+ */
+function verifyAttestationTargetRoot(headBlock: IBlockSummary, targetRoot: Root, attestationEpoch: Epoch): void {
+  // Check the attestation target root.
+  const headBlockEpoch = computeEpochAtSlot(headBlock.slot);
 
-//   // Check the attestation target root.
-//   const headBlockEpoch = computeEpochAtSlot(headBlock.slot);
-//   const attestationEpoch = computeEpochAtSlot(attestation.data.slot);
+  if (headBlockEpoch > attestationEpoch) {
+    // The epoch references an invalid head block from a future epoch.
+    //
+    // This check is not in the specification, however we guard against it since it opens us up
+    // to weird edge cases during verification.
+    //
+    // Whilst this attestation *technically* could be used to add value to a block, it is
+    // invalid in the spirit of the protocol. Here we choose safety over profit.
+    //
+    // Reference:
+    // https://github.com/ethereum/eth2.0-specs/pull/2001#issuecomment-699246659
+    throw new AttestationError({
+      code: AttestationErrorCode.INVALID_TARGET_ROOT,
+      targetRoot: targetRoot as Uint8Array,
+      expected: null,
+    });
+  } else {
+    const expectedTargetRoot =
+      headBlockEpoch === attestationEpoch
+        ? // If the block is in the same epoch as the attestation, then use the target root
+          // from the block.
+          headBlock.targetRoot
+        : // If the head block is from a previous epoch then skip slots will cause the head block
+          // root to become the target block root.
+          //
+          // We know the head block is from a previous epoch due to a previous check.
+          headBlock.blockRoot;
 
-//   if (headBlockEpoch > attestationEpoch) {
-//     // The epoch references an invalid head block from a future epoch.
-//     //
-//     // This check is not in the specification, however we guard against it since it opens us up
-//     // to weird edge cases during verification.
-//     //
-//     // Whilst this attestation *technically* could be used to add value to a block, it is
-//     // invalid in the spirit of the protocol. Here we choose safety over profit.
-//     //
-//     // Reference:
-//     // https://github.com/ethereum/eth2.0-specs/pull/2001#issuecomment-699246659
-//     throw new AttestationError({
-//       code: AttestationErrorCode.INVALID_TARGET_ROOT,
-//       targetRoot,
-//
-//     });
-//   } else {
-//     const expectedTargetRoot =
-//       headBlockEpoch === attestationEpoch
-//         ? // If the block is in the same epoch as the attestation, then use the target root
-//           // from the block.
-//           headBlock.targetRoot
-//         : // If the head block is from a previous epoch then skip slots will cause the head block
-//           // root to become the target block root.
-//           //
-//           // We know the head block is from a previous epoch due to a previous check.
-//           headBlock.blockRoot;
-
-//     // Reject any attestation with an invalid target root.
-//     throw new AttestationError({
-//       code: AttestationErrorCode.INVALID_TARGET_ROOT,
-//       targetRoot,
-//       expected: expectedTargetRoot,
-//     });
-//   }
-// }
+    if (!ssz.Root.equals(expectedTargetRoot, targetRoot)) {
+      // Reject any attestation with an invalid target root.
+      throw new AttestationError({
+        code: AttestationErrorCode.INVALID_TARGET_ROOT,
+        targetRoot: targetRoot as Uint8Array,
+        expected: expectedTargetRoot,
+      });
+    }
+  }
+}
 
 export function getCommitteeIndices(
   attestationTargetState: allForks.CachedBeaconState<allForks.BeaconState>,
