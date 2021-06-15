@@ -161,6 +161,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://chainsafe.github.io/lodestar/packages/beacon-state-transition/classes/allforks_util.indexedsynccommittee/</loc>
+         <lastmod>2021-06-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://chainsafe.github.io/lodestar/packages/beacon-state-transition/classes/allforks_util.pubkeyindexmap/</loc>
          <lastmod>2021-06-15</lastmod>
          <changefreq>daily</changefreq>
@@ -211,12 +216,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/beacon-state-transition/interfaces/reflection-1874.reflection-1365.ibeaconstatetransitionmetrics/</loc>
+         <loc>https://chainsafe.github.io/lodestar/packages/beacon-state-transition/interfaces/reflection-1901.reflection-1389.ibeaconstatetransitionmetrics/</loc>
          <lastmod>2021-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/beacon-state-transition/interfaces/reflection-1874.reflection-1365.ihistogram/</loc>
+         <loc>https://chainsafe.github.io/lodestar/packages/beacon-state-transition/interfaces/reflection-1901.reflection-1389.ihistogram/</loc>
          <lastmod>2021-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -286,12 +291,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/beacon-state-transition/modules/reflection-1874/</loc>
+         <loc>https://chainsafe.github.io/lodestar/packages/beacon-state-transition/modules/reflection-1901/</loc>
          <lastmod>2021-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://chainsafe.github.io/lodestar/packages/beacon-state-transition/modules/reflection-1874.reflection-1365/</loc>
+         <loc>https://chainsafe.github.io/lodestar/packages/beacon-state-transition/modules/reflection-1901.reflection-1389/</loc>
          <lastmod>2021-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
