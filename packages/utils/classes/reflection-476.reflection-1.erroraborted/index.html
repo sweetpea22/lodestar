@@ -6,10 +6,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Lodestar documentation - Typescript Eth2.0 client" name="description"/>
-<link href="https://chainsafe.github.io/lodestar/packages/utils/classes/reflection-475.reflection-1.timeouterror/" rel="canonical"/>
+<link href="https://chainsafe.github.io/lodestar/packages/utils/classes/reflection-476.reflection-1.erroraborted/" rel="canonical"/>
 <link href="../../../../images/favicon.ico" rel="icon"/>
 <meta content="mkdocs-1.2.1, mkdocs-material-7.1.8" name="generator"/>
-<title>Reflection 475.reflection 1.timeouterror - Lodestar documentation</title>
+<title>Reflection 476.reflection 1.erroraborted - Lodestar documentation</title>
 <link href="../../../../assets/stylesheets/main.ca7ac06f.min.css" rel="stylesheet"/>
 <link href="../../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-timeouterror">
+<a class="md-skip" href="#class-erroraborted">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Reflection 475.reflection 1.timeouterror
+              Reflection 476.reflection 1.erroraborted
             
           </span>
 </div>
@@ -310,17 +310,17 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/utils/classes/reflection-475.reflection-1.timeouterror.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/chainsafe/lodestar/edit/master/docs/packages/utils/classes/reflection-476.reflection-1.erroraborted.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
 </a>
-<p><a href="../../">@chainsafe/lodestar-utils</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/reflection-475/"></a> › <a href="../../modules/reflection-475.reflection-1/"></a> › <a href="./">TimeoutError</a></p>
-<h1 id="class-timeouterror">Class: TimeoutError<a class="headerlink" href="#class-timeouterror" title="Permanent link">¶</a></h1>
-<p>Throw this error when wrapped timeout expires</p>
+<p><a href="../../">@chainsafe/lodestar-utils</a> › <a href="../../globals/">Globals</a> › <a href="../../modules/reflection-476/"></a> › <a href="../../modules/reflection-476.reflection-1/"></a> › <a href="./">ErrorAborted</a></p>
+<h1 id="class-erroraborted">Class: ErrorAborted<a class="headerlink" href="#class-erroraborted" title="Permanent link">¶</a></h1>
+<p>Throw this error when an upstream abort signal aborts</p>
 <h2 id="hierarchy">Hierarchy<a class="headerlink" href="#hierarchy" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="../reflection-475.reflection-1.assertionerror/#static-error">Error</a></li>
+<li><a href="../reflection-476.reflection-1.assertionerror/#static-error">Error</a></li>
 </ul>
-<p>↳ <strong>TimeoutError</strong></p>
+<p>↳ <strong>ErrorAborted</strong></p>
 <h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">¶</a></h2>
 <h3 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">¶</a></h3>
 <ul>
@@ -335,8 +335,8 @@
 </ul>
 <h2 id="constructors_1">Constructors<a class="headerlink" href="#constructors_1" title="Permanent link">¶</a></h2>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">¶</a></h3>
-<p>+ <strong>new TimeoutError</strong>(<code>message?</code>: undefined | string): <em><a href="./">TimeoutError</a></em></p>
-<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/9637f2a/packages/utils/src/errors.ts#L41">packages/utils/src/errors.ts:41</a></em></p>
+<p>+ <strong>new ErrorAborted</strong>(<code>message?</code>: undefined | string): <em><a href="./">ErrorAborted</a></em></p>
+<p><em>Defined in <a href="https://github.com/ChainSafe/lodestar/blob/c34cd2f/packages/utils/src/errors.ts#L32">packages/utils/src/errors.ts:32</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -352,21 +352,21 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em><a href="./">TimeoutError</a></em></p>
+<p><strong>Returns:</strong> <em><a href="./">ErrorAborted</a></em></p>
 <h2 id="properties_1">Properties<a class="headerlink" href="#properties_1" title="Permanent link">¶</a></h2>
 <h3 id="message">message<a class="headerlink" href="#message" title="Permanent link">¶</a></h3>
 <p>• <strong>message</strong>: <em>string</em></p>
-<p><em>Inherited from <a href="../reflection-475.reflection-1.assertionerror/">AssertionError</a>.<a href="../reflection-475.reflection-1.assertionerror/#message">message</a></em></p>
+<p><em>Inherited from <a href="../reflection-476.reflection-1.assertionerror/">AssertionError</a>.<a href="../reflection-476.reflection-1.assertionerror/#message">message</a></em></p>
 <p>Defined in node_modules/typescript/lib/lib.es5.d.ts:974</p>
 <hr/>
 <h3 id="name">name<a class="headerlink" href="#name" title="Permanent link">¶</a></h3>
 <p>• <strong>name</strong>: <em>string</em></p>
-<p><em>Inherited from <a href="../reflection-475.reflection-1.assertionerror/">AssertionError</a>.<a href="../reflection-475.reflection-1.assertionerror/#name">name</a></em></p>
+<p><em>Inherited from <a href="../reflection-476.reflection-1.assertionerror/">AssertionError</a>.<a href="../reflection-476.reflection-1.assertionerror/#name">name</a></em></p>
 <p>Defined in node_modules/typescript/lib/lib.es5.d.ts:973</p>
 <hr/>
 <h3 id="optional-stack"><code>Optional</code> stack<a class="headerlink" href="#optional-stack" title="Permanent link">¶</a></h3>
 <p>• <strong>stack</strong>? : <em>undefined | string</em></p>
-<p><em>Inherited from <a href="../reflection-475.reflection-1.assertionerror/">AssertionError</a>.<a href="../reflection-475.reflection-1.assertionerror/#optional-stack">stack</a></em></p>
+<p><em>Inherited from <a href="../reflection-476.reflection-1.assertionerror/">AssertionError</a>.<a href="../reflection-476.reflection-1.assertionerror/#optional-stack">stack</a></em></p>
 <p>Defined in node_modules/typescript/lib/lib.es5.d.ts:975</p>
 <hr/>
 <h3 id="static-error"><code>Static</code> Error<a class="headerlink" href="#static-error" title="Permanent link">¶</a></h3>
