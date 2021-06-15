@@ -816,12 +816,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://chainsafe.github.io/lodestar/packages/fork-choice/interfaces/reflection-588.reflection-446.iforkchoicemetrics/</loc>
+         <lastmod>2021-06-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://chainsafe.github.io/lodestar/packages/fork-choice/interfaces/reflection-588.reflection-446.ihistogram/</loc>
+         <lastmod>2021-06-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://chainsafe.github.io/lodestar/packages/fork-choice/modules/forkchoice/</loc>
          <lastmod>2021-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://chainsafe.github.io/lodestar/packages/fork-choice/modules/protoarray/</loc>
+         <lastmod>2021-06-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://chainsafe.github.io/lodestar/packages/fork-choice/modules/reflection-588/</loc>
+         <lastmod>2021-06-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://chainsafe.github.io/lodestar/packages/fork-choice/modules/reflection-588.reflection-446/</loc>
          <lastmod>2021-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
