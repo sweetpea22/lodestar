@@ -1,7 +1,7 @@
 import {init} from "@chainsafe/bls";
 import {BenchmarkRunner} from "@chainsafe/lodestar-utils/test_utils/benchmark";
 import {allForks, phase0} from "../../../../src";
-import {generatePerfTestCachedBeaconState} from "../../util";
+import {generatePerfTestCachedStatePhase0} from "../../util";
 
 export async function runGetAttestationDeltaTest(): Promise<void> {
   const runner = new BenchmarkRunner("getAttestationDeltas", {
@@ -11,7 +11,7 @@ export async function runGetAttestationDeltaTest(): Promise<void> {
   });
 
   await init("blst-native");
-  const state = generatePerfTestCachedBeaconState({goBackOneSlot: true});
+  const state = generatePerfTestCachedStatePhase0({goBackOneSlot: true});
   const epochProcess = allForks.prepareEpochProcessState(state);
 
   await runner.run({

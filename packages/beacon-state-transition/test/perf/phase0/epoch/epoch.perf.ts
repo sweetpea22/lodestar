@@ -1,7 +1,7 @@
 import {init} from "@chainsafe/bls";
 import {BenchmarkRunner} from "@chainsafe/lodestar-utils/test_utils/benchmark";
 import {allForks, phase0} from "../../../../src";
-import {generatePerfTestCachedBeaconState} from "../../util";
+import {generatePerfTestCachedStatePhase0} from "../../util";
 
 export async function runEpochTransitionStepTests(): Promise<void> {
   const runner = new BenchmarkRunner("Epoch transition steps", {
@@ -12,7 +12,7 @@ export async function runEpochTransitionStepTests(): Promise<void> {
 
   await init("blst-native");
 
-  const originalState = generatePerfTestCachedBeaconState({goBackOneSlot: true});
+  const originalState = generatePerfTestCachedStatePhase0({goBackOneSlot: true});
   const process = allForks.prepareEpochProcessState(originalState);
 
   await runner.run({

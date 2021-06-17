@@ -5,7 +5,7 @@ import {ssz} from "@chainsafe/lodestar-types";
 import {BenchmarkRunner} from "@chainsafe/lodestar-utils/test_utils/benchmark";
 import {byteArrayEquals, List, fromHexString} from "@chainsafe/ssz";
 import {allForks} from "../../../../src";
-import {generatePerformanceBlock, generatePerfTestCachedBeaconState} from "../../util";
+import {generatePerformanceBlockPhase0, generatePerfTestCachedStatePhase0} from "../../util";
 
 // As of Jun 12 2021
 // Process block
@@ -22,8 +22,8 @@ export async function runBlockTransitionTests(): Promise<void> {
   });
   await init("blst-native");
 
-  const originalState = generatePerfTestCachedBeaconState() as allForks.CachedBeaconState<allForks.BeaconState>;
-  const regularBlock = generatePerformanceBlock();
+  const originalState = generatePerfTestCachedStatePhase0() as allForks.CachedBeaconState<allForks.BeaconState>;
+  const regularBlock = generatePerformanceBlockPhase0();
   const [oneValidatorExitBlock, maxValidatorExitBlock] = [1, MAX_VOLUNTARY_EXITS].map((numValidatorExits) => {
     const signedBlock = regularBlock.clone();
     const exitEpoch = originalState.epochCtx.currentShuffling.epoch;

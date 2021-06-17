@@ -1,7 +1,7 @@
 import {config} from "@chainsafe/lodestar-config/default";
 import {BeaconState, Epoch} from "../../../../phase0";
 import {CachedBeaconState, createCachedBeaconState} from "../../../../src/allForks";
-import {generatePerformanceState} from "../../util";
+import {generatePerformanceStatePhase0} from "../../util";
 
 describe("getCommitteeAssignment perf test group", function () {
   this.timeout(0);
@@ -12,7 +12,7 @@ describe("getCommitteeAssignment perf test group", function () {
 
   before(() => {
     epoch = 23638;
-    state = generatePerformanceState();
+    state = generatePerformanceStatePhase0();
     cstate = createCachedBeaconState(config, state);
   });
 
