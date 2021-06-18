@@ -1,4 +1,5 @@
 import {config} from "@chainsafe/lodestar-config/default";
+import {createIBeaconConfig} from "@chainsafe/lodestar-config";
 import {altair, Gwei, ParticipationFlags, phase0, ssz} from "@chainsafe/lodestar-types";
 import bls, {CoordType, PublicKey} from "@chainsafe/bls";
 import {fromHexString, List, TreeBacked} from "@chainsafe/ssz";
@@ -93,6 +94,8 @@ export function generatePerfTestCachedStateAltair(opts?: {
   goBackOneSlot: boolean;
 }): allForks.CachedBeaconState<altair.BeaconState> {
   const {pubkeys, pubkey2index, index2pubkey} = syncPubkeys();
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  const config = createIBeaconConfig({ALTAIR_FORK_EPOCH: 0});
 
   const origState = generatePerformanceStateAltair(pubkeys);
   if (!altairCachedState23637) {
