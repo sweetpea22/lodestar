@@ -75,7 +75,7 @@ export async function runRootComparisonTests(): Promise<void> {
     runs: 64,
   });
   const stateRoot = fromHexString("0x6c86ca3c4c6688cf189421b8a68bf2dbc91521609965e6f4e207d44347061fee");
-  const signedBlock = generatePerformanceBlock();
+  const signedBlock = generatePerformanceBlockPhase0();
   const blockStateRoot = signedBlock.message.stateRoot;
   await runner.run({
     id: "ssz.Root.equals",

@@ -3,6 +3,10 @@ import {BenchmarkRunner} from "@chainsafe/lodestar-utils/test_utils/benchmark";
 import {allForks, altair} from "../../../../src";
 import {generatePerfTestCachedStateAltair} from "../../util";
 
+/**
+ * TODO: got OOM if we run all steps so it's not part of benchmark workflow for now.
+ * Comment out some steps to run locally.
+ */
 export async function runAltairEpochTransitionStepTests(): Promise<void> {
   const runner = new BenchmarkRunner("Altair epoch transition steps", {
     maxMs: 60 * 1000,
@@ -24,6 +28,10 @@ export async function runAltairEpochTransitionStepTests(): Promise<void> {
   const mutatedState = originalState.clone();
   altair.processJustificationAndFinalization(mutatedState as allForks.CachedBeaconState<allForks.BeaconState>, process);
 
+  // As of Jun 18
+  // Altair epoch transition steps
+  // ================================================================
+  // processInactivityUpdates                                              0.6118570 ops/s      1.634369  s/op     36 runs    60.48 s
   await runner.run({
     id: "processInactivityUpdates",
     beforeEach: () => mutatedState.clone(),
