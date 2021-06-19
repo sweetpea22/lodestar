@@ -1,16 +1,11 @@
-import fs from "fs";
-import path from "path";
 import github from "@actions/github";
-import {getGithubContext, getGithubEventData, GithubActionsEventData} from "./utils/gaContext";
+import {getGithubEventData, GithubActionsEventData} from "./utils/gaContext";
 import {parseRef} from "./utils/gitRef";
-
-const prCommentTag = "benchmarkbot/tag";
-
-type Context = {
-  octokit: ReturnType<typeof github.getOctokit>;
-  repo: Required<typeof github.context.payload>["repository"];
-  commitSha: string;
-};
+import {Benchmark, BenchmarkHistory, BenchComparision, Context} from "./types";
+import {commentToCommit, commetToPrUpdatable, getIsDefaultBranch} from "./utils/octokit";
+import {renderComment} from "./utils/render";
+import {getCurrentCommitInfo} from "./utils/git";
+import {readBenchmarkHistory, readBenchmarkResults, writeBenchmarkResults} from "./utils/benchmarkFiles";
 
 /**
  * 1. Read benchmark results from disk
@@ -33,280 +28,171 @@ type Context = {
  *     branches:
  *       - master
  *
- *       # Must get the entire git history
  *       - uses: actions/checkout@v2
  *         with:
+ *           # Must get the entire git history
  *           fetch-depth: 0
+ *           # Do not checkout merge commit
+ *           ref: ${{ github.event.pull_request.head.sha }}
  * ```
  */
-async function runBenchmarkAction(threshold: number) {
-  const {eventName, sha: commitSha, ref: refString} = getGithubContext();
+export async function runBenchmarkAction(inputs: {
+  threshold?: number;
+  githubToken: string;
+  benchmarkResultsPath: string;
+  benchmarkHistoryPath: string;
+}) {
+  const {threshold = 2, githubToken, benchmarkResultsPath, benchmarkHistoryPath} = inputs;
 
-  const githubToken = process.env.GITHUB_TOKEN;
+  const eventName = github.context.eventName;
+  const refStr = github.context.ref;
+  const repo = github.context.payload.repository;
   const octokit = github.getOctokit(githubToken);
 
-  const repo = github.context.payload.repository;
-  if (!repo) {
-    throw Error("Repository information is not available in payload");
-  }
+  if (!eventName) throw Error("Empty github.context.eventName");
+  if (!refStr) throw Error("Empty github.context.ref");
+  if (!repo) throw Error("Empty github.context.payload.repository");
 
-  const context: Context = {octokit, repo, commitSha};
+  const context: Context = {octokit, repo, refStr, threshold, benchmarkHistoryPath};
 
-  // Read JSON file with benchmark results
-  const benchmarkOutputJsonPath = process.env.BENCHMARK_OUTPUT;
-  const currBench = readJson<Benchmark>(benchmarkOutputJsonPath);
-  console.log(`Read benchmark output from BENCHMARK_OUTPUT ${benchmarkOutputJsonPath}`);
+  // Read JSON file with benchmark results (+ validate)
+  const currResults = readBenchmarkResults(benchmarkResultsPath);
+  console.log(`Read benchmark results from ${benchmarkResultsPath}`);
 
-  // TODO: Validate schema of `bench`
+  // Attach current commit data to results
+  const currentCommit = await getCurrentCommitInfo();
+  const currBench: Benchmark = {
+    commitSha: currentCommit.sha,
+    timestamp: currentCommit.timestamp,
+    results: currResults,
+  };
 
-  // Load previous benchmark history results
-  const benchmarkHistoryPath = process.env.BENCHMARK_HISTORY_PATH;
-  const benchkHistory = readJson<BenchmarkHistory>(benchmarkHistoryPath);
-  console.log(`Read benchmark history from BENCHMARK_HISTORY_PATH ${benchmarkHistoryPath}`);
+  // Load previous benchmark history results (+ validate)
+  const benchHistory = readBenchmarkHistory(benchmarkHistoryPath);
+  console.log(`Read benchmark history from ${benchmarkHistoryPath}`);
 
   if (eventName === "pull_request") {
-    const eventData = getGithubEventData<GithubActionsEventData["pull_request"]>();
-    // Ensure it's not a merge commit, but the head branch commit
-
-    const prNumber = eventData.number;
-    eventData.pull_request.head.sha;
-    // TODO: parse ref to be `/refs/heads/$branch`
-    const baseBranch = eventData.pull_request.base.ref;
-
-    // On PR fetch the latest commit from the base branch with an available benchmark
-    const baseBranchBenches = benchkHistory.benchmarks[baseBranch] || [];
-    const prevBench = baseBranchBenches[baseBranchBenches.length - 1];
-    const allResultsComp = computeBenchComparision(currBench, prevBench);
-    const badResultsComp = allResultsComp.filter((r) => r.ratio !== null && r.ratio > threshold);
-    const commitsSha = {
-      curr: currBench.commit.id,
-      prev: prevBench.commit.id,
-    };
-
-    // Build a comment to publish to a PR
-    const commentBody = buildComment(allResultsComp, badResultsComp, commitsSha, threshold);
-    await commetToPrUpdatable(context, prNumber, commentBody);
-
-    // Note: For PRs do not persist the bench data
+    await onPullRequestEvent(context, benchHistory, currBench);
   } else if (eventName === "push") {
-    const ref = parseRef(refString);
-    if (ref.type !== "branch") {
-      throw Error(`Must only run on push event for branches: ${ref.type}`);
-    }
-
-    const defaultBranch = await getIsDefaultBranch(context);
-    if (ref.branch !== defaultBranch) {
-      throw Error(`Must not run on push event for non-default branch: ${ref.branch}`);
-    }
-
-    // Persist benchmark data
-    // TODO
-
-    // Fetch the previous commit
-    const eventData = getGithubEventData<GithubActionsEventData["push"]>();
-    const baseBranchBenches = benchkHistory.benchmarks[defaultBranch] || [];
-
-    const prevBench = baseBranchBenches.find((b) => b.commit.id === eventData.before);
-    if (!prevBench) {
-      if (baseBranchBenches.length > 0) {
-        throw Error(`Previous commit not found ${eventData.before}. You must run this action with concurrency of 1`);
-      } else {
-        // Store the result and stop.
-        // The first time this benchmark is ran, there won't be any prev results.
-        return;
-      }
-    }
-
-    const allResultsComp = computeBenchComparision(currBench, prevBench);
-    const badResultsComp = allResultsComp.filter((r) => r.ratio !== null && r.ratio > threshold);
-
-    if (badResultsComp.length > 0) {
-      // Only comment if it should fail
-      const commitsSha = {
-        curr: currBench.commit.id,
-        prev: prevBench.commit.id,
-      };
-      const commentBody = buildComment(allResultsComp, badResultsComp, commitsSha, threshold);
-      commentToCommit(context, github.context.sha, commentBody);
-
-      throw Error(`Benchmark performance alert: \n\n${commentBody}`);
-    }
+    await onPushEvent(context, benchHistory, currBench);
   } else {
     throw Error(`event not supported ${eventName}`);
   }
 }
 
-function buildComment(
-  allResultsComp: BenchComparision[],
-  badResultsComp: BenchComparision[],
-  commitsSha: {curr: string; prev: string},
-  threshold: number
-): string {
-  const topSection =
-    badResultsComp.length > 0
-      ? // If there was any bad benchmark print a table only with the bad results
-        `# :warning: **Performance Alert** :warning:
+/**
+ * On `pull_request` event:
+ * 1. Read event data to get PR number + base branch
+ * 2. Get the latest bench in the base branch
+ * 3. Always post a comment with results + alert
+ */
+async function onPullRequestEvent(context: Context, benchHistory: BenchmarkHistory, currBench: Benchmark) {
+  const {threshold} = context;
+  const eventData = getGithubEventData<GithubActionsEventData["pull_request"]>();
 
-Possible performance regression was detected for some benchmarks.
-Benchmark result of this commit is worse than the previous benchmark result exceeding threshold \`${threshold}\`.
-  
-${renderBenchmarkTable(commitsSha, badResultsComp)}
-`
-      : // Otherwise, just add a title
-        "# Performance Report";
+  const prNumber = eventData.number;
+  const headCommitSha = eventData.pull_request.head.sha;
+  // TODO: parse ref to be `/refs/heads/$branch`
+  const baseBranch = eventData.pull_request.base.ref;
 
-  // For all cases attach the full benchmarks
-  return `${topSection}
-
-<details>
-
-${renderBenchmarkTable(commitsSha, allResultsComp)}
-
-</details>
-`;
-}
-
-type BenchmarkResult = {
-  id: string;
-  averageNs: number;
-  runsDone: number;
-  runsNs: bigint[];
-  totalMs: number;
-  factor?: number;
-};
-
-type GitHubUser = {
-  email?: string;
-  name: string;
-  username: string;
-};
-
-type Commit = {
-  author: GitHubUser;
-  committer: GitHubUser;
-  distinct?: unknown; // Unused
-  id: string;
-  message: string;
-  timestamp: string;
-  tree_id?: unknown; // Unused
-  url: string;
-};
-
-type Benchmark = {
-  commit: Commit;
-  date: number;
-  results: BenchmarkResult[];
-};
-
-type BenchmarkHistory = {
-  lastUpdate: number;
-  repoUrl: string;
-  benchmarks: {
-    [branch: string]: Benchmark[];
-  };
-};
-
-type BenchComparision = {
-  id: string;
-  currAverageNs: number;
-  prevAverageNs: number | null;
-  ratio: number | null;
-};
-
-function readJson<T>(filepath: string): T {
-  const jsonStr = fs.readFileSync(filepath, "utf8");
-
-  let json: T;
-  try {
-    json = JSON.parse(jsonStr);
-  } catch (e) {
-    throw Error(`Error parsing JSON ${filepath}: ${e.messge}`);
+  // Ensure it's not running on a merge commit, but the head branch commit
+  // See: https://github.com/actions/checkout#checkout-pull-request-head-commit-instead-of-merge-commit
+  if (currBench.commitSha !== headCommitSha) {
+    throw Error(
+      `pull_request event current commit sha ${currBench.commitSha} doesn't match head branch sha ${headCommitSha}`
+    );
   }
 
-  // TODO: Validate schema
+  // On PR fetch the latest commit from the base branch with an available benchmark
+  const baseBranchBenches = benchHistory.benchmarks[baseBranch] || [];
+  const prevBench = baseBranchBenches[baseBranchBenches.length - 1];
+  if (!prevBench) {
+    throw Error(`No benchmark available in base branch ${baseBranch}`);
+  }
 
-  return json;
-}
+  const allResultsComp = computeBenchComparision(currBench, prevBench);
+  const badResultsComp = allResultsComp.filter((r) => r.ratio !== null && r.ratio > threshold);
+  const commitsSha = {curr: currBench.commitSha, prev: prevBench.commitSha};
 
-async function getIsDefaultBranch(context: Context): Promise<string> {
-  const {octokit, repo} = context;
-  const thisRepo = await octokit.rest.repos.get({
-    owner: repo.owner.login,
-    repo: repo.name,
-  });
-  return thisRepo.data.default_branch;
-}
+  // Build a comment to publish to a PR
+  const commentBody = renderComment(allResultsComp, badResultsComp, commitsSha, threshold);
+  await commetToPrUpdatable(context, prNumber, commentBody);
 
-async function commetToPrUpdatable(context: Context, prNumber: number, body: string): Promise<void> {
-  const {octokit, repo} = context;
+  // Note: For PRs do not persist the bench data
 
-  // Append tag so the comment is findable latter
-  const bodyWithTag = `${body}\n\n${prCommentTag}`;
-
-  const comments = await octokit.rest.issues.listComments({
-    owner: repo.owner.login,
-    repo: repo.name,
-    issue_number: prNumber,
-  });
-  const prevComment = comments.data.find((c) => c.body_text && c.body_text.includes(prCommentTag));
-
-  if (prevComment) {
-    // Update
-    await octokit.rest.issues.updateComment({
-      owner: repo.owner.login,
-      repo: repo.name,
-      issue_number: prNumber,
-      comment_id: prevComment.id,
-      body: bodyWithTag,
-    });
-  } else {
-    // Create
-    await octokit.rest.issues.createComment({
-      owner: repo.owner.login,
-      repo: repo.name,
-      issue_number: prNumber,
-      body: bodyWithTag,
-    });
+  if (badResultsComp.length > 0) {
+    throw Error(`Benchmark performance alert: \n\n${commentBody}`);
   }
 }
 
-async function commentToCommit(context: Context, commitSha: string, body: string): Promise<void> {
-  const {octokit, repo} = context;
+/**
+ * On `push` event:
+ * 1. Throw if not on default branch
+ * 2. Persist benchmark data
+ * 3. Get previous commit bench
+ * 4. Only on regression post an alert comment
+ */
+async function onPushEvent(context: Context, benchHistory: BenchmarkHistory, currBench: Benchmark) {
+  const {threshold, refStr} = context;
+  const ref = parseRef(refStr);
+  if (ref.type !== "branch") {
+    throw Error(`Must only run on push event for branches: ${ref.type}`);
+  }
 
-  await octokit.rest.repos.createCommitComment({
-    owner: repo.owner.login,
-    repo: repo.name,
-    commit_sha: commitSha,
-    body,
-  });
-}
+  const defaultBranch = await getIsDefaultBranch(context);
+  if (ref.branch !== defaultBranch) {
+    throw Error(`Must not run on push event for non-default branch: ${ref.branch}`);
+  }
 
-function addBenchmarkToDataJson(bench: Benchmark, history: BenchmarkHistory): Benchmark | null {
-  // eslint-disable-next-line @typescript-eslint/camelcase
-  const htmlUrl = github.context.payload.repository?.html_url ?? "";
+  // Persist benchmark data
+  writeBenchmarkEntry(context, benchHistory, currBench, defaultBranch);
 
-  let prevBench: Benchmark | null = null;
-  history.lastUpdate = Date.now();
-  history.repoUrl = htmlUrl;
+  // Fetch the previous commit
+  const eventData = getGithubEventData<GithubActionsEventData["push"]>();
+  const baseBranchBenches = benchHistory.benchmarks[defaultBranch] || [];
 
-  // Add benchmark result
-  if (history.entries[benchName] === undefined) {
-    history.entries[benchName] = [bench];
-    console.log(`No suite was found for benchmark '${benchName}' in existing data. Created`);
-  } else {
-    const suites = history.entries[benchName];
-    // Get last suite which has different commit ID for alert comment
-    for (const e of suites.slice().reverse()) {
-      if (e.commit.id !== bench.commit.id) {
-        prevBench = e;
-        break;
-      }
+  const prevBench = baseBranchBenches.find((b) => b.commitSha === eventData.before);
+  if (!prevBench) {
+    if (baseBranchBenches.length > 0) {
+      throw Error(`Previous commit not found ${eventData.before}. You must run this action with concurrency of 1`);
+    } else {
+      // Store the result and stop.
+      // The first time this benchmark is ran, there won't be any prev results.
+      return;
     }
-
-    suites.push(bench);
   }
 
-  return prevBench;
+  const allResultsComp = computeBenchComparision(currBench, prevBench);
+  const badResultsComp = allResultsComp.filter((r) => r.ratio !== null && r.ratio > threshold);
+
+  // Only comment on performance regression
+  if (badResultsComp.length > 0) {
+    const commitsSha = {curr: currBench.commitSha, prev: prevBench.commitSha};
+    const commentBody = renderComment(allResultsComp, badResultsComp, commitsSha, threshold);
+    await commentToCommit(context, github.context.sha, commentBody);
+
+    throw Error(`Benchmark performance alert: \n\n${commentBody}`);
+  }
+}
+
+function writeBenchmarkEntry(context: Context, history: BenchmarkHistory, newBench: Benchmark, branch: string): void {
+  if (history.benchmarks[branch] === undefined) {
+    history.benchmarks[branch] = [];
+  }
+
+  // Ensure there are no duplicates for the same commit
+  history.benchmarks[branch] = history.benchmarks[branch].filter((bench) => {
+    if (bench.commitSha === newBench.commitSha) {
+      console.log("Deleting previous benchmark for the same commit");
+      return false;
+    } else {
+      return true;
+    }
+  });
+
+  history.benchmarks[branch].push(newBench);
+
+  writeBenchmarkResults(context.benchmarkHistoryPath, history);
 }
 
 function computeBenchComparision(currBench: Benchmark, prevBench: Benchmark | null): BenchComparision[] {
@@ -332,62 +218,4 @@ function computeBenchComparision(currBench: Benchmark, prevBench: Benchmark | nu
       };
     }
   });
-}
-
-function renderBenchmarkTable(
-  commitsSha: {curr: string; prev: string},
-  results: {id: string; currAverageNs: number; prevAverageNs?: number; ratio?: number}[]
-) {
-  function toRow(arr: (number | string)[]): string {
-    const row = arr.map((e) => `\`${e}\``).join(" | ");
-    return `| ${row} |`;
-  }
-
-  const rows = results.map((result) => {
-    const {id, prevAverageNs, currAverageNs, ratio} = result;
-
-    if (prevAverageNs !== undefined && ratio !== undefined) {
-      return toRow([id, prettyTimeStr(currAverageNs), prettyTimeStr(prevAverageNs), ratio.toFixed(2)]);
-    } else {
-      return toRow([id, prettyTimeStr(currAverageNs)]);
-    }
-  });
-
-  return `| Benchmark suite | Previous: ${commitsSha.prev} | Current: ${commitsSha.curr} | Ratio |
-|-|-|-|-|
-${rows.join("\n")}
-`;
-}
-
-async function leaveComment(commitSha: string, body: string, token: string) {
-  core.debug("Sending comment:\n" + body);
-
-  const repo = getCurrentRepo();
-  // eslint-disable-next-line @typescript-eslint/camelcase
-  const repoUrl = repo.html_url ?? "";
-  const client = new github.GitHub(token);
-  const res = await client.repos.createCommitComment({
-    owner: repo.owner.login,
-    repo: repo.name,
-    // eslint-disable-next-line @typescript-eslint/camelcase
-    commit_sha: commitSha,
-    body,
-  });
-
-  const commitUrl = `${repoUrl}/commit/${commitSha}`;
-  console.log(`Comment was sent to ${commitUrl}. Response:`, res.status, res.data);
-
-  return res;
-}
-
-function prettyTime(nanoSec: number): [number, string] {
-  if (nanoSec > 1e9) return [nanoSec / 1e9, " s"];
-  if (nanoSec > 1e6) return [nanoSec / 1e6, "ms"];
-  if (nanoSec > 1e3) return [nanoSec / 1e3, "us"];
-  return [nanoSec, "ns"];
-}
-
-function prettyTimeStr(nanoSec: number) {
-  const [value, unit] = prettyTime(nanoSec);
-  return `${value.toPrecision(5)} ${unit}`;
 }
