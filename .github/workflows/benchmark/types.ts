@@ -16,7 +16,6 @@ export type BenchmarkResult = {
   id: string;
   averageNs: number;
   runsDone: number;
-  runsNs: bigint[];
   totalMs: number;
   factor?: number;
 };

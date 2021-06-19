@@ -1,6 +1,3 @@
-import fs from "fs";
-import path from "path";
-
 /* eslint-disable no-console */
 
 export type BenchmarkOpts = {
@@ -9,93 +6,34 @@ export type BenchmarkOpts = {
   minMs?: number;
 };
 
+export type BenchmarkRunOpts = BenchmarkOpts & {
+  id: string;
+};
+
+export type BenchmarkRunOptsWithFn<T> = BenchmarkOpts & {
+  id: string;
+  fn: (arg: T) => void | Promise<void>;
+  beforeEach?: (i: number) => T | Promise<T>;
+};
+
 export type BenchmarkResult = {
   id: string;
   averageNs: number;
   runsDone: number;
-  runsNs: bigint[];
   totalMs: number;
   factor?: number;
 };
 
-type PromiseOptional<T> = T | Promise<T>;
+export type BenchmarkResultDetail = {
+  runsNs: bigint[];
+};
 
-type RunOpts<T1, T2 = T1, R = void> = {
-  before?: () => PromiseOptional<T1>;
-  beforeEach?: (arg: T1 | undefined, i: number) => PromiseOptional<T2>;
-  run: (input: T2) => PromiseOptional<R>;
-  check?: (result: R) => boolean;
-  id: string;
-} & BenchmarkOpts;
-
-export class BenchmarkRunner {
-  results: BenchmarkResult[] = [];
-  constructor(private readonly title: string, private readonly opts: BenchmarkOpts = {}) {
-    this.opts = opts || {};
-    console.log(formatTitle(title));
-  }
-
-  async run<T1, T2 = T1, R = void>(opts: RunOpts<T1, T2, R>): Promise<number> {
-    const result = await doRun(opts, this.opts);
-    return this.onRun(result);
-  }
-
-  group(): BenchmarkGroupRunner {
-    return new BenchmarkGroupRunner(this.opts || {}, this.onRun.bind(this));
-  }
-
-  done(): void {
-    const filepath = process.env.BENCHMARK_OUTPUT_PATH;
-    if (filepath) {
-      fs.mkdirSync(path.dirname(filepath), {recursive: true});
-      fs.appendFileSync(filepath, formatAsBenchmarkJs(this.results));
-    }
-  }
-
-  private onRun(result: BenchmarkResult): number {
-    this.results.push(result);
-    console.log(formatResultRow(result)); // ±1.74%
-
-    // Persist full results if requested
-    if (process.env.BENCHMARK_RESULTS_DIR) {
-      const filename = `${this.title.replace(/\s/g, "-")}_${result.id}.csv`;
-      const filepath = path.join(process.env.BENCHMARK_RESULTS_DIR, filename);
-      fs.mkdirSync(path.dirname(filepath), {recursive: true});
-      fs.writeFileSync(filepath, result.runsNs.join("\n"));
-    }
-
-    return result.averageNs;
-  }
-}
-
-class BenchmarkGroupRunner {
-  averageNs: number | null = null;
-  constructor(private readonly opts: BenchmarkOpts, private readonly onRun: (result: BenchmarkResult) => number) {
-    console.log("---");
-  }
-
-  async run<T1, T2 = T1, R = void>(opts: RunOpts<T1, T2, R>): Promise<number> {
-    const result = await doRun(opts, this.opts);
-
-    // Attach factor to result
-    if (this.averageNs === null) this.averageNs = result.averageNs;
-    result.factor = result.averageNs / this.averageNs;
-
-    return this.onRun(result);
-  }
-}
-
-async function doRun<T1, T2 = T1, R = void>(
-  {before, beforeEach, run, check, ...opts}: RunOpts<T1, T2, R>,
-  extraOpts: BenchmarkOpts
-): Promise<BenchmarkResult> {
-  const runs = opts.runs || extraOpts.runs || 512;
-  const maxMs = opts.maxMs || extraOpts.maxMs || 2000;
-  const minMs = opts.minMs || extraOpts.minMs || 100;
+export async function doRun<T>(opts: BenchmarkRunOptsWithFn<T>): Promise<{result: BenchmarkResult; runsNs: bigint[]}> {
+  const runs = opts.runs || 512;
+  const maxMs = opts.maxMs || 2000;
+  const minMs = opts.minMs || 100;
 
   const runsNs: bigint[] = [];
-
-  const inputAll = before ? await before() : undefined;
 
   const startRunMs = Date.now();
   let i = 0;
@@ -107,13 +45,11 @@ async function doRun<T1, T2 = T1, R = void>(
     // Exceeds target runs + min time
     if (i++ > runs && ellapsedMs > minMs) break;
 
-    const input = beforeEach ? await beforeEach(inputAll, i) : ((inputAll as unknown) as T2);
+    const input = opts.beforeEach ? await opts.beforeEach(i) : ((undefined as unknown) as T);
 
     const startNs = process.hrtime.bigint();
-    const result = await run(input);
+    await opts.fn(input);
     const endNs = process.hrtime.bigint();
-
-    if (check && check(result)) throw Error("Result fails check test");
 
     runsNs.push(endNs - startNs);
   }
@@ -121,7 +57,10 @@ async function doRun<T1, T2 = T1, R = void>(
   const average = averageBigint(runsNs);
   const averageNs = Number(average);
 
-  return {id: opts.id, averageNs, runsDone: i - 1, runsNs, totalMs: Date.now() - startRunMs};
+  return {
+    result: {id: opts.id, averageNs, runsDone: i - 1, totalMs: Date.now() - startRunMs},
+    runsNs,
+  };
 }
 
 function averageBigint(arr: bigint[]): bigint {
@@ -129,7 +68,7 @@ function averageBigint(arr: bigint[]): bigint {
   return total / BigInt(arr.length);
 }
 
-function formatResultRow({id, averageNs, runsDone, factor, totalMs}: BenchmarkResult): string {
+export function formatResultRow({id, averageNs, runsDone, factor, totalMs}: BenchmarkResult): string {
   const precision = 7;
   const idLen = 64;
 
@@ -142,10 +81,10 @@ function formatResultRow({id, averageNs, runsDone, factor, totalMs}: BenchmarkRe
   const [averageTime, timeUnit] = prettyTime(averageNs);
   const row = [
     factor === undefined ? "" : `x${factor.toFixed(2)}`.padStart(6),
-    `${opsPerSec.toPrecision(precision).padStart(13)} ops/s`,
-    `${averageTime.toPrecision(precision).padStart(13)} ${timeUnit}/op`,
-    `${String(runsDone).padStart(6)} runs`,
-    `${(totalMs / 1000).toPrecision(4).padStart(8)} s`,
+    `${opsPerSec.toPrecision(precision).padStart(11)} ops/s`,
+    `${averageTime.toPrecision(precision).padStart(11)} ${timeUnit}/op`,
+    `${String(runsDone).padStart(10)} runs`,
+    `${(totalMs / 1000).toPrecision(3).padStart(6)} s`,
   ].join(" ");
 
   return id.slice(0, idLen).padEnd(idLen) + " " + row;

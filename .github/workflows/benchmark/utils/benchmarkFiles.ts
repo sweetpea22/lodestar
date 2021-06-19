@@ -14,10 +14,6 @@ const benchmarkResultsSchema = {
       id: {type: "string"},
       averageNs: {type: "number"},
       runsDone: {type: "integer"},
-      runsNs: {
-        type: "array",
-        items: [{type: "number"}],
-      },
       totalMs: {type: "number"},
       factor: {type: "number"},
     },
