@@ -23,33 +23,31 @@ jobs:
         env:
           BENCHMARK_RESULTS_PATH: ./benchmark/results.json
           BENCHMARK_RESULTS_CSV_DIR: ./benchmark
-      # Upload full results
-      - name: Upload full benchmark results
-        if: ${{ always() }}
-        uses: actions/upload-artifact@v2
-        with:
-          name: benchmark-results
-          path: ./benchmark-results
+
       # Download previous benchmark result from cache (if exists)
       - name: Download previous benchmark data
         uses: actions/cache@v1
         with:
-          path: ./cache
-          key: ${{ runner.os }}-benchmark
+          path: ./benchmark/history.json
+          key: ${{ runner.os }}-benchmark-history-tmp
+
+      # Upload results + history
+      - name: Upload full benchmark results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: benchmark-data
+          path: ./benchmark
+
       # Run `github-action-benchmark` action
       - name: Store benchmark result
-        uses: rhysd/github-action-benchmark@v1
-        with:
-          # What benchmark tool the output.txt came from
-          tool: "benchmarkjs"
-          # Where the output from the benchmark tool is stored
-          output-file-path: ./benchmark-results/benchmark-output.txt
-          # Where the previous data file is stored
-          external-data-json-path: ./cache/benchmark-data.json
-          # Workflow will fail when an alert happens
-          fail-on-alert: true
-          # GitHub API token to make a commit comment
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          # Enable alert commit comment
-          comment-on-alert: true
+        run: |
+          cd .github/workflows/benchmark
+          yarn
+          yarn run-action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BENCHMARK_RESULTS_PATH: ./benchmark/results.json
+          BENCHMARK_HISTORY_PATH: ./benchmark/history.json
+          THRESHOLD: 2
       # Upload the updated cache file for the next job by actions/cache

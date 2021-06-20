@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "run-action": "node -r ts-node/register run.ts"
+  },
   "dependencies": {
     "@actions/github": "^5.0.0",
     "ajv": "^8.6.0"
