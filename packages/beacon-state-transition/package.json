@@ -34,8 +34,7 @@
     "lint:fix": "yarn run lint --fix",
     "test:unit": "mocha 'test/unit/**/*.test.ts'",
     "test:perf": "mocha 'test/perf/**/*.test.ts'",
-    "benchmark": "BENCHMARK_RESULTS_PATH=benchmarks.json mocha -r ts-node/register -r ../utils/test_utils/benchmark/mochaPlugin.ts --max-old-space-size=4096 'test/perf/**/*.perf.ts'",
-    "dev": "ts-node test/perf/phase0/epoch/processRewardsAndPenalties.perf.ts"
+    "benchmark": "mocha -r ts-node/register -r ../utils/test_utils/benchmark/mochaPlugin.ts --reporter ../utils/test_utils/benchmark/reporter.ts --max-old-space-size=4096 'test/perf/**/*.perf.ts'"
   },
   "types": "lib/index.d.ts",
   "dependencies": {
