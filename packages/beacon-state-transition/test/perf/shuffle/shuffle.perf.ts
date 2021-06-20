@@ -16,7 +16,13 @@ describe("shuffle list", () => {
   // eslint-disable-next-line @typescript-eslint/naming-convention
   const seed = new Uint8Array([42, 32]);
 
-  for (const listSize of [512, 16384, 4000000]) {
+  for (const listSize of [
+    512,
+    16384,
+    250000,
+    // Don't run 4_000_000 since it's very slow and not testnet has gotten there yet
+    // 4e6,
+  ]) {
     const input: number[] = [];
     for (let i = 0; i < listSize; i++) {
       input[i] = i;
