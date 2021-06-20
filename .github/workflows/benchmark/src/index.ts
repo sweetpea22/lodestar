@@ -1,4 +1,4 @@
-import github from "@actions/github";
+import * as github from "@actions/github";
 import {getGithubEventData, GithubActionsEventData} from "./utils/gaContext";
 import {parseRef} from "./utils/gitRef";
 import {Benchmark, BenchmarkHistory, BenchComparision, Context, BenchmarkResult} from "./types";

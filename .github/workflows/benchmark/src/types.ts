@@ -1,4 +1,4 @@
-import github from "@actions/github";
+import * as github from "@actions/github";
 
 /** Helper type to pass common arguments at once */
 export type Context = {
