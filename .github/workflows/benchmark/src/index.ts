@@ -1,7 +1,7 @@
 import github from "@actions/github";
 import {getGithubEventData, GithubActionsEventData} from "./utils/gaContext";
 import {parseRef} from "./utils/gitRef";
-import {Benchmark, BenchmarkHistory, BenchComparision, Context} from "./types";
+import {Benchmark, BenchmarkHistory, BenchComparision, Context, BenchmarkResult} from "./types";
 import {commentToCommit, commetToPrUpdatable, getIsDefaultBranch} from "./utils/octokit";
 import {renderComment} from "./utils/render";
 import {getCurrentCommitInfo} from "./utils/git";
@@ -196,7 +196,12 @@ function writeBenchmarkEntry(context: Context, history: BenchmarkHistory, newBen
 }
 
 function computeBenchComparision(currBench: Benchmark, prevBench: Benchmark | null): BenchComparision[] {
-  const prevBenches = new Map(prevBench.results.map((b) => [b.id, b]));
+  const prevBenches = new Map<string, BenchmarkResult>();
+  if (prevBench) {
+    for (const bench of prevBench.results) {
+      prevBenches.set(bench.id, bench);
+    }
+  }
 
   return currBench.results.map((currBench) => {
     const {id} = currBench;

@@ -30,19 +30,16 @@ ${renderBenchmarkTable(commitsSha, allResultsComp)}
 `;
 }
 
-function renderBenchmarkTable(
-  commitsSha: {curr: string; prev: string},
-  results: {id: string; currAverageNs: number; prevAverageNs?: number; ratio?: number}[]
-) {
+function renderBenchmarkTable(commitsSha: {curr: string; prev: string}, resultsComp: BenchComparision[]) {
   function toRow(arr: (number | string)[]): string {
     const row = arr.map((e) => `\`${e}\``).join(" | ");
     return `| ${row} |`;
   }
 
-  const rows = results.map((result) => {
+  const rows = resultsComp.map((result) => {
     const {id, prevAverageNs, currAverageNs, ratio} = result;
 
-    if (prevAverageNs !== undefined && ratio !== undefined) {
+    if (prevAverageNs != undefined && ratio != undefined) {
       return toRow([id, prettyTimeStr(currAverageNs), prettyTimeStr(prevAverageNs), ratio.toFixed(2)]);
     } else {
       return toRow([id, prettyTimeStr(currAverageNs)]);

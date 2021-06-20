@@ -31,7 +31,7 @@ jobs:
           path: ./benchmark/history.json
           key: ${{ runner.os }}-benchmark-history-tmp
 
-      # Upload results + history
+      # Upload results + history (even on error so partial results can be read)
       - name: Upload full benchmark results
         if: ${{ always() }}
         uses: actions/upload-artifact@v2

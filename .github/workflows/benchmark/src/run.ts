@@ -2,7 +2,7 @@ import {runBenchmarkAction} from "./index";
 
 // Lightwiegth CLI wrapper for CI runs
 
-const threshold = process.env.THRESHOLD && parseInt(process.env.THRESHOLD);
+const threshold = process.env.THRESHOLD ? parseInt(process.env.THRESHOLD) : undefined;
 const githubToken = process.env.GITHUB_TOKEN;
 const benchmarkResultsPath = process.env.BENCHMARK_RESULTS_PATH;
 const benchmarkHistoryPath = process.env.BENCHMARK_HISTORY_PATH;
