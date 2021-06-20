@@ -11,10 +11,6 @@ export const testResults = new WeakMap<Mocha.Runnable, BenchmarkResult>();
 const benchmarkResultsPath = process.env.BENCHMARK_RESULTS_PATH;
 const benchmarkResultsCsvDir = process.env.BENCHMARK_RESULTS_CSV_DIR;
 
-if (!benchmarkResultsPath) {
-  throw Error("Must set ENV BENCHMARK_RESULTS_PATH");
-}
-
 export const mochaHooks: Mocha.RootHookObject = {
   beforeAll() {
     if (benchmarkResultsCsvDir) {
@@ -23,9 +19,11 @@ export const mochaHooks: Mocha.RootHookObject = {
   },
 
   afterAll() {
-    // Persist benchmark results
-    fs.mkdirSync(path.dirname(benchmarkResultsPath), {recursive: true});
-    fs.writeFileSync(benchmarkResultsPath, JSON.stringify(results, null, 2));
+    // Persist benchmark results if requested
+    if (benchmarkResultsPath) {
+      fs.mkdirSync(path.dirname(benchmarkResultsPath), {recursive: true});
+      fs.writeFileSync(benchmarkResultsPath, JSON.stringify(results, null, 2));
+    }
   },
 };
 
