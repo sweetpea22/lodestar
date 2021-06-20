@@ -34,7 +34,7 @@
     "lint:fix": "yarn run lint --fix",
     "test:unit": "mocha 'test/unit/**/*.test.ts'",
     "test:perf": "mocha 'test/perf/**/*.test.ts'",
-    "benchmark": "mocha --config ./.mocharc.perf.yaml --max-old-space-size=4096 'test/perf/**/*.perf.ts'"
+    "benchmark": "mocha --config ./.mocharc.perf.yaml --max-old-space-size=4096 'test/perf/util/rootEquals.perf.ts'"
   },
   "types": "lib/index.d.ts",
   "dependencies": {

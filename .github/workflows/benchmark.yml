@@ -10,9 +10,15 @@ on:
       - master
       - benchmark
 
+env:
+  BENCHMARK_FILES_PATH: /home/runner/work/benchmark
+  BENCHMARK_RESULTS_PATH: /home/runner/work/benchmark/results.json
+  BENCHMARK_HISTORY_PATH: /home/runner/work/benchmark/history.json
+
 jobs:
   run:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v1
       - name: Bootstrap
@@ -21,15 +27,18 @@ jobs:
       - name: Run performance tests
         run: yarn benchmark
         env:
-          BENCHMARK_RESULTS_PATH: ./benchmark/results.json
-          BENCHMARK_RESULTS_CSV_DIR: ./benchmark
+          BENCHMARK_RESULTS_PATH: ${{env.BENCHMARK_RESULTS_PATH}}
+          BENCHMARK_RESULTS_CSV_DIR: ${{env.BENCHMARK_FILES_PATH}}
 
       # Download previous benchmark result from cache (if exists)
       - name: Download previous benchmark data
         uses: actions/cache@v1
         with:
-          path: ./benchmark/history.json
+          path: ${{env.BENCHMARK_HISTORY_PATH}}
           key: ${{ runner.os }}-benchmark-history-tmp
+
+      - name: Sanity check, are files there?
+        run: ls -ltr ${{env.BENCHMARK_FILES_PATH}}
 
       # Upload results + history (even on error so partial results can be read)
       - name: Upload full benchmark results
@@ -37,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: benchmark-data
-          path: ./benchmark
+          path: ${{env.BENCHMARK_FILES_PATH}}
 
       # Run `github-action-benchmark` action
       - name: Store benchmark result
@@ -47,7 +56,7 @@ jobs:
           yarn run-action
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BENCHMARK_RESULTS_PATH: ./benchmark/results.json
-          BENCHMARK_HISTORY_PATH: ./benchmark/history.json
+          BENCHMARK_RESULTS_PATH: ${{env.BENCHMARK_RESULTS_PATH}}
+          BENCHMARK_HISTORY_PATH: ${{env.BENCHMARK_HISTORY_PATH}}
           THRESHOLD: 2
       # Upload the updated cache file for the next job by actions/cache

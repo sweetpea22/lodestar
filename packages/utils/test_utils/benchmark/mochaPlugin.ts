@@ -21,6 +21,8 @@ export const mochaHooks: Mocha.RootHookObject = {
   afterAll() {
     // Persist benchmark results if requested
     if (benchmarkResultsPath) {
+      // eslint-disable-next-line no-console
+      console.log(`Persisting benchmark results to ${benchmarkResultsPath}`);
       fs.mkdirSync(path.dirname(benchmarkResultsPath), {recursive: true});
       fs.writeFileSync(benchmarkResultsPath, JSON.stringify(results, null, 2));
     }
