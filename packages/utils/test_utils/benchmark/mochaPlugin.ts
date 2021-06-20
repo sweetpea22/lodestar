@@ -62,9 +62,9 @@ export function itBench<T>(
     // Extend timeout if maxMs is set
     const timeout = this.timeout();
     if (optsCtx.maxMs && optsCtx.maxMs > timeout) {
-      this.timeout(optsCtx.maxMs + 1000);
+      this.timeout(optsCtx.maxMs * 1.5);
     } else if (optsCtx.minMs && optsCtx.minMs > timeout) {
-      this.timeout(optsCtx.minMs + 1000);
+      this.timeout(optsCtx.minMs * 1.5);
     }
 
     const {result, runsNs} = await doRun({...optsCtx, ...opts});
