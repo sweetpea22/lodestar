@@ -1,11 +1,12 @@
 import fs from "fs";
 import path from "path";
 
-import {BenchmarkOpts, BenchmarkResult, BenchmarkRunOptsWithFn, doRun, formatResultRow} from "./runner";
+import {BenchmarkOpts, BenchmarkResult, BenchmarkRunOptsWithFn, doRun} from "./runner";
 
 export const results: BenchmarkResult[] = [];
 
 const optsMap = new Map<Mocha.Suite, BenchmarkOpts>();
+export const testResults = new WeakMap<Mocha.Runnable, BenchmarkResult>();
 
 const benchmarkResultsPath = process.env.BENCHMARK_RESULTS_PATH;
 const benchmarkResultsCsvDir = process.env.BENCHMARK_RESULTS_CSV_DIR;
@@ -69,9 +70,15 @@ export function itBench<T>(
     }
 
     const {result, runsNs} = await doRun({...optsCtx, ...opts});
+
+    // Store result to persist to file latter
     results.push(result);
 
-    console.log(formatResultRow(result));
+    // Store temp results for the custom reporter
+    const test = this.currentTest ?? this.test;
+    if (test) {
+      testResults.set(test, result);
+    }
 
     // Persist full results if requested. dir is created in `beforeAll`
     if (benchmarkResultsCsvDir) {
